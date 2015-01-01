@@ -1,9 +1,8 @@
 '''MediaWiki a été installé avec succès.'''
 
-Consultez le [//meta.wikimedia.org/wiki/Aide:Contenu Guide de l’utilisateur] pour plus d’informations sur l’utilisation de ce logiciel de wiki.
+Y a plus qu'à s'y mettre les amis.
 
-== Pour démarrer ==
-* [//www.mediawiki.org/wiki/Manual:Configuration_settings Liste des paramètres de configuration]
-* [//www.mediawiki.org/wiki/Manual:FAQ/fr FAQ sur MediaWiki]
-* [https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce Liste de discussion sur les distributions de MediaWiki]
-* [//www.mediawiki.org/wiki/Localisation#Translation_resources Adaptez MediaWiki dans votre langue]
+Todo: installer Semantic Media Wiki pour l'édition wysiwyg
+Configurer les paramètres d'upload des fichiers.
+
+Remarques : pensez à utiliser la page de discussion de chaque article (souvent négligée dans la plupart des wikis)
