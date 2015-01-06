@@ -1,0 +1,18 @@
+<center>Les Microcontrôleurs</center>
+
+
+Nous allons parler sur cette page des Microcontrôleurs, mais malheureusement pas tous les Microcontrôleurs.
+
+
+Pourquoi&nbsp;? Tout simplement parce que nous ne les connaissons pas tous les Microcontrôleurs. Nous allons principalement vous parler des Microcontrôleurs Atmel et en particulier Les familles ATMega et ATTiny. Nous parlerons aussi des Arduino avec l’environnement Arduino mais aussi au travers d'autres environnement de programmation (en langage C au travers du connecteur SPI).
+
+
+Nous avons pour projet de travailler sur les MSP430 (de chez Texas Instrument), les STM32 (STMicroelectronics), les PIC (de chez Microchip) et les FPGA. 
+
+Oui les FPGA ne sont pas des Microcontrôleur mais puisque l'on peut instancié un Microcontrôleur dans un FPGA, nous le Rangerons probablement dans cette catégorie
+
+
+Voici pour l'instant ce sur quoi nous travaillons&nbsp;:
+
+
+- Les AVR
