@@ -1,0 +1,99 @@
+<center>Image lien</center>
+
+
+<center>'''VORCNC'''</center>
+
+
+[[Image:|thumb|<center></center>]]
+
+= VoLAB =
+= Assocation VoRoBoTics =
+Date : 
+
+Auteur : 
+
+Thème: 
+
+Projet 
+
+= Objectif de ce document : =
+Ce document à pout objectif de definir le porject CNC. Ce document vas décrire le fonctionnement de la CNC que nous souhaiterions réaliser au LAB, mais également lister toutes les étapes de conception et de réalisation.
+
+
+Ce projet étant un projet commun, toutes les fonctionnalités, la conception, l'aprovisionnement et la réalisation de ce projet peuvent et doivent être approuvées par l'ensemble des membres participants à la réalisation de ce projet
+
+
+= Principe de fonctionnement et déscription de la CNC : =
+[[Image:triede.jpg]]La CNC que nous voulons réaliser doit avoir des dimentions réstreinte pour d'une part limité l'encombrement, mais également reduire le cout. Ces dimention seront déterminées les vis à billes que nous pourrons nous procurer, soit des dimension comprise entre 25x25x25 et 40x40x40.
+
+
+Toujours dans un souci d'encombrement, il a été décider que le plateau serait fixe. La broche quant à elle, sera mobille en X,Y et Z. Dans cette optique la broche doit être montée sur un batis, mobile en Y. La broche elle même sera mobile sur le batis en X et Z
+
+
+La CNC doit être alimenter depuis une prise secteur (230 V alternatif). Elle doit pouvoir fonctionner en autonome, par exemple : en lisant un fichiers depuis une carte SD ou posseder un serveur de fichiers dans lequel on téléverse le fichiers qui sera ensuite lue par la CNC. Elle doit egalement pouvoir être piloté par un PC au traver du port USB ou par Bluetooth.
+
+
+La maintenance et l'évolution doit être facillement réalisable et donc entre autre chose, la broche doit pouvoir facilmenent démonter et / ou remplacer (y compris le remplacement de la broche par un modèle diférent.
+
+
+La CNC doit être parfaitemant sécuritaire dans sa conception, dans son assemblage et dans son utilisation.
+
+= Liste des étapes et ressources nécessaire : =
+Les lignes qui vont suivres vont nous permetre d'identifier l'ensemble des étapes nécessaire depuis la recherches et dévelopement jusqu'à la réalisation finale.
+
+
+Nous allons également identifiers les ressources nécessaire à la réalisation de se projet. Les diférentes ressources dont nous aurons besoins sont :
+
+
+- Les ressources matériels : outillage et fournitures dont nous allons avoir besoin
+
+- Les ressources humaines: une personne seule est moins efficace qu'un groupe.
+
+- Les comptéances : Design / dessins industriel ; Mécanique pour l'usinage et l'assemblage des pièces ; electroniques ; programation, etc. Chacun possèdes des compétances personnel qu'il peut mettre à contribution dans se projet
+
+- Financières : tous ce que l'on ne pourra pas se récupérer à droite, à gauche devra être acheter
+
+
+N.B : Notez que les étapes ci-dessous ne sont pas séquentiels. Plusieurs de ces étapes peuvent êtres réaliser en Paralèles. De plus le nombre de personnes nécessaire à la realisation de chaque étape n'est là qu'a titre indiquatif. Ce nombre peut être agmenter ou diminuer en fonction des volontaires.
+
+
+== Inventaire du matériel déjà à notre disposition : ==
+Nous disposons déjà de certaines pièces. Il faut les identifier et les qualifiers (désignation, utiliter et caractéristique). Cette listes doit être consigner dans un document et stocké sur le serveur à l'emplacement suivant :
+
+
+[file://192.168.1.100/projets/_COMMUN/CNC/00-avantProjet_v \\192.168.1.100\projets\_COMMUN\CNC\00-avantProjet_v]
+
+Ce document serat à compléter au fur et à mesure des nouveau approvisionnement.
+
+
+Ressources : 
+
+- 1 Personne
+
+
+== Dessin de la CNC : ==
+Pour savoir exactement ce que nous allons réaliser, il faut le dessiner. Cette étape permet d'étudier différente possibillité et différent concepte. L'idéale étant d'avoir au moins 2 concept de bases pour en choisir le plus facillement réalisable.
+
+
+<u>'''Ressources'''</u> :
+
+
+- Logiciel de dessin 3D
+
+- Compétence en dessin 3D
+
+- 1 à 2 personnes
+
+
+<u>Remarques</u> : ce travail sera plus efficace après l'inventaire du matériel déjà à notre disposition
+
+= License =
+Ce document est mise à disposition selon les termes de la&nbsp;[http://creativecommons.org/licenses/by/4.0/ Licence Creative Commons Attribution 4.0 International]. 
+
+
+= Bibliographie =
+= webographie =
+[http://www.reprap-france.com/home/91-imprimante-3d-prusa-i3-rework.html http://www.reprap-france.com/home/91-imprimante-3d-prusa-i3-rework.html]
+
+= Rédaction en langue française =
+Partant du constat de terrain qu'une énorme masse d'information concernant les sujets qui nous intéressent comme entre autres l'impression 3D n'étaient disponibles que dans la langue de Shakespeare et que de nombreuses personnes dans notre entourage ne maîtrisaient pas la dite langue et soucieux de diffuser encore plus l'information, nous avons pris le parti, au VoLAB, de rédiger nos documents de préférence en langue française.
