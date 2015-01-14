@@ -11,11 +11,10 @@ Thème : Projet
 Projet : CNC
 
 = Objectif de ce document : =
-Ce document à pout objectif de definir le porject CNC. Ce document vas décrire le fonctionnement de la CNC que nous souhaiterions réaliser au LAB, mais également lister toutes les étapes de conception et de réalisation.
+Ce document a pour objectif de définir le project CNC. Ce document va décrire le fonctionnement de la CNC que nous souhaiterions réaliser au VoLAB, mais également lister toutes les étapes de conception et de réalisation.
 
 
-Ce projet étant un projet commun, toutes les fonctionnalités, la conception, l'aprovisionnement et la réalisation de ce projet peuvent et doivent être approuvées par l'ensemble des membres participants à la réalisation de ce projet
-
+Ce projet étant un projet commun, toutes les fonctionnalités, la conception, l'approvisionnement et la réalisation de ce projet peuvent et doivent être approuvées par l'ensemble des membres participants à la réalisation de ce projet
 
 = Principe de fonctionnement et déscription de la CNC : =
 [[Image:triede300.jpg|cadre|gauche]]La CNC que nous voulons réaliser doit avoir des dimentions réstreinte pour d'une part limité l'encombrement, mais également reduire le cout. Ces dimention seront déterminées les vis à billes que nous pourrons nous procurer, soit des dimension comprise entre 25x25x25 et 40x40x40.
