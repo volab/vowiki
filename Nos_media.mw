@@ -1,14 +1,14 @@
 ← [[Accueil]]
 
-<center>'''Utilisation des outils informatiques du VoLab'''</center>
-<big>
-'Pour bénéficier d'un accès l'un de ces media veuillez-vous adresser à l'un des membres du CA, ou envoyer un e-mail à contact@vorobotics.com.'</big>
+== Utilisation des outils informatiques du VoLab ==
+
+<big>''Pour bénéficier d'un accès l'un de ces media veuillez-vous adresser à l'un des membres du CA, ou envoyer un e-mail à contact@vorobotics.com.''</big>
 
 &nbsp;
 
-&nbsp;
 
-# Le site internet
+
+=== Le site internet ===
 
 [http://www.vorobotics.com/ http://www.vorobotics.com]
 
@@ -18,13 +18,14 @@ Le menu "Nos réalisations" présentent nos projets d'une manière succincte. Le
 &nbsp;
 
 Le menu "Résumés des séances" sert simplement a montrer les activités en cours au lab et présenter l'actualité du Lab.
-''USAGES : Les billets publiés doivent être catégorisés. '
+
+''USAGES : Les billets publiés doivent être catégorisés. 
 
 &nbsp;
 
 &nbsp;
 
-# Le Forum
+=== Le Forum ===
 
 [http://vorobotics.com/forum/ http://vorobotics.com/forum/]
 
@@ -44,8 +45,8 @@ Seul les membres inscrits peuvent poster. Tous les internautes peuvent lire les 
 
 &nbsp;
 
-# Le Wiki 
-
+=== Le Wiki ===
+ 
 [http://www.vorobotics.com/wiki/index.php?title=Accueil http://www.vorobotics.com/wiki/index.php?title=Accueil]
 
 Le partage des données techniques des projets élaborés au Volab entre les membres et la diffusion sur internet.
@@ -57,7 +58,7 @@ Le partage des données techniques des projets élaborés au Volab entre les mem
 
 &nbsp;
 
-# Les partages du serveur 
+=== Les partages du serveur ===
 
 [file://192.168.1.100/ \\192.168.1.100\]
 
@@ -67,7 +68,6 @@ Une arborescence de répertoire type est en place pour permettre le partage et l
 
 &nbsp;
 
-:Ligne en retrait
 Les partages :
 
 -Applications, stocke les sources des applications les plus utilisées ou utiles au Lab
@@ -78,7 +78,7 @@ Les partages :
 
 &nbsp;
 
-# Pydio
+=== Pydio ===
 
 [http://volab.vorobotics.com/pydio/#0 http://volab.vorobotics.com/pydio/#0]
 
@@ -86,13 +86,11 @@ Permet d'accéder au serveur de fichiers du VoLab depuis l'extérieur.
 
 Repend les partages sous forme workspace.
 
-[[Image:]]
-
 &nbsp;
 
 &nbsp;
 
-# Galette
+=== Galette ===
 
 [http://volab.vorobotics.com/galette/ http://volab.vorobotics.com/galette/]
 
@@ -100,7 +98,7 @@ La gestion des membres, adhérents et des cotisations. Réservé au CA.
 
 &nbsp;
 
-# Gestion du matériel informatiques, serveurs, services informatique
+=== Gestion du matériel informatiques, serveurs, services informatique ===
 
 [file://192.168.1.100/ECHANGES/07-GestionInformatique/VOLAB%20-%20Plan%20d'Adressage%20IP.ods \\192.168.1.100\ECHANGES\07-GestionInformatique\VOLAB - Plan d'Adressage IP.ods]
 
