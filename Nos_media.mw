@@ -1,1 +1,107 @@
 ← [[Accueil]]
+
+<center>'''Utilisation des outils informatiques du VoLab'''</center>
+<big>
+'Pour bénéficier d'un accès l'un de ces media veuillez-vous adresser à l'un des membres du CA, ou envoyer un e-mail à contact@vorobotics.com.'</big>
+
+&nbsp;
+
+&nbsp;
+
+# Le site internet
+
+[http://www.vorobotics.com/ http://www.vorobotics.com]
+
+Son but est de montrer les activité du lab sans trop aborder les points techniques de notre projet. C'est notre vitrine. Il doit permettre à une personne lambda de comprendre nos activités.
+Le menu "Nos réalisations" présentent nos projets d'une manière succincte. Les données techniques se trouvant sur le wiki.
+
+&nbsp;
+
+Le menu "Résumés des séances" sert simplement a montrer les activités en cours au lab et présenter l'actualité du Lab.
+''USAGES : Les billets publiés doivent être catégorisés. '
+
+&nbsp;
+
+&nbsp;
+
+# Le Forum
+
+[http://vorobotics.com/forum/ http://vorobotics.com/forum/]
+
+Il est ouvert à tous les membres et permet l'échange et le partage. C'est un espace de discussion fortement modéré.
+
+Seul les membres inscrits peuvent poster. Tous les internautes peuvent lire les discussions.
+
+&nbsp;
+
+''USAGES : Les discussions doivent être nettoyée afin d'optimiser l'accès à l'information traitant du sujet initial.''
+
+[[Image:]]
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+# Le Wiki 
+
+[http://www.vorobotics.com/wiki/index.php?title=Accueil http://www.vorobotics.com/wiki/index.php?title=Accueil]
+
+Le partage des données techniques des projets élaborés au Volab entre les membres et la diffusion sur internet.
+
+''USAGES : La page de discussion d'un article doit être absolument réservé aux sujets de l'article attenant , et ne pas dévier sur d'autre points (pour cela il y a le forum).''
+
+[[Image:]]
+
+
+&nbsp;
+
+# Les partages du serveur 
+
+[file://192.168.1.100/ \\192.168.1.100\]
+
+C'est l'espace de travail des projets personnels ou communs.
+
+Une arborescence de répertoire type est en place pour permettre le partage et la construction de documentation.
+
+&nbsp;
+
+:Ligne en retrait
+Les partages :
+
+-Applications, stocke les sources des applications les plus utilisées ou utiles au Lab
+
+-Echanges, sert à transmettre des fichiers entre les membres. Il contient aussi les fichiers utiles à tout le monde (datasheets, tutos, images, et l'identité graphique de l'association).
+
+-Projets, héberge les projets des membres sous leur nom, ou sous Commun pour les projets collaboratifs.
+
+&nbsp;
+
+# Pydio
+
+[http://volab.vorobotics.com/pydio/#0 http://volab.vorobotics.com/pydio/#0]
+
+Permet d'accéder au serveur de fichiers du VoLab depuis l'extérieur.
+
+Repend les partages sous forme workspace.
+
+[[Image:]]
+
+&nbsp;
+
+&nbsp;
+
+# Galette
+
+[http://volab.vorobotics.com/galette/ http://volab.vorobotics.com/galette/]
+
+La gestion des membres, adhérents et des cotisations. Réservé au CA. 
+
+&nbsp;
+
+# Gestion du matériel informatiques, serveurs, services informatique
+
+[file://192.168.1.100/ECHANGES/07-GestionInformatique/VOLAB%20-%20Plan%20d'Adressage%20IP.ods \\192.168.1.100\ECHANGES\07-GestionInformatique\VOLAB - Plan d'Adressage IP.ods]
+
+Les personnes amenées à intervenir sur les matériel informatique doivent remplir ce fichier, pour que la continuité de service soit aisé.
