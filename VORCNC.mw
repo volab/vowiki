@@ -1,10 +1,4 @@
-<nowiki>← [[Accueil]] ← [[Nos Projets]]</nowiki>
-
-
-<center>'''VORCNC'''</center>
-
-
-[[Image:|thumb|<center></center>]]
+← [[Accueil]] ← [[Nos Projets]]
 
 = VoLAB =
 = Assocation VoRoBoTics =
@@ -45,7 +39,6 @@ Sachant cela et compte tenu de notre budget (pas loin de ZERO) nous devrons nous
 
 <u>Attention</u>&nbsp;: pour le bois, certaines essences seront trop denses pour notre CNC. Pour les métaux et alliages nous ne pourrons pas travailler des épaisseurs trop importante (profondeur de passes limitées). Il faut se souvenir que l'outil de fraisage utilisé peut s'user prématurément en fonction de la densité du matériau utilisé et de la bonne ou mauvaise utilisation qui en est faite.
 
-
 <u>'''N.B'''</u>&nbsp;:
 
 - les capacités de la CNC seront déterminer plus précisément ultérieurement à l'aide de calculs (encore non identifier...&nbsp;:-o )
@@ -53,7 +46,7 @@ Sachant cela et compte tenu de notre budget (pas loin de ZERO) nous devrons nous
 Un paramètre important qui sera également limité par nos choix techniques et surtout notre budget sera la précision. Nous espérons tenir un précision cumulée totale inférieure au dixième de millimètre.
 
 = Principe de fonctionnement et description de la CNC : =
-[[Image:triede300.jpg]]La CNC que nous voulons réaliser doit avoir des dimensions restreintes pour d'une part limiter l'encombrement, mais également réduire le coût. Ces dimensions seront déterminées par la longueur des vis à billes que nous pourrons nous procurer, soit des dimensions comprises entre 25x25x25 et 40x40x40.
+[[Image:triede300.jpg|cadre|gauche]]La CNC que nous voulons réaliser doit avoir des dimensions restreintes pour d'une part limiter l'encombrement, mais également réduire le coût. Ces dimensions seront déterminées par la longueur des vis à billes que nous pourrons nous procurer, soit des dimensions comprises entre 25x25x25 et 40x40x40.
 
 Toujours dans un souci d'encombrement, il a été décidé que le plateau serait fixe. La broche quant à elle, sera mobile en X,Y et Z. Dans cette optique la broche doit être montée sur un bâtis, mobile en Y. La broche elle même sera mobile sur le bâtis en X et Z.
 
