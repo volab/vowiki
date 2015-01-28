@@ -1,104 +1,272 @@
-← [[Accueil]] ← [[Nos Projets]]
+<nowiki>← [[Accueil]] ← [[Nos Projets]]</nowiki>
+
+
+<center>'''VORCNC'''</center>
+
+
+[[Image:|thumb|<center></center>]]
 
 = VoLAB =
 = Assocation VoRoBoTics =
-Date : 20150113
+Date : 28/01/2015
 
 Auteur : Poltergeist42
 
-Thème : Projet
+Relecteur&nbsp;: MajorLee
+
+Thème : Outillage
 
 Projet : CNC
 
 = Objectif de ce document : =
-Ce document a pour objectif de définir le project CNC. Ce document va décrire le fonctionnement de la CNC que nous souhaiterions réaliser au VoLAB, mais également lister toutes les étapes de conception et de réalisation.
+Ce document a pour objectif de définir le projet CNC du VoLAB. Ce document va décrire le fonctionnement de la CNC 3 axes ( '''C'''omputer '''N'''umerical '''C'''ontrol en d'autres termes machines à commandes numérique) que nous souhaiterions réaliser au LAB, mais également lister toutes les étapes de conception et de réalisation.
+
+Ce projet étant un projet commun, toutes les fonctionnalités, la conception, l'approvisionnement et la réalisation de ce projet et même le présent document, peuvent et devraient être approuvés par l'ensemble des membres participants à la réalisation de ce projet.
+
+Le projet VoLAB CNC est également à vocation pédagogique pour les membres du LAB.
+
+= Ce que la CNC devra pouvoir faire : =
+Il est évident que nous ne pourrons pas fabriquer une CNC ayant les caractéristique d'une CNC industrielle. Les matériaux que nous pourrons usiner seront déterminer par&nbsp;:
 
 
-Ce projet étant un projet commun, toutes les fonctionnalités, la conception, l'approvisionnement et la réalisation de ce projet peuvent et doivent être approuvées par l'ensemble des membres participants à la réalisation de ce projet
+- La taille de la CNC
 
-= Principe de fonctionnement et déscription de la CNC : =
-[[Image:triede300.jpg|cadre|gauche]]La CNC que nous voulons réaliser doit avoir des dimentions réstreinte pour d'une part limité l'encombrement, mais également reduire le cout. Ces dimention seront déterminées les vis à billes que nous pourrons nous procurer, soit des dimension comprise entre 25x25x25 et 40x40x40.
+- La broche utilisée&nbsp;: Moteur principal utilisé pour la rotation de la fraise
 
+- Le type de fraise utilisées
 
-Toujours dans un souci d'encombrement, il a été décider que le plateau serait fixe. La broche quant à elle, sera mobille en X,Y et Z. Dans cette optique la broche doit être montée sur un batis, mobile en Y. La broche elle même sera mobile sur le batis en X et Z
+- Le poids total de la CNC&nbsp;: Plus la structure sera lourde et rigide et plus l'épaisseur et la densité des pièces usinées seront importantes.
 
-
-La CNC doit être alimenter depuis une prise secteur (230 V alternatif). Elle doit pouvoir fonctionner en autonome, par exemple : en lisant un fichiers depuis une carte SD ou posseder un serveur de fichiers dans lequel on téléverse le fichiers qui sera ensuite lue par la CNC. Elle doit egalement pouvoir être piloté par un PC au traver du port USB ou par Bluetooth.
-
-
-La maintenance et l'évolution doit être facillement réalisable et donc entre autre chose, la broche doit pouvoir facilmenent démonter et / ou remplacer (y compris le remplacement de la broche par un modèle diférent.
+- Robustesse des actionneurs utilisés&nbsp;: L'ensemble des moteur pas à pas + vis à bille utilisé pour le déplacement de la broche sur les axes X, Y et Z
 
 
-La CNC doit être parfaitemant sécuritaire dans sa conception, dans son assemblage et dans son utilisation.
-
-= Liste des étapes et ressources nécessaire : =
-Les lignes qui vont suivres vont nous permetre d'identifier l'ensemble des étapes nécessaire depuis la recherches et dévelopement jusqu'à la réalisation finale.
+Sachant cela et compte tenu de notre budget (pas loin de ZERO) nous devrons nous "contenter" de ne pouvoir travailler que des matériaux tendres (bois, PVC , polystyrène, laiton, cuivre, aluminium). Ce qui fait entrer notre CNC dans la catégorie des Mini CNC.
 
 
-Nous allons également identifiers les ressources nécessaire à la réalisation de se projet. Les diférentes ressources dont nous aurons besoins sont :
+<u>Attention</u>&nbsp;: pour le bois, certaines essences seront trop denses pour notre CNC. Pour les métaux et alliages nous ne pourrons pas travailler des épaisseurs trop importante (profondeur de passes limitées). Il faut se souvenir que l'outil de fraisage utilisé peut s'user prématurément en fonction de la densité du matériau utilisé et de la bonne ou mauvaise utilisation qui en est faite.
 
 
-- Les ressources matériels : outillage et fournitures dont nous allons avoir besoin
+<u>'''N.B'''</u>&nbsp;:
+
+- les capacités de la CNC seront déterminer plus précisément ultérieurement à l'aide de calculs (encore non identifier...&nbsp;:-o )
+
+Un paramètre important qui sera également limité par nos choix techniques et surtout notre budget sera la précision. Nous espérons tenir un précision cumulée totale inférieure au dixième de millimètre.
+
+= Principe de fonctionnement et description de la CNC : =
+[[Image:triede300.jpg]]La CNC que nous voulons réaliser doit avoir des dimensions restreintes pour d'une part limiter l'encombrement, mais également réduire le coût. Ces dimensions seront déterminées par la longueur des vis à billes que nous pourrons nous procurer, soit des dimensions comprises entre 25x25x25 et 40x40x40.
+
+Toujours dans un souci d'encombrement, il a été décidé que le plateau serait fixe. La broche quant à elle, sera mobile en X,Y et Z. Dans cette optique la broche doit être montée sur un bâtis, mobile en Y. La broche elle même sera mobile sur le bâtis en X et Z.
+
+La CNC doit être alimentée depuis une prise secteur (230 V alternatif). Elle doit pouvoir fonctionner en autonome, par exemple : en lisant un fichier depuis une carte SD ou posséder un serveur de fichiers dans lequel on téléverse le fichier qui sera ensuite lue par la CNC. Elle doit également pouvoir être pilotée par un PC au travers du port USB ou par Bluetooth.
+
+La maintenance et l'évolution doit être facilement réalisable et donc entre autre chose, la broche doit pouvoir facilement être démontée et / ou remplacée (y compris le remplacement de la broche par un modèle différent).
+
+La CNC doit être parfaitement sécuritaire dans sa conception, dans son assemblage et dans son utilisation.
+
+= Liste des étapes et ressources nécessaires : =
+Les lignes qui vont suivre, vont nous permettre d'identifier l'ensemble des étapes nécessaires depuis la recherche et développement jusqu'à la réalisation finale.
+
+
+Nous allons également identifier les ressources nécessaires à la réalisation de ce projet. Nous identifions également ici les différents acteurs de chacune des étapes décrites ci-dessous. 
+
+
+Les différentes ressources dont nous aurons besoins sont :
+
+
+- Les ressources matériels : outillage et fournitures
 
 - Les ressources humaines: une personne seule est moins efficace qu'un groupe.
 
-- Les comptéances : Design / dessins industriel ; Mécanique pour l'usinage et l'assemblage des pièces ; electroniques ; programation, etc. Chacun possèdes des compétances personnel qu'il peut mettre à contribution dans se projet
+- Les compétences : Design / dessins industriel ; Mécanique pour l'usinage et l'assemblage des pièces ; électroniques ; programmation, etc. Chacun possède des compétences personnelles qu'il peut mettre à contribution dans se projet.
 
-- Financières : tous ce que l'on ne pourra pas se récupérer à droite, à gauche devra être acheter
-
-
-<u>N.B</u> : Notez que les étapes ci-dessous ne sont pas séquentiels. Plusieurs de ces étapes peuvent êtres réaliser en Paralèles. De plus le nombre de personnes nécessaire à la realisation de chaque étape n'est là qu'a titre indiquatif. Ce nombre peut être agmenter ou diminuer en fonction des volontaires.
+- Financières : tous ce que l'on ne pourra pas se récupérer à droite, à gauche devra être acheter.
 
 
-== Inventaire du matériel déjà à notre disposition : ==
-Nous disposons déjà de certaines pièces. Il faut les identifier et les qualifiers (désignation, utiliter et caractéristique). Cette listes doit être consigner dans un document et stocké sur le serveur à l'emplacement suivant :
+<u>'''N.B'''</u> : 
+
+- Notez que les étapes ci-dessous ne sont pas séquentielles bien que numérotées de 0 à 6. Plusieurs de ces étapes peuvent êtres réalisées en parallèle. De plus le nombre de personnes nécessaires à la réalisation de chaque étape n'est là qu'a titre indicatif. Ce nombre peut être augmenter ou diminuer en fonction des volontaires. Ce projet étant sur une base de volontariat, toutes les bonnes volontés seront les bienvenues. Il faudra cependant faire attention à ne pas se parasiter mutuellement, ni faire 2 fois le même travail. Ce qu'il faudra retenir ici, c'est la complémentarité.
 
 
-[../../../users/poltergeist/Documents/CNC/00-avantProjet/00-avantProjet_v \\192.168.1.100\projets\_COMMUN\CNC\00-avantProjet]
+== [Etape_00] : Description et préparation du projet ==
+C'est l'étape qui servira de base à l'ensemble du projet (le présent document). De brèves descriptions des objectifs visés, et une liste de tâches à effectuer pour la réalisation du projet.
 
-Ce document serat à compléter au fur et à mesure des nouveau approvisionnement.
+
+<u>'''N.B'''</u>&nbsp;: 
+
+- les objectifs ainsi que la liste de tâches peuvent évoluer en cours de projet. Ce dernier point dépendra des écueils et réussites que nous rencontrerons, mais également en fonction des propositions faites par l'ensemble des personnes participants à ce projet.
+
+
+<u>'''Ressources'''</u>&nbsp;:
+
+
+* 1 Personnes pour la rédaction
+* au moins 2 relecteurs (si possible)
+* tous les participants de ce projet, s'ils sont forces de proposition
+
+<u>'''Acteur(s)'''</u>&nbsp;:
+
+
+- Poltergeist42
+
+== [Etape_01] : Inventaire du matériel déjà à notre disposition ==
+Nous disposons déjà de certaines pièces. Il faut les identifier et les qualifier (désignation, utilité et caractéristique). Cette liste doit être consignée dans un document et stockée sur le serveur à l'emplacement suivant :
+
+
+\\192.168.1.100\projets\_COMMUN\CNC\00-avantProjet\Inventaires
+
+
+Ce document sera à compléter au fur et à mesure des nouveaux approvisionnements puis stocké dans un nouvel emplacement (définie plus bas)
 
 
 <u>'''Ressources'''</u> : 
 
-- 1 Personne
+
+* 1 Personne pour le première inventaire
+* Toutes personnes susceptibles d''amener de nouveaux éléments.
+
+<u>'''Acteur(s)'''</u>&nbsp;:
 
 
-== Dessin de la CNC : ==
-Pour savoir exactement ce que nous allons réaliser, il faut le dessiner. Cette étape permet d'étudier différente possibillité et différent concepte. L'idéale étant d'avoir au moins 2 concept de bases pour en choisir le plus facillement réalisable. Puisque cette modélisation en 3D doit nous servir de patron pour la réalisation du projet, il est nécessaire qu'elle soit "corriger par les personnes ayant les compétance en assemblage / usinage
+- Non Déterminé (N.D.)
+
+
+== [Etape_02] : Dessin de la CNC ==
+Pour savoir exactement ce que nous allons réaliser, il faut le dessiner. Cette étape permet d'étudier différentes possibilités et différents concepts. L'idéal étant d'avoir au moins 2 concepts de bases pour choisir le plus facilement réalisable.
+
+Puisque cette modélisation en 3D doit nous servir de patron pour la réalisation du projet, il est nécessaire qu'elle soit "corrigée" par les personnes ayant les compétences en assemblage / usinage. Il est également à prévoir que ce dessin est amené à être modifier en fonction de l'électronique et des approvisionnements possibles ou non.
+
+
+<u>'''N.B&nbsp;'''</u>:
+
+- Le dossier contenant le dessin de chacune des pièces devra être stocké sur le serveur à l'emplacement suivant&nbsp;:
+
+
+\\192.168.1.100\projets\_COMMUN\CNC\01-maquettageFaisabilite
 
 
 <u>'''Ressources'''</u> :
 
 
-- Logiciel de dessin 3D
-
-- Compétence en dessin 3D
-
-- 1 à 2 personnes
-
+* Logiciel de dessin 3D
+* Compétence en dessin 3D
+* 1 à 2 personnes
 
 <u>Remarques</u> : ce travail sera plus efficace après l'inventaire du matériel déjà à notre disposition
 
 
-== Fourniture et approvisionnement : ==
-Toutes les pièces ne pourons pas être fabriqué par nos soin. Nous devrons donc nous les procurer. Pour cela il faut identifier les diférentes sources d'approvisionnement en faisant jouer nos réseau de connaissance pour obtenir un maximum d'élément gratuis. Pour les éléments que nous ne pourrons pas nous procurer gratuitement, il faut identifier les fournisseur offrant le meilleur rapport qualité prix.
+<u>'''Acteur(s)'''</u>&nbsp;:
 
 
-Lorsque les sources d'approvisionnement seront Identifiers, l'ensemble doit être budjeté puis approvioner (en fonction des prioriter et de l'avancement du projet).
+- Non Déterminé (N.D.)
 
 
-<u>N.B</u> : Une fois les pièces approvisionner, elles devrons être inventorier dans le fichier se trouvant :
+== [Etape_03] : Fourniture et approvisionnement ==
+Toutes les pièces ne pourrons pas être fabriquée par nos soin. Nous devrons donc nous les procurer. Pour cela il faut identifier les différentes sources d'approvisionnement en faisant jouer nos réseaux de connaissances pour obtenir un maximum d'éléments gratuits. Pour les éléments que nous ne pourrons pas nous procurer gratuitement, il faut identifier les fournisseurs offrant le meilleur rapport qualité prix.
 
-[../../../users/poltergeist/Documents/CNC/00-avantProjet/00-avantProjet_v \\192.168.1.100\projets\_COMMUN\CNC\00-avantProjet]
+Lorsque les sources d'approvisionnement seront identifiées, l'ensemble doit être budgété puis approvisionné (en fonction des priorités et de l'avancement du projet).
 
 
-== Usinage :  ==
+'''N.B''' :
+
+- Une fois les pièces approvisionnées, elles devrons être inventoriées dans le fichier se trouvant :
+
+
+\\192.168.1.100\projets\_COMMUN\CNC\03-conception\Inventaires
+
+
+<u>'''Ressources'''</u>&nbsp;:
+
+
+- Matériel&nbsp;: tous les matériels que l'on identifiera comme nécessaire à la réalisation de se projet
+
+- Des sous&nbsp;/ des dons, du pèze, des brouzouffes
+
+- Toutes les bonnes volontés disponibles pour cette étapes sont nécessaires
+
+
+<u>'''Acteur(s)'''</u>&nbsp;:
+
+
+- Non Déterminé (N.D.)
+
+
+== [Etape_04] : L'usinage ==
+Certaines pièces peuvent devoir être fabriqués à la main. Dans la mesure ou la CNC est un outil de précision, toutes les pièces la composant doivent être les plus précises possible. C'est pourquoi le ou les opérateurs qui prendrons en charge cette partie doivent être particulièrement rigoureux à la réalisation de l'ouvrage
+
+
+<u>'''Ressources'''</u>&nbsp;:
+
+
+- Compétences en tournage, fraisage, perçage
+
+- 1 à deux 2 personnes
+
+
+<u>'''Acteur(s)'''</u>&nbsp;:
+
+
+- Non Déterminé (N.D.)
+
+
+== [Etape_05] : Électronique et programmation ==
+C'est la deuxième grosse parti de ce projet. Pour piloter la CNC, il faut une électronique fiable et un soft spécifique, que nous devrons certainement adapté car la plupart des softs existant sont prévu pour travailler sur port parallèle. Au cour de cette étape, nous allons devoir déterminer toute l’électronique&nbsp;du projet, comme par exemple : Arduino, Raspberry Pi, le type de moteur pas à pas utiliser, etc.
+
+Une partie de l’électronique va aussi être choisie en fonction de ce que nous trouverons du coté soft et notamment le choix de l'Arduino et / ou du Raspberry Pi. Si nous trouvons par exemple un firmware pour Arduino comme une version spécialisée de Marlin (firmware des imprimantes 3D) ou un programme spécifique sous Linux.
+
+Le câblage et l'alimentation qui nous servira pour alimenter l'ensemble seront également à prévoir lors de cette étape.
+
+L’électronique, le câblage et peut être aussi l'alimentation seront à prendre en compte dans le dessin et la mise en plan. Cela signifie que si l'électronique est déterminée après le premier dessin global de la structure, ce dernier peut nécessiter d'être revisité en conséquence.
+
+
+<u>'''Ressources'''</u>&nbsp;:
+
+
+* Connaissance des différents éléments de base en électronique
+* Compétences en électronique numérique sera un plus
+* Compétence en programmation
+* 2 à trois personnes
+
+<u>'''Acteur(s)'''</u>&nbsp;:
+
+
+- Non Déterminé (N.D.)
+
+
+== [Etape_06] : Documentation et publication ==
+Au cour de chacune des étapes, il est primordiale de documenter son travail&nbsp;: la recherche (penser à copier les liens WEB et à mettre une légende avec chaque lien), les tests, les réussites, les échecs et surtout quanq l'étape est accomplie, faire une documentation complète expliquant tous le processus ayant permis sont aboutissement.
+
+Pour permettre une publication WEB, notamment sur le WIKI, il est nécessaire d''uniformiser les supports de rédaction et les répertoires. Pour cela, il faudra utiliser le modèle de document disponible sur le serveur sous l'arborescence suivante&nbsp;:
+
+\\192.168.1.100\projets\_COMMUN\0000-modelsDoc\modelDocTechniqueVoRoBoTicsA4Portrait
+
+Une fois le document crée, il devra être sauvegardé dans le dossier de l'étape correspondante sous l'arborescence suivante&nbsp;:
+
+\\192.168.1.100\projets\_COMMUN\CNC\06-userDoc\[Etape_0x]\
+
+Lorsque (enfin) la CNC sera réalisée et fonctionnelle, il faudra également réaliser un guide utilisateur qui permettra à chacun d'utiliser la CNC dans les meilleurs conditions. Ce guide utilisateur sera enregistré sous l'arborescence&nbsp;:
+
+\\192.168.1.100\projets\_COMMUN\CNC\06-userDoc\Manuel\
+
+Régulièrement, les documentations seront publiées sur le WIKI pour montrer notre avancement sur le projet. A la fin du projet, nous devrions être capable de proposer une documentation complète, depuis l'étude, jusqu’à la réalisation et le manuel utilisateur.
+
+
 = License =
-Ce document est mise à disposition selon les termes de la&nbsp;[http://creativecommons.org/licenses/by/4.0/ Licence Creative Commons Attribution 4.0 International].
-[[Fichier:CC88x31.png|cadre|centré]]
+Ce document est mise à disposition selon les termes de la&nbsp;[http://creativecommons.org/licenses/by/4.0/ Licence Creative Commons Attribution 4.0 International]. 
+
 
 = Bibliographie =
 = webographie =
+[http://www.arduino.cc/ http://www.arduino.cc/]
+
+[http://www.raspberrypi.org/ http://www.raspberrypi.org/]
+
+[https://www.openoffice.org/fr/ https://www.openoffice.org/fr/]
+
+
 = Rédaction en langue française =
 Partant du constat de terrain qu'une énorme masse d'information concernant les sujets qui nous intéressent comme entre autres l'impression 3D n'étaient disponibles que dans la langue de Shakespeare et que de nombreuses personnes dans notre entourage ne maîtrisaient pas la dite langue et soucieux de diffuser encore plus l'information, nous avons pris le parti, au VoLAB, de rédiger nos documents de préférence en langue française.
+
+= VoLAB =
+Un mot sur le VoLAB. VoLAB est un fablab implanté à environ 30km au nord-ouest de Paris dans la commune de Vauréal dans l'agglomération de Cergy Pontoise. Il est animé par l'association VoRoBoTics.
+
+Site internet [http://www.vorobotics.com/ www.vorobotics.com]
