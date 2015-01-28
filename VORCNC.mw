@@ -1,12 +1,5 @@
-<nowiki>← [[Accueil]] ← [[Nos Projets]]</nowiki>
+← [[Accueil]] ← [[Nos Projets]]
 
-
-<center>'''VORCNC'''</center>
-
-
-[[Image:|thumb|<center></center>]]
-
-= VoLAB =
 = Assocation VoRoBoTics =
 Date : 28/01/2015
 
@@ -53,7 +46,7 @@ Sachant cela et compte tenu de notre budget (pas loin de ZERO) nous devrons nous
 Un paramètre important qui sera également limité par nos choix techniques et surtout notre budget sera la précision. Nous espérons tenir un précision cumulée totale inférieure au dixième de millimètre.
 
 = Principe de fonctionnement et description de la CNC : =
-[[Image:triede300.jpg]]La CNC que nous voulons réaliser doit avoir des dimensions restreintes pour d'une part limiter l'encombrement, mais également réduire le coût. Ces dimensions seront déterminées par la longueur des vis à billes que nous pourrons nous procurer, soit des dimensions comprises entre 25x25x25 et 40x40x40.
+[[Image:triede300.jpg|cadre|gauche]]La CNC que nous voulons réaliser doit avoir des dimensions restreintes pour d'une part limiter l'encombrement, mais également réduire le coût. Ces dimensions seront déterminées par la longueur des vis à billes que nous pourrons nous procurer, soit des dimensions comprises entre 25x25x25 et 40x40x40.
 
 Toujours dans un souci d'encombrement, il a été décidé que le plateau serait fixe. La broche quant à elle, sera mobile en X,Y et Z. Dans cette optique la broche doit être montée sur un bâtis, mobile en Y. La broche elle même sera mobile sur le bâtis en X et Z.
 
@@ -252,7 +245,7 @@ Régulièrement, les documentations seront publiées sur le WIKI pour montrer no
 
 = License =
 Ce document est mise à disposition selon les termes de la&nbsp;[http://creativecommons.org/licenses/by/4.0/ Licence Creative Commons Attribution 4.0 International]. 
-
+[[Fichier:CC88x31.jpg|cadre|centré]]
 
 = Bibliographie =
 = webographie =
