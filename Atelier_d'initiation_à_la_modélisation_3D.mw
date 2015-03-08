@@ -1,31 +1,138 @@
-== Objectif ==
-Permettre aux stagiaires de créer et d'imprimer leur premier objet 3D.
-== Contenu ==
-* Petite présentation sur les différents types d'impression 3D
-* Un tout petit peu d'histoire
-* Un grain de vocabulaire
+= [[Image:logoFC_R_320.jpg]]Atelier initiation à la modélisation 3D =
+[[Image:|thumb|<center></center>]]
+
+= VoLAB =
+= Assocation VoRoBoTics =
+Date : 08/03/2015
+
+Auteur : MajorLee, Poltergeist42
+
+Relecteur : 
+
+Thème: Atelier / Formation
+
+Projet : atelierModelisation 3D
+
+= Objectif =
+L'objectif de cet atelier est de vous initier à la modélisation et à l'impression d'objets 3D avec le logiciel gratuit FreeCAD.
+
+
+= Contenu =
+Chapitre 1&nbsp;: introduction
+
+* Petite présentation sur les différents types d'impression 3D 
+* Un tout petit peu d'histoire 
+* Un grain de vocabulaire 
 * Qu'est que la modélisation 3D
-* Présentation du logiciel Freecad
-* Utilisation du logiciel Freecad (atelier pratique)
-* Présentation du logiciel Repetier
-* Présentation du logiciel Slic3r
-* Utilisation de Repetier (atelier pratique impression)
-== Prérequis ==
 
-== Déroulement ==
+Chapitre 2&nbsp;: la modélisation 3D
 
-== Dates ==
+* Présentation du logiciel FreeCAD
+* Utilisation du logiciel FreeCAD (atelier pratique&nbsp;: création d'un porte clés)
 
-== Inscriptions ==
+Chapitre 3&nbsp;: l'impression 3D
 
-== Foires aux questions ==
+* Présentation du logiciel Repetier 
+* Présentation du logiciel Slic3r 
+* Utilisation de Repetier (atelier pratique d'impression 3D)<br/> 
 
-'''A qui s'adresse cette formation ?'''
 
-'''Dois-je apporter mon ordinateur ?'''
+= Prérequis =
+Le seul prérequis, est d'être à l'aise avec l'outil informatique. Sans pour autant être spécialiste en informatique, vous devrez utiliser la souris, le clavier et … votre tête&nbsp;;-p. 
 
-'''Faut-il connaître la 3D ?'''
 
-'''Pourquoi aussi peu de place ?'''
+= Déroulement =
+L'atelier sera diviser en 3 parties
 
-'''Y aura-t-il d'autres cession ?'''
+
+== 1ère Partie : Accueil et présentation ==
+Après vous avoir accueilli dans nos locaux, nous ferons un petit tours de table pour que tous le monde puisse se présenter à la suite de quoi nous vous présenterons rapidement le déroulement de l'atelier.
+
+
+== 2ème Partie : La découverte de la modélisation 3D avec FreeCAD ==
+C'est la plus grosse partie de cet atelier. Nous allons ici vous permettre de découvrir et de manipuler le logiciel, Open Source, de modélisation 3D : FreeCAD.
+
+
+En plus de vous faire découvrir le logiciel, nous allons vous guider au travers de plusieurs étapes simples vers la réalisation d'un porte clés qui pourra par la suite être produit sur imprimante 3D.
+
+
+== 3ème partie : L'impression 3D ==
+Dans cette dernière partie, nous vous montrerons toutes les étapes nécessaires pour passer de votre fichier modélisé sous FreeCAD à une pièce imprimée en 3D.
+
+
+= Dates et Horaires =
+Ce premier atelier se déroulera le Mercredi 15 Avril 2015, de 19h30 à 22h30. Afin que cet atelier ne finisse pas trop tard, il est demandé à chaque participant d'arriver à l'heure.
+
+
+= Inscriptions =
+Les inscriptions se font par l'envoie de courriel avec vos coordonnées (Nom, Prénom et Adresse électronique) à l'adresse [mailto:formation@vorobotics.com formation@vorobotics.com]. 
+
+
+<u>'''N.B'''</u> : Pensez à renseigner l'objet de votre courriel avec l'intitulé suivant :
+
+"Inscription Atelier 15/05/2015"
+
+
+Malheureusement nous n'avons que peu de place. Il est donc possible que nous ne puissions vous accueillir lors de ce premier atelier. Si tel était le cas, nous vous préviendrons très rapidement et vous recontacterons, si vous le souhaiter, pour des sessions ultérieures.
+
+
+= Foires aux questions =
+== A qui s'adresse cette formation ?  ==
+Cet atelier est destiné en priorité aux personnes désireuses de réaliser un projet personnel, mais ne sachant pas comment s'y prendre.
+
+
+Si vous êtes simplement curieux de voir l'imprimante 3D fonctionner, vous pouvez venir nous voir lors d'une séance publique, tous les Mardi et Vendredi à partir de 20H00 et le Samedi à partir de 14H30.
+
+
+== Combien coûte cet atelier ? ==
+Cet atelier vous est proposé '''gratuitement''' par des bénévoles, donc offert par le VoLAB. Mais si vous voulez nous laisser une contribution en partant, elle sera la binevenue.
+
+
+== Dois-je apporter mon ordinateur ?  ==
+Non, nous vous mettons à disposition un PC sur le quel est déjà installer le logiciel FreeCAD. Cela permet d'avoir un parc homogène et également de simplifié le travail des intervenants.
+
+
+== Est ce que je peut venir avec mon propre projet à cet atelier ? ==
+Le but de cet atelier est de vous montrez qu'il est facile de créer une pièce avec un minimum de connaissances. Si vous souhaitez réalisez votre propre projet, vous pouvez venir le faire en tant que membre du VoLAB. Vous pourrez alors approfondir et partager vos connaissances en modélisation et impression 3D en compagnie des autres membres du fablab.
+
+
+== Est ce que je pourrais repartir avec ma pièce le soir même ? ==
+Compte-tenu des temps d'impression, nous ne pourrons malheureusement pas "imprimez" les pièces le soir même. Nous les imprimerons dans la semaine qui suivra et vous préviendrons par mail que votre objet est prêt à être enlevé gratuitement. Vous pourrez alors venir la chercher lors d'une séance publique : les Mardi et Vendredi à partir de 20H00 et le Samedi à partir de 14H30.
+
+
+== Faut-il connaître la 3D ?  ==
+Non, cet atelier est une initiation à la modélisation 3D. Vous n'avez donc pas besoin de connaissances particulières dans ce domaine.
+
+
+Si vous avez quelques notions de modélisation 3D, vous pourriez tout de même être intéressé par cet atelier, en découvrant son orientation particulière relatif à l'impression 3D.
+
+
+== Pourquoi aussi peu de places ?  ==
+La raison principale pour la quelle il y a aussi peu de places, c'est de pouvoir vous assister plus facilement. Nous voulons cet atelier interactif et convivial, ce qui n'est souvent pas possible avec un nombre de participants trop important.
+
+== Que deviendrons les informations personnelles collectées ? ==
+Nous nous engageons à n'utiliser les informations personnelles collectées dans le cadre de cette formation qu'aux seules fins de l'organisation de cette dernière.
+
+== Y aura-t-il d'autres cessions ?  ==
+Oui, nous souhaitons pouvoir organiser cet atelier (et d'autres à venir) de façon régulière. Si votre demande d'inscription a été rejetée faute de place, nous ne manquerons pas de vous recontacter pour les prochains ateliers si bien sûr vous le désirez.
+
+
+= License =
+Ce document est mise à disposition selon les termes de la&nbsp;[http://creativecommons.org/licenses/by/4.0/ Licence Creative Commons Attribution 4.0 International]. 
+
+[[Image:CC88x31.jpg]]Paternité 'by' :''L'œuvre peut être librement utilisée, à la condition de l'attribuer à l'auteur en citant son nom.'' 
+
+
+Note aux auteurs de documents du VoLAB, Vous avez la possibilité de changer de licence. Mais ce serait bien de rester libre et ouvert. Encore une fois ceci est une recommandation et pas une obligation.
+
+= Bibliographie =
+= webographie =
+[http://fr.wikipedia.org/wiki/Licence_Creative_Commons http://fr.wikipedia.org/wiki/Licence_Creative_Commons]
+
+= Rédaction en langue française =
+Partant du constat de terrain qu'une énorme masse d'information concernant les sujets qui nous intéressent comme entre autres l'impression 3D n'étaient disponibles que dans la langue de Shakespeare et que de nombreuses personnes dans notre entourage ne maîtrisaient pas la dite langue et soucieux de diffuser encore plus l'information, nous avons pris le parti, au VoLAB, de rédiger nos documents de préférence en langue française.
+
+= VoLAB =
+Un mot sur le VoLAB. VoLAB est un fablab implanté à environ 30km au nord-ouest de Paris dans la commune de Vauréal dans l'agglomération de Cergy Pontoise. Il est animé par l'association VoRoBoTics.
+
+Site internet [http://www.vorobotics.com/ www.vorobotics.com]
