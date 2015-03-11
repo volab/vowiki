@@ -1,0 +1,2 @@
+Botsim est un simulateur de robots utilisé dans le cadre de travaux sur les algorithmes évolutionnaires.
+La physique est simulée via la librairie opensource Bullet.
