@@ -4,9 +4,6 @@
 
 <big>''Pour bénéficier d'un accès l'un de ces media veuillez-vous adresser à l'un des membres du CA, ou envoyer un e-mail à contact@vorobotics.com.''</big>
 
-&nbsp;
-
-
 
 === Le site internet ===
 
@@ -21,9 +18,6 @@ Le menu "Résumés des séances" sert simplement a montrer les activités en cou
 
 ''USAGES : Les billets publiés doivent être catégorisés. 
 
-&nbsp;
-
-&nbsp;
 
 === Le Forum ===
 
@@ -37,11 +31,6 @@ Seul les membres inscrits peuvent poster. Tous les internautes peuvent lire les 
 
 ''USAGES : Les discussions doivent être nettoyée afin d'optimiser l'accès à l'information traitant du sujet initial.''
 
-&nbsp;
-
-&nbsp;
-
-&nbsp;
 
 === Le Wiki ===
  
@@ -52,8 +41,7 @@ Le partage des données techniques des projets élaborés au Volab entre les mem
 ''USAGES : La page de discussion d'un article doit être absolument réservé aux sujets de l'article attenant , et ne pas dévier sur d'autre points (pour cela il y a le forum).''
 
 
-
-&nbsp;
+== Outils internes ==
 
 === Les partages du serveur ===
 
@@ -66,14 +54,10 @@ Une arborescence de répertoire type est en place pour permettre le partage et l
 &nbsp;
 
 Les partages :
+* Applications, stocke les sources des applications les plus utilisées ou utiles au Lab
+* Echanges, sert à transmettre des fichiers entre les membres. Il contient aussi les fichiers utiles à tout le monde (datasheets, tutos, images, et l'identité graphique de l'association).
+* Projets, héberge les projets des membres sous leur nom, ou sous Commun pour les projets collaboratifs.
 
--Applications, stocke les sources des applications les plus utilisées ou utiles au Lab
-
--Echanges, sert à transmettre des fichiers entre les membres. Il contient aussi les fichiers utiles à tout le monde (datasheets, tutos, images, et l'identité graphique de l'association).
-
--Projets, héberge les projets des membres sous leur nom, ou sous Commun pour les projets collaboratifs.
-
-&nbsp;
 
 === Pydio ===
 
@@ -83,9 +67,6 @@ Permet d'accéder au serveur de fichiers du VoLab depuis l'extérieur.
 
 Repend les partages sous forme workspace.
 
-&nbsp;
-
-&nbsp;
 
 === Galette ===
 
@@ -93,7 +74,6 @@ Repend les partages sous forme workspace.
 
 La gestion des membres, adhérents et des cotisations. Réservé au CA. 
 
-&nbsp;
 
 === Gestion du matériel informatiques, serveurs, services informatique ===
 
