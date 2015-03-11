@@ -1,18 +1,22 @@
-'''MediaWiki a été installé avec succès.'''
+= Bienvenue sur le wiki du VoLab =
 
-Y a plus qu'à s'y mettre les amis.
+<u>'''Rubriques du wiki'''</u>:<br />
 
-Remarques : pensez à utiliser la page de discussion de chaque article (souvent négligée dans la plupart des wikis)<br />
-
-<u>'''Rubrique sur ce wiki'''</u>:<br />
-
-* [[Microcontroleurs]] (juste la page d'intro pour le moment)
-* [[Imprimantes 3D]] (vide pour le moment)
+* [[Microcontroleurs]] (juste une introduction pour le moment)
+* [[Imprimantes 3D]] (à compléter)
 * [[Nos Projets]]
 * [[Nos media]]
-* [[Atelier initiation à la modélisation 3D]] (WIP)
+* [[Atelier d'initiation à la modélisation 3D]] (WIP)
+* [[Atelier d'initiation à la programmation en langage C]] (WIP)
 
 
-<br />
-= Rédaction en langue française =
-Partant du constat de terrain qu'une énorme masse d'information concernant les sujets qui nous intéressent comme entre autres l'impression 3D n'étaient disponibles que dans la langue de Shakespeare et que de nombreuses personnes dans notre entourage ne maîtrisaient pas la dite langue et soucieux de diffuser encore plus l'information, nous avons pris le parti, au VoLAB, de rédiger nos documents de préférence en langue française.
+== Rédaction en langue française ==
+
+Partant du constat qu'une énorme masse d'information concernant les sujets qui nous intéressent comme entre autres l'impression 3D n'étaient disponibles que dans la langue de Shakespeare et que de nombreuses personnes dans notre entourage ne maîtrisaient pas la dite langue et soucieux de diffuser encore plus l'information, nous avons pris le parti, au VoLAB, de rédiger nos documents de préférence en langue française.
+
+
+== Remarques ==
+
+Pensez à utiliser la page de discussion de chaque article (souvent négligée dans la plupart des wikis).
+
+Une page d'aide à propos de la syntaxe du wiki est disponible [http://fr.wikipedia.org/wiki/Aide:Syntaxe ici].
