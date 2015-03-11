@@ -51,11 +51,11 @@ C'est l'espace de travail des projets personnels ou communs.
 
 Une arborescence de répertoire type est en place pour permettre le partage et la construction de documentation.
 
-
 Les partages :
 * Applications, stocke les sources des applications les plus utilisées ou utiles au Lab
 * Echanges, sert à transmettre des fichiers entre les membres. Il contient aussi les fichiers utiles à tout le monde (datasheets, tutos, images, et l'identité graphique de l'association).
 * Projets, héberge les projets des membres sous leur nom, ou sous Commun pour les projets collaboratifs.
+
 
 === Pydio ===
 
