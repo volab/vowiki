@@ -3,6 +3,7 @@ Todo list (par ordre de priorité décroissant) :
 * Wiki :
 ** Distinguer les informations publiques des informations internes.
 ** Distinguer les pages "publiables" des pages "brouillon" utilisées comme support de réflexion.
+* Améliorer le template openoffice :  utiliser les sytles
 * Préparation de l'[[atelier d'initiation à la modélisation 3D]]
 * Wiki : tester la sauvegarde/restauration des données, faire un tour d'horizon des wiki basés sur des fichiers + git
 * Installer un wiki interne (?)
@@ -10,5 +11,6 @@ Todo list (par ordre de priorité décroissant) :
 * Compléter la page [[Nos Projets]] : ajouter les projets existants, ajouter des (belles) photos tous les projets entamés
 * Préparation de l'[[atelier d'initiation à la programmation en langage C]]
 * Installer la ferme de calculs [[Ralf]] (avec du matériel recyclé de faible puissance le temps de tester l'environnement logiciel) : tester Oracle Grid Engine (SGE) ?
+* Outils com : redéfinir les besoins et définir les périmètre d'utilisation de chaque outil
 * Améliorer la charte graphique des sites (logo du wiki, etc.) : thèmes wikimedia et wordpress
 * ...
