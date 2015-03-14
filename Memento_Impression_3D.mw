@@ -1,0 +1,192 @@
+[[Image:Image1.jpg|thumb|]]<center>Les petites choses à savoir pour une bonne impression 3D</center>
+
+
+[[Image:|thumb|<center></center>]]
+
+= VoLAB =
+= Assocation VoRoBoTics =
+Date : 14/03/2015
+
+Auteur : Poltergeist42
+
+Relecteur : 
+
+Thème: Impression 3D
+
+Projet&nbsp;:
+
+= Introduction =
+Lorsque l'on parle d'impression 3D, les gens l'associe souvent au termes : "c'est magique !". Eh bien non, c'est juste "Technique". Cela fini pareil mais c'est tout. Il n'y a pas grand chose à savoir pour pouvoir faire de l'impression 3D de qualité, mais il faut cependant les connaître.
+
+
+Ce document ne concerne que l'impression 3D dite : "A dépôt de Filament" et ne concerne pas l'impression 3D dite "A frittage de poudre" (NDLR : Nous ne parlerons pas plus des Imprimantes 3D servant à imprimer des pizzas, des steck Hachés ou autre joyeuseté de ce genre).
+
+
+Nous n'avons pas l'intention de couvrir tous le sujet de l'impression 3D. Nous parlerons simplement des petites choses qu'il est bon de connaître.
+
+
+Nous traiterons donc :
+
+
+- Etude et Conception : il faut pensée impression 3D dès le début de conception de vos pièces
+
+- STL et Gcode : Une étape essentiel et sensible
+
+- Préparation et conditionnement de l'imprimante 3D : Une imprimante 3D, ça n'est pas une imprimante papier
+
+
+= Etude et Conception =
+== Il faut pensée impression 3D dès le début de conception de vos pièces ==
+Tout au long du processus de conception ou d'étude de vos pièces (l'étude ce fera aussi lorsque vous passerez des heures à regarder des pièces toutes faites sur des sites spécialisés), vous devrez vous souvenir qu'on ne peut pas imprimer n'importe quoi dans n'importe qu'elle condition.
+
+
+Pour que vos pièce soit imprimable vous devez garder certaine caractéristique de votre imprimante et notamment&nbsp;:
+
+- Le nombre d’extrudeur de votre imprimante&nbsp;: La plus part des imprimante ne possède qu'un seul extrudeur. Certaine en revanche possèdent plusieurs extrudeur (en général deux). Outre la possibilité de pouvoir imprimé avec des colories différent, le gros intérêt d'avoir plusieurs extrudeur, c'est de pouvoir utilisé différent matériau sur une même pièce. Vous pouvez par exemple utilisé un polymère rigide et un autre flexible pour faire des jointures ou des articulations ce qui offre déjà des perspectives intéressantes. Là où cela devient vraiment génial, c'est d'utiliser un matériau qui se dissout à l'aide d'un liquide comme du [http://www.csst.qc.ca/prevention/reptox/pages/fiche-complete.aspx?no_produit=248898 d-limonène] pour le HIPS (Polystirène choc ou '''H'''igh '''I'''mpact '''P'''oly'''S'''tyrene en anglais) ou de l'eau pour le [http://fr.wikipedia.org/wiki/Alcool_polyvinylique PVA] (Alcool Polyvinilique ou '''P'''oly'''V'''inyl '''A'''lcool en anglais). On peut alors laisser le trancheur (ou "slicer" en anglais) se charger d'ajouter lui même des supports. Il s'uffit de choisir l'extruder qui doit déposer le matériau soluble. On obtiens alors une plus grande souplesse dans la conception de vos pièces.
+
+
+- La présence ou non d'un ventilateur en sortie de buse&nbsp;: Certaine imprimante son équipé d'un système de ventilation qui envoie un flux d'air frais à une distance d'environ un ou deux millimètre sous la buse. Cela à pour effet de rigidifier le filament qui vient d'être extruder et donc vous permet de faire des petites impressions en suspension entre deux surfaces sans avoir besoin de rajouter de support. Attention, Vous devez toujours penser "Pont" et non "Balcon" comme nous le verrons plus bas.
+
+
+- le diamètre de votre filament en sortie de buse&nbsp;: 
+
+
+Ces informations vous permettent de savoir ce qui est réalisable et sous qu'elle condition.
+
+
+== Conception d'une nouvelle pièce ==
+''… Rédaction en cours ...''
+
+
+== Utilisation d'un fichier existant ==
+''… Rédaction en cours ...''
+
+
+= STL et Gcode =
+== Une étape essantiel et sencible ==
+''… Rédaction en cours ...''
+
+
+= Préparation et conditionnement de l'imprimante 3D =
+== Une imprimante 3D, ça n'est pas une imprimante papier ==
+Une imprimante 3D ne s'utilise pas comme une imprimante papier. On ne peux pas la sortir du carton et travailler avec. Il faut d'abord la régler et la préparer tout en respectant un certain nombre de détail. Comme ces opérations sont à répéter avant chaque impression ou presque, il est important de s’astreindre à une routine de contrôle avant chaque impression.
+
+
+=== Le filament ===
+- Tous les filament n'ont pas les mêmes caractéristiques. Il faut savoir à quelle température vous devez l'extruder et si il à besoin d'un plateau chauffant pour l’accroche sur le plateau.
+
+
+- Il faut le conserver à l'abri de l'humidité et éviter les endroit trop chaud. Votre filament aura naturellement tendance à absorbé l'humidité ambiante. Un filament chargé d'humidité ne permettra que de mauvaise impression et risque de ne pas adhérer au plateau. Si vous laisser votre filament dans un endroit trop chaud, il vas se déformer et rendra son utilisation plus difficile. Vous ne devez par exemple pas laisser votre filament (et encore moins votre hexapode imprimer avec amour) sur la plage arrière de votre voiture garée toute la journée en plein soleil&nbsp;: c'est Maaallll (histoire vraie !).
+
+
+- Les spires de la bobine ne doivent pas s'entrecroiser. Cela créer des nœuds lors de l'impression. Pour éviter cela il faut laisser quelques tours flottant et surveiller régulièrement si il n'y pas de tension du filament en cous d'impression.
+
+
+- Il ne faut pas laisser la bobine de filament posé statiquement sur une table. Il faut que le bobine puisse délivrer son filament sans frottement et sans accoue. Pour cela, il vous faut un support de filament ou mieux, un dévidoir.
+
+
+- Il faut respecter le sens du filament (du à la courbure de la bobine). La position de votre extruder nécessite d'amener le filament dans une certaine position, il faut être vigilant lorsque l'on positionne la bobine et le filament par rapport à l'imprimante. Si vous contraignez le filament dans le sens opposé à sa courbure naturel, se dernier risque cassé. Votre impression sera alors échoué et votre bobine risque de s’emmêler
+
+
+=== Faire le Zéro ===
+- Pour une bonne qualité d'impression, il faut "faire le zéro", comme on pourrait régler la tare d'une balance avant une pesée. Cette opération permet de ne pas taper (ou même de creuser) dans le plateau avec la buse, ce qui pourrait abîmer et la buse et le plateau. Cela permet également d'obtenir une bonne accroche des premières couches et donc évité de se retrouver avec une pièce qui se balade sur le plateau en plein milieu d'une impression.
+
+
+- Il est nécessaire de refaire le zéro régulièrement. En fonction de la qualité et la fiabilité de votre imprimante, il faudra le vérifier sur un intervalle qui vas de&nbsp;: "une fois par séance", à&nbsp;: "entre chaque impression".
+
+
+- Il faut toujours s'assurer que la buse est propre avant de refaire le zéro. Si il reste une petite goutte de matériaux à l’extrémité de la buse, votre zéro sera faussé car lorsque la buse montera en température, la goutte vas fondre et donc décaler votre zéro de la hauteur de la goutte.
+
+
+- La bonne distance pour le zéro est de 2 dixième, soit l'épaisseur d'une feuille de papier plier en deux. C'est d’ailleurs avec une feuille de papier plier en deux qu'il faut refaire le zéro.
+
+<nowiki>* Placer la feuille sur le plateau au niveau de chaque point de contrôle qui est indiquer par l'imprimante.</nowiki>
+
+<nowiki>* </nowiki>Bouger la feuille d'avant en arrière sur le plateau. Si vous sentez que la feuille "gratte" légèrement avec une petite résistance mais sans pour autant que la feuille ne se plie ou se déchire, alors votre point de contrôle est bon.
+
+<nowiki>* </nowiki>Faire la même opération pour chaque point de contrôle
+
+<nowiki>* </nowiki>recommencer autant de fois que nécessaire
+
+
+- En principe, on ne peut pas faire le zéro si la buse est au dessus de 60°. Cela reste malgré tout très chaud et vous devez faire attention à ne pas vous brûler.
+
+
+=== Préparer le plateau pour une meilleur accroche ===
+Avant de faire le zéro, il faut préparer le plateau. Pour cela, il y a plusieurs méthode à adapté en fonction de l'imprimante, du matériaux extruder et surtout de vos préférences. 
+
+
+Toutes les méthodes que nous allons vous présenter sont à effectuer avec des gants car même si vous avez les mains propre, elles ont quant même une fine couche que graisse que vous risquez de déposer sur le plateau en le manipulant si vous n'y prenez pas garde.
+
+
+- La laque à cheveux (oui, vous avez bien lu). Certaine Laque à cheveux son utilisé pour fixer la première couche de votre impression sur le plateau. Il faut la pulvériser à 25 ou 30 centimètres du plateau en parcourant toute sa surface dans un mouvement fluide et régulier. Pour optimiser la couche de laque déposée, vous de la pulvériser en prenant soin de systématiquement dépasser les limites du plateau.
+
+
+- [http://fr.wikipedia.org/wiki/Polyimide Le Polyimide] (Ou du nom de la marque "KAFTONS")&nbsp;: communément appelé le ruban adhésif qui pue&nbsp;! Il s'agit d'un film "plastique" (le terme n'est pas vraiment approprié) auto-collant que l'on applique sur le plateau. Il est difficile à manipuler car on se retrouve avec des bulles que l’on doit enlever ("on maroufle, on maroufle, on maroufle" comme dit notre chère Valérie D.). Pour éviter d'avoir des bulles, vous pouvez pulvériser de l'eau savonneuse sur le plateau (a condition qu'il soit en verre) avant d'y appliquer le Polyimide.
+
+
+- Le BlueTape ou le BrownTape&nbsp;: C'est du ruban adhésif bleu ou du maron … Il s'agit d'un ruban adhésif de peintre en version de luxe. Sa surface légèrement granuleuse et molletonnée en fait le parfait matériau pour l'accroche des premières couche (Comment ça on essaye de vous influencer ?). Attention cependant à ne pas prendre n'importe quel ruban adhésif acheté en magasin de bricolage. Ce dernier est inadapté car il ne permet pas l'accroche du filament. (Même si vous acheté le ruban adhésif bleu de Brico machin Truc, il ne sera pas adapté. Il faut vous le procurer au près des revendeur de matériel et accessoire d'imprimante 3D.
+
+
+- La soupe d'ABS (sur lit chauffant)&nbsp;: Il ne s'agit pas ici du dernier plat en vogue dans les restaurant de cuisine expérimentale, mais d'une petite astuce qui consiste à diluée des petits morceaux d'ABS dans de l’acétone pour ensuite l'étaler sur le plateau de l'imprimante. Cela n'est efficace que si vous avez une imprimante équipée d'un plateau chauffant.
+
+
+= Quant ça veut pas, ça veut pas ! =
+Parfois vous avez beau tout essayer (y compris les menaces et les supplications), il n'y a rien à faire le filament ne veut pas adhérer, la pièce à tendance à se replier sur elle même ou la pièce "part en balade" en cours d'impression. Vous pouvez versifier et ou essayer quelques petites choses&nbsp;:
+
+
+- Le filament ne veut pas adhérer
+
+* Assurez vous que le plateau est propre. N'hésitez pas à change l'adhésif ou à nettoyer le plateau. Avant de rappliquer votre adhésif, laque ou "soupe".
+* Assurez vous que la buse de votre extruder est propre avant de refaire le zéro. Si c'est déjà le cas, vous pouvez essayer de faire un zéro un tout petit peu plus "mordant" (qui accroche légèrement plus la feuille de papier plier en deux).
+
+''… Rédaction en cours ...''
+
+
+= TODO =
+1) compléter&nbsp;:Conception d'une nouvelle pièce
+
+2) Compléter&nbsp;:Utilisation d'un fichier existant
+
+3) Compléter&nbsp;: Une étape essentiel et sensible
+
+4) Parler des temps d'impressions
+
+5) Ajouter des photos et dessins
+
+6) Compléter&nbsp;: Quant ça veut pas, ça veut pas&nbsp;!
+
+<nowiki>* taux d'écrasement de la première couche dans le tranchage</nowiki>
+
+<nowiki>* Chaleur constante dans l’environnement</nowiki>
+
+<nowiki>* les radeaux</nowiki>
+
+= License =
+Ce document est mise à disposition selon les termes de la&nbsp;[http://creativecommons.org/licenses/by/4.0/ Licence Creative Commons Attribution 4.0 International]. 
+
+[[Image:CC88x31.jpg]]Paternité 'by' :''L'œuvre peut être librement utilisée, à la condition de l'attribuer à l'auteur en citant son nom.'' 
+
+
+Note aux auteurs de documents du VoLAB, Vous avez la possibilité de changer de licence. Mais ce serait bien de rester libre et ouvert. Encore une fois ceci est une recommandation et pas une obligation.
+
+= Bibliographie =
+= Webographie =
+- [http://www.csst.qc.ca/prevention/reptox/pages/fiche-complete.aspx?no_produit=248898 d-limonène]&nbsp;: [http://www.csst.qc.ca/prevention/reptox/pages/fiche-complete.aspx?no_produit=248898 http://www.csst.qc.ca/prevention/reptox/pages/fiche-complete.aspx?no_produit=248898]
+
+
+- [http://fr.wikipedia.org/wiki/Alcool_polyvinylique PVA]&nbsp;: [http://fr.wikipedia.org/wiki/Alcool_polyvinylique http://fr.wikipedia.org/wiki/Alcool_polyvinylique]
+
+
+- [http://fr.wikipedia.org/wiki/Polyimide Polyimide]&nbsp;: [http://fr.wikipedia.org/wiki/Polyimide http://fr.wikipedia.org/wiki/Polyimide]
+
+
+[http://fr.wikipedia.org/wiki/Licence_Creative_Commons http://fr.wikipedia.org/wiki/Licence_Creative_Commons]
+
+= Rédaction en langue française =
+Partant du constat de terrain qu'une énorme masse d'information concernant les sujets qui nous intéressent comme entre autres l'impression 3D n'étaient disponibles que dans la langue de Shakespeare et que de nombreuses personnes dans notre entourage ne maîtrisaient pas la dite langue et soucieux de diffuser encore plus l'information, nous avons pris le parti, au VoLAB, de rédiger nos documents de préférence en langue française.
+
+= VoLAB =
+Un mot sur le VoLAB. VoLAB est un fablab implanté à environ 30km au nord-ouest de Paris dans la commune de Vauréal dans l'agglomération de Cergy Pontoise. Il est animé par l'association VoRoBoTics.
+
+Site internet [http://www.vorobotics.com/ www.vorobotics.com]
