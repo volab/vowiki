@@ -1,9 +1,7 @@
-[[Image:Image1.jpg|thumb|]]<center>Les petites choses à savoir pour une bonne impression 3D</center>
+[[Image:Image1.jpg|thumb|]]<br />
+<center>Les petites choses à savoir pour une bonne impression 3D</center><br />
 
 
-[[Image:|thumb|<center></center>]]
-
-= VoLAB =
 = Assocation VoRoBoTics =
 Date : 14/03/2015
 
@@ -100,13 +98,13 @@ Une imprimante 3D ne s'utilise pas comme une imprimante papier. On ne peux pas l
 
 - La bonne distance pour le zéro est de 2 dixième, soit l'épaisseur d'une feuille de papier plier en deux. C'est d’ailleurs avec une feuille de papier plier en deux qu'il faut refaire le zéro.
 
-<nowiki>* Placer la feuille sur le plateau au niveau de chaque point de contrôle qui est indiquer par l'imprimante.</nowiki>
+* Placer la feuille sur le plateau au niveau de chaque point de contrôle qui est indiquer par l'imprimante.
 
-<nowiki>* </nowiki>Bouger la feuille d'avant en arrière sur le plateau. Si vous sentez que la feuille "gratte" légèrement avec une petite résistance mais sans pour autant que la feuille ne se plie ou se déchire, alors votre point de contrôle est bon.
+* Bouger la feuille d'avant en arrière sur le plateau. Si vous sentez que la feuille "gratte" légèrement avec une petite résistance mais sans pour autant que la feuille ne se plie ou se déchire, alors votre point de contrôle est bon.
 
-<nowiki>* </nowiki>Faire la même opération pour chaque point de contrôle
+* Faire la même opération pour chaque point de contrôle
 
-<nowiki>* </nowiki>recommencer autant de fois que nécessaire
+* recommencer autant de fois que nécessaire
 
 
 - En principe, on ne peut pas faire le zéro si la buse est au dessus de 60°. Cela reste malgré tout très chaud et vous devez faire attention à ne pas vous brûler.
@@ -155,17 +153,17 @@ Parfois vous avez beau tout essayer (y compris les menaces et les supplications)
 5) Ajouter des photos et dessins
 
 6) Compléter&nbsp;: Quant ça veut pas, ça veut pas&nbsp;!
+* taux d'écrasement de la première couche dans le tranchage
 
-<nowiki>* taux d'écrasement de la première couche dans le tranchage</nowiki>
+* Chaleur constante dans l’environnement
 
-<nowiki>* Chaleur constante dans l’environnement</nowiki>
-
-<nowiki>* les radeaux</nowiki>
+* les radeaux
 
 = License =
 Ce document est mise à disposition selon les termes de la&nbsp;[http://creativecommons.org/licenses/by/4.0/ Licence Creative Commons Attribution 4.0 International]. 
 
-[[Image:CC88x31.jpg]]Paternité 'by' :''L'œuvre peut être librement utilisée, à la condition de l'attribuer à l'auteur en citant son nom.'' 
+[[Image:CC88x31.jpg|cadre|ceentré]]<br />
+Paternité 'by' :''L'œuvre peut être librement utilisée, à la condition de l'attribuer à l'auteur en citant son nom.'' 
 
 
 Note aux auteurs de documents du VoLAB, Vous avez la possibilité de changer de licence. Mais ce serait bien de rester libre et ouvert. Encore une fois ceci est une recommandation et pas une obligation.
