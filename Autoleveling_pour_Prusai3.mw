@@ -1,0 +1,729 @@
+[[Image:Image1.jpg|thumb|]]<center>Bed Autoleveling</center>
+
+<center>pour Prusa i3 EiNSTeiN/Reworks</center>
+
+<center>Wade Extruder</center>
+
+
+[[Image:|thumb|<center></center>]]
+
+= VoLAB =
+= Assocation VoRoBoTics =
+Date : 01/01/2015
+
+Auteur : J.SORANZO
+
+Thème: impression 3D
+
+Projet Prusa i3 autoleveling
+
+= Problématique =
+Implémenter l'autoleveling sur la Prusa i3/EiNSTeiN/Rework et son extruder Wade modifié.
+
+[[Image:images2.jpg|thumb|<center>Wade extruder "original"</center>]]A la base l'extruder Wade est fait pour les imprimante à chariot horizontal. La i3 a un chariot vertical.
+
+[[Image:Image3.jpg|thumb|<center>Wade extruder pour Prusa i3</center>]]
+
+
+= Répertoire de travail =
+Pour les fichiers 3D
+
+VoRoboticsAsso\04-Matos\3DPrinter\RepRap\3DModeling\Prusai3SolidWorksRecapJojo\extruderWade
+
+Pour la compilation de Marlin
+
+Donnees\008_iao_wrk\Arduino\Croquis\Marlin\Marlin-1.0.1_fromGithub
+
+
+= [[Image:support.jpg|thumb|Illustration 1: Support]]Version A =
+Servo moteur 9g
+
+Contacteur mécanique de l'axe Z
+
+2 pièces conçues: Support et pieds
+
+[[Image:pied.jpg|thumb|''Illustration 2: Pieds'']] 
+
+
+A priori un déplacement vertical de 10mm 13mmsuffit pour ne pas entrer en collision avec le plateau
+
+[[Image:image4.jpg|thumb|''Illustration 3: Ecart safe buse plateau'']]
+
+
+== Montage ==
+La conception mécanique initiale présente de grosse lacunes notamment au niveau du montage.
+
+Montage du servo sur le "support": les 2 trous de 2.8 sont trop grands (à passer à 1). Ce qui oblige à faire une montage vis/écrou au lieu d'une simple vis plastique en 2.5mm et donc les trou dans le servo sont à agrandir (opération très délicate). De plus le montage vis/écrou est très délicat à assemblé et compte tenu de l'écart entre les 2 parois, il ne faut pas le serrer tout de suite pour pouvoir reculer le servo et passer le pied.
+
+Le montage sur support sur l'extruder se fais grâce à un écrou monté sur une des vis inférieur de fixation de l'extruder remplacée par 27mm pour l'occasion. On se retrouve donc avec 2 écrous sur cette fixation (pas génial). L'écrou est de plus difficile à mettre en place et pour démonter, il faudra penser d'abord à démonter le système d'autoleveling avant de déposer l'extruder. Solution : enlever les 2 écrou dans l'extruder (ce dernier pouvant être mis et maintenu en place par les 2 vis du haut). Mettre des écrous prisonniers dans le "support".
+
+Écarter encore d'au moins 5 à 8mm les parties verticale du support pour dégager les fils de l'extruder.
+
+Agrandir le trou de 8mm
+
+== Modifications dans Marlin ==
+Toutes dans configuration.h
+
+ <nowiki>#define ENABLE_AUTO_BED_LEVELING</nowiki>
+
+
+ <nowiki>#define RIGHT_PROBE_BED_POSITION 170</nowiki>
+
+
+ <nowiki>#define AUTO_BED_LEVELING_GRID_POINTS 3</nowiki>
+
+
+ <nowiki>#define X_PROBE_OFFSET_FROM_EXTRUDER -37</nowiki>
+ <nowiki>#define Y_PROBE_OFFSET_FROM_EXTRUDER 17</nowiki>
+ <nowiki>#define Z_PROBE_OFFSET_FROM_EXTRUDER -9.5</nowiki>
+
+
+ <nowiki>#define Z_RAISE_BEFORE_HOMING 14</nowiki>
+
+
+ <nowiki>#define NUM_SERVOS 1 // Servo index starts with 0 for M280 command</nowiki>
+
+
+ <nowiki>#define SERVO_ENDSTOPS {-1, -1, 0} </nowiki>
+
+
+ <nowiki>#define SERVO_ENDSTOP_ANGLES {0,0, 0,0, 40,130}</nowiki>
+
+
+ <nowiki>#define PROBE_SERVO_DEACTIVATION_DELAY 300</nowiki>
+
+
+== Câblage ==
+L'alimentation du servomoteur est directement prélevé sur la carte ATMEGA vie un cavalier présent sur la carte RAMPS. Il se pourrait qu'à force de tirer sur cette sortie qui alimente également l'écran LCD et son rétroéclairage, elle finisse par ne plus être suffisante. On peut alors se poser la question de comment rentrer du 5V dans RAMPS pour alimenter l'arduino ? Voir en fin de document.
+
+5V pour le servo fourni par un convertisseur 12V/5V directement sur l'alimentation principale : attention GND. Mesurer la continuïté du GND au travers du convertisseur DC/DC. Le GND (0V) doit être commun pour tous les équipements (Arduino, RAMPS, SERVO, LCD...)
+
+Questionnement&nbsp;: Endstop sur Z mais '''que se passera-t-il quand on commandera un zero''' ?
+
+[[Image:rampsCavalier.jpg|thumb|''Illustration 4: Cavalier 5V'']]5V point central.
+
+
+=== Câblage de senseur ===
+Problème il s'agit du senseur Z donc si on branche on ne peut plus faire le 0 Z.
+
+
+<nowiki>M280 - Position an RC Servo P<index> S<angle/microseconds>, ommit S to report back current angle</nowiki>
+
+M280 P0 S130 : en haut
+
+M280 P0 S40 : en bas
+
+hauteur de sauvegarde 15mm
+
+Index du premier servo brancher à la RAMPS est 0 :
+
+
+Même si:
+
+ <nowiki>#define NUM_SERVOS 1 // Servo index starts with 0 for M280 command</nowiki>
+
+== Essais ==
+ Code trouvé sur [http://www.zem.fr/imprimante-3d-auto-bed-leveling-facile/#codesyntax_2 http://www.zem.fr/imprimante-3d-auto-bed-leveling-facile/#codesyntax_2]
+
+ Dans Slic3r/Printer setting/Strat G-code
+ Attention au G28 déjà présent.
+ A faire à la main avant.
+
+ G90 ; Passage coordonnees absolues
+ G28 X Y ; Home X Y
+ //G28 Z ; home Z (pas necessaire)
+ G29 ; Palpage
+ G90 ; Passage coordonnées absolues
+ G1 Z2 F4000 ; rétractation palpeur
+
+ Pas de gestion du Servo ???? G29 prend peut-être en charge.
+
+=== Procédure pour mesurer les paramètres pour Marlin ===
+Méthode de base issu du read me de Marlin
+
+My preferred method:
+
+<nowiki>* a) Make a small mark in the bed with a marker/felt-tip pen.</nowiki>
+
+<nowiki>* b) Place the hotend tip as *exactly* as possible on the mark, touching the bed. Raise the hotend 0.1mm (a regular paper thickness) and zero all axis (G92 X0 Y0 Z0);</nowiki>
+
+<nowiki>* d) Raise the hotend 10mm (or more) for probe clearance, lower the Z probe (Z-Endstop) with M401 and place it just on that mark by moving X, Y and Z;</nowiki>
+
+<nowiki>* e) Lower the Z in 0.1mm steps, with the probe always touching the mark (it may be necessary to adjust X and Y as well) until you hear the "click" meaning the mechanical endstop was trigged. You can confirm with M119;</nowiki>
+
+<nowiki>* f) Now you have the probe in the same place as your hotend tip was before. Perform a M114 and write down the values, for example: X:24.3 Y:-31.4 Z:5.1;</nowiki>
+
+<nowiki>* g) You can raise the z probe with M402 command;</nowiki>
+
+<nowiki>* h) Fill the defines bellow multiplying the values by "-1" (just change the signal)</nowiki>
+
+
+[[Image:bandeauRepetier.jpg]]Activer les acquittements pour voir les retours des commandes
+
+
+Compléments:
+
+A) avec le câblage Z-END stop normal faire sont zéro – Marlin avec SERVO mais sans autoleveling (commandes des servo active) attention toutefois le pied se baisse chaque fois qu'on commande un Z zéro. Astuce : débrancher le servo moteur mais sans l'autoleveling.
+
+B) cabler le nouveau Z-END stop
+
+# appliquer la procédure ci-dessus
+
+# activer l'autoleveling dans Marlin
+
+Problème avec la commande G92, une fois saisie, elle ne permet plus d'entrer des position négative sauf si:
+
+ <nowiki>#define min_software_endstops false</nowiki>
+
+In Configuration.h, this will allow you to move to negetive positions. 
+
+(http://forums.reprap.org/read.php?146,314645,323274#msg-323274)
+
+Procédure délicate mais même sans la commande G92, on y arrive, il suffit de savoir faire une soustraction.
+
+Position buse - Position senseur donne directement les valeurs à entrer dans Marlin et pas besoin de multiplier par -1
+
+
+Mes valeurs:
+
+   <nowiki>#define X_PROBE_OFFSET_FROM_EXTRUDER -37.4</nowiki>
+   <nowiki>#define Y_PROBE_OFFSET_FROM_EXTRUDER 16.8</nowiki>
+   <nowiki>#define Z_PROBE_OFFSET_FROM_EXTRUDER -9.5</nowiki>
+
+X remplacer par -37 et Y par 16 à cause de l'erreur:
+
+ In file included from Marlin.h:22:0,
+                  from BlinkM.cpp:5:
+ Configuration.h:417:41: error: floating constant in preprocessor expression
+    <nowiki>#define X_PROBE_OFFSET_FROM_EXTRUDER -37.4</nowiki>
+                                          ^
+ Configuration.h:457:9: note: in expansion of macro 'X_PROBE_OFFSET_FROM_EXTRUDER'
+      <nowiki>#if X_PROBE_OFFSET_FROM_EXTRUDER < 0</nowiki>
+          ^
+ Configuration.h:417:41: error: floating constant in preprocessor expression
+    <nowiki>#define X_PROBE_OFFSET_FROM_EXTRUDER -37.4</nowiki>
+                                          ^
+ Configuration.h:462:13: note: in expansion of macro 'X_PROBE_OFFSET_FROM_EXTRUDER'
+        <nowiki>#if ((X_PROBE_OFFSET_FROM_EXTRUDER * AUTO_BED_LEVELING_GRID_POINTS) >= (RIGHT_PROBE_BED_POSITION - LEFT_PROBE_BED_POSITION))</nowiki>
+              ^
+ Configuration.h:418:40: error: floating constant in preprocessor expression
+    <nowiki>#define Y_PROBE_OFFSET_FROM_EXTRUDER 16.8</nowiki>
+                                         ^
+ Configuration.h:466:9: note: in expansion of macro 'Y_PROBE_OFFSET_FROM_EXTRUDER'
+      <nowiki>#if Y_PROBE_OFFSET_FROM_EXTRUDER < 0</nowiki>
+          ^
+ Configuration.h:418:40: error: floating constant in preprocessor expression
+    <nowiki>#define Y_PROBE_OFFSET_FROM_EXTRUDER 16.8</nowiki>
+                                         ^
+ Configuration.h:471:13: note: in expansion of macro 'Y_PROBE_OFFSET_FROM_EXTRUDER'
+        <nowiki>#if ((Y_PROBE_OFFSET_FROM_EXTRUDER * AUTO_BED_LEVELING_GRID_POINTS) >= (BACK_PROBE_BED_POSITION – FRONT_PROBE_BED_POSITION))</nowiki>
+
+Après tout le probbing n'est pas au dixième en X et Y
+
+
+[[Image:Img_3686_versionA_servo.jpg|thumb|''Illustration 5: Version avec escamotage à servo moteur'']]
+
+
+=== Premiers palpages ===
+ 18:43:02.703 : Bed x: 15.00 y: 20.00 z: -0.07
+ 18:43:11.856 : Bed x: 92.00 y: 20.00 z: -0.03
+ 18:43:21.146 : Bed x: 169.00 y: 20.00 z: -0.29
+ 18:43:29.563 : Bed x: 170.00 y: 80.00 z: 0.40
+ 18:43:38.778 : Bed x: 93.00 y: 80.00 z: 0.19
+ 18:43:47.932 : Bed x: 16.00 y: 80.00 z: 0.30
+ 18:43:56.850 : Bed x: 15.00 y: 140.00 z: 0.51
+ 18:44:06.182 : Bed x: 92.00 y: 140.00 z: 0.17
+ 18:44:15.123 : Bed x: 169.00 y: 140.00 z: 0.27
+
+
+ 18:48:08.487 : Bed x: 15.00 y: 20.00 z: -0.12
+ 18:48:17.597 : Bed x: 92.00 y: 20.00 z: -0.14
+ 18:48:26.820 : Bed x: 169.00 y: 20.00 z: -0.21
+ 18:48:35.930 : Bed x: 170.00 y: 80.00 z: -0.39
+ 18:48:44.924 : Bed x: 93.00 y: 80.00 z: 0.05
+ 18:48:54.055 : Bed x: 16.00 y: 80.00 z: 0.02
+ 18:49:03.017 : Bed x: 15.00 y: 140.00 z: 0.21
+ 18:49:12.348 : Bed x: 92.00 y: 140.00 z: 0.03
+ 18:49:21.624 : Bed x: 169.00 y: 140.00 z: -0.16
+
+=== Gros défaut de conception ===
+Le talon de la botte entre en collision avec le plateau dans 2 cas: lors d'un homeaxis Z et lors des mesures avec G29. La cause en est que avant de sortie le capteur, il y a bien dans marlin déplacement en Z à la position Z_RAISE_BEFORE_HOMING mais pas au moment de la rentrée.
+
+
+Ligne 1236: fonction static void homeaxis(int axis) {
+
+     if (axis==Z_AXIS) retract_z_probe();
+
+A chaque fois on retrouve bien Z_RAISE_BEFORE_HOMING avant d'appeler HOEMAXIS(Z). Le problème est que 
+
+       <nowiki>destination[Z_AXIS] = </nowiki>Z_RAISE_BEFORE_HOMING * home_dir(Z_AXIS) * (-1);    // Set destination away from bed
+               <nowiki>feedrate = max_feedrate[Z_AXIS];</nowiki>
+               <nowiki>plan_buffer_line(destination[X_AXIS], destination[Y_AXIS], destination[Z_AXIS], destination[E_AXIS], feedrate, active_extruder);</nowiki>
+               st_synchronize();
+
+               HOMEAXIS(Z);
+
+Extrait de code L1597 de marlin_main.cpp
+
+= Version A.1 =
+Reprise des pièces mécaniques. Application des modification proposée au §Montage avec la distance supplémentaire par rapport à l'extruder de 10mm au lieu de 8. Et surtout redesign complet du pied pour supprimer le talon avec création d'une carte endstop verticale.
+
+
+[[Image:switch_sch.jpg]]Mes valeurs pour le design A.1:
+
+   <nowiki>#define X_PROBE_OFFSET_FROM_EXTRUDER -45</nowiki>
+   <nowiki>#define Y_PROBE_OFFSET_FROM_EXTRUDER 2</nowiki>
+   <nowiki>#define Z_PROBE_OFFSET_FROM_EXTRUDER -11.1</nowiki>
+
+
+== Essais ==
+Petits problème de répétabilité: entre 2 probing à vide, on obtient pas tout à fait les mêmes valeurs.
+
+ 23:23:10.113 : Bed x: 15.00 y: 140.00 z: 0.26
+ 23:23:20.271 : Bed x: 15.00 y: 20.00 z: 0.06
+ 23:23:30.719 : Bed x: 170.00 y: 70.00 z: -0.10
+ 23:23:30.729 : echo:endstops hit:  Z:-0.10
+
+
+ 16:48:02.129 : Bed x: 15.00 y: 140.00 z: 0.12
+ 16:48:12.285 : Bed x: 15.00 y: 20.00 z: -0.05
+ 16:48:22.877 : Bed x: 170.00 y: 70.00 z: -0.43
+ 16:48:22.877 : echo:endstops hit:  Z:-0.43
+
+
+Premier essai d'impression (l'idée est de dire allons-y, nous verrons bien !)
+
+L'imprimante imprime au moins à 10mm du plateau !!! Vérification du paramètre Z_PROBE_OFFSET_FROM_EXTRUDER.
+
+L'axe Z ne prend pas en compte du tout Z_PROBE_OFFSET_FROM_EXTRUDER
+
+Différents essais:
+
+Z_PROBE_OFFSET_FROM_EXTRUDER +20 => aucun effet
+
+min_software_endstops true : aucun effet
+
+Seul endroit où c'est utilisé dans Marlin :
+
+ <nowiki>void clamp_to_software_endstops(float target[3])</nowiki>
+ {
+   if (min_software_endstops) {
+     <nowiki>if (target[X_AXIS] < min_pos[X_AXIS]) target[X_AXIS] = min_pos[X_AXIS];</nowiki>
+     <nowiki>if (target[Y_AXIS] < min_pos[Y_AXIS]) target[Y_AXIS] = min_pos[Y_AXIS];</nowiki>
+
+     float negative_z_offset = 0;
+     <nowiki>#ifdef ENABLE_AUTO_BED_LEVELING</nowiki>
+       if (Z_PROBE_OFFSET_FROM_EXTRUDER<nowiki> < 0) negative_z_offset = negative_z_offset + Z_PROBE_OFFSET_FROM_EXTRUDER;</nowiki>
+       <nowiki>if (add_homing[Z_AXIS] < 0) negative_z_offset = negative_z_offset + add_homing[Z_AXIS];</nowiki>
+     <nowiki>#endif</nowiki>
+
+     <nowiki>if (target[Z_AXIS] < min_pos[Z_AXIS]+negative_z_offset) target[Z_AXIS] = min_pos[Z_AXIS]+negative_z_offset;</nowiki>
+   }
+
+Désactivation écran LCD car :
+
+ Configuration.h|343|#define min_software_endstops false|
+ Marlin_main.cpp|3948|if (min_software_endstops) {|
+ <nowiki>ultralcd.cpp|638|if (min_software_endstops && current_position[axis] < min) current_position[axis] = min;|</nowiki>
+
+SANS EFFET
+
+et enfin min_software_endstops false et LCD désactivé.
+
+Et en mode grille ?
+
+
+'''Seule configuration fonctionnelle est de mettre un offset Z négatif dans SLIC3r'''
+
+[[Image:supportA2.jpg|thumb|''Illustration 6: Support version A.2'']]
+
+= Varsion A.2 =
+Au cours des premiers tests, nous avons constaté un problème de répétabilité dans les mesures qui n'a fait que se confirmer au cours des impressions suivantes.
+
+Pour y remédier, nous avons renforcé la pièce support. Nous avons également taraudé directement dans la pièce les trous de fixation au diamètre M4 ce qui permet de se passer d'écrou. cf.wiki.
+
+
+[[Image:IMG_3729_autoLevelingSensor.JPG|thumb|''Illustration 7: Mécanisme sensor version A2'']]
+
+
+Les essais suivant nous montrent que cela ne corrige pas le problème.
+
+
+
+{| style="border-spacing:0;"
+| style="border-top:0.002cm solid #000000;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| Mesure 1
+| style="border-top:0.002cm solid #000000;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| Mesure 2
+| style="background-color:#cc9966;border-top:0.002cm solid #000000;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| Ecart vs M1
+| style="border-top:0.002cm solid #000000;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| Mesure 3
+| style="background-color:#cc9966;border-top:0.002cm solid #000000;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| Ecart vs M1
+| style="border-top:0.002cm solid #000000;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| Mesure 4
+| style="background-color:#cc9966;border-top:0.002cm solid #000000;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| Ecart vs M1
+| style="border-top:0.002cm solid #000000;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| Mesure 5
+| style="background-color:#cc9966;border:0.002cm solid #000000;padding:0.097cm;"| Ecart vs M1
+
+|-
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| 0.08
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| -0.01
+| style="background-color:#cc9966;border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| <div align="right">-0.09</div>
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| <div align="right">0.06</div>
+| style="background-color:#cc9966;border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| <div align="right">-0.02</div>
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| <div align="right">-0.03</div>
+| style="background-color:#cc9966;border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| <div align="right">-0.11</div>
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| <div align="right">0.09</div>
+| style="background-color:#cc9966;border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:0.002cm solid #000000;padding:0.097cm;"| <div align="right">0.01</div>
+
+|-
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| -0.01
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| -0.14
+| style="background-color:#cc9966;border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| <div align="right">-0.13</div>
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| <div align="right">0.07</div>
+| style="background-color:#cc9966;border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| <div align="right">0.08</div>
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| <div align="right">-0.22</div>
+| style="background-color:#cc9966;border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| <div align="right">-0.21</div>
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| <div align="right">-0.06</div>
+| style="background-color:#cc9966;border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:0.002cm solid #000000;padding:0.097cm;"| <div align="right">-0.05</div>
+
+|-
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| -0.1
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| -0.23
+| style="background-color:#cc9966;border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| <div align="right">-0.13</div>
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| <div align="right">-0.34</div>
+| style="background-color:#cc9966;border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| <div align="right">-0.24</div>
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| <div align="right">-0.43</div>
+| style="background-color:#cc9966;border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| <div align="right">-0.33</div>
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| <div align="right">-0.33</div>
+| style="background-color:#cc9966;border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:0.002cm solid #000000;padding:0.097cm;"| <div align="right">-0.23</div>
+
+|}
+''Tableau 1: Écart de mesure entre plusieurs mesures 3 points version A.2''
+
+Plusieurs causes sont envisagées à ce problème: mauvaise qualité du contact qui mesure. Répétabilité de positionnement du servo moteur. Nous avons en effet remarqués sur le projet HEXAPOD VOR005 que 2 commandes identiques dans un servo moteur ne provoquaient pas le même déplacement.
+
+Essai en commandant manuellement la sortie du palpeur puis en débranchant le servo moteur (afin que le capteur soit toujours dans la même position).
+
+
+{| style="border-spacing:0;"
+|| Mes 1
+|| Mes 2
+| style="background-color:#cc9966;"| 
+|| Mes 3
+| style="background-color:#cc9966;border:none;padding:0cm;"| 
+|| Mes 4
+| style="background-color:#cc9966;"| 
+
+|-
+|| <div align="right">0.05</div>
+|| <div align="right">-0.01</div>
+| style="background-color:#cc9966;"| <div align="right">-0.06</div>
+|| <div align="right">0.01</div>
+| style="background-color:#cc9966;border:none;padding:0cm;"| <div align="right">-0.04</div>
+|| <div align="right">0.03</div>
+| style="background-color:#cc9966;"| <div align="right">-0.02</div>
+
+|-
+|| <div align="right">-0.08</div>
+|| <div align="right">-0.08</div>
+| style="background-color:#cc9966;"| <div align="right">0</div>
+|| <div align="right">-0.07</div>
+| style="background-color:#cc9966;border:none;padding:0cm;"| <div align="right">0.01</div>
+|| <div align="right">-0.06</div>
+| style="background-color:#cc9966;"| <div align="right">0.02</div>
+
+|-
+|| <div align="right">-0.35</div>
+|| <div align="right">-0.33</div>
+| style="background-color:#cc9966;"| <div align="right">0.02</div>
+|| <div align="right">-0.32</div>
+| style="background-color:#cc9966;border:none;padding:0cm;"| <div align="right">0.03</div>
+|| <div align="right">-0.33</div>
+| style="background-color:#cc9966;"| <div align="right">0.02</div>
+
+|}
+''Tableau 2: Écarts de mesures avec servo toujours dans la même positon !''
+
+CQFD ! 
+
+= Version B =
+Démarrée en Février 2015
+
+L'idée du servo moteur est pas top et d'après les essais ci-dessus, nous voyons que ce n'est pas une bonne solution
+
+Proposition de remplacement : chariot de lecteur CD/DVD => embarqué un 328P qui interprète les ordres servo moteur
+
+Pour décoder les impulsions de commande, on peut utiliser pulsein(pin, HIGH):
+
+ int pin = 7;
+ unsigned long duration;
+ void setup(){
+   pinMode(pin, INPUT);
+ }
+ void loop(){
+   duration = pulseIn(pin, HIGH);
+ }
+
+Attention toutefois pulsein attend l'impulsion, sauf si on utilise le paramètre timeout dans ce cas la valeur de retour est nulle.
+
+Si duration est inférieure à 1000us alors commande sortir capteur (50° dans mon cas). Si duration supérieur à 1000us commande entrée.
+
+[[Image:platine.jpg|thumb|''Illustration 8: Platine CD en cours de câblage'']]Connecteur Jaune, Vert, Rouge, Noir
+
+1 : point orange = fil Jaune
+
+Stepper monMoteur(60, A2, A1, A0, A4);
+
+A2 = jaune, A1 = vert, A0= rouge, A4 = noir
+
+200pas = 30mm
+
+[[Image:Img_3779_manipStepperCD.jpg|thumb|''Illustration 9: Montage maquette platine lecteur CD'']]Essais sur la maquette ci-dessus montrent que le moteur n'est pas assez puissant pour activer le endstop haut qu'on apperçois sur la photo (petit téton blanc au bout des fils gris et orange).
+
+Cette solution est donc abandonnée.
+
+
+= Version B.2 =
+un moteur CC, deux endstop (haut, bas), un L293 et un crémaillère verticale qui descend le senseur imprimée. Là encore, il faut intercepter les commandes du servo donc le design 328P reste d'actualité.
+
+= Version C =
+Version avec capteur à effet Hall. Dans cette version le capteur à proprement parlé est fixe, c'est une tige mobile qui palpe. Cette solution a été mise en oeuvre par Thierry Monnot de "[https://thebreizmaker.wordpress.com/ The Breizh Maker]". La difficulté est alors de faire rentrer et sortir cette tige. En position sortie, il faut qu'elle dépasse la base de la buse d'impression et en position rentrée, qu'elle soit toujours au dessus. La solution de Thierry est de sortir la tige à l'aide d'une pince et d'utilisé l'effet aimant pour la rentrer à la fin du palpage.
+
+Parmi les solutions que nous avons envisagées:
+
+le principe de la grue avec un "câble" et un moteur enrouleur/dérouleur - on utilise la gravité pour sortir (faire descendre) le palpeur.
+
+une crémaillère avec pignon débraillable
+
+une ergot à ressort pour tenir en position haute (motorisable) et la gravité pour sortir et un marche pied pour rentrer (en dehors de la zone d'impression).
+
+Dans cette solution le capteur à effet hall peut être remplacé par un ILS voir même par un simple fin de course mécanique (avec ou sans roulette).
+
+[[Image:capteurEffetHall.jpg|thumb|''Illustration 10: senseur à capteur à effet hall de "The Breizh Maker"'']]
+
+[[Image:HallOS.JPG|thumb|''Illustration 11: Schéma ayant inspiré le montage'']]
+
+
+Targette supérieure mue par un moteur CC (donc la carte 328P, L293 est aussi utilisable)
+
+
+Hall captor chez RS : [http://fr.rs-online.com/web/p/capteurs-a-effet-hall/6807504P/ 680-7504P] 
+
+
+[http://reprap.org/wiki/Hall-Θ http://reprap.org/wiki/Hall-%CE%98]
+
+[http://www.rs-particuliers.com/WebCatalog/Capteur_a_effet_Hall_A1302KUA_T__Ultra_Mini_SIP_3_broches_4_5__6_V-6807504.aspx http://www.rs-particuliers.com/WebCatalog/Capteur_a_effet_Hall_A1302KUA_T__Ultra_Mini_SIP_3_broches_4_5__6_V-][http://www.rs-particuliers.com/WebCatalog/Capteur_a_effet_Hall_A1302KUA_T__Ultra_Mini_SIP_3_broches_4_5__6_V-6807504.aspx 6807504.aspx]
+
+== Etude du capteur A1302 ==
+Tension de sortie sens aimant : 762mV 2.5V au repos (il faut bien connecter les broches) Attention dans la datasheet les broches 2 et 3 sont permutées entre les 2 type de boîtiers.
+
+[[Image:extraitDsA1302_pinout.jpg|thumb|''Illustration 12: Brochage A1302'']]
+
+Avec aimant cylindrique 12mmx3 x2 220mV à 2mm. Le capteur détecte un pôle de l'aimant. Le design aurait été plus simple avec des aimants de type barreau mais nous n'avions sous la main que des aimants de type disque avec un pôle sur chaque face. La principal difficulté reste l'escamotage du palpeur et le réglage de la distance d’escamotage. C'est le rôle de l'aimant sur le dessus. C'est un réglage de conception un peu délicat. Trop puissant et il escamote le palpeur trop tôt trop faible il l'escamote trop tard. Comprendre tôt et tard comme les longueurs de palpeur en dessous ou au dessus de 
+
+
+{| style="border-spacing:0;"
+| style="border-top:0.002cm solid #000000;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| [[Image:palpeurVersionC1.jpg]]
+| style="border:0.002cm solid #000000;padding:0.097cm;"| [[Image:extruderAvecVersionC1.jpg]]
+
+|}
+[[Image:lm358Dpinout.jpg]]== Comparateur à ampliop LM358 ==
+Nous avons positionné les aimants arbitrairement pour avoir une variation de 2.5V en absence d'aimant vers 5V quand l'aimant est présent devant le capteur.
+
+
+3k sur l'entrée + , capteur sur l'entrée -
+
+10k
+
+
+== Conserver le mécanical endstop Z tout en ajoutant l'autolevelling ==
+Mechanical endstop de chez makerbot V1.2 à 4 fil. Celui du haut = sig, GND, GND et en bas VCC.
+
+
+{| style="border-spacing:0;"
+| style="border-top:0.002cm solid #000000;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| [[Image:endStopSpecial.jpg]]
+| style="border:0.002cm solid #000000;padding:0.097cm;"| [[Image:mechanical-endstop_display_pcb.jpg]]
+
+|}
+[[Image:mechanical-endstop_display_large_preview_featured.jpg]]Petit soucis, la branche NC du switch qui renvoi du VCC sur le fil SIG quand on est pas en contact. Un petit coup de pince coupante plus tard et ça marche.
+
+Petite astuce pour la recherche des offsets: grâce à la connection simultané des 2 fins de course(celui de base et celui de l'autolevelling, on petu facilement passer d'un mode à l'autre).
+
+
+{| style="border-spacing:0;"
+| style="border:none;padding:0cm;"| [[Image:Img_3844_modeAvecAutoLevelling.jpg|thumb|''Illustration 13: autoleveling connecté'']]
+| style="border:none;padding:0cm;"| [[Image:Img_3846_autolevellingDeconnecte.jpg|thumb|''Illustration 14: autoleveling déconnecté'']]
+
+|}
+Grâce au petit montage ci-dessus, 3 connecteurs 3 points reliés en fil à fil (1 au 1, 2 au 2 et 3 au 3) – il devient plus facile de passer d'un mode à l'autre sans être obligé de se contorsionner derrière la carte RAMPS...
+
+== Les premiers essais de la version C ==
+Une erreur étrange est apparue au cours des essais:
+
+ Error:Line Number is not Last Line Number+1, Last Line: x
+
+D'après le grand maître Google, il s'agirait d'une 'harware issue' => d'où réflet, désactivation de l'écran LCD dans Marlin. Donc pour le moment retrait de l'écran LCD, on verra plus tard et disparition des erreurs (probablement un problème de limite de courant délivré par le régulateur de la carte ARDUINO cf. Annexe.)
+
+== [[Image:copieEcranRepetier_zerobuse.jpg]]Mesure des offset méthode easy ==
+# Faire un zéro standard en débranchant le palpeur (donc avec endstopZ classique à peu près au centre du plateau.
+# Marquer le point.
+# Relever les valeurs dans Repetier (position buse).
+# Brancher le senseur
+# Emmener la tige de ce dernier en lieu et place de la bus, grâce au boutons de déplacement de Repetier.
+# Monter/descendre l'axe Z jusqu'à la limite du zéro senseur. (jouer avec les déplacement de 1/10 de mm pour trouver la position exacte (rappel pour les axes X et Y la position est au mm près cf. Procédure pour mesurer les paramètres pour Marlin).
+# [[Image:copieEcranRepetier_sensorVC_150414.jpg]]Noter les nouvelles valeurs (position senseur).
+# Calculer les valeurs d'offset pour Marlin
+
+
+{| style="border-spacing:0;"
+| style="border-top:0.002cm solid #000000;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| 
+| style="border-top:0.002cm solid #000000;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| Pos. Buse
+| style="border-top:0.002cm solid #000000;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| Pos. Senseur
+| style="border:0.002cm solid #000000;padding:0.097cm;"| Offset
+
+|-
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| X
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| 100
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| 148
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:0.002cm solid #000000;padding:0.097cm;"| -48
+
+|-
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| Y
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| 60
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| 60
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:0.002cm solid #000000;padding:0.097cm;"| 0
+
+|-
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| Z
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| 0
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| 19,5
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:0.002cm solid #000000;padding:0.097cm;"| -19,5
+
+|}
+== Procédure d'essai autoleveling en manuel ==
+G1 Z12
+
+G28 X Y
+
+G1 X150 Y60 F7600 //sortir le palpeur
+
+G29
+
+G1 Z-12 //rentrée du capteur
+
+G1 Z6 // éloigne un peu du bed
+
+== Activation du mode Grille à trois point ==
+J'ai été confronté à cette erreur:
+
+ <nowiki>#error "The X axis probing range is not enough to fit all the points defined in AUTO_BED_LEVELING_GRID_POINTS"</nowiki>
+
+Qui provient du fichier config.h au environ de la ligne 470
+
+Les paramètres pris en compte pour ce test sont
+
+ X_PROBE_OFFSET_FROM_EXTRUDER -48
+ AUTO_BED_LEVELING_GRID_POINTS 3
+ LEFT_PROBE_BED_POSITION 20
+ RIGHT_PROBE_BED_POSITION 140
+
+L'erreur pête si :
+
+ |X_PROBE_OFFSET_FROM_EXTRUDER * AUTO_BED_LEVELING_GRID_POINTS| >=
+ RIGHT_PROBE_BED_POSITION – LEFT_PROBE_BED_POSITION
+
+<nowiki>AN : 48*3 >= 140-20 <=> 144>=120 => oui donc erreur</nowiki>
+
+Qu'à cela ne tienne prenont 190 (Xmaxi) pour RIGHT_PROBE_BED_POSITION 
+
+170 est bien supérieur à 144 et ça compile !
+
+Problème lors des déplacement de la tête pour palper c'est 190 + l'offset qui est appliqué donc partage en butée
+
+Paramètres pour que ça passe:
+
+ X_PROBE_OFFSET_FROM_EXTRUDER -46
+ AUTO_BED_LEVELING_GRID_POINTS 3
+ LEFT_PROBE_BED_POSITION 1
+ RIGHT_PROBE_BED_POSITION 140
+
+46*3 versus 140-1 => 138 >= 139 ça passe juste !!!!
+
+En trichant un peu sur l'offset
+
+
+= Annexes =
+== Commandes utiles ==
+Certaines commandes Marlin sont bien pratiques.
+
+M401 : sortie capteur (abaisser)
+
+M402 : rentrer capteur
+
+M280 P0 S48 : metter le servo moteur 0 à l'angle 48°
+
+G28 X Y : faire le zéro axe X et Y
+
+G1 X40 F7600 : déplacer l'axe X à 40mm à la vitesse 7600
+
+<nowiki>M600 - Pause for filament change X[pos] Y[pos] Z[relative lift] E[initial retract] L[later retract distance for removal]</nowiki>
+
+G29 lancer une mesure "autoleveling"
+
+
+== Problème connexe : entrer un 5V extérieur ==
+[[Image:alim5VRamps.jpg]]'''Supprimer D1''' et injecter le 5V sur la broche 5Vin En n'oubliant pas de relier au 5V SERVO. Ce 5V n'est distribué qu'aux 4 connecteur SERVO de droite.
+
+
+[[Image:vccDistrib.jpg|thumb|''Illustration 15: Distribution du VCC (5V)'']]
+
+''Remarque: la sélection en rouge ci-dessous est une fonctionnalité de EAGLE (show depuis le schéma en cliquant sur le fil VCC – cela allume les points en vert claire – couleur non configurable – pour les avoir en rouge, je suis passé par un logiciel de retouche d'image – GIMP.''
+
+En supprimant D1, on coupe le VIN qui descend au régulateur d'entrée de l'ARDUINO
+
+== Calcul de puissance ARDUINO: ==
+Le régulateur 5V de l'ARDUINO est un NCP1117ST50T3G
+
+[[Image:schArduinoRegul.jpg]]La datasheet de ce dernier nous dit:
+
+[[Image:NCP1117DtsExtraiAbsMaxRat.jpg]]Or pour nous Vin = 14V (alimentation un peu boostée). Le régulateur a donc 14V – 5V = 9V de chutte à ses bornes. Si il dit débiter 150mA. ''Atmega2560 à 8MHz : 14mA. 5 stepstick pollolu 8mA soit 40mA, l'écran LCD avec son rétroéclairage: pas vraiment d'information trouvé sur le net. On va dire qu'il y a 4 diode pour le rétroéclairage à 10mA chacune soit 40mA +20mA pour l'écran et son électronique''. La puissance à dissiper est donc de 9x.15 soit 1.35W.
+
+D'après la formule : TJ = Pd x RJA + Ta = 1.35x160 + 26 (il fait chaud au VoLAB) = 242°C (on est largement au dessus des 175°C maximum admissibles.
+
+[[Image:NCP1117ThermalRes.jpg]]La courbe ci-dessus montre que dans les meilleur condition de dissipation, la puissance maximum dissipable est de 1.4W avec un delta U de 9V aux bornes cela donne 155mA max
+
+Même si ces calcul sont très approximatifs, ils montrent qu'il peut être très facile d'atteindre les limites de dissipation du tout petit régulateur de la carte ARDUINO.
+
+Supprimer D1 et prélever l'alimentation sur le port USB peut s'avérer à la limite plus judicieux.
+
+'''Pour une utilisation en autonome (i.e. sans PC), supprimer la diode D1 est une fausse bonne idée.''' En effet, la commutation entre alimentation USB et alimentation régulateur carte est assurée par Vin.
+
+[[Image:2560switchAlimUSB.jpg|thumb|''Illustration 16: Dispositif de commutation de l'alimentation USB de la carte 2560'']]Autres solutions possibles : 
+
+# mettre un dissipateur sur le régulateur de la carte 2560 mais compte-tenu des mauvaise condition de dissipation à l'intérieur du sanqwitch 2560/RAMPS, il serait peut-être plus judicieux de placer ce dissipateur sous le régulateur de la carte 2560.
+# '''Déposer le régulateur de la 2560 et le remplacer par une version plus musclée.'''
+
+= License =
+Ce document est mise à disposition selon les termes de la&nbsp;[http://creativecommons.org/licenses/by/4.0/ Licence Creative Commons Attribution 4.0 International]. 
+
+
+= Bibliographie =
+= webographie =
+[http://www.reprap-france.com/home/91-imprimante-3d-prusa-i3-rework.html http://www.reprap-france.com/home/91-imprimante-3d-prusa-i3-rework.html]
+
+[https://github.com/ErikZalm/Marlin https://github.com/ErikZalm/Marlin]
+
+[http://arduino.cc/en/Main/Software http://arduino.cc/en/Main/Software]
+
+[https://thebreizmaker.wordpress.com/autoleveling-bed/ https://thebreizmaker.wordpress.com/autoleveling-bed/]
+
+Datasheet LM358 disponible chez de nombreux fabricants comme ST
+
+[http://www.st.com/web/en/resource/technical/document/datasheet/CD00000464.pdf http://www.st.com/web/en/resource/technical/document/datasheet/CD00000464.pdf]
+
+
+= Rédaction en langue française =
+Partant du constat de terrain qu'une énorme masse d'information concernant les sujets qui nous intéressent comme entre autres l'impression 3D n'étaient disponibles que dans la langue de Shakespeare et que de nombreuses personnes dans notre entourage ne maîtrisaient pas la dite langue et soucieux de diffuser encore plus l'information, nous avons pris le parti, au VoLAB, de rédiger nos documents de préférence en langue française.
+
+
+= VoLAB =
+Un mot sur le VoLAB. VoLAB est un fablab implanté à environ 30km au nord-ouest de Paris dans la commune de Vauréal dans l'agglomération de Cergy Pontoise. Il est animé par l'association VoRoBoTics.
+
+Site internet [http://www.vorobotics.com/ www.vorobotics.com]
