@@ -22,10 +22,7 @@ Implémenter l'autoleveling sur la Prusa i3/EiNSTeiN/Rework et son extruder Wade
 
 [[Image:images2.jpg|thumb|center|<center>Wade extruder "original"</center>]]A la base l'extruder Wade est fait pour les imprimante à chariot horizontal. La i3 a un chariot vertical.
 
-[[Image:Image3.jpg|thumb|<center>Wade extruder pour Prusa i3</center>]]
-
-
-[[Fichier:Exemple.jpg|vignette]]
+[[Image:Image3.jpg|thumb|center|<center>Wade extruder pour Prusa i3</center>]]
 
 = Répertoire de travail =
 Pour les fichiers 3D
