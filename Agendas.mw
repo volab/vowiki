@@ -1,34 +1,68 @@
 
-Dernière mise à jour Major Lee le 12/03/2015
+Dernière mise à jour [[Utilisateur:Jeremie]] le 05/05/2015
 
-== Prochains événements qui pourrait être intéressants ==
-
-'''2 et 3/05/2015'''
-Maker faire Paris : 2 et 3 mai 2015 pour le moment en tant que simple visiteur.
-
-'''13 au 16/05/2015'''
-Coupe de France de Robotique (A confirmer 13/03/2015)
-'''
-11 au 21/06/2015''' Futur en seine
 
 == Prochains événements auxquels le VoLAB participera ==
 
-'''6 au 10/05/2015'''
-[http://www.fablabfestival.fr/edition-2015/programme/ fablab festival Toulouse]
+<!-- RANGER PAR ORDRE CROISSANT -->
 
-'''06/06/2015'''
-Fablab éphémère de Visage du Monde (participation très active)
+{| class="wikitable alternance centre" width="50%"
+|-
+! scope=col width="25%" | Date(s)
+! scope=col             | Description
+|-
+| '''du 06 au 10/05/2015'''
+| [http://www.fablabfestival.fr/edition-2015/programme/ Fablab festival Toulouse]
+|-
+| '''06/06/2015'''
+| Fablab éphémère de Visage du Monde (participation très active)
+|}
+
+
+== Prochains ateliers ==
+
+{| class="wikitable alternance centre" width="50%"
+|-
+! scope=col width="25%" | Date(s)
+! scope=col             | Description
+|-
+| '''13/05/2015'''
+| [[Atelier d'initiation à la modélisation 3D]] (inscriptions closes)
+|}
+
+
+== Prochains événements qui pourrait être intéressants ==
+
+<!-- RANGER PAR ORDRE CROISSANT -->
+
+{| class="wikitable alternance centre" width="50%"
+|-
+! scope=col width="25%" | Date(s)
+! scope=col             | Description
+|-
+| '''du 13 au 16/05/2015'''
+| Coupe de France de Robotique (A confirmer 13/03/2015)
+|-
+| '''du 11 au 21/06/2015'''
+| Futur en seine
+|}
+
 
 == Événements auxquels nous avons participé ==
 
-<!--
-'''28/03/2015'''
-Arduino Days : événement mondial et en même temps local le 28 mars prochain. Faut voir si on veut faire quelques chose. A discuter.== Événements auxquels nous avons participé ==
--->
+<!-- RANGER PAR ORDRE DÉCROISSANT -->
 
-'''24/2/2015''' Échanges autour des questions de sécurité dans un FabLab 24/2 citée des sciences à partir de 18h30 (raté mais de peu)
-
-'''21/01/2015''' Échanges sur les bonnes pratiques autour de la documentation dans un fab lab
-
-== Prochains ateliers ==
-Mercredi 15 avril 2015 de 19h30 à 22h00 (ouverture des inscriptions au environs du 20 mars)
+{| class="wikitable alternance centre" width="50%"
+|-
+! scope=col width="25%" | Date(s)
+! scope=col             | Description
+|-
+| '''le 02 et 03/05/2015'''
+| Maker faire Paris.
+|-
+| '''24/02/2015'''
+| Échanges autour des questions de sécurité dans un FabLab 24/2 citée des sciences à partir de 18h30 (raté mais de peu)
+|-
+| '''21/01/2015'''
+| Échanges sur les bonnes pratiques autour de la documentation dans un fab lab
+|}
