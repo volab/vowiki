@@ -490,7 +490,7 @@ un moteur CC, deux endstop (haut, bas), un L293 et un crémaillère verticale qu
 
 = Version C =
 [[Image:capteurEffetHall.jpg|thumb|''Illustration 10: senseur à capteur à effet hall de "The Breizh Maker"'']]
-Version avec capteur à effet Hall. Dans cette version le capteur à proprement parlé est fixe, c'est une tige mobile qui palpe. Cette solution a été mise en oeuvre par Thierry Monnot de "[https://thebreizmaker.wordpress.com/ The Breizh Maker]". La difficulté est alors de faire rentrer et sortir cette tige. En position sortie, il faut qu'elle dépasse la base de la buse d'impression et en position rentrée, qu'elle soit toujours au dessus. La solution de Thierry est de sortir la tige à l'aide d'une pince et d'utilisé l'effet aimant pour la rentrer à la fin du palpage.
+Version avec capteur à effet Hall. Dans cette version le capteur à proprement parlé est fixe, c'est une tige mobile qui palpe. Cette solution a été mise en oeuvre par Thierry Monnot de "[https://thebreizmaker.wordpress.com/autoleveling-bed/ The Breizh Maker]". La difficulté est alors de faire rentrer et sortir cette tige. En position sortie, il faut qu'elle dépasse la base de la buse d'impression et en position rentrée, qu'elle soit toujours au dessus. La solution de Thierry est de sortir la tige à l'aide d'une pince et d'utilisé l'effet aimant pour la rentrer à la fin du palpage.
 
 Parmi les solutions que nous avons envisagées:
 
