@@ -702,9 +702,13 @@ En supprimant D1, on coupe le VIN qui descend au régulateur d'entrée de l'ARDU
 == Calcul de puissance ARDUINO: ==
 Le régulateur 5V de l'ARDUINO est un NCP1117ST50T3G
 
-[[Image:schArduinoRegul.jpg]]La datasheet de ce dernier nous dit:
+[[Image:schArduinoRegul.jpg]]
 
-[[Image:NCP1117DtsExtraiAbsMaxRat.jpg]]Or pour nous Vin = 14V (alimentation un peu boostée). Le régulateur a donc 14V – 5V = 9V de chutte à ses bornes. Si il dit débiter 150mA. ''Atmega2560 à 8MHz : 14mA. 5 stepstick pollolu 8mA soit 40mA, l'écran LCD avec son rétroéclairage: pas vraiment d'information trouvé sur le net. On va dire qu'il y a 4 diode pour le rétroéclairage à 10mA chacune soit 40mA +20mA pour l'écran et son électronique''. La puissance à dissiper est donc de 9x.15 soit 1.35W.
+La datasheet de ce dernier nous dit:
+
+[[Image:NCP1117DtsExtraiAbsMaxRat.jpg]]
+
+Or pour nous Vin = 14V (alimentation un peu boostée). Le régulateur a donc 14V – 5V = 9V de chutte à ses bornes. Si il dit débiter 150mA. ''Atmega2560 à 8MHz : 14mA. 5 stepstick pollolu 8mA soit 40mA, l'écran LCD avec son rétroéclairage: pas vraiment d'information trouvé sur le net. On va dire qu'il y a 4 diode pour le rétroéclairage à 10mA chacune soit 40mA +20mA pour l'écran et son électronique''. La puissance à dissiper est donc de 9x.15 soit 1.35W.
 
 D'après la formule : TJ = Pd x RJA + Ta = 1.35x160 + 26 (il fait chaud au VoLAB) = 242°C (on est largement au dessus des 175°C maximum admissibles.
 
