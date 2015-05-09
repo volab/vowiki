@@ -683,6 +683,9 @@ G29 lancer une mesure "autoleveling"
 
 
 == Problème connexe : entrer un 5V extérieur ==
+Dans la configuration original, le 12V est appliqué à la carte RAMPS puis "descend" vers la carte 2560 par son entrée VIN au travers de la diode D1. Sur la carte 2560, ce 12V traverse un régulateur linéaire NCP1117 pour générer le 5V de la carte 2560. Ce 5V remonte vers la carte RAMPS par la broche 5V de la 2560 pour alimenter toute les fonctions de la carte RAMPS. A savoir : tous les step stick de pilotage des moteurs pas à pas (seulement leurs parties logiques), les leds des fins de courses et les éventuels servo, écran LCD (avec leurs rétroéclairage) et autres cartes SD tout ça fini par consommer.
+
+
 [[Image:alim5VRamps.jpg]]
 
 '''Supprimer D1''' et injecter le 5V sur la broche 5Vin En n'oubliant pas de relier au 5V SERVO. Ce 5V n'est distribué qu'aux 4 connecteur SERVO de droite.
