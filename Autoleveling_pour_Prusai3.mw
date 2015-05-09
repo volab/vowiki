@@ -570,7 +570,7 @@ Une erreur étrange est apparue au cours des essais:
 
 D'après le grand maître Google, il s'agirait d'une 'harware issue' => d'où réflet, désactivation de l'écran LCD dans Marlin. Donc pour le moment retrait de l'écran LCD, on verra plus tard et disparition des erreurs (probablement un problème de limite de courant délivré par le régulateur de la carte ARDUINO cf. Annexe.)
 
-== [[Image:copieEcranRepetier_zerobuse.jpg]]Mesure des offset méthode easy ==
+== Mesure des offset méthode easy ==
 # Faire un zéro standard en débranchant le palpeur (donc avec endstopZ classique à peu près au centre du plateau.
 # Marquer le point.
 # Relever les valeurs dans Repetier (position buse).
@@ -606,6 +606,7 @@ D'après le grand maître Google, il s'agirait d'une 'harware issue' => d'où r�
 | style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:0.002cm solid #000000;padding:0.097cm;"| -19,5
 
 |}
+
 == Procédure d'essai autoleveling en manuel ==
 G1 Z12
 
