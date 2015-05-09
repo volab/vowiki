@@ -549,7 +549,9 @@ Mechanical endstop de chez makerbot V1.2 à 4 fil. Celui du haut = sig, GND, GND
 | style="border:0.002cm solid #000000;padding:0.097cm;"| [[Image:mechanical-endstop_display_pcb.jpg|400px]]
 
 |}
-[[Image:mechanical-endstop_display_large_preview_featured.jpg]]Petit soucis, la branche NC du switch qui renvoi du VCC sur le fil SIG quand on est pas en contact. Un petit coup de pince coupante plus tard et ça marche.
+[[Image:mechanical-endstop_display_large_preview_featured.jpg|400px]]
+
+Petit soucis, la branche NC du switch qui renvoi du VCC sur le fil SIG quand on est pas en contact. Un petit coup de pince coupante plus tard et ça marche.
 
 Petite astuce pour la recherche des offsets: grâce à la connection simultané des 2 fins de course(celui de base et celui de l'autolevelling, on petu facilement passer d'un mode à l'autre).
 
