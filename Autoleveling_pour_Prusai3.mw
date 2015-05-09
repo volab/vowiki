@@ -568,7 +568,7 @@ Une erreur étrange est apparue au cours des essais:
 
  Error:Line Number is not Last Line Number+1, Last Line: x
 
-D'après le grand maître Google, il s'agirait d'une 'harware issue' => d'où réflet, désactivation de l'écran LCD dans Marlin. Donc pour le moment retrait de l'écran LCD, on verra plus tard et disparition des erreurs (probablement un problème de limite de courant délivré par le régulateur de la carte ARDUINO cf. Annexe.)
+D'après le grand maître Google, il s'agirait d'une 'harware issue' => d'où, désactivation de l'écran LCD dans Marlin. Donc pour le moment retrait de l'écran LCD (on verra plus tard) disparition des erreurs (probablement un problème de limite de courant délivré par le régulateur de la carte ARDUINO cf. [[#Annexes]] ci-dessous.)
 
 == Mesure des offset méthode easy ==
 
