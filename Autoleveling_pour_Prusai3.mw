@@ -683,7 +683,9 @@ G29 lancer une mesure "autoleveling"
 
 
 == Problème connexe : entrer un 5V extérieur ==
-[[Image:alim5VRamps.jpg]]'''Supprimer D1''' et injecter le 5V sur la broche 5Vin En n'oubliant pas de relier au 5V SERVO. Ce 5V n'est distribué qu'aux 4 connecteur SERVO de droite.
+[[Image:alim5VRamps.jpg]]
+
+'''Supprimer D1''' et injecter le 5V sur la broche 5Vin En n'oubliant pas de relier au 5V SERVO. Ce 5V n'est distribué qu'aux 4 connecteur SERVO de droite.
 
 
 [[Image:vccDistrib.jpg|thumb|''Illustration 15: Distribution du VCC (5V)'']]
