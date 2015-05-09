@@ -712,7 +712,9 @@ Or pour nous Vin = 14V (alimentation un peu boostée pour diminuer le temps de c
 
 D'après la formule : TJ = Pd x RJA + Ta = 1.35x160 + 26 (il fait chaud au VoLAB) = 242°C (on est largement au dessus des 175°C maximum admissibles.
 
-[[Image:NCP1117ThermalRes.jpg]]La courbe ci-dessus montre que dans les meilleur condition de dissipation, la puissance maximum dissipable est de 1.4W avec un delta U de 9V aux bornes cela donne 155mA max
+[[Image:NCP1117ThermalRes.jpg]]
+
+La courbe ci-dessus montre que dans les meilleur condition de dissipation, la puissance maximum dissipable est de 1.4W avec un delta U de 9V aux bornes cela donne 155mA max
 
 Même si ces calcul sont très approximatifs, ils montrent qu'il peut être très facile d'atteindre les limites de dissipation du tout petit régulateur de la carte ARDUINO.
 
@@ -720,7 +722,9 @@ Supprimer D1 et prélever l'alimentation sur le port USB peut s'avérer à la li
 
 '''Pour une utilisation en autonome (i.e. sans PC), supprimer la diode D1 est une fausse bonne idée.''' En effet, la commutation entre alimentation USB et alimentation régulateur carte est assurée par Vin.
 
-[[Image:2560switchAlimUSB.jpg|thumb|''Illustration 16: Dispositif de commutation de l'alimentation USB de la carte 2560'']]Autres solutions possibles : 
+[[Image:2560switchAlimUSB.jpg|thumb|''Illustration 16: Dispositif de commutation de l'alimentation USB de la carte 2560'']]
+
+Autres solutions possibles : 
 
 # mettre un dissipateur sur le régulateur de la carte 2560 mais compte-tenu des mauvaise condition de dissipation à l'intérieur du sanqwitch 2560/RAMPS, il serait peut-être plus judicieux de placer ce dissipateur sous le régulateur de la carte 2560.
 # '''Déposer le régulateur de la 2560 et le remplacer par une version plus musclée.'''
