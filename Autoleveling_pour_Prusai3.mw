@@ -729,7 +729,7 @@ Autres solutions possibles :
 # mettre un dissipateur sur le régulateur de la carte 2560 mais compte-tenu des mauvaise condition de dissipation à l'intérieur du sandwitch 2560/RAMPS, il serait peut-être plus judicieux de placer ce dissipateur sous le régulateur de la carte 2560.
 # '''Déposer le régulateur de la 2560 et le remplacer par une version plus musclée.'''
 
-= Fichiers sources =
+= Fichiers sources, pdf et odt =
 Sources de l'article original au format Open Office: [[http://www.vorobotics.com/uploads/autoleveling/docConceptionAutoLevelling.zip cliquer ici]]<br />
 
 Le même en version pdf : [[http://www.vorobotics.com/uploads/autoleveling/conceptionAutoLevelling150427_0029.pdf cliquer là]]<br />
