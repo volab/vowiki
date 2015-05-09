@@ -296,6 +296,9 @@ Premier essai d'impression (l'idée est de dire allons-y, nous verrons bien !)
 L'imprimante imprime au moins à 10mm du plateau !!! Vérification du paramètre Z_PROBE_OFFSET_FROM_EXTRUDER.
 
 L'axe Z ne prend pas en compte du tout Z_PROBE_OFFSET_FROM_EXTRUDER
+maj JSO 9/05/2015
+Bug reconnu officiellement dans Marlin bug #2040 en cours de traitement
+https://github.com/MarlinFirmware/Marlin/issues/2040
 
 Différents essais:
 
