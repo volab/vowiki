@@ -528,15 +528,16 @@ Avec aimant cylindrique 12mmx3 x2 220mV à 2mm. Le capteur détecte un pôle de 
 | style="border-top:0.002cm solid #000000;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| [[Image:palpeurVersionC1.jpg]]
 | style="border:0.002cm solid #000000;padding:0.097cm;"| [[Image:extruderAvecVersionC1.jpg]]
 
-|}
-[[Image:lm358Dpinout.jpg]]== Comparateur à ampliop LM358 ==
+|}<br />
+== Comparateur à ampliop LM358 ==<br />
+
+[[Image:lm358Dpinout.jpg]]
 Nous avons positionné les aimants arbitrairement pour avoir une variation de 2.5V en absence d'aimant vers 5V quand l'aimant est présent devant le capteur.
 
 
 3k sur l'entrée + , capteur sur l'entrée -
 
 10k
-
 
 == Conserver le mécanical endstop Z tout en ajoutant l'autolevelling ==
 Mechanical endstop de chez makerbot V1.2 à 4 fil. Celui du haut = sig, GND, GND et en bas VCC.
