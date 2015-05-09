@@ -191,7 +191,7 @@ Mes valeurs:
    <nowiki>#define Y_PROBE_OFFSET_FROM_EXTRUDER 16.8</nowiki>
    <nowiki>#define Z_PROBE_OFFSET_FROM_EXTRUDER -9.5</nowiki>
 
-X remplacer par -37 et Y par 16 à cause de l'erreur:
+X remplacer par -37 et Y par 16 à cause de l'erreur suivante (apparemment due à Arduino 1.5):
 
  In file included from Marlin.h:22:0,
                   from BlinkM.cpp:5:
