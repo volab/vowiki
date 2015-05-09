@@ -730,11 +730,12 @@ Autres solutions possibles :
 # '''Déposer le régulateur de la 2560 et le remplacer par une version plus musclée.'''
 
 = Fichiers sources =
-Sources de l'article original au format Open Office: [[http://www.vorobotics.com/uploads/autoleveling/conceptionAutoLevelling150427_0029.odt cliquer ici]]<br />
+Sources de l'article original au format Open Office: [[http://www.vorobotics.com/uploads/autoleveling/docConceptionAutoLevelling.zip cliquer ici]]<br />
 
-Le même en version pdf : à venir<br />
+Le même en version pdf : [[http://www.vorobotics.com/uploads/autoleveling/conceptionAutoLevelling150427_0029.pdf cliquer là]]<br />
 
-Les fichiers sources techniques : à venir
+Les fichiers sources techniques : [[http://www.vorobotics.com/uploads/autoleveling/prusai3Full_withAutoleveling_solidWorks2014.zip et enfin là]]<br />
+Le top level se nomme: prusaI3Full6mmAluFrame.SLDASM
 
 = License =
 Ce document est mise à disposition selon les termes de la&nbsp;[http://creativecommons.org/licenses/by/4.0/ Licence Creative Commons Attribution 4.0 International]. 
