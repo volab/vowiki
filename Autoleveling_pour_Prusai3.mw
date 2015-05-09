@@ -471,7 +471,7 @@ Attention toutefois pulsein attend l'impulsion, sauf si on utilise le paramètre
 
 Si duration est inférieure à 1000us alors commande sortir capteur (50° dans mon cas). Si duration supérieur à 1000us commande entrée.
 
-[[Image:platine.jpg|thumb|''Illustration 8: Platine CD en cours de câblage'']]Connecteur Jaune, Vert, Rouge, Noir
+[[Image:platine.jpg|thumb|400px|''Illustration 8: Platine CD en cours de câblage'']]Connecteur Jaune, Vert, Rouge, Noir
 
 1 : point orange = fil Jaune
 
@@ -484,7 +484,6 @@ A2 = jaune, A1 = vert, A0= rouge, A4 = noir
 [[Image:Img_3779_manipStepperCD.jpg|thumb|''Illustration 9: Montage maquette platine lecteur CD'']]Essais sur la maquette ci-dessus montrent que le moteur n'est pas assez puissant pour activer le endstop haut qu'on apperçois sur la photo (petit téton blanc au bout des fils gris et orange).
 
 Cette solution est donc abandonnée.
-
 
 = Version B.2 =
 un moteur CC, deux endstop (haut, bas), un L293 et un crémaillère verticale qui descend le senseur imprimée. Là encore, il faut intercepter les commandes du servo donc le design 328P reste d'actualité.
