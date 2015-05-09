@@ -33,7 +33,9 @@ Pour la compilation de Marlin
 Donnees\008_iao_wrk\Arduino\Croquis\Marlin\Marlin-1.0.1_fromGithub
 
 
-= [[Image:support.jpg|thumb|Illustration 1: Support]]Version A =
+= [[Image:support.jpg|thumb|Illustration 1: Support servo 9g version A]]
+
+Version A =
 Servo moteur 9g
 
 Contacteur mécanique de l'axe Z
