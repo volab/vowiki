@@ -688,7 +688,7 @@ Dans la configuration original, le 12V est appliqué à la carte RAMPS puis "des
 
 [[Image:alim5VRamps.jpg]]
 
-'''Supprimer D1''' et injecter le 5V sur la broche 5Vin En n'oubliant pas de relier au 5V SERVO. Ce 5V n'est distribué qu'aux 4 connecteur SERVO de droite.
+'''Supprimer D1''' et injecter le 5V sur la broche 5Vin En n'oubliant pas de relier au 5V SERVO. Ce 5V n'est distribué qu'aux 4 connecteur SERVO de droite. Ceci peut s'avérer être un fausse bonne idée: voir le paragraphe suivant.
 
 
 
