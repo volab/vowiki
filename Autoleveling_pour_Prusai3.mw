@@ -545,8 +545,8 @@ Mechanical endstop de chez makerbot V1.2 à 4 fil. Celui du haut = sig, GND, GND
 
 
 {| style="border-spacing:0;"
-| style="border-top:0.002cm solid #000000;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| [[Image:endStopSpecial.jpg]]
-| style="border:0.002cm solid #000000;padding:0.097cm;"| [[Image:mechanical-endstop_display_pcb.jpg]]
+| style="border-top:0.002cm solid #000000;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| [[Image:endStopSpecial.jpg|400px]]
+| style="border:0.002cm solid #000000;padding:0.097cm;"| [[Image:mechanical-endstop_display_pcb.jpg|400px]]
 
 |}
 [[Image:mechanical-endstop_display_large_preview_featured.jpg]]Petit soucis, la branche NC du switch qui renvoi du VCC sur le fil SIG quand on est pas en contact. Un petit coup de pince coupante plus tard et ça marche.
