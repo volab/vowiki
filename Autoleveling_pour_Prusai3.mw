@@ -579,7 +579,7 @@ D'après le grand maître Google, il s'agirait d'une 'harware issue' => d'où, d
 # Relever les valeurs dans Repetier (position buse).
 # Brancher le senseur
 # Emmener la tige de ce dernier en lieu et place de la bus, grâce au boutons de déplacement de Repetier.
-# Monter/descendre l'axe Z jusqu'à la limite du zéro senseur. (jouer avec les déplacement de 1/10 de mm pour trouver la position exacte (rappel pour les axes X et Y la position est au mm près cf. Procédure pour mesurer les paramètres pour Marlin).
+# Monter/descendre l'axe Z jusqu'à la limite du zéro senseur. (jouer avec les déplacement de 1/10 de mm pour trouver la position exacte (rappel pour les axes X et Y la position est au mm près cf. Procédure pour mesurer les paramètres pour Marlin plus haut dans cet article).
 # Noter les nouvelles valeurs (position senseur).
 # Calculer les valeurs d'offset pour Marlin
 
