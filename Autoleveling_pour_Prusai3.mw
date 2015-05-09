@@ -571,6 +571,9 @@ Une erreur étrange est apparue au cours des essais:
 D'après le grand maître Google, il s'agirait d'une 'harware issue' => d'où réflet, désactivation de l'écran LCD dans Marlin. Donc pour le moment retrait de l'écran LCD, on verra plus tard et disparition des erreurs (probablement un problème de limite de courant délivré par le régulateur de la carte ARDUINO cf. Annexe.)
 
 == Mesure des offset méthode easy ==
+
+[[Image:copieEcranRepetier_zerobuse.jpg]]
+
 # Faire un zéro standard en débranchant le palpeur (donc avec endstopZ classique à peu près au centre du plateau.
 # Marquer le point.
 # Relever les valeurs dans Repetier (position buse).
