@@ -537,10 +537,8 @@ Avec aimant cylindrique 12mmx3 x2 220mV à 2mm. Le capteur détecte un pôle de 
 [[Image:lm358Dpinout.jpg]]
 Nous avons positionné les aimants arbitrairement pour avoir une variation de 2.5V en absence d'aimant vers 5V quand l'aimant est présent devant le capteur.
 
-
-3k sur l'entrée + , capteur sur l'entrée -
-
-10k
+3k/10k sur l'entrée + , capteur sur l'entrée -<br />
+JSO 9/5/15: valeurs à confirmer.
 
 == Conserver le mécanical endstop Z tout en ajoutant l'autolevelling ==
 Mechanical endstop de chez makerbot V1.2 à 4 fil. Celui du haut = sig, GND, GND et en bas VCC.
