@@ -529,7 +529,10 @@ Avec aimant cylindrique 12mmx3 x2 220mV à 2mm. Le capteur détecte un pôle de 
 | style="border:0.002cm solid #000000;padding:0.097cm;"| [[Image:extruderAvecVersionC1.jpg]]
 
 |}<br />
-== Comparateur à ampliop LM358 ==<br />
+
+== Comparateur à ampliop LM358 ==
+
+
 
 [[Image:lm358Dpinout.jpg]]
 Nous avons positionné les aimants arbitrairement pour avoir une variation de 2.5V en absence d'aimant vers 5V quand l'aimant est présent devant le capteur.
