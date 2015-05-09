@@ -688,7 +688,7 @@ G29 lancer une mesure "autoleveling"
 '''Supprimer D1''' et injecter le 5V sur la broche 5Vin En n'oubliant pas de relier au 5V SERVO. Ce 5V n'est distribué qu'aux 4 connecteur SERVO de droite.
 
 
-[[Image:vccDistrib.jpg|thumb|''Illustration 15: Distribution du VCC (5V)'']]
+[[Image:vccDistrib.jpg|''Illustration 15: Distribution du VCC (5V)'']]
 
 ''Remarque: la sélection en rouge ci-dessous est une fonctionnalité de EAGLE (show depuis le schéma en cliquant sur le fil VCC – cela allume les points en vert claire – couleur non configurable – pour les avoir en rouge, je suis passé par un logiciel de retouche d'image – GIMP.''
 
