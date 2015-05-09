@@ -267,7 +267,9 @@ Extrait de code L1597 de marlin_main.cpp
 Reprise des pièces mécaniques. Application des modification proposée au §Montage avec la distance supplémentaire par rapport à l'extruder de 10mm au lieu de 8. Et surtout redesign complet du pied pour supprimer le talon avec création d'une carte endstop verticale.
 
 
-[[Image:switch_sch.jpg]]Mes valeurs pour le design A.1:
+[[Image:switch_sch.jpg]]
+
+Mes valeurs pour le design A.1:
 
    <nowiki>#define X_PROBE_OFFSET_FROM_EXTRUDER -45</nowiki>
    <nowiki>#define Y_PROBE_OFFSET_FROM_EXTRUDER 2</nowiki>
