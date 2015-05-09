@@ -726,7 +726,7 @@ Supprimer D1 et prélever l'alimentation sur le port USB peut s'avérer à la li
 
 Autres solutions possibles : 
 
-# mettre un dissipateur sur le régulateur de la carte 2560 mais compte-tenu des mauvaise condition de dissipation à l'intérieur du sanqwitch 2560/RAMPS, il serait peut-être plus judicieux de placer ce dissipateur sous le régulateur de la carte 2560.
+# mettre un dissipateur sur le régulateur de la carte 2560 mais compte-tenu des mauvaise condition de dissipation à l'intérieur du sandwitch 2560/RAMPS, il serait peut-être plus judicieux de placer ce dissipateur sous le régulateur de la carte 2560.
 # '''Déposer le régulateur de la 2560 et le remplacer par une version plus musclée.'''
 
 = Fichiers sources =
