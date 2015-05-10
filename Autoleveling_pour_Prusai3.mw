@@ -663,6 +663,20 @@ Paramètres pour que ça passe:
 
 En trichant un peu sur l'offset
 
+== Lancer une impression ==
+
+Lancer le chauffage de la buse et éventuellement du plateau
+
+Faire le zéro en Z:
+
+G28 X Y //homing X et Y
+
+G1 Y60 X150 F7600 // Centrer X et Y sur le plateau
+
+G28 Z // zéro en Z
+
+Lancer l'impression
+
 = Annexes =
 == Commandes utiles ==
 
