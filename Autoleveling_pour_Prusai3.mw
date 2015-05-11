@@ -681,7 +681,7 @@ G28 Z // zéro en Z
 
 Lancer l'impression
 
-== Conclusion et futur ==
+= Conclusion et futur =
 Ce n'est peut-être pas très claire dans ce qui précède, mais la seule version réellement fonctionnel à nos yeux est la version C à capteur à effet Hall.
 
 Prochaine étape après beaucoup de repos sur ce sujet sera l'impémentation d'un capteur à effet capacitif avec zéro contact et zéro mécanique.
