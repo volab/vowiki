@@ -221,6 +221,8 @@ X remplacer par -37 et Y par 16 à cause de l'erreur suivante (apparemment due �
 
 Après tout le probbing n'est pas au dixième en X et Y
 
+'''Maj JSO''' : Cette erreur est visiblement apportée par Arduino 1.5 et supérieur (pas de nombre décimaux dans les #if).
+
 
 [[Image:Img_3686_versionA_servo.jpg|thumb|400px|''Illustration 5: Version avec escamotage à servo moteur'']]
 
