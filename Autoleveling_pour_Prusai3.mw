@@ -701,7 +701,7 @@ G1 X40 F7600 : déplacer l'axe X à 40mm à la vitesse 7600
 
 G29 lancer une mesure "autoleveling"
 
-'''Maj JSO 10/5'''
+'''maj JSO''' 10/5
 
 G90 - Use Absolute Coordinates
 
@@ -713,7 +713,7 @@ M119 - Output Endstop status to serial port
 
 M300 - Play beepsound S<frequency Hz> P<duration ms> (a condition d'avoir un buzzer)
 
-'''Fin Maj'''
+'''fin maj'''
 
 == Problème connexe : entrer un 5V extérieur ==
 Dans la configuration original, le 12V est appliqué à la carte RAMPS puis "descend" vers la carte 2560 par son entrée VIN au travers de la diode D1. Sur la carte 2560, ce 12V traverse un régulateur linéaire NCP1117 pour générer le 5V de la carte 2560. Ce 5V remonte vers la carte RAMPS par la broche 5V de la 2560 pour alimenter toute les fonctions de la carte RAMPS. A savoir : tous les step stick de pilotage des moteurs pas à pas (seulement leurs parties logiques), les leds des fins de courses et les éventuels servo, écran LCD (avec leurs rétroéclairage) et autres cartes SD. Tout ça, ça fini par consommer !
