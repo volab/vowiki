@@ -31,27 +31,34 @@ Si une de ces formations vous intéresse, veuillez-vous adresser à l'un des mem
 <!--
 |-
 | <span id="py03">py03</span>
-| Initiation à la programmation d'interfaces séries en Python avec la bibliothèque PySerial.
+| Initiation à la programmation des interfaces GPIO en Python sur RaspberryPi.
 | L'objectif de cet atelier est de vous initier à la programmation ....
 | Les bases de la programmation Python présentées dans l'atelier [[#py01]].
 | n.c.
 | [[Utilisateur:Jeremie|Jérémie]]
 |-
 | <span id="py04">py04</span>
+| Initiation à la programmation d'interfaces séries en Python avec la bibliothèque PySerial.
+| L'objectif de cet atelier est de vous initier à la programmation ....
+| Les bases de la programmation Python présentées dans l'atelier [[#py01]].
+| n.c.
+| [[Utilisateur:Jeremie|Jérémie]]
+|-
+| <span id="py05">py05</span>
 | Outils pour la programmation en Python
 | L'objectif de cet atelier est de vous initier à la programmation .... Créer une appli "finie" et un peu plus "pro". Pylint, git/github, covertest, unittest, doctest, gdb, ...
 | Les bases de la programmation Python présentées dans l'atelier [[#py01]].
 | n.c.
 | [[Utilisateur:Jeremie|Jérémie]]
 |-
-| <span id="py03">py03</span>
+| <span id="py06">py06</span>
 | Initiation à la programmation d'interfaces graphiques en Python avec la bibliothèque GTK+3
 | L'objectif de cet atelier est de vous initier à la programmation .... dessiner avec Cairo, afficher une page web avec Webkit, afficher un graph avec Matplotlib, images avec PIL
 | Les bases de la programmation graphique en Python avec GTK+3 présentées dans l'atelier [[#py02]].
 | n.c.
 | [[Utilisateur:Jeremie|Jérémie]]
 |-
-| <span id="py04">py04</span>
+| <span id="py07">py07</span>
 | Initiation à la persistance de données en Python avec le format JSON
 | L'objectif de cet atelier est de vous initier à la programmation ....
 | Les bases de la programmation Python présentées dans l'atelier [[#py01]].
