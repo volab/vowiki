@@ -4,16 +4,74 @@ Ces formations sont mises en place à la demande en fonction du nombre d'intére
 
 Si une de ces formations vous intéresse, veuillez-vous adresser à l'un des membres du CA ou d'envoyer un e-mail à contact@vorobotics.com.
 
-= Modélisation et imprimantes 3D =
+<!--
+= Programmation =
 
 {| class="wikitable alternance centre" width="100%"
 |-
+! scope=col width="5%"  | Réf.
 ! scope=col width="20%" | Nom
 ! scope=col             | Description
 ! scope=col width="20%" | Prérequis
 ! scope=col width="10%" | Durée
 ! scope=col width="15%" | Responsable(s)
 |-
+| <span id="py01">py01</span>
+| Initiation à la programmation Python
+| L'objectif de cet atelier est de vous initier à la programmation en langage Python.]].
+| Aucun
+| n.c.
+| [[Utilisateur:Jeremie|Jérémie]]
+|-
+| <span id="py02">py02</span>
+| Initiation à la programmation d'interfaces graphiques en Python avec la bibliothèque GTK+3
+| L'objectif de cet atelier est de vous initier à la programmation ....
+| Les bases de la programmation Python présentées dans l'atelier [[#py01]]. Aucune notion de POO (Programmation Orientée Objet) n'est requise pour cet atelier.
+| n.c.
+| [[Utilisateur:Jeremie|Jérémie]]
+|-
+| <span id="py03">py03</span>
+| Initiation à la programmation d'interfaces graphiques en Python avec la bibliothèque GTK+3
+| L'objectif de cet atelier est de vous initier à la programmation .... dessiner avec Cairo, afficher une page web avec Webkit, afficher un graph avec Matplotlib, images avec PIL
+| Les bases de la programmation graphique en Python avec GTK+3 présentées dans l'atelier [[#py02]].
+| n.c.
+| [[Utilisateur:Jeremie|Jérémie]]
+|-
+| <span id="py04">py04</span>
+| Initiation à la persistance de données en Python avec le format JSON
+| L'objectif de cet atelier est de vous initier à la programmation ....
+| Les bases de la programmation Python présentées dans l'atelier [[#py01]].
+| n.c.
+| [[Utilisateur:Jeremie|Jérémie]]
+|-
+| <span id="py05">py05</span>
+| Initiation à la programmation d'interfaces séries en Python avec la bibliothèque PySerial
+| L'objectif de cet atelier est de vous initier à la programmation ....
+| Les bases de la programmation Python présentées dans l'atelier [[#py01]].
+| n.c.
+| [[Utilisateur:Jeremie|Jérémie]]
+|-
+| <span id="py06">py06</span>
+| Outils pour la programmation en Python
+| L'objectif de cet atelier est de vous initier à la programmation .... Créer une appli "finie" et un peu plus "pro". Pylint, git/github, covertest, unittest, doctest, gdb, ...
+| Les bases de la programmation Python présentées dans l'atelier [[#py01]].
+| n.c.
+| [[Utilisateur:Jeremie|Jérémie]]
+|}
+-->
+
+= Modélisation et imprimantes 3D =
+
+{| class="wikitable alternance centre" width="100%"
+|-
+! scope=col width="5%"  | Réf.
+! scope=col width="20%" | Nom
+! scope=col             | Description
+! scope=col width="20%" | Prérequis
+! scope=col width="10%" | Durée
+! scope=col width="15%" | Responsable(s)
+|-
+| <span id="mod01">mod01</span>
 | Atelier d'initiation à la modélisation 3D
 | L'objectif de cet atelier est de vous initier à la modélisation et à l'impression d'objets 3D avec le logiciel gratuit FreeCAD. Ce qui se décline de la manière suivante: être capable d'utiliser FreeCAD pour modéliser des objets simples ; s'initier à l'impression 3D ; être capable de comprendre et d'appréhender le processus allant de l'idée à l'impression d'un objet, en passant par sa modélisation. Pour une description complète de l'atelier, voir [[Atelier d'initiation à la modélisation 3D]].
 | Aucun
