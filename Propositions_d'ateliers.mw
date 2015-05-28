@@ -11,10 +11,12 @@ Si une de ces formations vous intéresse, veuillez-vous adresser à l'un des mem
 ! scope=col width="20%" | Nom
 ! scope=col             | Description
 ! scope=col width="20%" | Prérequis
+! scope=col width="10%" | Durée
 ! scope=col width="15%" | Responsable(s)
 |-
 | Atelier d'initiation à la modélisation 3D
 | L'objectif de cet atelier est de vous initier à la modélisation et à l'impression d'objets 3D avec le logiciel gratuit FreeCAD. Ce qui se décline de la manière suivante: être capable d'utiliser FreeCAD pour modéliser des objets simples ; s'initier à l'impression 3D ; être capable de comprendre et d'appréhender le processus allant de l'idée à l'impression d'un objet, en passant par sa modélisation. Pour une description complète de l'atelier, voir [[Atelier d'initiation à la modélisation 3D]].
 | Aucun
+| 3h
 | MajorLee et Poltergeist42 
 |}
