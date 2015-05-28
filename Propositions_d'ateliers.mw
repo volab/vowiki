@@ -67,6 +67,25 @@ Si une de ces formations vous intéresse, veuillez-vous adresser à l'un des mem
 -->
 |}
 
+= Intelligence Artificielle =
+
+{| class="wikitable alternance centre" width="100%"
+|-
+! scope=col width="5%"  | Réf.
+! scope=col width="20%" | Nom
+! scope=col             | Description
+! scope=col width="20%" | Prérequis
+! scope=col width="10%" | Durée
+! scope=col width="15%" | Responsable(s)
+|-
+| <span id="ia01">ia01</span>
+| Algorithmes de parcours d'arbres, théorie et mise en pratique avec Python. Application à la résolution de problèmes modélisés sous la forme de graphs d'états (résolution par "force brute").
+| À définir...
+| Les bases de la programmation Python présentées dans l'atelier [[#py01]], notions d'algorithmique (structures d'arbres et de graphs).
+| 1 à 2h
+| [[Utilisateur:Jeremie|Jérémie]]
+|}
+
 = Modélisation et imprimantes 3D =
 
 {| class="wikitable alternance centre" width="100%"
