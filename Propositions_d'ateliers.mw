@@ -26,23 +26,23 @@ Si une de ces formations vous intéresse, veuillez-vous adresser à l'un des mem
 | Initiation à la programmation d'interfaces graphiques en Python avec la bibliothèque GTK+3.
 | L'objectif de cet atelier est de vous initier à la programmation d'interfaces graphiques en Python avec la bibliothèque GTK+3.
 | Les bases de la programmation Python présentées dans l'atelier [[#py01]]. Aucune notion de POO (Programmation Orientée Objet) n'est requise pour cet atelier.
-| 2 à 4h
+| 2 à 3h
 | [[Utilisateur:Jeremie|Jérémie]]
-<!--
 |-
 | <span id="py03">py03</span>
 | Initiation à la programmation des interfaces GPIO en Python sur RaspberryPi.
-| L'objectif de cet atelier est de vous initier à la programmation ....
+| À définir...
 | Les bases de la programmation Python présentées dans l'atelier [[#py01]].
-| n.c.
+| 2 à 3h
 | [[Utilisateur:Jeremie|Jérémie]]
 |-
 | <span id="py04">py04</span>
 | Initiation à la programmation d'interfaces séries en Python avec la bibliothèque PySerial.
-| L'objectif de cet atelier est de vous initier à la programmation ....
+| À définir...
 | Les bases de la programmation Python présentées dans l'atelier [[#py01]].
-| n.c.
+| 1 à 2h
 | [[Utilisateur:Jeremie|Jérémie]]
+<!--
 |-
 | <span id="py05">py05</span>
 | Outils pour la programmation en Python
