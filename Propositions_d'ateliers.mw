@@ -4,7 +4,6 @@ Ces formations sont mises en place à la demande en fonction du nombre d'intére
 
 Si une de ces formations vous intéresse, veuillez-vous adresser à l'un des membres du CA ou d'envoyer un e-mail à contact@vorobotics.com.
 
-<!--
 = Programmation =
 
 {| class="wikitable alternance centre" width="100%"
@@ -17,18 +16,19 @@ Si une de ces formations vous intéresse, veuillez-vous adresser à l'un des mem
 ! scope=col width="15%" | Responsable(s)
 |-
 | <span id="py01">py01</span>
-| Initiation à la programmation Python
-| L'objectif de cet atelier est de vous initier à la programmation en langage Python.]].
-| Aucun
-| n.c.
+| Initiation à la programmation Python.
+| L'objectif de ce cours est de vous aider à faire vos premiers pas en programmation Python (version 3) en mettant l'accent sur la pratique. Ce cours a également pour but de vous donner les clés qui vous permettront d'approfondir rapidement vos connaissances en toute autonomie et de vous aider à concevoir rapidement de vraies applications utiles. Contenu: présentation du langage Python (histoire et particularités), présentation de l'environnement de programmation Python, variables et types de base, quelques fonctions utiles (print, help, dir), les opérateurs logiques et arithmétiques, les structures de données (listes, dictionnaire, ensembles, le "slicing"), les structures de contrôle (if/then/else, boucles for et boucles while), les fonctions, les fichiers, les modules, quelques notions de base de la POO (Programmation Orientée Objet), quelques astuces (les "list comprehensions", ...).
+| Bases en informatique (installer une application, savoir ce qu'est un système de fichiers, ...), notions d'algorithmique (boucles, conditions, logique booléenne).
+| 2 à 4h
 | [[Utilisateur:Jeremie|Jérémie]]
 |-
 | <span id="py02">py02</span>
-| Initiation à la programmation d'interfaces graphiques en Python avec la bibliothèque GTK+3
-| L'objectif de cet atelier est de vous initier à la programmation ....
+| Initiation à la programmation d'interfaces graphiques en Python avec la bibliothèque GTK+3.
+| L'objectif de cet atelier est de vous initier à la programmation d'interfaces graphiques en Python avec la bibliothèque GTK+3.
 | Les bases de la programmation Python présentées dans l'atelier [[#py01]]. Aucune notion de POO (Programmation Orientée Objet) n'est requise pour cet atelier.
-| n.c.
+| 2 à 4h
 | [[Utilisateur:Jeremie|Jérémie]]
+<!--
 |-
 | <span id="py03">py03</span>
 | Initiation à la programmation d'interfaces graphiques en Python avec la bibliothèque GTK+3
@@ -57,8 +57,8 @@ Si une de ces formations vous intéresse, veuillez-vous adresser à l'un des mem
 | Les bases de la programmation Python présentées dans l'atelier [[#py01]].
 | n.c.
 | [[Utilisateur:Jeremie|Jérémie]]
-|}
 -->
+|}
 
 = Modélisation et imprimantes 3D =
 
