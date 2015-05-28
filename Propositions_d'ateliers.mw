@@ -42,14 +42,14 @@ Si une de ces formations vous intéresse, veuillez-vous adresser à l'un des mem
 | Les bases de la programmation Python présentées dans l'atelier [[#py01]].
 | 1 à 2h
 | [[Utilisateur:Jeremie|Jérémie]]
-<!--
 |-
 | <span id="py05">py05</span>
-| Outils pour la programmation en Python
-| L'objectif de cet atelier est de vous initier à la programmation .... Créer une appli "finie" et un peu plus "pro". Pylint, git/github, covertest, unittest, doctest, gdb, ...
+| Outils pour la programmation en Python.
+| L'objectif de cet atelier est de vous présenter quelques outils dont vous ne pourrez plus vous passer pour écrire des applications Python plus "pro". Contenu à définir: utiliser un interprète Python interactif avec ipython, vérification de code source avec Pylint et pep8, tests de couverture de code avec coverage, débugage avec pdb, profiling avec tests unitaires avec unittest et doctest, tracer un diagramme UML avec pyreverse, gestion des versions et diffusion avec Git/GitHub...
 | Les bases de la programmation Python présentées dans l'atelier [[#py01]].
 | n.c.
 | [[Utilisateur:Jeremie|Jérémie]]
+<!--
 |-
 | <span id="py06">py06</span>
 | Initiation à la programmation d'interfaces graphiques en Python avec la bibliothèque GTK+3
