@@ -84,6 +84,20 @@ Si une de ces formations vous intéresse, veuillez-vous adresser à l'un des mem
 | Les bases de la programmation Python présentées dans l'atelier [[#py01]], notions d'algorithmique (structures d'arbres et de graphs).
 | 1 à 2h
 | [[Utilisateur:Jeremie|Jérémie]]
+|-
+| <span id="ia02">ia02</span>
+| Une introduction à la théorie des jeux avec l'algorithme MiniMax. Mise en pratique en Python et application au jeu tic-tac-toe.
+| À définir...
+| Les algorithmes de parcours d'arbres présentés dans le cours [[#ia01]].
+| n.c.
+| [[Utilisateur:Jeremie|Jérémie]]
+|-
+| <span id="ia03">ia03</span>
+| Une introduction à la classification de données avec les réseaux de neurones.
+| À définir...
+| Notions de base d'algèbre linéaire (matrices, ...) et d'analyse.
+| n.c.
+| [[Utilisateur:Jeremie|Jérémie]]
 |}
 
 = Modélisation et imprimantes 3D =
