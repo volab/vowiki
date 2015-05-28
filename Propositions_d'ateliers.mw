@@ -38,7 +38,7 @@ Si une de ces formations vous intéresse, veuillez-vous adresser à l'un des mem
 |-
 | <span id="py04">py04</span>
 | Initiation à la programmation d'interfaces séries en Python avec la bibliothèque PySerial.
-| Le but de ce cours et de vous apprendre à écrire en Python des applications qui communiqueront avec des micro-contrôleurs ou des plate-formes embarquées via le port série. Un exemple d'application proposée consistera à contrôler depuis un ordinateur un servomoteur Dynamixel AX-12.
+| Le but de ce cours et de vous apprendre à écrire des applications en Python qui communiqueront avec des micro-contrôleurs ou des plate-formes embarquées via le port série. Un exemple d'application proposée consistera à contrôler depuis un ordinateur un servomoteur Dynamixel AX-12.
 | Les bases de la programmation Python présentées dans l'atelier [[#py01]].
 | 1 à 2h
 | [[Utilisateur:Jeremie|Jérémie]]
