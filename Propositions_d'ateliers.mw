@@ -49,6 +49,13 @@ Si une de ces formations vous intéresse, veuillez-vous adresser à l'un des mem
 | Les bases de la programmation Python présentées dans l'atelier [[#py01]].
 | environ 1h
 | [[Utilisateur:Jeremie|Jérémie]]
+|-
+| <span id="c01">c01</span>
+| Initiation à l'analyse d'images avec OpenCV.
+| À définir...
+| Les bases de la programmation en langage C.
+| 2 à 3h
+| [[Utilisateur:Jeremie|Jérémie]]
 <!--
 |-
 | <span id="py06">py06</span>
@@ -59,6 +66,7 @@ Si une de ces formations vous intéresse, veuillez-vous adresser à l'un des mem
 | [[Utilisateur:Jeremie|Jérémie]]
 -->
 |}
+
 
 = Raspberry Pi =
 
@@ -131,6 +139,7 @@ Si une de ces formations vous intéresse, veuillez-vous adresser à l'un des mem
 | n.c.
 | [[Utilisateur:Jeremie|Jérémie]]
 |}
+
 
 = Modélisation et imprimantes 3D =
 
