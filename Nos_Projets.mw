@@ -2,6 +2,7 @@
 
 Liste (non exhaustive) des projets et réalisations du VoLab :
 * [[VORCNC]]
+* [[Autolevelling pour Prusa I3]]
 
 * [[zone PCB]]
 * [[botsim]]
@@ -17,8 +18,10 @@ Liste (non exhaustive) des projets et réalisations du VoLab :
 ** [[VoR9]]
 ** [[VoR10]]
 ** ...
-* [[Autolevelling pour Prusa I3]]
 
+
+
+<!--
 {| class="wikitable centre" width="90%"
 |+ Nos projets
 |-
@@ -47,3 +50,4 @@ VoR
 | width="33%" |
 {{Barre de progression|50}}{{4/4}}
 |}
+--!>
