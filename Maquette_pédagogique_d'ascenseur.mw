@@ -203,10 +203,11 @@ Cette partie du programme est très intéressante car elle permet de mettre votr
 
 La commande «&nbsp;Tant que ...&nbsp;» (while) est utilisée pour programmer les moteurs.
 
+[[Fichier:Initialisation.JPG|vignette|500px|left]]
 
 Dès le début du programme, deux variables numériques sont définies afin de mémoriser les appels de la cabine.
 
-[[Image:]]
+[[Image:Fichier:Memhautbas.JPG]]
 
 
 Le moteur, branché sur le connecteur M1 tourne dans le sens permettant la fermeture des portes à une vitesse précise (200)
@@ -233,7 +234,6 @@ Nous voyons ici l'utilisation d'un nouveau bloc de contrôle «&nbsp;sous-progra
 
 
 Le sous programme est rédigé dans la même fenêtre, suit les mêmes règles que le programme principal et permet d'éviter les répétitions.
-
 
 = Licence =
 Ce document est mise à disposition selon les termes de la&nbsp;[http://creativecommons.org/licenses/by/4.0/ Licence Creative Commons Attribution 4.0 International]. 
