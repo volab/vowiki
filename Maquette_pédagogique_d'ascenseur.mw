@@ -88,18 +88,13 @@ Servo moteur à rotation continue 4,8 à 6V.
 Une résistance de rappel («pull-up» ou «pull-down») permet de fixer une entrée numérique à un état HIGH (haut ou 1) ou LOW (bas ou 0).
 
 Attention car j'ai câblé les capteurs et boutons poussoir de l'ascenseur en "pull-up" et ceux de la porte en "pull-down" (erreur de débutant). Faites bien attention et choisissez plutôt le câblage en "pull-up" afin d'être en sécurité si un court circuit vous arrive (la résistance se trouve toujours entre le VCC et le GND) et de ne pas griller l'alimentation.
-
-[[Image:pullups.png|middle|thumbs|left|450px]]Avec la résistance de rappel "pull-down", l'entrée numérique est à l'état LOW lorsque le micro-rupteur ou le bouton poussoir sont ouverts (relâchés).
-
-Avec la résistance de rappel "pull-up", l'entrée numérique est à l'état HIGH lorsque le micro-rupteur ou le bouton poussoir sont ouverts (relâchés).
-
-Cette information est importante car votre programme ne fonctionnera pas si vous mélangez les câblages comme j'ai pu le faire et perdre un temps important pour trouver l'erreur.<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+{| class="wikitable" border="1"
+|-
+| [[Image:pullups.png|middle|thumbs|left|450px]]
+| Avec la résistance de rappel "pull-down", l'entrée numérique est à l'état LOW lorsque le micro-rupteur ou le bouton poussoir sont ouverts (relâchés).<br />
+Avec la résistance de rappel "pull-up", l'entrée numérique est à l'état HIGH lorsque le micro-rupteur ou le bouton poussoir sont ouverts (relâchés).<br />
+Cette information est importante car votre programme ne fonctionnera pas si vous mélangez les câblages comme j'ai pu le faire et perdre un temps important pour trouver l'erreur.
+|}
 <br />
 
 == Montage de la carte Arduino Mega 2560 et la carte d'extension Adafruit Motor Shield  ==
