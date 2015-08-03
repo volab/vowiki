@@ -1,0 +1,264 @@
+← [[Accueil]]<br />
+
+[[Fichier:IMG 3749.JPG|400px|border]][[Fichier:IMG 3756.JPG|400px|border]]
+
+<!--
+<gallery>
+[[Fichier:IMG 3749.JPG|400px|border]]
+[[Fichier:IMG 3756.JPG|400px|border]]
+</gallery>
+-->
+
+<center>'''<big><big>Maquette d'ascenseur</big></big>'''</center>
+
+
+= VoLAB =
+= Assocation VoRoBoTics =
+Date : 14/03/2015
+
+Auteur : Lecorsier Gilles
+
+Relecteur : Joel Soranzo
+
+Thème : Domotique, enseignement
+
+Projet : Ascenseur, programmation Arduino
+
+= Problématique =
+Le but de ce document est de présenter mon expérience et d'apporter mon aide pour éviter de perdre du temps important dans le développement de projets automatisés.
+
+Au départ, ce travail est proposé aux élèves de 3ème de collège (voir le [http://lecorsiergilles.blogspot.fr/ blog La Technologie au Collège]).
+
+
+Dans ce document sont abordés&nbsp;:
+
+Les cartes Arduino Mega 2560 et Adafruit Motor Shield
+
+Les branchements des capteurs et actionneurs
+
+La programmation à l'aide d'ArduBlock, plugin (module d'extension) du logiciel Arduino de&nbsp;:
+
+Contrôles et commandes à l'aide de boutons poussoirs et de capteurs fin de course
+
+Moteur CC (à courant continu)
+
+Servomoteur à rotation continue
+
+La commande «&nbsp;Tant que ...&nbsp;» (while)
+
+La boucle «&nbsp;Si&nbsp;» (if)
+
+Sous programme
+
+
+= Matériel =
+La maquette proposée n'est qu'un support et le travail peut très bien être transféré sur un autre projet.
+
+== Cartes  ==
+[http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.MaterielMega2560 La carte Arduino Mega 2560] est une carte à microcontrôleur basée sur un ATmega2560 ([http://www.atmel.com/Images/doc2549.pdf fiche technique]).
+
+[[Image:ArduinoMega2560Front240.jpg|thumb|center]]
+
+
+[https://learn.adafruit.com/downloads/pdf/adafruit-motor-shield.pdf La carte Aafruit Motor Shield] est une carte d'extension de commande de moteurs à base de L293.
+
+[[Fichier:L293Dmotorshield.jpg|vignette|center]]
+
+== Logiciel ==
+Le logiciel Arduino installé (voir : http://www.arduino.cc/)
+
+[http://www.semageek.com/arduino-presentation-et-traduction-en-francais-de-ardublock/ Ardublock] est un plugin qui s’ajoute à l’IDE d’Arduino. (Programmation graphique), à placer dans C:\Users\nom_du_compte\Documents\Arduino\Tools\ArduBlockTool\Tool
+
+La librairie [https://learn.adafruit.com/adafruit-motor-shield-v2-for-arduino/install-software Adafruit Motor Shield] (même si elle apparaît dans Ardublock), à placer dans C:\Users\nom_du_compte\Documents\Arduino\libraries
+
+== Information (Attention au câblage présenté plus bas) ==
+Microrupteur (fin de course) normalement ouvert.
+
+Boutons poussoir normalement ouvert.
+
+
+== Actionneurs ==
+Moto réducteur CC 1.5-3V D.C. (rapport de réduction 100:1).
+
+Servo moteur à rotation continue 4,8 à 6V.
+
+
+= Préparation =
+== Câblage des interrupteurs et boutons poussoir ==
+Une résistance de rappel («pull-up» ou «pull-down») permet de fixer une entrée numérique à un état HIGH (haut ou 1) ou LOW (bas ou 0).
+
+Attention car j'ai câblé les capteurs et boutons poussoir de l'ascenseur en "pull-up" et ceux de la porte en "pull-down" (erreur de débutant). Faites bien attention et choisissez plutôt le câblage en "pull-up" afin d'être en sécurité si un court circuit vous arrive (la résistance se trouve toujours entre le VCC et le GND) et de ne pas griller l'alimentation.
+
+[[Image:pullups.png]]Avec la résistance de rappel "pull-down", l'entrée numérique est à l'état LOW lorsque le micro-rupteur ou le bouton poussoir sont ouverts (relâchés).
+
+Avec la résistance de rappel "pull-up", l'entrée numérique est à l'état HIGH lorsque le micro-rupteur ou le bouton poussoir sont ouverts (relâchés).
+
+Cette information est importante car votre programme ne fonctionnera pas si vous mélangez les câblages comme j'ai pu le faire et perdre un temps important pour trouver l'erreur.
+
+
+== Montage de la carte Arduino Mega 2560 et la carte d'extension Adafruit Motor Shield  ==
+[[Image:megaloupe4%20reperage.jpg]]Le moto réducteur qui permet d'ouvrir la porte de la maquette est branché sur le bornier à vis M1.
+
+Le servomoteur à rotation continue est branché sur le connecteur SER1.
+
+[http://souterweb.free.fr/boitaoutils/eclairage/annexes/ATX/modif_ATX.htm Une alimentation stabilisée] est branchée sur le bornier de l'alimentation externe. Attention aux polarités, vous risquez de griller le circuit.
+
+
+== Repérage des branchements ==
+Entre parenthèses&nbsp;: les numéro des entrées au niveau de la carte Atmega2560. Sauf pour MA carte Adafruit.
+
+1) Porte de la cabine
+
+Capteur fin de course fermé (26)
+
+Capteur fin de course ouvert (28)
+
+Moteur cc (M1)
+
+2) Cabine
+
+Fin de course haut (32)
+
+Fin de course bas (34)
+
+Bouton appel haut (36)
+
+Bouton appel bas (38)
+
+Servomoteur (10)
+
+
+= Programmation =
+== Scénario ==
+- Initialisation&nbsp;du système&nbsp;:
+
+Fermer la porte de la cabine
+
+Descendre la cabine au rez de chaussée
+
+- Programme&nbsp;:
+
+Deux possibilités (la cabine est au rez de chaussée)
+
+1) Une personne au rez de chaussée demande l'ouverture de la porte
+
+La porte s'ouvre
+
+La porte reste ouverte quelques secondes
+
+La porte se referme
+
+L'ascenseur monte au premier étage
+
+L'ascenseur s’arrête
+
+La porte s'ouvre
+
+La porte reste ouverte quelques secondes
+
+La porte se referme.
+
+2) Une personne au premier étage appelle l'ascenseur.
+
+L'ascenseur monte au premier étage
+
+L'ascenseur s’arrête
+
+La porte s'ouvre
+
+La porte reste ouverte quelques secondes
+
+La porte se referme.
+
+L'ascenseur descend au rez de chaussée
+
+L'ascenseur s’arrête
+
+La porte s'ouvre
+
+La porte reste ouverte quelques secondes
+
+La porte se referme.
+
+Le reste du programme est semblable lorsque l'ascenseur est au premier étage avec les deux possibilités.
+
+Une petite variante a été ajouté dans le programme pour garder en mémoire un appel cabine lorsque celle-ci est en mouvement. Une fois la porte refermée, la cabine se remet en mouvement pour répondre à l'appel enregistré.
+
+
+== Programme ArduBlock ==
+Chargement du fichier créé avec Ardublock
+
+1) Ouvrir le logiciel Arduino
+
+2) Dans le menu outil, lancer le plugin Ardublock.
+
+3) Ouvrir le fichier «&nbsp;ascenseur_ardublock&nbsp;»
+
+
+Description du programme
+
+1) Initialisation (setup)
+
+Cette partie du programme est très intéressante car elle permet de mettre votre automatisme en position de départ choisie.
+
+La commande «&nbsp;Tant que ...&nbsp;» (while) est utilisée pour programmer les moteurs.
+
+
+Dès le début du programme, deux variables numériques sont définies afin de mémoriser les appels de la cabine.
+
+[[Image:]]
+
+
+Le moteur, branché sur le connecteur M1 tourne dans le sens permettant la fermeture des portes à une vitesse précise (200)
+
+Attention, le contrôle de la fermeture de la porte s'effectue avec le contrôle «&nbsp;Tant que ...&nbsp;» (while). Je rappelle que mes capteurs de fin de course de la porte sont montés en "pull-down". La borne 26 correspond au capteur fin de course fermeture de la porte. Le programme boucle dans le contrôle «&nbsp;Tant que ...&nbsp;» jusqu'au moment où la valeur de la broche passe à l'état HIGH. Ensuite le moteur s’arrête (vitesse 0).
+
+
+Une fois la porte fermée, la cabine se met automatiquement en position basse.
+
+Le programme de la descente s'effectue avec le contrôle «&nbsp;Tant que ...&nbsp;» (while) mais mes capteurs fin de course sont branchés en "pull-up". Je suis obligé d'inverser l'état de la broche 34 et obtenir un état LOW pour que le programme boucle dans le contrôle «&nbsp;Tant que ...&nbsp;» jusqu'au moment où la cabine appuie sur le capteur fin de course. La broche passe à l'état HIGH. Le servomoteur s'arrête.
+
+La broche 10 du servomoteur à rotation continue permet de régler la vitesse dans un sens ou l'autre(de 0 à 180) puis l’arrêter (90)
+
+
+2) Le programme (boucle)
+
+La commande «&nbsp;Si&nbsp;» (if) est utilisée afin d’obtenir plusieurs branches différentes correspondantes aux différentes possibilités de de commandes décrites dans le scénario.
+
+La boucle «&nbsp;Si&nbsp;» (if) permet de tester l'état des variables et d'exécuter la commande si sont état est HIGH. Si la variable n'est pas valide, le programme traverse la boucle et effectue la commande suivante en dessous.
+
+Nous voyons ici l'utilisation d'un nouveau bloc de contrôle «&nbsp;sous-programme&nbsp;» nommé porte qui appel donc le sous programme «&nbsp;porte&nbsp;»
+
+[[Image:]]
+
+
+Le sous programme est rédigé dans la même fenêtre, suit les mêmes règles que le programme principal et permet d'éviter les répétitions.
+
+
+= Licence =
+Ce document est mise à disposition selon les termes de la&nbsp;[http://creativecommons.org/licenses/by/4.0/ Licence Creative Commons Attribution 4.0 International]. 
+
+[[Image:]]Parternité 'by' :''L'œuvre peut être librement utilisée, à la condition de l'attribuer à l'auteur en citant son nom.'' 
+
+
+Note aux auteurs de documents du VoLAB, Vous avez la possibilité de changer de licence. Mais ce serait bien de rester libre et ouvert. Encore une fois ceci est une recommandation et non une obligation.
+
+= Bibliographie =
+= Webographie =
+[http://fr.wikipedia.org/wiki/Licence_Creative_Commons http://fr.wikipedia.org/wiki/Licence_Creative_Commons]
+
+[http://www.semageek.com/arduino-presentation-et-traduction-en-francais-de-ardublock/ Ardublock]
+
+[http://www.arduino.cc/ http://www.arduino.cc/]
+
+[https://www.adafruit.com/products/81 https://www.adafruit.com/products/81]
+
+[http://lecorsiergilles.blogspot.fr/ blog La Technologie au Collège]
+
+= Rédaction en langue française =
+Partant du constat de terrain qu'une énorme masse d'information concernant les sujets qui nous intéressent comme entre autres l'impression 3D n'étaient disponibles que dans la langue de Shakespeare et que de nombreuses personnes dans notre entourage ne maîtrisaient pas la dite langue et soucieux de diffuser encore plus l'information, nous avons pris le parti, au VoLAB, de rédiger nos documents de préférence en langue française.
+
+= VoLAB =
+Un mot sur le VoLAB. VoLAB est un fablab implanté à environ 30km au nord-ouest de Paris dans la commune de Vauréal dans l'agglomération de Cergy Pontoise. Il est animé par l'association VoRoBoTics.
+
+Site internet [http://www.vorobotics.com/ www.vorobotics.com]
