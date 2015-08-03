@@ -203,17 +203,18 @@ Cette partie du programme est très intéressante car elle permet de mettre votr
 
 La commande «&nbsp;Tant que ...&nbsp;» (while) est utilisée pour programmer les moteurs.
 
-[[Fichier:Initialisation.JPG|vignette|500px|left]]
+[[Fichier:Initialisation.JPG|500px|left]]
 
-Dès le début du programme, deux variables numériques sont définies afin de mémoriser les appels de la cabine.
+<br clear=all>Dès le début du programme, deux variables numériques sont définies afin de mémoriser les appels de la cabine.
 
-[[Image:Fichier:Memhautbas.JPG]]
+[[Image:Memhautbas.JPG]]
 
 
 Le moteur, branché sur le connecteur M1 tourne dans le sens permettant la fermeture des portes à une vitesse précise (200)
 
 Attention, le contrôle de la fermeture de la porte s'effectue avec le contrôle «&nbsp;Tant que ...&nbsp;» (while). Je rappelle que mes capteurs de fin de course de la porte sont montés en "pull-down". La borne 26 correspond au capteur fin de course fermeture de la porte. Le programme boucle dans le contrôle «&nbsp;Tant que ...&nbsp;» jusqu'au moment où la valeur de la broche passe à l'état HIGH. Ensuite le moteur s’arrête (vitesse 0).
 
+[[Fichier:Moteurcc.JPG]]
 
 Une fois la porte fermée, la cabine se met automatiquement en position basse.
 
@@ -221,6 +222,7 @@ Le programme de la descente s'effectue avec le contrôle «&nbsp;Tant que ...&nb
 
 La broche 10 du servomoteur à rotation continue permet de régler la vitesse dans un sens ou l'autre(de 0 à 180) puis l’arrêter (90)
 
+[[Fichier:Servomoteur.JPG]]
 
 2) Le programme (boucle)
 
@@ -230,7 +232,7 @@ La boucle «&nbsp;Si&nbsp;» (if) permet de tester l'état des variables et d'ex
 
 Nous voyons ici l'utilisation d'un nouveau bloc de contrôle «&nbsp;sous-programme&nbsp;» nommé porte qui appel donc le sous programme «&nbsp;porte&nbsp;»
 
-[[Image:]]
+[[Image:Cabinebas.JPG]]
 
 
 Le sous programme est rédigé dans la même fenêtre, suit les mêmes règles que le programme principal et permet d'éviter les répétitions.
