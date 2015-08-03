@@ -99,12 +99,11 @@ Cette information est importante car votre programme ne fonctionnera pas si vous
 <br />
 
 == Montage de la carte Arduino Mega 2560 et la carte d'extension Adafruit Motor Shield  ==
-[[Image:megaloupe4%20reperage.jpg]]Le moto réducteur qui permet d'ouvrir la porte de la maquette est branché sur le bornier à vis M1.
+[[Image:megaloupe4%20reperage.jpg|border|center|500px]]Le moto réducteur qui permet d'ouvrir la porte de la maquette est branché sur le bornier à vis M1.
 
 Le servomoteur à rotation continue est branché sur le connecteur SER1.
 
 [http://souterweb.free.fr/boitaoutils/eclairage/annexes/ATX/modif_ATX.htm Une alimentation stabilisée] est branchée sur le bornier de l'alimentation externe. Attention aux polarités, vous risquez de griller le circuit.
-
 
 == Repérage des branchements ==
 Entre parenthèses&nbsp;: les numéro des entrées au niveau de la carte Atmega2560. Sauf pour MA carte Adafruit.
