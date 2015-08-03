@@ -242,7 +242,8 @@ Le sous programme est rédigé dans la même fenêtre, suit les mêmes règles q
 =Fichiers sources=
 Pdf de cette page : [[http://www.vorobotics.com/uploads/ascenseurmaquette_reluJojo.pdf ici]]<br />
 
-Le zip avec les images : ici<br />
+Le zip avec les images : [[http://www.vorobotics.com/uploads/AscenseurMaquette.zip ici]]<br />
+Le contenu de ces fichiers peut être légèrement différent de la présente page de notre wiki. Ils ont servi à la créer mais ne possèdent pas de liens directe. Nous n'avons pas encore de solution (satisfaisante à nos yeux) qui nous permette de créer la documentation en local et qu'elle siot directement transmise et surtout synchronisée en ligne.
 
 Code Arduino et Adublock : ici <br />
 
