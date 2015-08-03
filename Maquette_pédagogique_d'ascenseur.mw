@@ -93,7 +93,10 @@ Attention car j'ai câblé les capteurs et boutons poussoir de l'ascenseur en "p
 
 Avec la résistance de rappel "pull-up", l'entrée numérique est à l'état HIGH lorsque le micro-rupteur ou le bouton poussoir sont ouverts (relâchés).
 
-Cette information est importante car votre programme ne fonctionnera pas si vous mélangez les câblages comme j'ai pu le faire et perdre un temps important pour trouver l'erreur.
+Cette information est importante car votre programme ne fonctionnera pas si vous mélangez les câblages comme j'ai pu le faire et perdre un temps important pour trouver l'erreur.<br />
+<br />
+<br />
+<br />
 
 == Montage de la carte Arduino Mega 2560 et la carte d'extension Adafruit Motor Shield  ==
 [[Image:megaloupe4%20reperage.jpg]]Le moto réducteur qui permet d'ouvrir la porte de la maquette est branché sur le bornier à vis M1.
