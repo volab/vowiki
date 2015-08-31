@@ -63,134 +63,126 @@ COM3 -> /dev/ttyS2
 COM4 -> /dev/ttyS3
 
 
-# Connaitre la list des port série utilisé&nbsp;:
+=== Connaitre la list des port série utilisé&nbsp;:===
 
-Il y a deux façon simple de connaître la liste des ports série utilié&nbsp;:
+:Il y a deux façon simple de connaître la liste des ports série utilié&nbsp;:
 
-ls /dev/tty*
+::ls /dev/tty*
+<br />
+:La commande retourne généralement plus de 50 tty. Cependant, les tty associés au port USB disposent d'une nomenclature différente. Ils contiennent habituellement USB ou ACM (Abstract Control Model)
+:La seconde façon, est d'intérroger le journal sur toutes les entrées "tty"
 
-La commande retourne généralement plus de 50 tty. Cependant, les tty associés au port USB disposent d'une nomenclature différente. Ils contiennent habituellement USB ou ACM (Abstract Control Model)
+::dmesg | grep tty
+<br />
 
+: Cette seconde methode peut parraitre plus complexe à interpréter, mais elle nous renseigne directement sur le matériel et sur le port utilisé.
+<br />
 
-La seconde façon, est d'intérroger le journal sur toutes les entrées "tty"
+=== Rappel&nbsp;: Libérer l'UART pour l'utiliser depuis le GPIO<br/>===
+Par défaut, l'UART et réserver au debug et n'est accessible qu'en mode console vous devez donc le désactiver dans l'outil de configuration.<br/> 
 
-dmesg | grep tty
+* Intérroger le journal sur les dernier événement de la liaison série pour vérifier que l'opération n'a pas déjà été effectuer<br />
+::dmesg | grep tty<br /><br />
 
+:Si l'opération n'a pas encore été effectuer, le résultat obtenu doit être :<br/>
+::[ 0.002072] console [tty1] enabled<br/> 
+::[ 0.195363] 3f201000.uart: ttyAMA0 at MMIO 0x3f201000 (irq = 83, base_baud = 0) is a PL011 rev2<br/>
+::[ 0.695429] console [ttyAMA0] enabled<br/><br />
 
-Cette seconde methode peut parraitre plus complexe à interpréter, mais elle nous renseigne directement sur le matériel et sur le port utilisé.
+* configurer l'UART avec l'outil de configuration du Rpi<br />
+::sudo raspi-config<br />
 
+* se déplacer dans les menu selon la séquence suivante<br />
 
-# Rappel&nbsp;: Libérer l'UART pour l'utiliser depuis le GPIO<br/> Par défaut, l'UART et réserver au debug et n'est accessible qu'en mode console vous devez donc le désactiver dans l'outil de configuration.<br/> 
-2.1.Intérroger le journal sur les dernier événement de la liaison série pour vérifier que l'opération n'a pas déjà été effectuerdmesg | grep ttySi l'opération n'a pas encore été effectuer, le résultat obtenu doit être :<br/> [ 0.002072] console [tty1] enabled<br/> [ 0.195363] 3f201000.uart: ttyAMA0 at MMIO 0x3f201000 (irq = 83, base_baud = 0) is a PL011 rev2<br/> [ 0.695429] console [ttyAMA0] enabled<br/> 
-2.2 configurer l'UART avec l'outil de configuration du Rpisudo raspi-config2.3 se déplacer dans les menu selon la séquence suivante[ 8 ] --> [ A8] --> [ Non ]Le quatrième écran vous informe que Serial est maintenant désactivé[ Ok ] --> [ Finish ]2.4 Redémarersudo reboot2.5. Vérifier dans le journal que l'opération a bien été prise en comptedemsg | grep ttyCe qui doit vous donner le résultat suivant :[ 0.002051] console [tty1] enabled<br/> [ 0.195175] 3f201000.uart: ttyAMA0 at MMIO 0x3f201000 (irq = 83, base_baud = 0) is a PL011 rev2
+::[ 8 ] --> [ A8] --> [ Non ]<br /><br />
 
-On constate que la dernière ligne à disparue, le mode debug sur la sortie UART est donc bien désactivée.
+:Le quatrième écran vous informe que Serial est maintenant désactivé<br />
 
+::[ Ok ] --> [ Finish ]<br /><br />
 
-# Utilisation de l'adaptater USB-TTL
+* Redémarer<br />
+::sudo reboot<br />
+* Vérifier dans le journal que l'opération a bien été prise en compte<br />
+::demsg | grep tty<br /><br />
 
-La première chose à faire est bien évidement de connecter l'adaptater dans l'un des ports USB disponible.
+:Ce qui doit vous donner le résultat suivant :
+::[ 0.002051] console [tty1] enabled<br/>
+::[ 0.195175] 3f201000.uart: ttyAMA0 at MMIO 0x3f201000 (irq = 83, base_baud = 0) is a PL011 rev2
+<br /><br />
+: On constate que la dernière ligne à disparue, le mode debug sur la sortie UART est donc bien désactivée.<br /><br />
 
-3.1 Connaitre le port de l'adaptateur
+=== Utilisation de l’adaptateur USB-TTL<br />===
 
-Avant de s'inquiéter du port utiliser par l'adaptateur, il faut s'assurer qu'il a bien été pris en compte par le système au moment du branchement&nbsp;:
+La première chose à faire est bien évidement de connecter l’adaptateur dans l'un des ports USB disponible.<br />
 
-lsusb
+* Connaitre le port de l'adaptateur<br />
 
+:Avant de s'inquiéter du port utiliser par l'adaptateur, il faut s'assurer qu'il a bien été pris en compte par le système au moment du branchement&nbsp;: <br />
 
-Vous devriez obtenir un résultat proche de ceci&nbsp;:
+::lsusb
+<br />
+:Vous devriez obtenir un résultat proche de ceci&nbsp;:
 
-Bus 001 Device 005: ID 10c4:ea60 Cygnal Integrated Products, Inc. CP210x UART Bridge / myAVR mySmartUSB light
+::Bus 001 Device 005: ID 10c4:ea60 Cygnal Integrated Products, Inc. CP210x UART Bridge / myAVR mySmartUSB light
+<br />
 
+:la commande suivante&nbsp;:
+<br />
+::ls /dev/tty*
+<br />
+:Doit à présent s'être enrichie d'une étiquette supplémentaire à la toute fin du tableau, ressemblant à&nbsp;:
+::/dev/ttyUSB0
+<br />
+:On peut donc deviné que le composant CP210x communique sur le port /dev/ttyUSB0. Pour le vérifier on interroge le journal sur les éléments tty&nbsp;:
+<br />
+::dmesg | grep tty
+<br />
+:la dernière entrée dans le journal est alors&nbsp;:
+<br />
+:[ 4708.499632] usb 1-1.4: cp210x converter now attached to ttyUSB0<br />
 
-la commande suivante&nbsp;:
+:Nous somme donc assuré que notre adaptateur a bien été pris en compte et que le système lui a effectivement attaché un port série. Il ne reste plus qu'a utiliser notre nouveau port série 
 
-ls /dev/tty*
-
-
-Doit à présent s'être enrichie d'une étiquette supplémentaire à la toute fin du tableau, ressemblant à&nbsp;:
-
-/dev/ttyUSB0
-
-
-On peut donc deviné que le composant CP210x communique sur le port /dev/ttyUSB0. Pour le vérifier on interroge le journal sur les éléments tty&nbsp;:
-
-dmesg | grep tty
-
-
-la dernière entrée dans le journal est alors&nbsp;:
-
-[ 4708.499632] usb 1-1.4: cp210x converter now attached to ttyUSB0
-
-
-Nous somme donc assuré que notre adaptateur a bien été pris en compte et que le système lui a effectivement attaché un port série. Il ne reste plus qu'a utiliser notre nouveau port série 
-
-
-[[Image:branchementUsbTTL.png]]Pour pouvoir tester notre communication série, nous avons placé un cavalier entre les broches Rx et Tx de l'adaptateur. Nous avons ensuite lancer un petit script en Python3 pour vérifier le bon fonctionnement du couple envoie / réception&nbsp;:
-
-
+[[Image:branchementUsbTTL.png]]<br />
+Pour pouvoir tester notre communication série, nous avons placé un cavalier entre les broches Rx et Tx de l'adaptateur. Nous avons ensuite lancer un petit script en Python3 pour vérifier le bon fonctionnement du couple envoie / réception&nbsp;:
+<br />
 code&nbsp;:
 
-<nowiki>#!/usr/bin/env python</nowiki>
+ <nowiki>
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-<nowiki># -*- coding: utf-8 -*-</nowiki>
+# Pour executer se script, lancer la commande :
+# python serialWrite.py
 
-
-<nowiki># Pour executer se script, lancer la commande :</nowiki>
-
-<nowiki># python serialWrite.py</nowiki>
-
-
-<nowiki># Ce script envoie en continue la chaine de caractère :</nowiki>
-
-<nowiki># "Write counter:" suivie de la variable "counter"</nowiki>
-
-<nowiki># cette variable est incrémenter de 1 à chaque tour</nowiki>
-
-<nowiki># de boucle</nowiki>
-
-
-<nowiki># La chaine transmise est reçu et afficher dans la foulée</nowiki>
-
+# Ce script envoie en continue la chaine de caractère :
+# "Write counter:" suivie de la variable "counter"
+# cette variable est incrémenter de 1 à chaque tour
+# de boucle
+# La chaine transmise est reçu et afficher dans la foulée
 
 import time
-
 import serial
 
-
 ser = serial.Serial(
-
-
-port='/dev/ttyUSB0',
-
-baudrate = 9600,
-
-parity=serial.PARITY_NONE,
-
-stopbits=serial.STOPBITS_ONE,
-
-bytesize=serial.EIGHTBITS,
-
-timeout=1
-
+        port='/dev/ttyUSB0',
+        baudrate = 9600,
+        parity=serial.PARITY_NONE,
+        stopbits=serial.STOPBITS_ONE,
+        bytesize=serial.EIGHTBITS,
+        timeout=1
 )
 
 counter=0
 
-
 while 1:
-
-ser.write('Write counter: %d \n'%(counter))
-
-print("test d'envoie ok")
-
-time.sleep(1)
-
-counter += 1
-
-x=ser.readline()
-
-print(x)
+        ser.write('Write counter: %d \n'%(counter))
+        print("test d'envoie ok")
+        time.sleep(1)
+        counter += 1
+        x=ser.readline()
+        print(x)
+</nowiki>
 
 = Fichiers sources =
 = Licence =
