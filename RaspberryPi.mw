@@ -76,12 +76,12 @@ COM4 -> /dev/ttyS3
 <br />
 
 === Rappel&nbsp;: Libérer l'UART pour l'utiliser depuis le GPIO<br/>===
-Par défaut, l'UART et réserver au debug et n'est accessible qu'en mode console vous devez donc le désactiver dans l'outil de configuration.<br/> 
+Par défaut, l'UART est réservé au debug et n'est accessible qu'en mode console LINUX, vous devez donc le désactiver dans l'outil de configuration.<br/> 
 
-* Intérroger le journal sur les dernier événement de la liaison série pour vérifier que l'opération n'a pas déjà été effectuer<br />
+* Intérroger le journal sur les derniers événements de la liaison série pour vérifier que l'opération n'a pas déjà été effectuer<br />
 ::dmesg | grep tty<br /><br />
 
-:Si l'opération n'a pas encore été effectuer, le résultat obtenu doit être :<br/>
+:Si l'opération n'a pas encore été effectuée, le résultat obtenu doit être :<br/>
 ::[ 0.002072] console [tty1] enabled<br/> 
 ::[ 0.195363] 3f201000.uart: ttyAMA0 at MMIO 0x3f201000 (irq = 83, base_baud = 0) is a PL011 rev2<br/>
 ::[ 0.695429] console [ttyAMA0] enabled<br/><br />
