@@ -1,6 +1,6 @@
 ← [[Accueil]]
 
-= Les Microcontrôleurs =
+= Microcontrôleurs et Micro-Ordinateurs =
 Nous allons parler sur cette page des Microcontrôleurs, mais malheureusement pas tous les Microcontrôleurs.
 
 
@@ -9,10 +9,16 @@ Pourquoi&nbsp;? Tout simplement parce que nous ne les connaissons pas tous les M
 
 Nous avons pour projet de travailler sur les MSP430 (de chez Texas Instrument), les STM32 (STMicroelectronics), les PIC (de chez Microchip) et les FPGA. 
 
-Oui les FPGA ne sont pas des Microcontrôleur mais puisque l'on peut instancié un Microcontrôleur dans un FPGA, nous le Rangerons probablement dans cette catégorie
+Oui les FPGA ne sont pas des Microcontrôleur mais puisque l'on peut instancié un Microcontrôleur dans un FPGA, nous le Rangerons probablement dans cette catégorie.
+
+Puisque nous allons de toutes façons nous éloigner quelque peu des Micocontrôleurs, nous ne pouvons pas passer à coté des Micro-Ordinateurs comme le Raspberry Pi, le BeagleBone ou l'Onion Omega.
 
 
 Voici pour l'instant ce sur quoi nous travaillons&nbsp;:
 
 
-- Les AVR
+- Les AVR :
+: * ATMega328p (en boitier DIL tout seul et depuis la carte Arduino Uno)
+: * ATMega2560 (sur les cartes Arduino 2560)
+
+- Le Raspberry Pi
