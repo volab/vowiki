@@ -42,13 +42,13 @@ Vous le savez certainement, le Raspberry Pi dispose sur ses GPIO d'un UART qui e
 | style="border-top:none;border-bottom:0.05pt solid #000000;border-left:0.05pt solid #000000;border-right:0.05pt solid #000000;padding:0.097cm;"| <center>Rx</center>
 
 |}
-Cela peut suffire dans la plupart des cas. Cependant, il peut arriver que vous ayez besoin de port série supplémentaire. Si votre projet est strictement confiner au dimension du Raspberry Pi, nous n'avons pas de solution pour vous.
+Cela peut suffire dans la plupart des cas. Cependant, il peut arriver que vous ayez besoin de port série supplémentaire. Si votre projet est strictement confiné aux dimensions du Raspberry Pi, nous n'avons pas de solution pour vous.
 
-Si au contraire vous disposer de tous l’espace situé devant les ports USB, alors vous allez pouvoir vous amuser. 
+Si au contraire vous disposez de tout l’espace situé devant les ports USB, alors vous allez pouvoir vous amuser. 
 
 Vous devez vous procurez un [http://www.banggood.com/Wholesale-USB-To-TTL-COM-Converter-Module-buildin-In-CP2102-New-p-27989.html adaptateur usb-TTL] que vous trouverez sur internet pour 2 ou 3 euros.
 
-Avent de commencer, voici un petit rappel sur la correspondance des nom "Windows" et les nom "Linux"&nbsp;:
+Avant de commencer, voici un petit rappel sur la correspondance des noms "Windows" et les noms "Linux"&nbsp;:
 
 
 COM1 -> /dev/ttyS0
@@ -60,19 +60,19 @@ COM3 -> /dev/ttyS2
 COM4 -> /dev/ttyS3
 
 
-=== Connaitre la list des port série utilisé&nbsp;:===
+=== Connaître la liste des ports séries utilisés&nbsp;:===
 
-:Il y a deux façon simple de connaître la liste des ports série utilié&nbsp;:
+:Il y a deux façons simples de connaître la liste des ports séries utiliés&nbsp;:
 
 ::ls /dev/tty*
 <br />
-:La commande retourne généralement plus de 50 tty. Cependant, les tty associés au port USB disposent d'une nomenclature différente. Ils contiennent habituellement USB ou ACM (Abstract Control Model)
-:La seconde façon, est d'intérroger le journal sur toutes les entrées "tty"
+:La commande retourne généralement plus de 50 tty. Cependant, les tty associés aux ports USB disposent d'une nomenclature différente. Ils contiennent habituellement USB ou ACM (Abstract Control Model)
+:La seconde façon, est d’interroger le journal sur toutes les entrées "tty"
 
 ::dmesg | grep tty
 <br />
 
-: Cette seconde methode peut parraitre plus complexe à interpréter, mais elle nous renseigne directement sur le matériel et sur le port utilisé.
+: Cette seconde méthode peut paraitre plus complexe à interpréter, mais elle nous renseigne directement sur le matériel et sur le port utilisé.
 <br />
 
 === Rappel&nbsp;: Libérer l'UART pour l'utiliser depuis le GPIO<br/>===
