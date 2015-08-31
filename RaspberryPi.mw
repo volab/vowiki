@@ -1,7 +1,7 @@
-[[Image:Raspberry_Pi_Logo.svg.png|thumb|]]<center>Le Raspberry Pi</center>
+[[Image:Raspberry_Pi_Logo.svg.png|thumb|centre]]<center>Le Raspberry Pi</center>
 
 
-[[Image:|thumb|<center></center>]]
+
 
 = VoLAB =
 = Association VoRoBoTics =
@@ -138,7 +138,6 @@ La première chose à faire est bien évidement de connecter l’adaptateur dans
 ::dmesg | grep tty
 <br />
 :la dernière entrée dans le journal est alors&nbsp;:
-<br />
 :[ 4708.499632] usb 1-1.4: cp210x converter now attached to ttyUSB0<br />
 
 :Nous somme donc assuré que notre adaptateur a bien été pris en compte et que le système lui a effectivement attaché un port série. Il ne reste plus qu'a utiliser notre nouveau port série 
@@ -187,20 +186,21 @@ while 1:
 = Fichiers sources =
 = Licence =
 Ce document est mise à disposition selon les termes de la&nbsp;[http://creativecommons.org/licenses/by/4.0/ Licence Creative Commons Attribution 4.0 International]. 
-
-[[Image:CC88x31.jpg]]Paternité 'by' :''L'œuvre peut être librement utilisée, à la condition de l'attribuer à l'auteur en citant son nom.'' 
+<br />
+[[Image:CC88x31.jpg|centre]]<br />
+Paternité 'by' :''L'œuvre peut être librement utilisée, à la condition de l'attribuer à l'auteur en citant son nom.'' 
 
 
 Note aux auteurs de documents du VoLAB, Vous avez la possibilité de changer de licence. Mais ce serait bien de rester libre et ouvert. Encore une fois ceci est une recommandation et pas une obligation.
 
 = Bibliographie =
 = Webographie =
-La page Wikipedia consacré au Raspberry Pi :
+* La page Wikipedia consacré au Raspberry Pi :
 
-[https://en.wikipedia.org/wiki/Raspberry_Pi https://en.wikipedia.org/wiki/Raspberry_Pi]
+::[https://en.wikipedia.org/wiki/Raspberry_Pi https://en.wikipedia.org/wiki/Raspberry_Pi]
 
-
-[http://fr.wikipedia.org/wiki/Licence_Creative_Commons http://fr.wikipedia.org/wiki/Licence_Creative_Commons]
+<br /><br />
+::[http://fr.wikipedia.org/wiki/Licence_Creative_Commons http://fr.wikipedia.org/wiki/Licence_Creative_Commons]
 
 = Rédaction en langue française =
 Partant du constat de terrain qu'une énorme masse d'information concernant les sujets qui nous intéressent comme entre autres l'impression 3D n'étaient disponibles que dans la langue de Shakespeare et que de nombreuses personnes dans notre entourage ne maîtrisaient pas la dite langue et soucieux de diffuser encore plus l'information, nous avons pris le parti, au VoLAB, de rédiger nos documents de préférence en langue française.
