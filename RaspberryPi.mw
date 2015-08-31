@@ -14,10 +14,9 @@ Thème: Nano-Ordinateurs
 Projet&nbsp;: Cook Book RPi
 
 = Introduction : =
-Nous allons ici vous présenté seulement les informations réellement utiles que nous avons trouvé ou expérimenter lors de nos recherche.
+Nous allons ici vous présenter seulement les informations réellement utiles que nous avons trouvées ou expérimentées lors de nos recherches.
 
-Ce document ne sera certainement pas un document exhaustif. Il est simplement le reflet de nos expérience. Ce documents est donc à la croisé d'un pense-bête et d'un journal de manip
-
+Ce document ne sera certainement pas un document exhaustif. Il est simplement le reflet de nos expériences. Ce document est donc à la croisée d'un pense-bête et d'un journal de manip.
 
 = UART : =
 == Comment avoir plusieur UART (ports séries) sur un seul Raspberry Pi : ==
