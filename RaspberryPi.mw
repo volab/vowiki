@@ -148,14 +148,14 @@ code&nbsp;:
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# Pour executer se script, lancer la commande :
+# Pour executer ce script, lancer la commande :
 # python serialWrite.py
 
-# Ce script envoie en continue la chaine de caractère :
+# Ce script envoie en continu la chaine de caractères :
 # "Write counter:" suivie de la variable "counter"
-# cette variable est incrémenter de 1 à chaque tour
+# cette variable est incrémenté de 1 à chaque tour
 # de boucle
-# La chaine transmise est reçu et afficher dans la foulée
+# La chaine transmise est reçue et affichée dans la foulée
 
 import time
 import serial
