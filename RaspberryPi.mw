@@ -180,7 +180,7 @@ while 1:
         print(x)
 </nowiki>
 
-On voit par cette méthode qu'il est très facile d'ajouter un port série au RaspBerry Pi(2). Sur un Rpi2 on peut ainsi avoir 2 voir 3 ports COM supplémentaires (on se garde un port USB pour un petit dongle WIFI).  Et même encore plus si on y ajoute un petit hub USB...
+On voit par cette méthode qu'il est très facile d'ajouter un port série au RaspBerry Pi(2). Sur un Rpi2, on peut ainsi avoir 2 voir 3 ports COM supplémentaires. On se garde un port USB pour un petit dongle WIFI.  On pourrait même aller encore plus loin en y ajoutant un petit hub USB...
 
 = Fichiers sources =
 = Licence =
