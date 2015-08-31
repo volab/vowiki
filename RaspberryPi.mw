@@ -19,7 +19,7 @@ Nous allons ici vous présenter seulement les informations réellement utiles qu
 Ce document ne sera certainement pas un document exhaustif. Il est simplement le reflet de nos expériences. Ce document est donc à la croisée d'un pense-bête et d'un journal de manip.
 
 = UART : =
-== Comment avoir plusieur UART (ports séries) sur un seul Raspberry Pi : ==
+== Comment avoir plusieurs UART (ports séries) sur un seul Raspberry Pi : ==
 Vous le savez certainement, le Raspberry Pi dispose sur ses GPIO d'un UART qui est accessible sur les broches physiques 8 et 10
 
 
