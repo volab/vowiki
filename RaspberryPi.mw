@@ -1,0 +1,219 @@
+[[Image:Raspberry_Pi_Logo.svg.png|thumb|]]<center>Le Raspberry Pi</center>
+
+
+[[Image:|thumb|<center></center>]]
+
+= VoLAB =
+= Association VoRoBoTics =
+Date : 31/08/2015
+
+Auteur : Poltergeist42
+
+Relecteur : 
+
+Thème: Nano-Ordinateurs
+
+Projet&nbsp;: Cook Book RPi
+
+= Introduction : =
+Nous allons ici vous présenté seulement les informations réellement utiles que nous avons trouvé ou expérimenter lors de nos recherche.
+
+Ce document ne sera certainement pas un document exhaustif. Il est simplement le reflet de nos expérience. Ce documents est donc à la croisé d'un pense-bête et d'un journal de manip
+
+
+= UART : =
+== Comment avoir plusieur UART (ports séries) sur un seul Raspberry Pi : ==
+Vous le savez certainement, le Raspberry Pi dispose sur ses GPIO d'un UART qui est accessible sur les broches physiques 8 et 10
+
+
+{| style="border-spacing:0;"
+| style="border-top:0.05pt solid #000000;border-bottom:0.05pt solid #000000;border-left:0.05pt solid #000000;border-right:none;padding:0.097cm;"| <center>Broche Physique</center>
+| style="border-top:0.05pt solid #000000;border-bottom:0.05pt solid #000000;border-left:0.05pt solid #000000;border-right:none;padding:0.097cm;"| <center>BCM</center>
+| style="border-top:0.05pt solid #000000;border-bottom:0.05pt solid #000000;border-left:0.05pt solid #000000;border-right:none;padding:0.097cm;"| <center>BRD</center>
+| style="border:0.05pt solid #000000;padding:0.097cm;"| <center>Fonction</center>
+
+|-
+| style="border-top:none;border-bottom:0.05pt solid #000000;border-left:0.05pt solid #000000;border-right:none;padding:0.097cm;"| <center>8</center>
+| style="border-top:none;border-bottom:0.05pt solid #000000;border-left:0.05pt solid #000000;border-right:none;padding:0.097cm;"| <center>14</center>
+| style="border-top:none;border-bottom:0.05pt solid #000000;border-left:0.05pt solid #000000;border-right:none;padding:0.097cm;"| <center>15</center>
+| style="border-top:none;border-bottom:0.05pt solid #000000;border-left:0.05pt solid #000000;border-right:0.05pt solid #000000;padding:0.097cm;"| <center>Tx</center>
+
+|-
+| style="border-top:none;border-bottom:0.05pt solid #000000;border-left:0.05pt solid #000000;border-right:none;padding:0.097cm;"| <center>10</center>
+| style="border-top:none;border-bottom:0.05pt solid #000000;border-left:0.05pt solid #000000;border-right:none;padding:0.097cm;"| <center>15</center>
+| style="border-top:none;border-bottom:0.05pt solid #000000;border-left:0.05pt solid #000000;border-right:none;padding:0.097cm;"| <center>16</center>
+| style="border-top:none;border-bottom:0.05pt solid #000000;border-left:0.05pt solid #000000;border-right:0.05pt solid #000000;padding:0.097cm;"| <center>Rx</center>
+
+|}
+Cela peut suffire dans la plupart des cas. Cependant, il peut arriver que vous ayez besoin de port série supplémentaire. Si votre projet est strictement confiner au dimension du Raspberry Pi, nous n'avons pas de solution pour vous.
+
+Si au contraire vous disposer de tous l’espace situé devant les ports USB, alors vous allez pouvoir vous amuser. 
+
+Vous devez vous procurez un [http://www.banggood.com/Wholesale-USB-To-TTL-COM-Converter-Module-buildin-In-CP2102-New-p-27989.html adaptateur usb-TTL] que vous trouverez sur internet pour 2 ou 3 euros.
+
+Avent de commencer, voici un petit rappel sur la correspondance des nom "Windows" et les nom "Linux"&nbsp;:
+
+
+COM1 -> /dev/ttyS0
+
+COM2 -> /dev/ttyS1
+
+COM3 -> /dev/ttyS2
+
+COM4 -> /dev/ttyS3
+
+
+# Connaitre la list des port série utilisé&nbsp;:
+
+Il y a deux façon simple de connaître la liste des ports série utilié&nbsp;:
+
+ls /dev/tty*
+
+La commande retourne généralement plus de 50 tty. Cependant, les tty associés au port USB disposent d'une nomenclature différente. Ils contiennent habituellement USB ou ACM (Abstract Control Model)
+
+
+La seconde façon, est d'intérroger le journal sur toutes les entrées "tty"
+
+dmesg | grep tty
+
+
+Cette seconde methode peut parraitre plus complexe à interpréter, mais elle nous renseigne directement sur le matériel et sur le port utilisé.
+
+
+# Rappel&nbsp;: Libérer l'UART pour l'utiliser depuis le GPIO<br/> Par défaut, l'UART et réserver au debug et n'est accessible qu'en mode console vous devez donc le désactiver dans l'outil de configuration.<br/> 
+2.1.Intérroger le journal sur les dernier événement de la liaison série pour vérifier que l'opération n'a pas déjà été effectuerdmesg | grep ttySi l'opération n'a pas encore été effectuer, le résultat obtenu doit être :<br/> [ 0.002072] console [tty1] enabled<br/> [ 0.195363] 3f201000.uart: ttyAMA0 at MMIO 0x3f201000 (irq = 83, base_baud = 0) is a PL011 rev2<br/> [ 0.695429] console [ttyAMA0] enabled<br/> 
+2.2 configurer l'UART avec l'outil de configuration du Rpisudo raspi-config2.3 se déplacer dans les menu selon la séquence suivante[ 8 ] --> [ A8] --> [ Non ]Le quatrième écran vous informe que Serial est maintenant désactivé[ Ok ] --> [ Finish ]2.4 Redémarersudo reboot2.5. Vérifier dans le journal que l'opération a bien été prise en comptedemsg | grep ttyCe qui doit vous donner le résultat suivant :[ 0.002051] console [tty1] enabled<br/> [ 0.195175] 3f201000.uart: ttyAMA0 at MMIO 0x3f201000 (irq = 83, base_baud = 0) is a PL011 rev2
+
+On constate que la dernière ligne à disparue, le mode debug sur la sortie UART est donc bien désactivée.
+
+
+# Utilisation de l'adaptater USB-TTL
+
+La première chose à faire est bien évidement de connecter l'adaptater dans l'un des ports USB disponible.
+
+3.1 Connaitre le port de l'adaptateur
+
+Avant de s'inquiéter du port utiliser par l'adaptateur, il faut s'assurer qu'il a bien été pris en compte par le système au moment du branchement&nbsp;:
+
+lsusb
+
+
+Vous devriez obtenir un résultat proche de ceci&nbsp;:
+
+Bus 001 Device 005: ID 10c4:ea60 Cygnal Integrated Products, Inc. CP210x UART Bridge / myAVR mySmartUSB light
+
+
+la commande suivante&nbsp;:
+
+ls /dev/tty*
+
+
+Doit à présent s'être enrichie d'une étiquette supplémentaire à la toute fin du tableau, ressemblant à&nbsp;:
+
+/dev/ttyUSB0
+
+
+On peut donc deviné que le composant CP210x communique sur le port /dev/ttyUSB0. Pour le vérifier on interroge le journal sur les éléments tty&nbsp;:
+
+dmesg | grep tty
+
+
+la dernière entrée dans le journal est alors&nbsp;:
+
+[ 4708.499632] usb 1-1.4: cp210x converter now attached to ttyUSB0
+
+
+Nous somme donc assuré que notre adaptateur a bien été pris en compte et que le système lui a effectivement attaché un port série. Il ne reste plus qu'a utiliser notre nouveau port série 
+
+
+[[Image:branchementUsbTTL.png]]Pour pouvoir tester notre communication série, nous avons placé un cavalier entre les broches Rx et Tx de l'adaptateur. Nous avons ensuite lancer un petit script en Python3 pour vérifier le bon fonctionnement du couple envoie / réception&nbsp;:
+
+
+code&nbsp;:
+
+<nowiki>#!/usr/bin/env python</nowiki>
+
+<nowiki># -*- coding: utf-8 -*-</nowiki>
+
+
+<nowiki># Pour executer se script, lancer la commande :</nowiki>
+
+<nowiki># python serialWrite.py</nowiki>
+
+
+<nowiki># Ce script envoie en continue la chaine de caractère :</nowiki>
+
+<nowiki># "Write counter:" suivie de la variable "counter"</nowiki>
+
+<nowiki># cette variable est incrémenter de 1 à chaque tour</nowiki>
+
+<nowiki># de boucle</nowiki>
+
+
+<nowiki># La chaine transmise est reçu et afficher dans la foulée</nowiki>
+
+
+import time
+
+import serial
+
+
+ser = serial.Serial(
+
+
+port='/dev/ttyUSB0',
+
+baudrate = 9600,
+
+parity=serial.PARITY_NONE,
+
+stopbits=serial.STOPBITS_ONE,
+
+bytesize=serial.EIGHTBITS,
+
+timeout=1
+
+)
+
+counter=0
+
+
+while 1:
+
+ser.write('Write counter: %d \n'%(counter))
+
+print("test d'envoie ok")
+
+time.sleep(1)
+
+counter += 1
+
+x=ser.readline()
+
+print(x)
+
+= Fichiers sources =
+= Licence =
+Ce document est mise à disposition selon les termes de la&nbsp;[http://creativecommons.org/licenses/by/4.0/ Licence Creative Commons Attribution 4.0 International]. 
+
+[[Image:CC88x31.jpg]]Paternité 'by' :''L'œuvre peut être librement utilisée, à la condition de l'attribuer à l'auteur en citant son nom.'' 
+
+
+Note aux auteurs de documents du VoLAB, Vous avez la possibilité de changer de licence. Mais ce serait bien de rester libre et ouvert. Encore une fois ceci est une recommandation et pas une obligation.
+
+= Bibliographie =
+= Webographie =
+La page Wikipedia consacré au Raspberry Pi :
+
+[https://en.wikipedia.org/wiki/Raspberry_Pi https://en.wikipedia.org/wiki/Raspberry_Pi]
+
+
+[http://fr.wikipedia.org/wiki/Licence_Creative_Commons http://fr.wikipedia.org/wiki/Licence_Creative_Commons]
+
+= Rédaction en langue française =
+Partant du constat de terrain qu'une énorme masse d'information concernant les sujets qui nous intéressent comme entre autres l'impression 3D n'étaient disponibles que dans la langue de Shakespeare et que de nombreuses personnes dans notre entourage ne maîtrisaient pas la dite langue et soucieux de diffuser encore plus l'information, nous avons pris le parti, au VoLAB, de rédiger nos documents de préférence en langue française.
+
+= VoLAB =
+Un mot sur le VoLAB. VoLAB est un fablab implanté à environ 30km au nord-ouest de Paris dans la commune de Vauréal dans l'agglomération de Cergy Pontoise. Il est animé par l'association VoRoBoTics.
+
+Site internet [http://www.vorobotics.com/ www.vorobotics.com]
