@@ -142,7 +142,7 @@ La première chose à faire est bien évidement de connecter l’adaptateur dans
 
 :Nous somme donc assuré que notre adaptateur a bien été pris en compte et que le système lui a effectivement attaché un port série. Il ne reste plus qu'a utiliser notre nouveau port série 
 
-[[Image:branchementUsbTTL.png]]<br />
+[[Image:branchementUsbTTL.png|centre]]<br />
 Pour pouvoir tester notre communication série, nous avons placé un cavalier entre les broches Rx et Tx de l'adaptateur. Nous avons ensuite lancer un petit script en Python3 pour vérifier le bon fonctionnement du couple envoie / réception&nbsp;:
 <br />
 code&nbsp;:
