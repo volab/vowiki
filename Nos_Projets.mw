@@ -8,7 +8,7 @@ Liste (non exhaustive) des projets et réalisations du VoLab :
 * [[zone PCB]]
 * [[Botsim]] : Un simulateur de robots utilisé dans le cadre de travaux sur des algorithmes bio-inspirés (apprentissage artificiel, algorithmes évolutionnaires, apprentissage par renforcement, ...) (par [[Utilisateur:Jeremie|Jérémie]])
 * [[PyAX-12]] : Une bibliothèque pour contrôler des servomoteurs Dynamixel AX-12 directement depuis un ordinateur (par [[Utilisateur:Jeremie|Jérémie]])
-* [[Raspicam-apache]] (a.k.a. VorTélésurveillance) : Une caméra de surveillance utilisant un RaspberryPi et une RaspiCam pour diffuser en temps réel les vidéos capturées sur un serveur web Apache (par [[Utilisateur:Jeremie|Jérémie]])
+* [[Raspicam-apache]] (a.k.a. VorTélésurveillance) : Une caméra de surveillance utilisant un RaspberryPi et une RaspiCam pour diffuser en temps réel les vidéos capturées vers un serveur web Apache (par [[Utilisateur:Jeremie|Jérémie]])
 * [[atmega-xx8-isp-board]] : Le typon et les fichiers KiCAD d'un circuit imprimé conçu pour faciliter la programmation des micro-contrôleurs Atmel AVR xx8 (par [[Utilisateur:Jeremie|Jérémie]])
 * Robots
 ** [[VoR1]] : Le Quadri
