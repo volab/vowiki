@@ -21,3 +21,5 @@ Voici pour l'instant ce sur quoi nous travaillons&nbsp;:
 : * ATMega2560 (sur les cartes Arduino 2560)
 
 - [[RaspberryPi|Le Raspberry Pi]]
+
+- [http://www.jdhp.org/hevea/tutoriel_rpi_qemu/tutoriel_rpi_qemu.html Émuler le Raspberry Pi sous Debian avec Qemu] (version [http://download.tuxfamily.org/jdhp/pdf/tutoriel_rpi_qemu.pdf PDF])
