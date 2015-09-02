@@ -8,10 +8,9 @@
 Nos motivations : utiliser des méthodes bio-inspirées pour générer in-silico des formes de vie artificielles originales et performantes dans l'accomplissement d'une tache donnée (se déplacer, modifier son environnement, survivre, ...).
 
 Plus particulièrement, [http://www.botsim.org/ Botsim.org] a été écrit pour:
-
-    reproduire les expériences et les résultats du projet [http://www.demo.cs.brandeis.edu/golem/ Golem]: optimiser la morphologie et le contrôle de robots en simulation via des méthodes bio-inspirées (algorithmes évolutionnaires et réseaux de neurones) puis matérialiser ces organismes auto-générés à l'aide d'une imprimante 3D;
-    améliorer le contrôle de robots existants en générant un grand nombre de simulations in-silico;
-    reproduire certaines expériences de l'équipe [http://www.inria.fr/equipes/flowers Inria Flowers] sur la curiosité artificielle.
+* reproduire les expériences et les résultats du projet [http://www.demo.cs.brandeis.edu/golem/ Golem]: optimiser la morphologie et le contrôle de robots en simulation via des méthodes bio-inspirées (algorithmes évolutionnaires et réseaux de neurones) puis matérialiser ces organismes auto-générés à l'aide d'une imprimante 3D;
+* améliorer le contrôle de robots existants en générant un grand nombre de simulations in-silico;
+* reproduire certaines expériences de l'équipe [http://www.inria.fr/equipes/flowers Inria Flowers] sur la curiosité artificielle.
 
 
 [http://www.botsim.org/ Botsim.org] utilise la bibliothèque opensource Bullet pour simuler la physique.
