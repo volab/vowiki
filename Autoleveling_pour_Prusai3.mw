@@ -686,9 +686,13 @@ Ce n'est peut-être pas très claire dans ce qui précède, mais la seule versio
 
 La prochaine étape, après beaucoup de repos sur ce sujet, sera l'implémentation d'un capteur à effet capacitif avec zéro contact et zéro mécanique.
 
-cf http://premium-forum.fr/viewtopic.php?f=9&t=391
+cf [[http://premium-forum.fr/viewtopic.php?f=9&t=391 Capteur capacitif]]
 
-[[Fichier:capteurCapacitif.png|center]]
+[[Fichier:capteurCapacitif.png|center]]<br />
+
+
+Autres capteurs:
+[[http://www.micro-epsilon.fr/displacement-position-sensors/capacitive-sensor/capacitive-displacement-sensors/index.html Autre capteur capacitif]]
 
 = Annexes =
 == Commandes utiles ==
