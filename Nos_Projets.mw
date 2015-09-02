@@ -9,6 +9,7 @@ Liste (non exhaustive) des projets et réalisations du VoLab :
 * [[Botsim]] : Simulateur physique (par [[Utilisateur:Jeremie|Jérémie]])
 * [[PyAX-12]] (par [[Utilisateur:Jeremie|Jérémie]])
 * [[Raspicam-apache]] (a.k.a. VorTélésurveillance) (par [[Utilisateur:Jeremie|Jérémie]])
+* [[atmega-xx8-isp-board]] Le typon et les fichiers KiCAD d'un circuit imprimé conçu pour faciliter la programmation des micro-contrôleurs Atmel AVR xx8 (par [[Utilisateur:Jeremie|Jérémie]])
 * Robots
 ** [[VoR1]] : Le Quadri
 ** [[VoR2]] : Le tricycle
