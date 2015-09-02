@@ -6,18 +6,21 @@ Liste (non exhaustive) des projets et réalisations du VoLab :
 * [[Maquette pédagogique d'ascenseur (par Gilles)]]
 
 * [[zone PCB]]
-* [[botsim]]
+* [[Botsim]] (par [[Utilisateur:Jeremie|Jérémie]])
+* [[PyAX-12]] (par [[Utilisateur:Jeremie|Jérémie]])
+* [[Raspicam-apache]] (a.k.a. VorTélésurveillance) (par [[Utilisateur:Jeremie|Jérémie]])
 * Robots
-** [[VoR1]] : le Quadri
-** [[VoR2]] : le tricycle
+** [[VoR1]] : Le Quadri
+** [[VoR2]] : Le tricycle
 ** [[VoR3]] : Quadcoptère family
 ** [[VoR4]] : Mecanum
 ** [[VoR5]] : Hexapod
 ** [[VoR6]] : Deux roues P.Hugo
 ** [[VoR7]] : La VoRoSaure Pierre
-** [[VoR8]] : plateforme odométrique
+** [[VoR8]] : Plateforme odométrique
 ** [[VoR9]] : The new tri eand fonctionnal
-** [[VoR10]] : Jeremy P'tit blanc
+** [[VoR11]] : Plate-forme de test robotique pour RaspberryPi et Atmel AVR: robot roulant modulable (par [[Utilisateur:Jeremie|Jérémie]])
+** [[VoR12]] : Plate-forme de test pour OpenCV (traitement d'images en temps réel) et [[PyAX-12]]: webcam mobile programmée pour suivre un objet donné (par [[Utilisateur:Jeremie|Jérémie]])
 ** ...
 
 <!--
@@ -56,8 +59,8 @@ Et tous les autres projets plus ou moins démarrés ou qui n'attendent que des b
 * [[Téléphérique (par Gilles)]] : réaliser une maquette de téléphérique dans le lab (il y a de la place au plafond)
 * Plotclock (libre) : parce que ça nous fait bien marrer alors o aimerait bien en fabriquer une.
 * Minigraveuse laser (libre) : juste pour se faire la main et en attendant de pouvoir se payer une vrai découpeuse laser !
-* Useless machine (Daniel) : version 1, entièrement électrique réalisée. Reste à faire la v2 avec microcntroleur
-* Coup d'bate (Pierre) : bras robotiqe qui permet de casser une piniata et que les utilisateurs doivent programmer
+* Useless machine (Daniel) : version 1, entièrement électrique réalisée. Reste à faire la v2 avec microcontroleur
+* Coup d'bate (Pierre) : bras robotique qui permet de casser une piniata et que les utilisateurs doivent programmer
 * Projet insoleuse PCB
 * My little garden (Pierre)
 * Robot jeep (Daniel) : Version 1 avec caméra embarquée terminée.
@@ -65,5 +68,4 @@ Et tous les autres projets plus ou moins démarrés ou qui n'attendent que des b
 * Banc d'essai Reprap (Jojo)
 * Filastruder (Jojo + Gérard de l'Electrolab)
 * Imprimante à PCB
-* VorTélésurveillance (libre)
 * Enseigne lumineuse pour le LAB
