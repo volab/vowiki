@@ -13,14 +13,14 @@ Voici la liste (non exhaustive) de nos réalisations.
 
 === Outils ===
 
-* [[VORCNC]]
-* [[Zone PCB]] (par [[Utilisateur:Jeremie|Jérémie]])
+* [[VORCNC]] : notre CNC
+* [[Zone PCB]] (par [[Utilisateur:Jeremie|Jérémie]]) : création d'un espace dédié à la conception de circuits imprimés
 
 === Divers ===
 
 * [[Maquette pédagogique d'ascenseur]] (par Gilles)
-* [[Raspicam-apache]] (a.k.a. VorCam) : Une caméra de surveillance utilisant un RaspberryPi et une RaspiCam pour diffuser en temps réel les vidéos capturées vers un serveur web Apache (par [[Utilisateur:Jeremie|Jérémie]])
-* [[Atmega-xx8-isp-board]] : Le typon et les fichiers KiCAD d'un circuit imprimé conçu pour faciliter la programmation des micro-contrôleurs Atmel AVR xx8 (par [[Utilisateur:Jeremie|Jérémie]])
+* [[Raspicam-apache]] (a.k.a. VorCam) (par [[Utilisateur:Jeremie|Jérémie]]) : Une caméra de surveillance utilisant un RaspberryPi et une RaspiCam pour diffuser en temps réel les vidéos capturées vers un serveur web Apache
+* [[Atmega-xx8-isp-board]] (par [[Utilisateur:Jeremie|Jérémie]]) : Le typon et les fichiers KiCAD d'un circuit imprimé conçu pour faciliter la programmation des micro-contrôleurs Atmel AVR xx8
 * Useless machine (par [[Utilisateur:Daniel|Daniel]]) : version 1, entièrement électrique réalisée. Reste à faire la v2 avec microcontrôleur
 
 
@@ -30,8 +30,8 @@ Voici quelques-uns de nos projets en cours d'élaboration.
 
 === Logiciels ===
 
-* [[Botsim]] (par [[Utilisateur:Jeremie|Jérémie]]) : Un simulateur de robots utilisé dans le cadre de travaux sur des algorithmes bio-inspirés (apprentissage artificiel, algorithmes évolutionnaires, apprentissage par renforcement, ...) (par [[Utilisateur:Jeremie|Jérémie]])
-* [[PyAX-12]] (par [[Utilisateur:Jeremie|Jérémie]]) : Une bibliothèque pour contrôler des servomoteurs Dynamixel AX-12 directement depuis un ordinateur ou un RaspberryPi (par [[Utilisateur:Jeremie|Jérémie]])
+* [[Botsim]] (par [[Utilisateur:Jeremie|Jérémie]]) : Un simulateur de robots utilisé dans le cadre de travaux sur des algorithmes bio-inspirés (apprentissage artificiel, algorithmes évolutionnaires, apprentissage par renforcement, ...)
+* [[PyAX-12]] (par [[Utilisateur:Jeremie|Jérémie]]) : Une bibliothèque pour contrôler des servomoteurs Dynamixel AX-12 directement depuis un ordinateur ou un RaspberryPi
 
 === Robots ===
 
@@ -50,7 +50,7 @@ Voici quelques-uns de nos projets en cours d'élaboration.
 
 === Outils ===
 
-* [[Autoleveling pour Prusai3]] (par Joël)
+* [[Autoleveling pour Prusai3]] (par [[Utilisateur:Majorlee|Joël]])
 
 === Divers ===
 
@@ -66,8 +66,8 @@ Les autres projets auxquels nous avons réfléchi mais dont la réalisation n'a 
 * Projet insoleuse PCB
 * My little garden (par [[Utilisateur:Pierre|Pierre]])
 * Thermoplieuse libre
-* Banc d'essai Reprap (par Joël)
-* Filastruder (Joël et Gérard de l'Electrolab)
+* Banc d'essai Reprap (par [[Utilisateur:Majorlee|Joël]])
+* Filastruder (par [[Utilisateur:Majorlee|Joël]] et Gérard de l'Electrolab)
 * Imprimante à PCB
 * Enseigne lumineuse pour le LAB
 
