@@ -1,29 +1,77 @@
 ← [[Accueil]]
 
-Liste (non exhaustive) des projets et réalisations du VoLab :
-* [[VORCNC]]
-* [[Autoleveling pour Prusai3]]
-* [[Maquette pédagogique d'ascenseur (par Gilles)]]
+Certains de nos projets sont partagés sur notre compte [https://github.com/volab GitHub].
 
-* [[zone PCB]]
+
+== Projets matures ==
+
+Voici la liste (non exhaustive) de nos réalisations.
+
+=== Robots ===
+
+* Robot jeep (par Daniel) : un robot téléguidé avec une caméra embarquée.
+
+=== Outils ===
+
+* [[VORCNC]]
+* [[Zone PCB]]
+
+=== Divers ===
+
+* [[Maquette pédagogique d'ascenseur]] (par Gilles)
+* [[Raspicam-apache]] (a.k.a. VorCam) : Une caméra de surveillance utilisant un RaspberryPi et une RaspiCam pour diffuser en temps réel les vidéos capturées vers un serveur web Apache (par [[Utilisateur:Jeremie|Jérémie]])
+* [[Atmega-xx8-isp-board]] : Le typon et les fichiers KiCAD d'un circuit imprimé conçu pour faciliter la programmation des micro-contrôleurs Atmel AVR xx8 (par [[Utilisateur:Jeremie|Jérémie]])
+* Useless machine (par Daniel) : version 1, entièrement électrique réalisée. Reste à faire la v2 avec microcontrôleur
+
+
+== Projets en cours d'élaboration ==
+
+Voici quelques-uns de nos projets en cours d'élaboration.
+
+=== Logiciels ===
+
 * [[Botsim]] : Un simulateur de robots utilisé dans le cadre de travaux sur des algorithmes bio-inspirés (apprentissage artificiel, algorithmes évolutionnaires, apprentissage par renforcement, ...) (par [[Utilisateur:Jeremie|Jérémie]])
 * [[PyAX-12]] : Une bibliothèque pour contrôler des servomoteurs Dynamixel AX-12 directement depuis un ordinateur ou un RaspberryPi (par [[Utilisateur:Jeremie|Jérémie]])
-* [[Raspicam-apache]] (a.k.a. VorTélésurveillance) : Une caméra de surveillance utilisant un RaspberryPi et une RaspiCam pour diffuser en temps réel les vidéos capturées vers un serveur web Apache (par [[Utilisateur:Jeremie|Jérémie]])
-* [[atmega-xx8-isp-board]] : Le typon et les fichiers KiCAD d'un circuit imprimé conçu pour faciliter la programmation des micro-contrôleurs Atmel AVR xx8 (par [[Utilisateur:Jeremie|Jérémie]])
-* Robots
-** [[VoR1]] : Le Quadri
-** [[VoR2]] : Le tricycle
-** [[VoR3]] : Quadcoptère family
-** [[VoR4]] : Mecanum
-** [[VoR5]] : Hexapod
-** [[VoR6]] : Deux roues P.Hugo
-** [[VoR7]] : Hack d'un jouet télécomandé en un Robot Pierre
-** [[VoR8]] : Plateforme odométrique
-** [[VoR9]] : The new tri eand fonctionnal
-** [[VoR10]] : Rex
-** [[VoR11]] : Plate-forme de test robotique pour RaspberryPi et Atmel AVR: robot roulant modulable (par [[Utilisateur:Jeremie|Jérémie]])
-** [[VoR12]] : Plate-forme de test pour OpenCV (traitement d'images en temps réel) et [[PyAX-12]]: webcam mobile programmée pour suivre un objet donné (par [[Utilisateur:Jeremie|Jérémie]])
-** ...
+
+=== Robots ===
+
+* [[VoR1]] : Le Quadri
+* [[VoR2]] : Le tricycle
+* [[VoR3]] : Quadcoptère family
+* [[VoR4]] : Mecanum
+* [[VoR5]] : Hexapod
+* [[VoR6]] : Deux roues P.Hugo
+* [[VoR7]] : Hack d'un jouet télécomandé en un Robot Pierre
+* [[VoR8]] : Plateforme odométrique
+* [[VoR9]] : The new tri eand fonctionnal
+* [[VoR10]] : Rex
+* [[VoR11]] : Plate-forme de test robotique pour RaspberryPi et Atmel AVR: robot roulant modulable (par [[Utilisateur:Jeremie|Jérémie]])
+* [[VoR12]] : Plate-forme de test pour OpenCV (traitement d'images en temps réel) et [[PyAX-12]]: webcam mobile programmée pour suivre un objet donné (par [[Utilisateur:Jeremie|Jérémie]])
+
+=== Outils ===
+
+* [[Autoleveling pour Prusai3]] (par Joël)
+
+=== Divers ===
+
+* Téléphérique (par Gilles) : une maquette de téléphérique
+
+
+== Projets à l'étude ==
+
+Les autres projets auxquels nous avons réfléchi mais dont la réalisation n'a pas encore démarré.
+
+* Plotclock libre : parce que ça nous fait bien marrer alors on aimerait bien en fabriquer une.
+* Minigraveuse laser libre : juste pour se faire la main et en attendant de pouvoir se payer une vrai découpeuse laser !
+* Coup d'bate (par Pierre) : bras robotique conçu pour casser une Piñata et devant être programmé par ses utilisateurs
+* Projet insoleuse PCB
+* My little garden (par Pierre)
+* Thermoplieuse libre
+* Banc d'essai Reprap (par Joël)
+* Filastruder (Joël + Gérard de l'Electrolab)
+* Imprimante à PCB
+* Enseigne lumineuse pour le LAB
+
 
 <!--
 {| class="wikitable centre" width="90%"
@@ -55,24 +103,3 @@ VoR
 {{Barre de progression|50}}{{4/4}}
 |}
 -->
-
-Et tous les autres projets plus ou moins démarrés ou qui n'attendent que des bonnes volontés:
-
-* [[Téléphérique (par Gilles)]] : réaliser une maquette de téléphérique dans le lab (il y a de la place au plafond)
-* Plotclock (libre) : parce que ça nous fait bien marrer alors on aimerait bien en fabriquer une.
-* Minigraveuse laser (libre) : juste pour se faire la main et en attendant de pouvoir se payer une vrai découpeuse laser !
-* Useless machine (Daniel) : version 1, entièrement électrique réalisée. Reste à faire la v2 avec microcontrôleur
-* Coup d'bate (Pierre) : bras robotique qui permet de casser une piniata et que les utilisateurs doivent programmer
-* Projet insoleuse PCB
-* My little garden (Pierre)
-* Robot jeep (Daniel) : Version 1 avec caméra embarquée terminée.
-* Thermoplieuse pour le lab (libre)
-* Banc d'essai Reprap (Jojo)
-* Filastruder (Jojo + Gérard de l'Electrolab)
-* Imprimante à PCB
-* Enseigne lumineuse pour le LAB
-
-
-=== Référentiels publiques (code source et documentation) ===
-
-Certains de nos projets sont partagés sur notre compte [https://github.com/volab GitHub].
