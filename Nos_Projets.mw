@@ -31,8 +31,8 @@ Voici quelques-uns de nos projets en cours d'élaboration.
 
 === Logiciels ===
 
-* [[Botsim]] (par [[Utilisateur:Jeremie|Jérémie]]) : Un simulateur de robots utilisé dans le cadre de travaux sur des algorithmes bio-inspirés (apprentissage artificiel, algorithmes évolutionnaires, apprentissage par renforcement, ...)
-* [[PyAX-12]] (par [[Utilisateur:Jeremie|Jérémie]]) : Une bibliothèque pour contrôler des servomoteurs Dynamixel AX-12 directement depuis un ordinateur ou un RaspberryPi
+* [[Botsim]] (par [[Utilisateur:Jeremie|Jérémie]]) : un simulateur de robots utilisé dans le cadre de travaux sur des algorithmes bio-inspirés (apprentissage artificiel, algorithmes évolutionnaires, apprentissage par renforcement, ...)
+* [[PyAX-12]] (par [[Utilisateur:Jeremie|Jérémie]]) : une bibliothèque pour contrôler des servomoteurs Dynamixel AX-12 directement depuis un ordinateur ou un RaspberryPi
 
 === Robots ===
 
