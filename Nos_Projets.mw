@@ -46,7 +46,7 @@ Voici quelques-uns de nos projets en cours d'élaboration.
 * [[VoR7]]  (par [[Utilisateur:Pierre|Pierre]]) : le hack d'un jouet télécommandé pour en faire un robot suiveur de ligne (contrôlé par un Raspberry Pi et un Arduino)
 * [[VoR8]]  (par [[Utilisateur:Majorlee|Joël]]) : une plate-forme de test pour l'odométrie, les protocoles de communication série et la création de robots modulaires
 * [[VoR9]]  (par [[Utilisateur:Pec|Pec]]) : un robot suiveur de ligne servant également de plate-forme de test pour l'odométrie (inspiré du robot Zumo de Pololu)
-* [[VoR10]] (par [[Utilisateur:Pierre|Pierre]]) : Rex
+* [[VoR10]] (a.k.a. Rex) (par [[Utilisateur:Pierre|Pierre]]) : un robot suiveur de ligne également utilisé comme plate-forme de test pour l'odométrie
 * [[VoR11]] (par [[Utilisateur:Jeremie|Jérémie]]) : un robot roulant modulaire, contrôlé par un RaspberryPi et des microcontrôleurs Atmel AVR et utilisé comme plate-forme de test robotique généraliste
 * [[VoR12]] (par [[Utilisateur:Jeremie|Jérémie]]) : une webcam mobile programmée pour suivre un objet donné, servant de plate-forme de test pour OpenCV (traitement d'images en temps réel) et [[PyAX-12]] 
 
