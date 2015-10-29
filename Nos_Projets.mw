@@ -40,7 +40,7 @@ Voici quelques-uns de nos projets en cours d'élaboration.
 * [[VoR1]]  (par [[Utilisateur:Majorlee|Joël]], [[Utilisateur:Pec|Pec]] et Julien) : un robot roulant
 * [[VoR2]]  (par [[Utilisateur:Pec|Pec]] et Julien) : un robot monté sur 3 roues et contrôlé par un Arduino
 * [[VoR3]]  (par Julien) : un drone (quadricoptere) qui utilise une carte ardupilot pour voler et recevoir ces instructions de la télécommande
-* VoR4  : Mecanum
+<!-- * VoR4  : Mecanum, projet abandonné qui, de plus, n'a pas été conçu au VoLab -->
 * [[VoR5]]  (par [[Utilisateur:Pierre|Pierre]], [[Utilisateur:Majorlee|Joël]] et Gilles de l'[http://www.electrolab.fr/ electrolab]) : un robot hexapod contrôlé par un Arduino
 * [[VoR6]]  : Deux roues P.Hugo
 * [[VoR7]]  (par [[Utilisateur:Pierre|Pierre]]) : le hack d'un jouet télécommandé pour en faire un robot suiveur de ligne (contrôlé par un Raspberry Pi et un Arduino)
