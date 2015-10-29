@@ -13,8 +13,9 @@ Voici la liste (non exhaustive) de nos réalisations.
 
 === Outils ===
 
+* [[Autoleveling pour Prusai3]] (par [[Utilisateur:Majorlee|Joël]]) : une évolution de l'imprimante 3D RepRap Prusa i3
 * [[VORCNC]] : notre CNC
-* [[Zone PCB]] (par [[Utilisateur:Jeremie|Jérémie]]) : création d'un espace dédié à la conception de circuits imprimés
+* [[Zone PCB]] (par [[Utilisateur:Jeremie|Jérémie]]) : un espace dédié à la conception de circuits imprimés
 * Platine de développement pour Arduino (par [[Utilisateur:Francis|Francis]])
 
 === Divers ===
@@ -48,10 +49,6 @@ Voici quelques-uns de nos projets en cours d'élaboration.
 * [[VoR10]] (par [[Utilisateur:Pierre|Pierre]]) : Rex
 * [[VoR11]] (par [[Utilisateur:Jeremie|Jérémie]]) : Plate-forme de test robotique pour RaspberryPi et Atmel AVR: robot roulant modulable
 * [[VoR12]] (par [[Utilisateur:Jeremie|Jérémie]]) : Plate-forme de test pour OpenCV (traitement d'images en temps réel) et [[PyAX-12]]: webcam mobile programmée pour suivre un objet donné
-
-=== Outils ===
-
-* [[Autoleveling pour Prusai3]] (par [[Utilisateur:Majorlee|Joël]])
 
 === Divers ===
 
