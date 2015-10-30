@@ -98,10 +98,14 @@ Les autres projets auxquels nous avons réfléchi mais dont la réalisation n'a 
 * Imprimante 3D réalisée "from scratch" (par [[Utilisateur:Francis|Francis]]) : une imprimante 3D dont la mécanique est entièrement dessinée en partant de rien
 * CNC (par [[Utilisateur:Francis|Francis]]) : une CNC réalisée à partir d'une fraiseuse industrielle
 * Infrared signal sniffer (par [[Utilisateur:Jeremie|Jérémie]]) : un sniffer de signaux de télécommunications infra-rouge
+* Télécommande IR de forte puissance (par [[Utilisateur:Jeremie|Jérémie]]) : pour télécommander un appareil très éloigné par IR
 * RF spectrum analysis (par [[Utilisateur:Jeremie|Jérémie]]) : un sniffer d'ondes électromagnétiques
+* Cage de Faraday (par [[Utilisateur:Jeremie|Jérémie]]) : étudier la propagation des ondes électromagnétiques de différentes fréquences au travers de différents matériaux (aluminium, acier, cuivre, graphite, ...) et des surfaces/volumes de différentes formes (plaques, boites, grilles plus ou moins fines, etc.)
 * Compteur Geiger (par [[Utilisateur:Jeremie|Jérémie]]) : un compteur Geiger (système de mesure du niveau de radiation ambiant)
+* Détecteur de rayons cosmiques (par [[Utilisateur:Jeremie|Jérémie]]) : un détecteur de rayons cosmiques par assemblage d'une matrice de tubes Geiger–Müller ou par effet Cherenkov ou cloud chamber (https://www.youtube.com/watch?v=1vSTsADQXG8, https://www.youtube.com/watch?v=7eLYCpSpoDU)
 * Spectrophotomètre (par [[Utilisateur:Jeremie|Jérémie]]) : un spectrophotomètre (système pour analyser la composition chimique d'un objet, d'un liquide, d'un gaz, etc.) basé sur http://publiclab.org/wiki/spectrometer et inspiré par [https://www.kickstarter.com/projects/903107259/scio-your-sixth-sense-a-pocket-molecular-sensor-fo SCiO]
 * Sport manager (par [[Utilisateur:Jeremie|Jérémie]]) : un logger de cardiofréquencemètre, GPS, electrodes, etc.
+* Construction d'un Newton mètre (par [[Utilisateur:Jeremie|Jérémie]]) + mesure de couples
 * Template ReStructuredText (par [[Utilisateur:Jeremie|Jérémie]])
 * Sensor box (par [[Utilisateur:Jeremie|Jérémie]])
 * Ordinateur / micro contrôleur à ultra basse consommation et énergétiquement autonome (par [[Utilisateur:Jeremie|Jérémie]]) : e-ink screen, solar pannel, ...
@@ -115,7 +119,7 @@ Les autres projets auxquels nous avons réfléchi mais dont la réalisation n'a 
 * Smart radio alarm (par [[Utilisateur:Jeremie|Jérémie]])
 * Émetteur (de faible puissance) / récepteur radio (AM et FM) (par [[Utilisateur:Jeremie|Jérémie]])
 * Maison d'oiseaux connectée (par [[Utilisateur:Jeremie|Jérémie]])
-* Ruche connectée (par [[Utilisateur:Jeremie|Jérémie]])
+* Ruche connectée (par [[Utilisateur:Jeremie|Jérémie]] et des membres du FacLab)
 * Éolienne POC21 (par [[Utilisateur:Jeremie|Jérémie]])
 * Logger GPS miniature (par [[Utilisateur:Jeremie|Jérémie]])
 * Machine de Turing mécanique (par [[Utilisateur:Jeremie|Jérémie]]) : cf. http://www.ens-lyon.eu/actualites/la-machine-de-turing-en-legos--158118.kjsp?RH=ENS-LYON-FR-evenemen
