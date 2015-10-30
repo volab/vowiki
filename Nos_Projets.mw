@@ -96,7 +96,8 @@ Les autres projets auxquels nous avons réfléchi mais dont la réalisation n'a 
 * CNC (par [[Utilisateur:Francis|Francis]]) : une CNC réalisée à partir d'une fraiseuse industrielle
 * Infrared signal sniffer (par [[Utilisateur:Jeremie|Jérémie]]) : un sniffer de signaux de télécommunications infra-rouge
 * RF spectrum analysis (par [[Utilisateur:Jeremie|Jérémie]]) : un sniffer d'ondes électromagnétiques
-* Compteur Geiger (par [[Utilisateur:Jeremie|Jérémie]]) : un compteur Geiger
+* Compteur Geiger (par [[Utilisateur:Jeremie|Jérémie]]) : un compteur Geiger (système de mesure du niveau de radiation ambiant)
+* Spectrophotomètre (par [[Utilisateur:Jeremie|Jérémie]]) : un spectrophotomètre (système pour analyser la composition chimique d'un objet, d'un liquide, d'un gaz, etc.) basé sur http://publiclab.org/wiki/spectrometer et inspiré par [https://www.kickstarter.com/projects/903107259/scio-your-sixth-sense-a-pocket-molecular-sensor-fo SCiO]
 * Sport manager (par [[Utilisateur:Jeremie|Jérémie]]) : un logger de cardiofréquencemètre, GPS, electrodes, etc.
 * Template ReStructuredText (par [[Utilisateur:Jeremie|Jérémie]])
 
