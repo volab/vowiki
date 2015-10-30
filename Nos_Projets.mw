@@ -36,6 +36,10 @@ Voici quelques-uns de nos projets en cours d'élaboration.
 * [[Botsim]] (par [[Utilisateur:Jeremie|Jérémie]]) : un simulateur de robots utilisé dans le cadre de travaux sur des algorithmes bio-inspirés (apprentissage artificiel, algorithmes évolutionnaires, apprentissage par renforcement, ...)
 * [[PyAX-12]] (par [[Utilisateur:Jeremie|Jérémie]]) : une bibliothèque pour contrôler des servomoteurs Dynamixel AX-12 directement depuis un ordinateur ou un RaspberryPi
 
+=== Outils ===
+
+* Diyouware TwinTeeth (projet commun principalement réalisé par [[Utilisateur:M4vrick|Gregory]]) : une machine multi-usages basé sur la [http://www.diyouware.com/ Diyouware TwinTeeth]
+
 === Robots ===
 
 * [[VoR1]]  (par [[Utilisateur:Majorlee|Joël]], [[Utilisateur:Pec|Pec]] et Julien) : un robot roulant
