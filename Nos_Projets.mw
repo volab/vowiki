@@ -13,6 +13,7 @@ Voici la liste (non exhaustive) de nos réalisations.
 * [[VoR2]]  (par [[Utilisateur:Pec|Pec]] et Julien) : un robot monté sur 3 roues et contrôlé par un Arduino
 * [[VoR3]]  (par Julien) : un drone (quadricoptere) qui utilise une carte ardupilot pour voler et recevoir ces instructions de la télécommande
 * [[VoR6]]  (par Pierre Hugo) : un robot sur deux roues en forme de scarabée
+* [[VoR9]]  (par [[Utilisateur:Pec|Pec]]) : un robot suiveur de ligne servant également de plate-forme de test pour l'odométrie (inspiré du robot Zumo de Pololu)
 * [[VoR12]] (par [[Utilisateur:Jeremie|Jérémie]]) : une webcam mobile programmée pour suivre un objet donné, servant de plate-forme de test pour OpenCV (traitement d'images en temps réel) et [[PyAX-12]]
 * [[Robot jeep]] (par [[Utilisateur:Daniel|Daniel]]) : un robot téléguidé avec une caméra embarquée.
 
@@ -60,7 +61,6 @@ Voici quelques-uns de nos projets en cours d'élaboration.
 * [[VoR5]]  (par [[Utilisateur:Pierre|Pierre]], [[Utilisateur:Majorlee|Joël]] et Gilles de l'[http://www.electrolab.fr/ electrolab]) : un robot hexapod contrôlé par un Arduino
 * [[VoR7]]  (par [[Utilisateur:Pierre|Pierre]]) : le hack d'un jouet télécommandé pour en faire un robot suiveur de ligne (contrôlé par un Raspberry Pi et un Arduino)
 * [[VoR8]]  (par [[Utilisateur:Majorlee|Joël]]) : une plate-forme de test pour l'odométrie, les protocoles de communication série et la création de robots modulaires
-* [[VoR9]]  (par [[Utilisateur:Pec|Pec]]) : un robot suiveur de ligne servant également de plate-forme de test pour l'odométrie (inspiré du robot Zumo de Pololu)
 * VoR10 (a.k.a. Rex) (par [[Utilisateur:Pierre|Pierre]]) : un robot suiveur de ligne également utilisé comme plate-forme de test pour l'odométrie et les trains épicycloïdaux
 * [[VoR11]] (par [[Utilisateur:Jeremie|Jérémie]]) : un robot roulant modulaire, contrôlé par un RaspberryPi et des microcontrôleurs Atmel AVR et utilisé comme plate-forme de test robotique généraliste
 * Assuro (par [[Utilisateur:Jeremie|Jérémie]]) : un robot [http://www.arexx.nl/arexx.php?cmd=goto&cparam=p_asuro Arexx Asuro] modifié pour être radio contrôlé
