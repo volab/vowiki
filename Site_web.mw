@@ -3,7 +3,7 @@
 
 == Étude des besoins ==
 
-* communiquer les news avec le public (blog, facebook, twitter)
+* communiquer les news avec le public (blog, facebook, twitter, RSS, Google+, Diaspora*, ...)
 ** réalisations
 ** articles et tutoriels
 ** évènements
@@ -17,6 +17,47 @@
 * référentiel pour le code source et la CAD (voir la documentation) (github)
 * agenda partagé public (est-ce vraiment utile ?)
 * partage de fichiers entre membres (pydio)
+
+
+== Problèmes avec la configuration actuelle ==
+
+* le wiki est utilisé comme CMS à sens unique
+
+
+== Outils, usages potentiels, forces et faiblesses ==
+
+* blog
+** communication figée et chronologique
+* cms
+* wiki
+** documentation
+** sa liberté d'usage fait que ça peut vite devenir le chaos si on y prête pas attention...
+* serveur de fichier interne
+** parfait pour échanger des binaires (exe, solidworks, fichiers STL/gcode/..., multimédia, open/libreoffice, word, ...)
+* serveur FTP (vs Pydio) ?
+* forum
+* www.eventbrite.fr
+** pour gérer les inscriptions aux formations
+* IRC
+* calendrier comme google calendar (import/export ical)
+** http://webcalendar.sourceforge.net/
+** https://www.projet-plume.org/fiche/webcalendar
+* twitter
+* facebook
+* google+
+* diaspora
+* google drive
+** préférer les framapad (etherpad) ou owncloud
+* git / svn
+** pour le partage de code source et de documentation texte (latex, ReStructuredText, Markdown, Docbook, HTML, Troff, ...), a usage interne et/ou vers le publique
+* https://framadate.org/ alternative à doodle
+* owncloud
+* blog statiques (fichiers Markdown + Git)
+
+
+== À bannir ==
+
+* word/exel : ce ne sont pas des formats ouverts, utiliser libreoffice/openoffice
 
 
 == TODO list ==
