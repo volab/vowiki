@@ -11,5 +11,7 @@
 == TODO list ==
 
 * revoir les menus du blog
+* écrire et installer les scripts de conversion automatique ODT/Rst/Latex/... -> Wiki/PDF
+* écrire et installer des scripts de sauvegarde automatique du blog et du wiki
 * compléter et uniformiser le wiki
 * revoir la charte graphique et les thèmes du blog et du wiki
