@@ -34,7 +34,7 @@ D'autres exemples de résultats sont disponibles [http://www.vorobotics.com/wiki
 * 2 flashs cobra déportés et leur socle
 ** Canon Speedlite 430EX II
 ** ou l'alternative économique : Yongnuo YN560-II Flash Speedlite (un clone du Canon Speedlite 430EX II sans l'ETTL qui de toute façon est inutile ici)
-* Objectif Macro pour obtenir un très bon "[https://fr.wikipedia.org/wiki/Piqu%C3%A9 piqué]" (Canon EF-S 60 mm f/2.8 Macro USM)
+* Objectif Macro pour obtenir un très bon "[https://fr.wikipedia.org/wiki/Piqu%C3%A9 piqué]" (Canon EF-S 60 mm f/2.8 Macro USM), pour les très gros objets, un objectif macro n'est toutefois probablement pas idéal (profondeur de champ trop réduite, etc.) 
 * APN Canon EOS 700D
 * Un trépied pour l'appareil photo
 * Un trépied pour chaque flash ([http://www.amazon.fr/gp/product/B001M4HXB2?psc=1&redirect=true&ref_=oh_aui_detailpage_o00_s01 Manfrotto 5001B Pied en Aluminium 5 sections Noir])
@@ -44,14 +44,15 @@ D'autres exemples de résultats sont disponibles [http://www.vorobotics.com/wiki
 * Des pinces
 * Un filtre polarisant circulaire et/ou un filtre à densité neutre peut être utile dans certain cas
 
+
 == Configuration ==
 
 Attention, la pièce ne doit pas être éclairée par une autre source de lumière que les deux flashs au moment des prises de vues pour ne pas avoir à changer les réglages d'exposition (et l'emplacement des flashs) et pour éviter de mélanger des sources de lumière de [https://fr.wikipedia.org/wiki/Balance_des_blancs température] différentes...
 
 * Flashs cobra configurés en mode manuel à 1/32
 * Réglages de l'APN pour une bonne exposition avec les deux flashs cobra déportés lorsque la pièce est plongée dans le noir (vérifiez la qualité de l'exposition des photos prises avec leur histogramme):
-** Ouverture: F 7.1
-** Vitesse: 1/100
+** Ouverture: f/7.1
+** Temps d'exposition: 1/100
 ** ISO: 200
 * Mise au point: manuelle en mode "live view" (avec zoom)
 * Réglage de la température des couleurs: mode flash
