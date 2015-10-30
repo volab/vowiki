@@ -14,6 +14,7 @@ Voici la liste (non exhaustive) de nos réalisations.
 * [[VoR3]]  (par Julien) : un drone (quadricoptere) qui utilise une carte ardupilot pour voler et recevoir ces instructions de la télécommande
 * Robot jeep (par [[Utilisateur:Daniel|Daniel]]) : un robot téléguidé avec une caméra embarquée.
 * [[VoR6]]  (par Pierre Hugo) : un robot sur deux roues en forme de scarabée
+* [[VoR12]] (par [[Utilisateur:Jeremie|Jérémie]]) : une webcam mobile programmée pour suivre un objet donné, servant de plate-forme de test pour OpenCV (traitement d'images en temps réel) et [[PyAX-12]]
 
 === Outils ===
 
@@ -43,6 +44,7 @@ Voici quelques-uns de nos projets en cours d'élaboration.
 * Snippets Atmel AVR (par [[Utilisateur:Jeremie|Jérémie]]) : une collection de snippets pour les microcontrôleurs Atmel AVR
 * Snippets RaspberryPi (par [[Utilisateur:Jeremie|Jérémie]]) : une collection de snippets pour la programmation des GPIO sur le RaspberryPi
 * VorCV (par [[Utilisateur:Jeremie|Jérémie]]) : un framework de traitement d'images en temps réel, écrit en Python et basé sur la bibliothèque OpenCV (notamment utilisé pour Vor11 et Vor12)
+* Automates cellulaires (par [[Utilisateur:Jeremie|Jérémie]])
 
 === Outils ===
  
@@ -59,7 +61,6 @@ Voici quelques-uns de nos projets en cours d'élaboration.
 * [[VoR9]]  (par [[Utilisateur:Pec|Pec]]) : un robot suiveur de ligne servant également de plate-forme de test pour l'odométrie (inspiré du robot Zumo de Pololu)
 * VoR10 (a.k.a. Rex) (par [[Utilisateur:Pierre|Pierre]]) : un robot suiveur de ligne également utilisé comme plate-forme de test pour l'odométrie et les trains épicycloïdaux
 * [[VoR11]] (par [[Utilisateur:Jeremie|Jérémie]]) : un robot roulant modulaire, contrôlé par un RaspberryPi et des microcontrôleurs Atmel AVR et utilisé comme plate-forme de test robotique généraliste
-* [[VoR12]] (par [[Utilisateur:Jeremie|Jérémie]]) : une webcam mobile programmée pour suivre un objet donné, servant de plate-forme de test pour OpenCV (traitement d'images en temps réel) et [[PyAX-12]]
 * Assuro (par [[Utilisateur:Jeremie|Jérémie]]) : un robot [http://www.arexx.nl/arexx.php?cmd=goto&cparam=p_asuro Arexx Asuro] modifié pour être radio contrôlé
 * Pololu 3Pi (par [[Utilisateur:Jeremie|Jérémie]]) : un robot [https://www.pololu.com/product/975/ Pololu 3Pi] modifié pour être radio contrôlé
 
@@ -119,6 +120,7 @@ Les autres projets auxquels nous avons réfléchi mais dont la réalisation n'a 
 * Camera d'angles morts pour voiture (par [[Utilisateur:Jeremie|Jérémie]])
 * Cube solver https://www.raspberrypi.org/blog/cube-solver/ : un robot solveur de Rubik's Cubes
 * Plate-forme robotique pour la robocup
+* Bras robotisé (par [[Utilisateur:Jeremie|Jérémie]]) : un bras robotisé pour réaliser des expériences de programmation logique, de planification (de type "monde des cubes") et de curiosité artificielle (extension des Ergo-Robots)
 
 
 <!--
