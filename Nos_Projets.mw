@@ -52,7 +52,7 @@ Voici quelques-uns de nos projets en cours d'élaboration.
  
 * Diyouware TwinTeeth (projet commun principalement réalisé par [[Utilisateur:M4vrick|Gregory]]) : une machine polyvalente (imprimante 3D, graveuse, photograveuse, perceuse, etc.) basée sur le principe des imprimante 3D delta (d'après le projet open-source [http://www.diyouware.com/ Diyouware TwinTeeth])
 * Effie (par [[Utilisateur:Pierre|Pierre]]) : une RepRap Prusa i3 modifiée
-* Scanner 3D (par [[Utilisateur:Pierre|Pierre]]) : un scanner 3D basé sur le principe d'[http://www.123dapp.com/catch Autodesk 123D Catch]
+* Scanner 3D (par [[Utilisateur:Pierre|Pierre]] et [[Utilisateur:Jeremie|Jérémie]]) : un scanner 3D basé sur le principe d'[http://www.123dapp.com/catch Autodesk 123D Catch], également utilisé pour tester une extension de la stereo vision d'OpenCV
 * [[Site web]] : amélioration de notre site web et de nos outils de communication (blog, wiki, forum, ...)
 
 === Robots ===
@@ -117,6 +117,7 @@ Les autres projets auxquels nous avons réfléchi mais dont la réalisation n'a 
 * Ergo-Robots / Flower fields (par [[Utilisateur:Jeremie|Jérémie]]) : https://flowers.inria.fr/
 * VoR13 (par [[Utilisateur:Jeremie|Jérémie]]) : un pendule inversé inspiré du projet http://roboticssamy.blogspot.pt/
 * VoR14 (par [[Utilisateur:Jeremie|Jérémie]]) : un drone "fait maison" (y compris le contrôleur)
+* Imagerie 3D (par [[Utilisateur:Jeremie|Jérémie]]) : mesures et modélisation (moyenne) de champs (magnétiques, électromagnétiques, etc.) dans un volume ; utiliser VTK et mayavi pour l'affichage (volume rendering, vector fields, etc.)
 * Smart radio alarm (par [[Utilisateur:Jeremie|Jérémie]])
 * Émetteur (de faible puissance) / récepteur radio (AM et FM) (par [[Utilisateur:Jeremie|Jérémie]])
 * Maison d'oiseaux connectée (par [[Utilisateur:Jeremie|Jérémie]])
