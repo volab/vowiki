@@ -38,6 +38,7 @@ Voici quelques-uns de nos projets en cours d'élaboration.
 * PyAI (par [[Utilisateur:Jeremie|Jérémie]]) : un framework d'Intelligence Artificielle généraliste pour le langage de programmation Python (apprentissage automatique, optimisation, prise de décision séquentielle, etc.)
 * Snippets Atmel AVR (par [[Utilisateur:Jeremie|Jérémie]]) : une collection de snippets pour les microcontrôleurs Atmel AVR
 * Snippets RaspberryPi (par [[Utilisateur:Jeremie|Jérémie]]) : une collection de snippets pour la programmation des GPIO sur le RaspberryPi
+* VorCV (par [[Utilisateur:Jeremie|Jérémie]]) : un framework de traitement d'images en temps réel, écrit en Python et basé sur la bibliothèque OpenCV (notamment utilisé pour Vor11 et Vor12)
 
 === Outils ===
  
