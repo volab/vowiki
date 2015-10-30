@@ -22,6 +22,10 @@
 == Problèmes avec la configuration actuelle ==
 
 * le wiki est utilisé comme CMS à sens unique
+* le menu du blog est à refaire
+* manque de dynamisme sur le wiki et le blog
+* le forum est très peu utilisé
+* ...
 
 
 == Outils, usages potentiels, forces et faiblesses ==
@@ -54,9 +58,7 @@
 * owncloud
 * blog statiques (fichiers Markdown + Git)
 
-
-== À bannir ==
-
+Les outils/formats à bannir:
 * word/exel : ce ne sont pas des formats ouverts, utiliser libreoffice/openoffice
 
 
