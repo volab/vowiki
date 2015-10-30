@@ -103,17 +103,22 @@ Les autres projets auxquels nous avons réfléchi mais dont la réalisation n'a 
 * Sensor box (par [[Utilisateur:Jeremie|Jérémie]])
 * Ordinateur / micro contrôleur à ultra basse consommation et énergétiquement autonome (par [[Utilisateur:Jeremie|Jérémie]]) : e-ink screen, solar pannel, ...
 * RaspberryPi laptop (par [[Utilisateur:Jeremie|Jérémie]])
-* RaspberryPi robuste (par [[Utilisateur:Jeremie|Jérémie]]) : un OS basé sur Raspbian mono application et mono utilisateur
+* RaspberryPi robuste (par [[Utilisateur:Jeremie|Jérémie]]) : un OS basé sur Raspbian mono application et mono utilisateur (C et Python)
 * RPi network appliances (par [[Utilisateur:Jeremie|Jérémie]]) : firewall, proxy, NAS, traffic analyser, wifi access point, etc.
 * RPi console emulators (SNES, Genesis, NeoGeo, ...) + XBox controller (par [[Utilisateur:Jeremie|Jérémie]])
 * Ergo-Robots / Flower fields (par [[Utilisateur:Jeremie|Jérémie]]) : https://flowers.inria.fr/
 * VoR13 (par [[Utilisateur:Jeremie|Jérémie]])
 * VoR14 (par [[Utilisateur:Jeremie|Jérémie]])
 * Smart radio alarm (par [[Utilisateur:Jeremie|Jérémie]])
+* Émetteur / récepteur radio (AM et FM) (par [[Utilisateur:Jeremie|Jérémie]])
+* Maison d'oiseaux connectée (par [[Utilisateur:Jeremie|Jérémie]])
+* Ruche connectée (par [[Utilisateur:Jeremie|Jérémie]])
+* Éolienne POC21 (par [[Utilisateur:Jeremie|Jérémie]])
 * Logger GPS miniature (par [[Utilisateur:Jeremie|Jérémie]])
 * Machine de Turing mécanique (par [[Utilisateur:Jeremie|Jérémie]]) : cf. http://www.ens-lyon.eu/actualites/la-machine-de-turing-en-legos--158118.kjsp?RH=ENS-LYON-FR-evenemen
 * Camera d'angles morts pour voiture (par [[Utilisateur:Jeremie|Jérémie]])
 * Cube solver https://www.raspberrypi.org/blog/cube-solver/ : un robot solveur de Rubik's Cubes
+* Plate-forme robotique pour la robocup
 
 
 <!--
