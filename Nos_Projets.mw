@@ -106,7 +106,7 @@ Les autres projets auxquels nous avons réfléchi mais dont la réalisation n'a 
 * RaspberryPi laptop (par [[Utilisateur:Jeremie|Jérémie]])
 * RaspberryPi robuste (par [[Utilisateur:Jeremie|Jérémie]]) : un OS basé sur Raspbian mono application et mono utilisateur (C et Python)
 * RPi network appliances (par [[Utilisateur:Jeremie|Jérémie]]) : firewall, proxy, NAS, traffic analyser, wifi access point, etc.
-* RPi console emulators (SNES, Genesis, NeoGeo, ...) + XBox controller (par [[Utilisateur:Jeremie|Jérémie]])
+* RPi console emulator (par [[Utilisateur:Jeremie|Jérémie]]) : émulateur SNES, Genesis, NeoGeo, ... + XBox gamepad
 * Ergo-Robots / Flower fields (par [[Utilisateur:Jeremie|Jérémie]]) : https://flowers.inria.fr/
 * VoR13 (par [[Utilisateur:Jeremie|Jérémie]]) : un pendule inversé inspiré du projet http://roboticssamy.blogspot.pt/
 * VoR14 (par [[Utilisateur:Jeremie|Jérémie]]) : un drone "fait maison" (y compris le contrôleur)
