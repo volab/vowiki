@@ -122,10 +122,11 @@ Les autres projets auxquels nous avons réfléchi mais dont la réalisation n'a 
 * Cube solver https://www.raspberrypi.org/blog/cube-solver/ : un robot solveur de Rubik's Cubes
 * Plate-forme robotique pour la robocup
 * Bras robotisé (par [[Utilisateur:Jeremie|Jérémie]]) : un bras robotisé pour réaliser des expériences de programmation logique, de planification (de type "monde des cubes") et de curiosité artificielle (extension des Ergo-Robots)
+* Plate-forme robotique RaspberryPi sur roues (par [[Utilisateur:Daniel|Daniel]])
+* Voiture radiocommandée "hackée" (par [[Utilisateur:Daniel|Daniel]])
 
 
 <!--
-
 TODO: Boîtes avec nom, auteurs, lien, description, image
 
 {| class="wikitable centre" width="90%"
