@@ -86,9 +86,45 @@ Les outils/formats à bannir:
 
  libreoffice --headless --convert-to pdf test.odt
 
-
 === Conversion ODT (openoffice/libreoffice) vers HTML ===
 
  libreoffice --headless --convert-to html test.odt
 
 À améliorer (CSS personnalisé, etc.)
+
+=== Conversion ReStructuredText vers PDF ===
+
+ ...
+
+=== Conversion ReStructuredText vers HTML ===
+
+ ...
+
+=== Conversion Markdown vers PDF ===
+
+ ...
+
+=== Conversion Markdown vers HTML ===
+
+ ...
+
+
+=== Conversion LaTeX vers PDF ===
+
+ ...
+
+=== Conversion LaTeX vers HTML ===
+
+ ...
+
+=== Sphinx et readthedocs.org ===
+
+ ...
+
+=== Synchronisation des fichiers HTML et PDF générés depuis un serveur de fichier vers un serveur web ===
+
+ ...
+
+=== Automatisation avec Cron ===
+
+ ...
