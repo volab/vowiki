@@ -148,11 +148,12 @@ Conversion ODT vers HTML:
 
 === Synchronisation des fichiers HTML et PDF générés depuis un serveur de fichier vers un serveur web ===
 
-''sync_a_file'':
+''sync_files'':
 
  #!/bin/sh
  
- DST=user@host:/path/    # TODO: mettre le vrai path ici
+ SRC_DIR=...                 # TODO: mettre le vrai path ici
+ DST_DIR=user@host:/path/    # TODO: mettre le vrai path ici
  
  ### CHECK COMMANDS ###
  
@@ -161,16 +162,13 @@ Conversion ODT vers HTML:
  
  ### CHECK ARGS ###
  
- if [ $# -ne 1 ] ; then echo "usage: $0 <SRC_DIR>" ; exit 1 ; fi
- SRC=$1
- 
- if [ ! -d "$SRC" ] ; then echo "$SRC: directory not found." ; exit 1 ; fi
- if [ ! -d "$DST" ] ; then echo "$DST: directory not found." ; exit 1 ; fi
+ if [ ! -d "$SRC_DIR" ] ; then echo "$SRC_DIR: directory not found." ; exit 1 ; fi
+ if [ ! -d "$DST_DIR" ] ; then echo "$DST_DIR: directory not found." ; exit 1 ; fi
  
  ### SYNC ###
  
- echo "Synchronizing ${SRC} to ${DST}"
- rsync -r -L -v -e ssh --delete ${SRC} ${DST}
+ echo "Synchronizing ${SRC_DIR} to ${DST_DIR}"
+ rsync -r -L -v -e ssh --delete ${SRC_DIR} ${DST_DIR}
 
 Options utilisées pour ''rsync'':
 * ''-e ssh'' : utilise SSH
