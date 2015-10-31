@@ -100,6 +100,8 @@ Les outils/formats à bannir:
 
  ...
 
+<!--
+
 === Conversion Markdown vers PDF ===
 
  ...
@@ -117,11 +119,17 @@ Les outils/formats à bannir:
 
  ...
 
+-->
+
 === Sphinx et readthedocs.org ===
 
  ...
 
 === Synchronisation des fichiers HTML et PDF générés depuis un serveur de fichier vers un serveur web ===
+
+ ...
+
+=== Synchronisation des fichiers HTML et PDF générés depuis un référentiel Git vers un serveur web ===
 
  ...
 
