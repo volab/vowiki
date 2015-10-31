@@ -133,7 +133,6 @@ Les outils/formats à bannir:
 
  #!/bin/sh
  
- SRC=path                # TODO: mettre le vrai path ici
  DST=user@host:/path/    # TODO: mettre le vrai path ici
  
  ### CHECK COMMANDS ###
@@ -143,17 +142,19 @@ Les outils/formats à bannir:
  
  ### CHECK ARGS ###
  
+ if [ $# -ne 1 ] ; then echo "usage: $0 <SRC_DIR>" ; exit 1 ; fi
+ SRC=$1
+ 
  if [ ! -d "$SRC" ] ; then echo "$SRC: directory not found." ; exit 1 ; fi
  if [ ! -d "$DST" ] ; then echo "$DST: directory not found." ; exit 1 ; fi
  
  ### SYNC ###
  
  echo "Synchronizing ${SRC} to ${DST}"
- rsync -a -v -e ssh --delete ${SRC} ${DST}
+ rsync -r -L --chmod=444 -v -e ssh --delete ${SRC} ${DST}
 
 Options utilisées pour ''rsync'':
 * ''-e ssh'' : utilise SSH
-* ''-a'' : mode "archive" (TODO: probablement pas une bonne idée en fait)
 * ''-v'' : mode "verbeux"
 * ''--delete'' : supprime de $DST les fichiers qui ont été supprimés de $SRC depuis la dernière synchronisation
 
