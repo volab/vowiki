@@ -88,30 +88,27 @@ Conversion ODT vers PDF:
 
  libreoffice --headless --convert-to pdf test.odt
 
-Conversion ODT vers HTML:
+Conversion ODT vers HTML (à améliorer : CSS personnalisé, etc.):
 
  libreoffice --headless --convert-to html test.odt
 
 
-''convert_odt'':
+''convert_files.sh'':
 
  #!/bin/sh
  
- SRC_DIR=...          # TODO: écrire ici le chemin vers le répertoire contenant les fichiers source
+ SRC_DIR=./          # Écrire ici le chemin vers le répertoire contenant les fichiers source (ODT, ...)
+ DST_DIR=./          # Écrire ici le chemin vers le répertoire contenant les fichiers PDF et HTML générés
  
  ### CHECK COMMANDS ###
  
  # command -v will return >0 when the $i is not found
- command -v sync_a_file >/dev/null && continue || { echo "sync_a_file: command not found."; exit 1; }
+ command -v libreoffice >/dev/null && continue || { echo "sync_a_file: command not found."; exit 1; }
  
- ### CHECK COMMANDS ###
+ ### CONVERT FILES ###
  
- for FILE in "${SRC_DIR}"
- do
-     sync_a_file $FILE
- done
-
-À améliorer (CSS personnalisé, etc.)
+ find ${SRC_DIR} -type f -iname "*.odt" -execdir libreoffice --headless --convert-to html --outdir ${DST_DIR} {} \;
+ find ${SRC_DIR} -type f -iname "*.odt" -execdir libreoffice --headless --convert-to pdf --outdir ${DST_DIR} {} \;
 
 === Conversion ReStructuredText vers PDF ===
 
