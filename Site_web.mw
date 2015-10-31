@@ -84,9 +84,11 @@ Les outils/formats à bannir:
 
 === Conversion ODT (openoffice/libreoffice) vers PDF ===
 
-libreoffice --headless --convert-to pdf test.odt
+ libreoffice --headless --convert-to pdf test.odt
 
 
 === Conversion ODT (openoffice/libreoffice) vers HTML ===
 
-libreoffice --headless --convert-to html test.odt
+ libreoffice --headless --convert-to html test.odt
+
+À améliorer (CSS personnalisé, etc.)
