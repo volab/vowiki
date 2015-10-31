@@ -148,10 +148,6 @@ Conversion ODT vers HTML:
 
 === Synchronisation des fichiers HTML et PDF générés depuis un serveur de fichier vers un serveur web ===
 
- ...
-
-=== Synchronisation des fichiers HTML et PDF générés depuis un référentiel Git vers un serveur web ===
-
 ''sync_a_file'':
 
  #!/bin/sh
@@ -183,6 +179,10 @@ Options utilisées pour ''rsync'':
 * ''-v'' : mode "verbeux"
 * ''--delete'' : supprime de $DST les fichiers qui ont été supprimés de $SRC depuis la dernière synchronisation
 
+=== Synchronisation des fichiers HTML et PDF générés depuis un référentiel Git vers un serveur web ===
+
+ ...
+
 === Automatisation avec Cron ===
 
 Éditer la liste des taches cron avec la commande suivante:
@@ -191,8 +191,8 @@ Options utilisées pour ''rsync'':
 
 Par exemple, pour synchroniser les fichiers toutes les heures:
 
- 0 * * * * /absolute/path/to/sync_all_files
+ 0 * * * * /absolute/path/to/convert_and_sync.sh
 
 ou pour synchroniser les fichiers tous les jours à 4h du matin:
 
- 0 4 * * * /absolute/path/to/sync_all_files
+ 0 4 * * * /absolute/path/to/convert_and_sync.sh
