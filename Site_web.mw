@@ -132,9 +132,9 @@ Les outils/formats à bannir:
 === Synchronisation des fichiers HTML et PDF générés depuis un référentiel Git vers un serveur web ===
 
  #!/bin/sh
-
+ 
  ### CHECK COMMANDS ###
-
+ 
  # command -v will return >0 when the $i is not found
  command -v rsync >/dev/null && continue || { echo "rsync: command not found."; exit 1; }
  
