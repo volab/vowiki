@@ -133,6 +133,9 @@ Les outils/formats à bannir:
 
  #!/bin/sh
  
+ SRC=path                # TODO: mettre le vrai path ici
+ DST=user@host:/path/    # TODO: mettre le vrai path ici
+ 
  ### CHECK COMMANDS ###
  
  # command -v will return >0 when the $i is not found
@@ -140,17 +143,19 @@ Les outils/formats à bannir:
  
  ### CHECK ARGS ###
  
- if [ $# -ne 2 ] ; then echo "usage: $0 <SRC_DIR> <DST_DIR>" ; exit 1 ; fi
- if [ ! -d "$1" ] ; then echo "$1: directory not found." ; exit 1 ; fi
- if [ ! -d "$2" ] ; then echo "$2: directory not found." ; exit 1 ; fi
- 
- SRC=$1
- DST=$2
+ if [ ! -d "$SRC" ] ; then echo "$SRC: directory not found." ; exit 1 ; fi
+ if [ ! -d "$DST" ] ; then echo "$DST: directory not found." ; exit 1 ; fi
  
  ### SYNC ###
  
- echo "Synchronizing (src: ${SRC}, dest: ${DST})"
- rsync -a --delete --progress -h --stats --log-file=/tmp/rsync.log ${SRC} ${DST}
+ echo "Synchronizing ${SRC} to ${DST}"
+ rsync -a -v -e ssh --delete ${SRC} ${DST}
+
+Options utilisées pour ''rsync'':
+* ''-e ssh'' : utilise SSH
+* ''-a'' : mode "archive" (TODO: probablement pas une bonne idée en fait)
+* ''-v'' : mode "verbeux"
+* ''--delete'' : supprime de $DST les fichiers qui ont été supprimés de $SRC depuis la dernière synchronisation
 
 === Automatisation avec Cron ===
 
