@@ -192,6 +192,11 @@ et ''convert_files.sh'':
  # command -v will return >0 when the $i is not found
  command -v libreoffice >/dev/null && continue || { echo "sync_a_file: command not found."; exit 1; }
  
+ ### CHECK ARGS ###
+ 
+ if [ ! -d "$SRC_DIR" ] ; then echo "$SRC_DIR: directory not found." ; exit 1 ; fi
+ if [ ! -d "$DST_DIR" ] ; then echo "$DST_DIR: directory not found." ; exit 1 ; fi
+ 
  ### CONVERT FILES ###
  
  # ODT FILES
