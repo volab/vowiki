@@ -198,4 +198,4 @@ et ''convert_files.sh'':
 
 Écrire les liens comme suit dans le "wikicode":
 
- * <nowiki>[http://www.tld/path/fichier.html Titre du document] (version [http://tld/path/fichier.pdf PDF])</nowiki>
+ <nowiki>* [http://www.tld/path/fichier.html Titre du document] (version [http://tld/path/fichier.pdf PDF])</nowiki>
