@@ -202,3 +202,6 @@ et ''convert_files.sh'':
  # ODT FILES
  find ${SRC_DIR} -type f -iname "*.odt" -execdir libreoffice --headless --convert-to html --outdir ${DST_DIR} {} \;
  find ${SRC_DIR} -type f -iname "*.odt" -execdir libreoffice --headless --convert-to pdf --outdir ${DST_DIR} {} \;
+ 
+ # RST FILES
+ #...
