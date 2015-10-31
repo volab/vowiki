@@ -183,8 +183,8 @@ Options utilisées pour ''rsync'':
 
 Par exemple, pour synchroniser les fichiers toutes les heures:
 
- 0 * * * * nom_du_script_à_executer
+ 0 * * * * /absolute/path/to/sync_all_files
 
 ou pour synchroniser les fichiers tous les jours à 4h du matin:
 
- 0 4 * * * nom_du_script_à_executer
+ 0 4 * * * /absolute/path/to/sync_all_files
