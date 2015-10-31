@@ -78,4 +78,15 @@ Les outils/formats à bannir:
 * mettre plus en avant les service web open source tels que https://degooglisons-internet.org/liste (http://framasoft.net/#topPgCloud)
 
 
+== Framework ==
+
 [[Fichier:Organisation_documenatation_wiki_odt_rst_latex.png|800px]]
+
+=== Conversion ODT (openoffice/libreoffice) vers PDF ===
+
+libreoffice --headless --convert-to pdf test.odt
+
+
+=== Conversion ODT (openoffice/libreoffice) vers HTML ===
+
+libreoffice --headless --convert-to html test.odt
