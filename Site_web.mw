@@ -159,4 +159,10 @@ Options utilisées pour ''rsync'':
 
 === Automatisation avec Cron ===
 
- ...
+Éditer la liste des taches cron avec la commande suivante:
+
+ crontab -e
+
+Par exemple, pour synchroniser les fichiers toutes les heures:
+
+ 0 * * * * nom_du_script_à_executer
