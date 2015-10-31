@@ -92,24 +92,6 @@ Conversion ODT vers HTML (à améliorer : CSS personnalisé, etc.):
 
  libreoffice --headless --convert-to html test.odt
 
-
-''convert_files.sh'':
-
- #!/bin/sh
- 
- SRC_DIR=./          # Écrire ici le chemin vers le répertoire contenant les fichiers source (ODT, ...)
- DST_DIR=./          # Écrire ici le chemin vers le répertoire contenant les fichiers PDF et HTML générés
- 
- ### CHECK COMMANDS ###
- 
- # command -v will return >0 when the $i is not found
- command -v libreoffice >/dev/null && continue || { echo "sync_a_file: command not found."; exit 1; }
- 
- ### CONVERT FILES ###
- 
- find ${SRC_DIR} -type f -iname "*.odt" -execdir libreoffice --headless --convert-to html --outdir ${DST_DIR} {} \;
- find ${SRC_DIR} -type f -iname "*.odt" -execdir libreoffice --headless --convert-to pdf --outdir ${DST_DIR} {} \;
-
 === Conversion ReStructuredText vers PDF ===
 
  ...
@@ -197,3 +179,21 @@ avec ''convert_and_sync.sh'':
  #!/bin/sh
  
  convert_files.sh && sync_files.sh
+
+et ''convert_files.sh'':
+
+ #!/bin/sh
+ 
+ SRC_DIR=./          # Écrire ici le chemin vers le répertoire contenant les fichiers source (ODT, ...)
+ DST_DIR=./          # Écrire ici le chemin vers le répertoire contenant les fichiers PDF et HTML générés
+ 
+ ### CHECK COMMANDS ###
+ 
+ # command -v will return >0 when the $i is not found
+ command -v libreoffice >/dev/null && continue || { echo "sync_a_file: command not found."; exit 1; }
+ 
+ ### CONVERT FILES ###
+ 
+ # ODT FILES
+ find ${SRC_DIR} -type f -iname "*.odt" -execdir libreoffice --headless --convert-to html --outdir ${DST_DIR} {} \;
+ find ${SRC_DIR} -type f -iname "*.odt" -execdir libreoffice --headless --convert-to pdf --outdir ${DST_DIR} {} \;
