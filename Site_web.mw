@@ -151,10 +151,12 @@ Les outils/formats à bannir:
  ### SYNC ###
  
  echo "Synchronizing ${SRC} to ${DST}"
- rsync -r -L --chmod=444 -v -e ssh --delete ${SRC} ${DST}
+ rsync -r -L -v -e ssh --delete ${SRC} ${DST}
 
 Options utilisées pour ''rsync'':
 * ''-e ssh'' : utilise SSH
+* ''-r'' : mode "récursif"
+* ''-L'' : déréférence les liens
 * ''-v'' : mode "verbeux"
 * ''--delete'' : supprime de $DST les fichiers qui ont été supprimés de $SRC depuis la dernière synchronisation
 
