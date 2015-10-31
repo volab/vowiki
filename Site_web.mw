@@ -131,6 +131,8 @@ Les outils/formats à bannir:
 
 === Synchronisation des fichiers HTML et PDF générés depuis un référentiel Git vers un serveur web ===
 
+''sync_a_file'':
+
  #!/bin/sh
  
  DST=user@host:/path/    # TODO: mettre le vrai path ici
@@ -159,6 +161,19 @@ Options utilisées pour ''rsync'':
 * ''-L'' : déréférence les liens
 * ''-v'' : mode "verbeux"
 * ''--delete'' : supprime de $DST les fichiers qui ont été supprimés de $SRC depuis la dernière synchronisation
+
+''sync_all_files'':
+
+ #!/bin/sh
+ 
+ ### CHECK COMMANDS ###
+ 
+ # command -v will return >0 when the $i is not found
+ command -v sync_a_file >/dev/null && continue || { echo "sync_a_file: command not found."; exit 1; }
+ 
+ ### CHECK COMMANDS ###
+ 
+ sync_a_file ...
 
 === Automatisation avec Cron ===
 
