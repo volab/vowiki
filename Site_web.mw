@@ -148,7 +148,7 @@ Conversion ODT vers HTML:
 
 === Synchronisation des fichiers HTML et PDF générés depuis un serveur de fichier vers un serveur web ===
 
-''sync_files'':
+''sync_files.sh'':
 
  #!/bin/sh
  
