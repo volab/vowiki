@@ -196,3 +196,7 @@ ou pour synchroniser les fichiers tous les jours à 4h du matin:
  0 4 * * * /absolute/path/to/convert_and_sync.sh
 
 avec ''convert_and_sync.sh'':
+
+ #!/bin/sh
+ 
+ convert_files.sh && sync_files.sh
