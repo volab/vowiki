@@ -82,13 +82,34 @@ Les outils/formats à bannir:
 
 [[Fichier:Organisation_documenatation_wiki_odt_rst_latex.png|800px]]
 
-=== Conversion ODT (openoffice/libreoffice) vers PDF ===
+=== Conversion ODT (openoffice/libreoffice) vers PDF et HTML ===
+
+Conversion ODT vers PDF:
 
  libreoffice --headless --convert-to pdf test.odt
 
-=== Conversion ODT (openoffice/libreoffice) vers HTML ===
+Conversion ODT vers HTML:
 
  libreoffice --headless --convert-to html test.odt
+
+
+''convert_odt'':
+
+ #!/bin/sh
+ 
+ SRC_DIR=...          # TODO: écrire ici le chemin vers le répertoire contenant les fichiers source
+ 
+ ### CHECK COMMANDS ###
+ 
+ # command -v will return >0 when the $i is not found
+ command -v sync_a_file >/dev/null && continue || { echo "sync_a_file: command not found."; exit 1; }
+ 
+ ### CHECK COMMANDS ###
+ 
+ for FILE in "${SRC_DIR}"
+ do
+     sync_a_file $FILE
+ done
 
 À améliorer (CSS personnalisé, etc.)
 
