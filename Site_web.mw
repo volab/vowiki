@@ -196,4 +196,6 @@ et ''convert_files.sh'':
 
 === Écriture des liens dans le wiki ===
 
- * [http://www.tld/path/fichier.html Titre du document] (version [http://tld/path/fichier.pdf PDF])
+Écrire les liens comme suit dans le "wikicode":
+
+ * <nowiki>[http://www.tld/path/fichier.html Titre du document] (version [http://tld/path/fichier.pdf PDF])</nowiki>
