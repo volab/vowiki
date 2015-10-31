@@ -92,30 +92,20 @@ Conversion ODT vers HTML (à améliorer : CSS personnalisé, etc.):
 
  libreoffice --headless --convert-to html test.odt
 
-=== Conversion ReStructuredText vers PDF ===
+=== Conversion ReStructuredText vers PDF et HTML ===
 
- ...
-
-=== Conversion ReStructuredText vers HTML ===
+Cf. https://github.com/jdhp-misc/rst_jdhp_theme (en cours d'écriture).
 
  ...
 
 <!--
 
-=== Conversion Markdown vers PDF ===
-
- ...
-
-=== Conversion Markdown vers HTML ===
+=== Conversion Markdown vers PDF et HTML ===
 
  ...
 
 
-=== Conversion LaTeX vers PDF ===
-
- ...
-
-=== Conversion LaTeX vers HTML ===
+=== Conversion LaTeX vers PDF et HTML ===
 
  ...
 
@@ -205,3 +195,7 @@ et ''convert_files.sh'':
  
  # RST FILES
  #...
+
+=== Écriture des liens dans le wiki ===
+
+ * [http://www.tld/path/fichier.html Titre du document] (version [http://tld/path/fichier.pdf PDF])
