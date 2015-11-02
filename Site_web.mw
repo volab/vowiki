@@ -72,7 +72,7 @@ Les outils/formats à bannir:
 ** "Association VOROBOTICS" -> ?
 ** "Le Projet VoLab" -> "Le VoLab"
 * déplacer la documentation des projets VoR ... vers le wiki (centralisation de la documentation) ?
-* écrire et installer les scripts de conversion automatique ODT/Rst/Latex/... -> Wiki/PDF
+* [[#Documentation publique (wiki)|écrire et installer les scripts de conversion automatique ODT/Rst/Latex/... -> Wiki/PDF]]
 * écrire et installer des scripts de sauvegarde automatique du blog et du wiki
 * compléter et uniformiser le wiki
 * revoir la charte graphique et les thèmes du blog et du wiki
