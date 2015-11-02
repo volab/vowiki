@@ -58,6 +58,7 @@
 * owncloud
 * blog statiques (fichiers Markdown + Git)
 
+
 Les outils/formats à bannir:
 * word/exel : ce ne sont pas des formats ouverts, utiliser libreoffice/openoffice
 
