@@ -37,7 +37,7 @@
 ** documentation
 ** sa liberté d'usage fait que ça peut vite devenir le chaos si on y prête pas attention...
 * serveur de fichier interne
-** parfait pour échanger des binaires (exe, solidworks, fichiers STL/gcode/..., multimédia, open/libreoffice, word, ...)
+** parfait pour échanger des binaires (exe, fichiers de CAD, fichiers STL/gcode/..., multimédia, open/libreoffice, word, ...)
 * serveur FTP (vs Pydio) ?
 * forum
 * www.eventbrite.fr
