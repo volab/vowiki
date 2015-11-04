@@ -8,7 +8,7 @@ Pourquoi&nbsp;? Tout simplement parce que nous ne les connaissons pas tous les M
 
 Nous avons pour projet de travailler sur les MSP430 (de chez Texas Instrument), les STM32 (STMicroelectronics), les PIC (de chez Microchip) et les FPGA. 
 
-Oui les FPGA ne sont pas des Microcontrôleur mais puisque l'on peut instancié un Microcontrôleur dans un FPGA, nous le Rangerons probablement dans cette catégorie.
+Oui les FPGA ne sont pas des Microcontrôleur mais puisque l'on peut instancié un Microcontrôleur dans un FPGA, nous le rangerons probablement dans cette catégorie.
 
 Puisque nous allons de toutes façons nous éloigner quelque peu des Micocontrôleurs, nous ne pouvons pas passer à coté des Nano-Ordinateurs comme le Raspberry Pi, le BeagleBone ou l'Onion Omega.
 
