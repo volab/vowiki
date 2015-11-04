@@ -76,7 +76,7 @@ Voici quelques-uns de nos projets en cours d'élaboration.
 * Tableau space invaders (par [[Utilisateur:M4vrick|Gregory]])
 
 
-== Projets à l'étude ==
+== Idées de projets et projets à l'étude ==
 
 Les autres projets auxquels nous avons réfléchi mais dont la réalisation n'a pas encore démarré.
 
@@ -120,6 +120,7 @@ Les autres projets auxquels nous avons réfléchi mais dont la réalisation n'a 
 * Imagerie 3D (par [[Utilisateur:Jeremie|Jérémie]]) : mesures et modélisation (moyenne) de champs (magnétiques, électromagnétiques, etc.) dans un volume ; utiliser VTK et mayavi pour l'affichage (volume rendering, vector fields, etc.)
 * Smart radio alarm (par [[Utilisateur:Jeremie|Jérémie]])
 * Émetteur (de faible puissance) / récepteur radio (AM et FM) (par [[Utilisateur:Jeremie|Jérémie]])
+* Étude des antennes radioélectrique et de la propagation des ondes (par [[Utilisateur:Jeremie|Jérémie]]) : les différents types d'antennes, leurs formes, les différentes matériaux et leurs caractéristiques (rendement, gain, diagramme de rayonnement, etc.)
 * Maison d'oiseaux connectée (par [[Utilisateur:Jeremie|Jérémie]])
 * Ruche connectée (par [[Utilisateur:Jeremie|Jérémie]] et des membres du FacLab)
 * Éolienne POC21 (par [[Utilisateur:Jeremie|Jérémie]])
@@ -130,6 +131,11 @@ Les autres projets auxquels nous avons réfléchi mais dont la réalisation n'a 
 * Cube solver : un robot solveur de Rubik's Cubes inspiré de [https://www.raspberrypi.org/blog/cube-solver/  celui-ci]
 * Plate-forme robotique pour la [http://www.planete-sciences.org/robot/index.php?section=pages&pageid=79 coupe de France de robotique] (ancienne Coupe E=M6 de robotique)
 * Bras robotisé (par [[Utilisateur:Jeremie|Jérémie]]) : un bras robotisé pour réaliser des expériences de programmation logique, de planification (de type "monde des cubes") et de curiosité artificielle (extension des Ergo-Robots)
+* Calculateur  (par [[Utilisateur:Jeremie|Jérémie]]) : projet pédagogique, un calculateur rudimentaire (additions de nombres sur 4 bits), construit uniquement avec des transistors regroupés en portes logiques (une porte logique = un circuit imprimé), la saisie des opérandes se faisant bit à bit par des interrupteurs (et la sortie en binaire sur des LEDs)
+* Ordinateur (par [[Utilisateur:Jeremie|Jérémie]]) : projet pédagogique, un ordinateur ultra rudimentaire (bus de 4 ou 8 bits, quelques registres, quelques instructions), créé à partir de circuits intégrés généralistes (portes logiques, mémoires, ...)
+* Timelapse pour croissance de plantes (par [[Utilisateur:Jeremie|Jérémie]]) : avec un RaspberryPi et une raspicam
+* Terminal série matériel comptible [https://fr.wikipedia.org/wiki/VT100|Dec VT100] (par [[Utilisateur:Jeremie|Jérémie]])
+* VoR-Cluster (par [[Utilisateur:Jeremie|Jérémie]]) : un cluster de calcul pour botsim, pyai, etc. utilisant SGE, MPI, OpenMP, CUDA, OpenCL, etc.
 * Plate-forme robotique RaspberryPi sur roues (par [[Utilisateur:Daniel|Daniel]])
 * Voiture radiocommandée "hackée" (par [[Utilisateur:Daniel|Daniel]])
 
