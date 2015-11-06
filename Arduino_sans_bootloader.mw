@@ -46,6 +46,7 @@ J'ai commancé par installer Atmelstudio v6 et je suis tombé sur un pb d'instal
 
 Pb install driver USB : certificats invalides.
 
+[[Image:bugInstallAtmelStudioUSBDriver.jpg]]<br />
 
 Un nouveau prog d'install juste des drivers en question est à dispo ici:
 
@@ -160,6 +161,7 @@ AVR fuse calc : [http://www.engbedded.com/fusecalc/ http://www.engbedded.com/fus
 
 Upload complet de la flash d'un composant vierge avec AS7 en mode binary.
 
+[[Image:devProgReadBinaryMode.jpg]]<br />
 
 On récupère alors un fichier de 32ko (à l'octet près) !
 
