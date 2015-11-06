@@ -190,7 +190,9 @@ De plus, on peut remarquer que l'upload a été au delà de l'adresse 0x8000 !!!
 
 Et deplus on remarque aussi que le bootloader ne commence pas à l'adresse 0x7E00
 
-[[Image:arduinoBootloaderStart.JPG]]Mais qu'est-ce que c'est que ce cirque ? L'ATMega328P aurait-il des octets supplémentaires cachés ? Après vérification dans la DS: non !
+[[Image:arduinoBootloaderStart.JPG]]<br />
+
+Mais qu'est-ce que c'est que ce cirque ? L'ATMega328P aurait-il des octets supplémentaires cachés ? Après vérification dans la DS: non !
 
 Contre manip : programmation de Optiboot dans un composant vierge et programmation des fuse à l'identique. Puis test sur carte ARDUINO UNO (merci les support DIP 28): carte fonctionnelle.
 
