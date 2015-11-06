@@ -213,7 +213,7 @@ Autre manip&nbsp;: upload toujours du même composant avec AS7 en mode Intel HEX
 
 Essai avec !atmel Studio 6.2 : eh ben y a pas le mode binary lol.
 
-<span style="color: #FFFF00;">Il semble qu'il y ait un bug dans la chaîne AtmelStudio/MkII en mode raw.</span>
+<span style="color: #FF0000;">Il semble qu'il y ait un bug dans la chaîne AtmelStudio/MkII en mode raw.</span>
 
 == Conclusion : ==
 Le boot chargé dans les carte ARDUINO UNO est bien est celui dont on trouve le source dans :
