@@ -9,12 +9,12 @@ Voici la liste (non exhaustive) de nos réalisations.
 
 === Robots ===
 
-* [[VoR1]]  (par [[Utilisateur:Majorlee|Joël]], [[Utilisateur:Pec|Pec]] et Julien) : un robot roulant
-* [[VoR2]]  (par [[Utilisateur:Pec|Pec]] et Julien) : un robot monté sur 3 roues et contrôlé par un Arduino
-* [[VoR3]]  (par Julien) : un drone (quadricoptere) qui utilise une carte ardupilot pour voler et recevoir ces instructions de la télécommande
-* [[VoR6]]  (par Pierre Hugo) : un robot sur deux roues en forme de scarabée
-* [[VoR9]]  (par [[Utilisateur:Pec|Pec]]) : un robot suiveur de ligne servant également de plate-forme de test pour l'odométrie (inspiré du robot Zumo de Pololu)
-* [[VoR12]] (par [[Utilisateur:Jeremie|Jérémie]]) : une webcam mobile programmée pour suivre un objet donné, servant de plate-forme de test pour OpenCV (traitement d'images en temps réel) et [[PyAX-12]]
+* [[VoR001]]  (par [[Utilisateur:Majorlee|Joël]], [[Utilisateur:Pec|Pec]] et Julien) : un robot roulant
+* [[VoR002]]  (par [[Utilisateur:Pec|Pec]] et Julien) : un robot monté sur 3 roues et contrôlé par un Arduino
+* [[VoR003]]  (par Julien) : un drone (quadricoptere) qui utilise une carte ardupilot pour voler et recevoir ces instructions de la télécommande
+* [[VoR006]]  (par Pierre Hugo) : un robot sur deux roues en forme de scarabée
+* [[VoR009]]  (par [[Utilisateur:Pec|Pec]]) : un robot suiveur de ligne servant également de plate-forme de test pour l'odométrie (inspiré du robot Zumo de Pololu)
+* [[VoR012]] (par [[Utilisateur:Jeremie|Jérémie]]) : une webcam mobile programmée pour suivre un objet donné, servant de plate-forme de test pour OpenCV (traitement d'images en temps réel) et [[PyAX-12]]
 * [[Robot jeep]] (par [[Utilisateur:Daniel|Daniel]]) : un robot téléguidé avec une caméra embarquée.
 
 === Outils ===
