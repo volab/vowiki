@@ -19,6 +19,7 @@ Voici pour l'instant ce sur quoi nous travaillons&nbsp;:
 - Les AVR :
 : * ATMega328p (en boitier DIL tout seul et depuis la carte Arduino Uno)
 : * ATMega2560 (sur les cartes Arduino 2560)
+- [[Arduino sans bootloader]]
 
 - [[RaspberryPi|Le Raspberry Pi]]
 
