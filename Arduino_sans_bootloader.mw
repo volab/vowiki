@@ -168,7 +168,8 @@ Jusqu'ici tout va bien et les résultats sont conforme aux attendus.
 
 Dans la datasheet de l'ATMega328P, on trouve:
 
-[[Image:tableBootLoaderParam.jpg]]Attention: les adresses indiquées sont des adresses de mots de 16bits pour avoir des adresses d'octets, il suffit de multiplier par 2. Donc le boot, avec bootsz = 11 sera dans le fichier à l'adresse 0x7E00.
+[[Image:tableBootLoaderParam.jpg]]<br />
+Attention: les adresses indiquées sont des adresses de mots de 16bits pour avoir des adresses d'octets, il suffit de multiplier par 2. Donc le boot, avec bootsz = 11 sera dans le fichier à l'adresse 0x7E00.
 
 Ensuite, je charge un ARDUINO UNO (un vrai) avec un blink depuis l'interface Arduino. (compilé ça pèse 1030 octets soit de 0000 à 0x202m16.
 
