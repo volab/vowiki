@@ -180,7 +180,9 @@ Le bit BOOTRST est actif donc on boot bien en 0x3F00
 Les loc bits ne sont pas verouillés.
 
 
-[[Image:diffOptiboot.JPG]]A gauche optiboot.hex du répertoire : C:\Program Files (x86)\Arduino\hardware\arduino\avr\bootloaders\optiboot
+[[Image:diffOptiboot.JPG]]<br />
+
+A gauche optiboot.hex du répertoire : C:\Program Files (x86)\Arduino\hardware\arduino\avr\bootloaders\optiboot
 
 A droite le boot uptloadé de l'Arduino blink ! C'est presque identique ! A quelques octets près. Etrange !
 
