@@ -1,0 +1,302 @@
+[[Image:illu-arduino-UNO.png|thumb|]]<center>Arduino sans bootloader</center>
+
+
+[[Image:|thumb|<center></center>]]
+
+= VoLAB =
+= Association VoRoBoTics =
+Date : 25/10/2015
+
+Auteur : J. (MajorLee) Soranzo
+
+Relecteur : 
+
+Thème: Arduino, Avr, bootloader
+
+Projet&nbsp;: expérimentations diverses sur l'Arduino
+
+= Problématique =
+Dans le magazine Hackable n°8, il y a un article intitulé «&nbsp;Construisez votre programmeur Arduino sans Arduino&nbsp;». Cet article explore toute les possibilité de programmer un Arduino sans programmeur et sans passer par le port USB. Il y est également question de programmer des microcontrôleurs qui ne sont pas nécessairement des cœurs de cartes ARDUINO come l'ATmega 168 ou les Atiny. Il y a quelques mois je m'étais penché sur la programmation des Atmega dans Atmel Studio et via les sonde de programmation USBASP. La lecture de cet article m'a donné envie d'aller encore plus loin dans la compréhension du bootloader de l'Arduino. Cela sert à quoi&nbsp;? Comment cela fonctionne-t-il&nbsp;?
+
+Questionnement&nbsp;:
+
+Quel est le bootloader qui est programmé dans les carte UNO aujourd'hui&nbsp;?
+
+Que fait-il exactement&nbsp;?
+
+Peut-on mettre un sketch dans un ATmega328P sans bootloader&nbsp;?
+
+Peut-on le faire avec Code::Blocks for Arduino&nbsp;?
+
+Peut-on claquer un fichier issu de l'IDE ARDUINO pour un UNO dans un Atmega88&nbsp;?
+
+48A, PA et 328 et 328P&nbsp;? différences. Le sketch aura été compilé pour un 328'''P'''
+
+Peut-on faire de «&nbsp;l'Arduino&nbsp;» dans Atmel Studio&nbsp;? 
+
+Histoire de profiter des librairies existantes (Adafruit par exemple). 
+
+[https://raw.githubusercontent.com/carlosefr/atmega/master/package_carlosefr_atmega_index.json https://raw.githubusercontent.com/carlosefr/atmega/master/package_carlosefr_atmega_index.json]
+
+= Bootloader ARDUINO ? =
+== Les manips ==
+Pour répondre à cette question, j'ai utiliser Atmelstudio pour relire les fuse et la flash de l'ATmega328P.
+
+J'ai commancé par installer Atmelstudio v6 et je suis tombé sur un pb d'install des drivers USB (une vague histoire de certificats périmés...).
+
+Pb install driver USB : certificats invalides.
+
+
+Un nouveau prog d'install juste des drivers en question est à dispo ici:
+
+[https://gallery.atmel.com/Products/Details/6873be43-0628-46ac-ba83-286869a3d97a https://gallery.atmel.com/Products/Details/6873be43-0628-46ac-ba83-286869a3d97a][https://gallery.atmel.com/Products/Details/6873be43-0628-46ac-ba83-286869a3d97a? ?]
+
+Finalement comme Atmelstudio v7 vient de sortir, je désintalle la 6 et inatll la 7. Pas de soucis particuliers.
+
+Utilisation de AVRISP MkII. J'aurais très bienpu utiliser un USBASP et avrdude. C'est juste que dans AS c'est plus convivial. Et j'adore la convivialité.
+
+Expertise bootloader
+
+Utilisation de la carte serial avec 2 AVR : remplacement de l'AVR slave par un AVR vierge
+
+Lecture des fuse d'un ATmega328P
+
+
+{| style="border-spacing:0;"
+| style="border-top:0.002cm solid #000000;border-bottom:none;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| BODLEVEL = DISABLED
+
+<nowiki>RSTDISBL = [ ]</nowiki>
+
+<nowiki>DWEN = [ ]</nowiki>
+
+<nowiki>SPIEN = [X]</nowiki>
+
+<nowiki>WDTON = [ ]</nowiki>
+
+<nowiki>EESAVE = [ ]</nowiki>
+
+BOOTSZ = 2048W_3800
+
+<nowiki>BOOTRST = [ ]</nowiki>
+
+<nowiki>CKDIV8 = [X]</nowiki>
+
+<nowiki>CKOUT = [ ]</nowiki>
+
+SUT_CKSEL = INTRCOSC_8MHZ_6CK_14CK_65MS
+
+
+EXTENDED = 0xFF (valid)
+
+HIGH = 0xD9 (valid)
+
+LOW = 0x62 (valid)
+| style="border-top:0.002cm solid #000000;border-bottom:none;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| BODLEVEL = 2V7
+
+<nowiki>RSTDISBL = [ ]</nowiki>
+
+<nowiki>DWEN = [ ]</nowiki>
+
+<nowiki>SPIEN = [X]</nowiki>
+
+<nowiki>WDTON = [ ]</nowiki>
+
+<nowiki>EESAVE = [ ]</nowiki>
+
+BOOTSZ = 2048W_3800
+
+<nowiki>BOOTRST = [ ]</nowiki>
+
+<nowiki>CKDIV8 = [ ]</nowiki>
+
+<nowiki>CKOUT = [X]</nowiki>
+
+SUT_CKSEL = EXTXOSC_8MHZ_XX_16KCK_14CK_65MS
+
+
+EXTENDED = 0xFD (valid)
+
+HIGH = 0xD9 (valid)
+
+LOW = 0xBF (valid)
+| style="border-top:0.002cm solid #000000;border-bottom:none;border-left:0.002cm solid #000000;border-right:0.002cm solid #000000;padding:0.097cm;"| BODLEVEL = 2V7
+
+<nowiki>RSTDISBL = [ ]</nowiki>
+
+<nowiki>DWEN = [ ]</nowiki>
+
+<nowiki>SPIEN = [X]</nowiki>
+
+<nowiki>WDTON = [ ]</nowiki>
+
+<nowiki>EESAVE = [X]</nowiki>
+
+BOOTSZ = 256W_3F00
+
+<nowiki>BOOTRST = [X]</nowiki>
+
+<nowiki>CKDIV8 = [ ]</nowiki>
+
+<nowiki>CKOUT = [X]</nowiki>
+
+SUT_CKSEL = EXTXOSC_8MHZ_XX_16KCK_14CK_65MS
+
+
+EXTENDED = 0xFD (valid)
+
+HIGH = 0xD6 (valid)
+
+LOW = 0xBF (valid)
+
+|-
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| Composant vierge
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| (celui marqué M sur la carte de dev serial)
+| style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:0.002cm solid #000000;padding:0.097cm;"| Un Atmel Arduino (avec blink)
+
+|}
+Au passage, un site bien utile pour calculer les fuses:
+
+AVR fuse calc : [http://www.engbedded.com/fusecalc/ http://www.engbedded.com/fusecalc/]
+
+Upload complet de la flash d'un composant vierge avec AS7 en mode binary.
+
+
+On récupère alors un fichier de 32ko (à l'octet près) !
+
+
+Jusqu'ici tout va bienet les résultats sont conforme aux attendus.
+
+Dans la datasheet de l'ATMega328P, on trouve:
+
+[[Image:tableBootLoaderParam.jpg]]Attention: les adresses indiquées sont des adresses de mots de 16bits pour avoir des adresses d'octets, il suffit de multiplier par 2. Donc le boot, avec bootsz = 11 sera dans le fichier à l'adresse 0x7E00.
+
+Ensuite, je charge un ARDUINO UNO (un vrai) avec un blink depuis l'interface Arduino. (compilé ça pèse 1030 octets soit de 0000 à 0x202m16.
+
+Upload avec atmelStudio. On voit bien le boot à partir de l'adresse 0x7E00 soit 0x3F00mot16
+
+Le bit BOOTRST est actif donc on boot bien en 0x3F00
+
+Les loc bits ne sont pas verouillés.
+
+
+[[Image:diffOptiboot.JPG]]A gauche optiboot.hex du répertoire : C:\Program Files (x86)\Arduino\hardware\arduino\avr\bootloaders\optiboot
+
+A droite le boot uptloadé de l'Arduino blink ! C'est presque identique ! A quelques octets près. Etrange !
+
+De plus, on peut remarquer que l'upload a été au delà de l'adresse 0x8000 !!!
+
+Et deplus on remarque aussi que le bootloader ne commence pas à l'adresse 0x7E00
+
+[[Image:arduinoBootloaderStart.JPG]]Mais qu'est-ce que c'est que ce cirque ? L'ATMega328P aurait-il des octets supplémentaires cachés ? Après vérification dans la DS: non !
+
+Contre manip : programmation de Optiboot dans un composant vierge et programmation des fuse à l'identique. Puis test sur carte ARDUINO UNO (merci les support DIP 28): carte fonctionnelle.
+
+Essai de programmation du blink dans Arduino vers un composant vierge. Le blink est fonctionnel et pourtant, il n'y a pas de boot la zone est bien vierge ! Même essai avec Code::Blocks pour Arduino : résultat identique !
+
+Upload avec AS7 en mode Intel HEX : cette fois les octets sont tous à leur place !
+
+Lecture en mode RAW(= mode binaire) avec avrdude et un USBASP du même composant. Commande utilisée:
+
+ % avrdude -p m328p -c usbasp -U flash:r:"c:/blink.bin":r
+
+La taille du fichier obtenue est correcte et le bootloader est identique et au bon endroit
+
+Autre manip&nbsp;: upload toujours du même composant avec AS7 en mode Intel HEX&nbsp;: boot à l'endroit attendu et plus d'octets supplémentaires&nbsp;!!!
+
+Essai avec !atmel Studio 6.2 : eh ben y a pas le mode binary lol.
+
+Il semble qu'il y ait un bug dans la chaîne AtmelStudio/MkII en mode raw.
+
+== Conclusion : ==
+Le boot chargé dans les carte ARDUINO UNO est bien est celui dont on trouve le source dans :
+
+C:\Program Files (x86)\Arduino\hardware\arduino\avr\bootloaders\optiboot
+
+On peut chargé un sketch dans un composant sans boot avec l'interface ARDUINO et avec Code::Blocks for Arduino
+
+= AVR 8 bits – points commun et différences =
+Dans la famille AVR8, on a principalement 3 sous familles à savoir&nbsp;: tiny, mega, xmega. Et dans chacune de ces sous familles, on a de multiples composants... (108 pour les mega par exemple. Source site Atmel)
+
+ATmega 48/88/168/328 sont regroupés dans la même datasheet
+
+La différence entre un Atmega8 et un Atmega88&nbsp;est somme toute assez subtile. A part côté conso&nbsp;!
+
+De même entre 8515 et 8535&nbsp;!
+
+entre 16 et 168&nbsp;!
+
+Afin de répondre à la question&nbsp;: «&nbsp;''Peut-on claquer un fichier issu de l'IDE ARDUINO pour un UNO dans un Atmega88PA''&nbsp;?&nbsp;» Je me limite donc aux Atmega48/88/168/328. Le fichier hex ne contient pas l'ID du compsant.
+
+Que signifie A et P en suffixe&nbsp;?
+
+P pour picoPower
+
+Source AN AVR532 Migration from ATmega48/88/168 to Atmega48A/88A/168A
+
+A ou pas A&nbsp;: 4 changement électrique
+
+Test à réaliser (dès que j'aurai une carte avec un 88 dessus).
+
+= ARDUINO dans Atmel Studio =
+[http://www.visualmicro.com/page/Arduino-Visual-Studio-Downloads.aspx http://www.visualmicro.com/page/Arduino-Visual-Studio-Downloads.aspx] 
+
+C'est à priori gratuit. Ce n'est pas open source. Cela s’installe correctement.
+
+Cela ouvre des sketch Arduino existants
+
+Des essais complémentaires seraient à réaliser.
+
+Autre possibilité&nbsp;: Atmel Studio 7 sait importer directement des sketchs ARDUINO;-)
+
+
+= Conclusion =
+Tout cela pose une question complémentaire
+
+Avec quelle IDE faut-il développer pour faire de l'ARDUINO&nbsp;?
+
+ARDUINO
+
+Code::blocks for Arduino
+
+Atmel Studio et le plugin Visual Micro.
+
+A noter que Code::Block for Arduino ne supporte pas forcément AVRISP MkII (ou alors j'ai pas trouvé).
+
+Me voilà bien avancé maintenant&nbsp;!
+
+Pour ma part, je trouve que CB for ARDUINO est un bon compromis. Utilisé avec un USBASP à moins de 5€, c'est plutôt sympa.
+
+
+= Fichiers sources =
+= Licence =
+Ce document est mise à disposition selon les termes de la&nbsp;[http://creativecommons.org/licenses/by/4.0/ Licence Creative Commons Attribution 4.0 International]. 
+
+[[Image:CC88x31.jpg]]Paternité 'by' :''L'œuvre peut être librement utilisée, à la condition de l'attribuer à l'auteur en citant son nom.'' 
+
+
+Note aux auteurs de documents du VoLAB, Vous avez la possibilité de changer de licence. Mais ce serait bien de rester libre et ouvert. Encore une fois ceci est une recommandation et pas une obligation.
+
+= Bibliographie =
+= webographie =
+[http://fr.wikipedia.org/wiki/Licence_Creative_Commons http://fr.wikipedia.org/wiki/Licence_Creative_Commons]
+
+
+Arduino
+
+[https://www.arduino.cc/ https://www.arduino.cc/]
+
+
+Code::block
+
+[http://www.codeblocks.org/ http://www.codeblocks.org/]
+
+[http://arduinodev.com/codeblocks/ http://arduinodev.com/codeblocks/]
+
+
+= Rédaction en langue française =
+Partant du constat de terrain qu'une énorme masse d'information concernant les sujets qui nous intéressent comme entre autres l'impression 3D n'étaient disponibles que dans la langue de Shakespeare et que de nombreuses personnes dans notre entourage ne maîtrisaient pas la dite langue et soucieux de diffuser encore plus l'information, nous avons pris le parti, au VoLAB, de rédiger nos documents de préférence en langue française.
+
+= VoLAB =
+Un mot sur le VoLAB. VoLAB est un fablab implanté à environ 30km au nord-ouest de Paris dans la commune de Vauréal dans l'agglomération de Cergy Pontoise. Il est animé par l'association VoRoBoTics.
+
+Site internet [http://www.vorobotics.com/ www.vorobotics.com]
