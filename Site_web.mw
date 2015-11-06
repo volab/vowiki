@@ -65,12 +65,12 @@ Les outils/formats à éviter:
 * word/exel : ce ne sont pas des formats ouverts, préférer par exemple libreoffice ou openoffice
 
 
-== TODO list ==
+== TODO list et propositions ==
 
 * revoir les menus du blog
-** Ajouter "Projets" (vers http://www.vorobotics.com/wiki/index.php?title=Nos_Projets)
-** Ajouter "Documentation" (vers http://www.vorobotics.com/wiki/index.php?title=Documentation)
-** Supprimer "Résumés des Séances" et "Nos réalisations"
+** ajouter "Projets" (vers http://www.vorobotics.com/wiki/index.php?title=Nos_Projets)
+** ajouter "Documentation" (vers http://www.vorobotics.com/wiki/index.php?title=Documentation)
+** supprimer "Résumés des Séances" et "Nos réalisations"
 ** "Association VOROBOTICS" -> ?
 ** "Le Projet VoLab" -> "Le VoLab"
 * déplacer la documentation des projets VoR ... vers le wiki (centralisation de la documentation) ?
@@ -83,6 +83,15 @@ Les outils/formats à éviter:
 ** https://www.mediawiki.org/wiki/VisualEditor
 ** https://en.wikipedia.org/wiki/VisualEditor
 * faire des mises à jours plus régulières des services (principalement mediawiki, wordpress étant automatiquement mis à jours)
+* ajouter sur la page d'accueil une page "Nos actions" (trouver un meilleur titre ?) pour présenter/lister nos actions publiques :
+** salons auxquels nous avons participé (fête de la science, etc.)
+** interventions auprès des établissements d'enseignement ("TAP", ...)
+** nos partenariats avec des établissements publiques (Eragny, Visage du monde, ...)
+** échanges avec d'autres associations (CIF, ...) / Fablabs
+** ateliers de formation ouverts au public / aux écoles
+** participation à la vie économique locale (?)
+** etc.
+** Cette page serait notamment utile pour valoriser le rôle de l'asso auprès des élus locaux.
 
 
 == Documentation publique (wiki) ==
