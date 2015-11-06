@@ -217,7 +217,9 @@ Le boot chargé dans les carte ARDUINO UNO est bien est celui dont on trouve le 
 
 C:\Program Files (x86)\Arduino\hardware\arduino\avr\bootloaders\optiboot
 
-On peut chargé un sketch dans un composant sans boot avec l'interface ARDUINO et avec Code::Blocks for Arduino
+On peut chargé un sketch dans un composant sans boot avec l'interface ARDUINO et avec Code::Blocks for Arduino<br />
+
+De plus ce bootloader ne fait que charger le code en flash via le lien serie. Donc pas d'initialisations de l'AVR en particulier
 
 = AVR 8 bits – points commun et différences =
 Dans la famille AVR8, on a principalement 3 sous familles à savoir&nbsp;: tiny, mega, xmega. Et dans chacune de ces sous familles, on a de multiples composants... (108 pour les mega par exemple. Source site Atmel)
