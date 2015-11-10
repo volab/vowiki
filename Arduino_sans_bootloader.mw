@@ -40,27 +40,27 @@ Histoire de profiter des librairies existantes (Adafruit par exemple).
 
 = Bootloader ARDUINO ? =
 == Les manips ==
-Pour répondre à cette question, j'ai utiliser Atmelstudio pour relire les fuse et la flash de l'ATmega328P.
+Pour répondre à cette question, j'ai utilisé AtmelStudio pour relire les fuses et la flash de l'ATmega328P.
 
-J'ai commancé par installer Atmelstudio v6 et je suis tombé sur un pb d'install des drivers USB (une vague histoire de certificats périmés...).
+J'ai commencé par installer AtmelStudio v6 et je suis tombé sur un problème d'installation des drivers USB (une vague histoire de certificats périmés...).
 
 Pb install driver USB : certificats invalides.
 
 [[Image:bugInstallAtmelStudioUSBDriver.jpg]]<br />
 
-Un nouveau prog d'install juste des drivers en question est à dispo ici:
+Un nouveau programme d'installation juste des drivers en question est disponible ici:
 
 [https://gallery.atmel.com/Products/Details/6873be43-0628-46ac-ba83-286869a3d97a https://gallery.atmel.com/Products/Details/6873be43-0628-46ac-ba83-286869a3d97a][https://gallery.atmel.com/Products/Details/6873be43-0628-46ac-ba83-286869a3d97a? ?]
 
-Finalement comme Atmelstudio v7 vient de sortir, je désintalle la 6 et inatll la 7. Pas de soucis particuliers.
+Finalement comme AtmelStudio v7 vient de sortir, je désinstalle la 6 et installe la 7. Pas de soucis particulier.
 
-Utilisation de AVRISP MkII. J'aurais très bienpu utiliser un USBASP et avrdude. C'est juste que dans AS c'est plus convivial. Et j'adore la convivialité.
+Utilisation de AVRISP MkII. J'aurais très bien pu utiliser un USBASP et avrdude. C'est juste que dans AS c'est plus convivial. Et j'adore la convivialité.
 
 Expertise bootloader
 
 Utilisation de la carte serial avec 2 AVR : remplacement de l'AVR slave par un AVR vierge
 
-Lecture des fuse d'un ATmega328P
+Lecture des fuses d'un ATmega328P
 
 
 {| style="border-spacing:0;"
