@@ -167,37 +167,37 @@ On récupère alors un fichier de 32ko (à l'octet près) !
 
 [[Image:composantViergePropriete.jpg]]<br />
 
-Jusqu'ici tout va bien et les résultats sont conforme aux attendus.
+Jusqu'ici tout va bien et les résultats sont conformes aux attentes.
 
 Dans la datasheet de l'ATMega328P, on trouve:
 
 [[Image:tableBootLoaderParam.jpg]]<br />
 Attention: les adresses indiquées sont des adresses de mots de 16bits pour avoir des adresses d'octets, il suffit de multiplier par 2. Donc le boot, avec bootsz = 11 sera dans le fichier à l'adresse 0x7E00.
 
-Ensuite, je charge un ARDUINO UNO (un vrai) avec un blink depuis l'interface Arduino. (compilé ça pèse 1030 octets soit de 0000 à 0x202m16.
+Ensuite, je charge un ARDUINO UNO (un vrai) avec un blink depuis l'interface Arduino. (compilé ça pèse 1030 octets soit de 0000 à 0x202m16).
 
-Upload avec atmelStudio. On voit bien le boot à partir de l'adresse 0x7E00 soit 0x3F00mot16
+Upload avec AtmelStudio. On voit bien le boot à partir de l'adresse 0x7E00 soit 0x3F00mot16
 
 Le bit BOOTRST est actif donc on boot bien en 0x3F00
 
-Les loc bits ne sont pas verouillés.
+Les loc bits ne sont pas verrouillés.
 
 
 [[Image:diffOptiboot.JPG]]<br />
 
 A gauche optiboot.hex du répertoire : C:\Program Files (x86)\Arduino\hardware\arduino\avr\bootloaders\optiboot
 
-A droite le boot uptloadé de l'Arduino blink ! C'est presque identique ! A quelques octets près. Etrange !
+A droite le boot uploadé de l'Arduino blink ! C'est presque identique ! A quelques octets près. Etrange !
 
 De plus, on peut remarquer que l'upload a été au delà de l'adresse 0x8000 !!!
 
-Et deplus on remarque aussi que le bootloader ne commence pas à l'adresse 0x7E00
+Et de plus on remarque aussi que le bootloader ne commence pas à l'adresse 0x7E00
 
 [[Image:arduinoBootloaderStart.JPG]]<br />
 
 Mais qu'est-ce que c'est que ce cirque ? L'ATMega328P aurait-il des octets supplémentaires cachés ? Après vérification dans la DS: non !
 
-Contre manip : programmation de Optiboot dans un composant vierge et programmation des fuse à l'identique. Puis test sur carte ARDUINO UNO (merci les support DIP 28): carte fonctionnelle.
+Contre manip : programmation de Optiboot dans un composant vierge et programmation des fuses à l'identique. Puis test sur carte ARDUINO UNO (merci les supports DIP 28): carte fonctionnelle.
 
 Essai de programmation du blink dans Arduino vers un composant vierge. Le blink est fonctionnel et pourtant, il n'y a pas de boot la zone est bien vierge ! Même essai avec Code::Blocks pour Arduino : résultat identique !
 
