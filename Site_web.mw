@@ -210,6 +210,8 @@ et ''convert_files.sh'':
  # RST FILES
  #...
 
+Tous ces scripts sont disponibles sur le référentiel Git suivant : https://github.com/volab/vor-doctools
+
 === Écriture des liens dans le wiki ===
 
 Écrire les liens comme suit dans le "wikicode":
