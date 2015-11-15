@@ -1,0 +1,17 @@
+== Présentation / description ==
+
+...
+
+== Installation ==
+
+Debian:
+
+ aptitude install git-mediawiki
+
+== Documentation ==
+
+* Doc : https://github.com/moy/Git-Mediawiki/wiki
+* Code source : https://github.com/git/git/tree/master/contrib/mw-to-git
+* http://www-verimag.imag.fr/~moy/cours/spe/git-wiki.html
+* http://www-verimag.imag.fr/~moy/cours/spe/libre.html
+* Page perso du mainteneur principal : http://www-verimag.imag.fr/~moy/?lang=en
