@@ -2,11 +2,18 @@
 
 ...
 
+
 == Installation ==
 
 Debian:
 
  aptitude install git-mediawiki
+
+
+== Clonner le wiki du VoLab ==
+
+ git clone mediawiki::http://www.vorobotics.com/wiki/
+
 
 == Documentation ==
 
