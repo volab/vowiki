@@ -216,4 +216,4 @@ Tous ces scripts sont disponibles sur le référentiel Git suivant : https://git
 
 Écrire les liens comme suit dans le "wikicode":
 
- <nowiki>* [http://www.tld/path/fichier.html Titre du document] (version [http://tld/path/fichier.pdf PDF])</nowiki>
+ <nowiki>* [http://volab.vorobotics.com/docs/nom_du_fichier.html Titre du document] (version [http://volab.vorobotics.com/docs/nom_du_fichier.pdf PDF])</nowiki>
