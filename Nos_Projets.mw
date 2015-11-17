@@ -10,8 +10,8 @@ Voici la liste (non exhaustive) de nos réalisations.
 === Robots ===
 
 {{Vignette de projet
-  | Page = VoR1
-  | Nom = VOR-1
+  | Page = VOR-001
+  | Nom = VOR-001
   | Auteur = [[Utilisateur:Majorlee|Joël]], [[Utilisateur:Pec|Pec]] et Julien
   | Image = IMG_7067.JPG
   | Description = Un robot roulant.
@@ -82,7 +82,6 @@ Voici la liste (non exhaustive) de nos réalisations.
 * [[Atmega-xx8-isp-board]] (par [[Utilisateur:Jeremie|Jérémie]]) : le typon et les fichiers KiCAD d'un circuit imprimé conçu pour faciliter la programmation des micro-contrôleurs Atmel AVR xx8
 * [[Useless machine]] (par [[Utilisateur:Daniel|Daniel]]) : une machine qui ne sert à rien à part à nous amuser...
 * [[Studio photo]] (par [[Utilisateur:Jeremie|Jérémie]]) : un studio photo pour améliorer significativement la qualité des photos et des vidéos diffusées par VoRobotics.
-
 
 == Projets en cours d'élaboration ==
 
