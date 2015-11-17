@@ -27,10 +27,10 @@ Voici la liste (non exhaustive) de nos réalisations.
 
 {{Vignette de projet
   | Page = VoR3
-  | Nom = VOR-3
+  | Nom = VOR-003
   | Auteur = Julien
   | Image = X.png
-  | Description = Un drone (quadricoptere) qui utilise une carte ardupilot pour voler et recevoir ces instructions de la télécommande.
+  | Description = Un drone (quadricoptere) qui utilise une carte ardupilot.
 }}
 
 {{Vignette de projet
