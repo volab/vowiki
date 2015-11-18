@@ -1,0 +1,16 @@
+← [[Accueil]] ← [[Nos Projets]]
+
+
+* Site web: http://www.jdhp.org/projects_en.html#vor12
+* Documentation: http://vor12.readthedocs.org/
+* Code source: https://github.com/volab/vor12
+* Issue tracker: https://github.com/volab/vor12/issues
+* PyAX-12 sur PyPI: https://pypi.python.org/pypi/vor12
+
+
+== Description ==
+
+
+The VoR12 project is a mobile video camera. It uses two Dynamixel AX-12 actuators and the OpenCV computer vision library for object tracking experiments.
+
+[[Fichier:Vor12-2.jpeg|400px]]
