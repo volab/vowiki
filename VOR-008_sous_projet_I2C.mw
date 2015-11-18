@@ -301,6 +301,15 @@ soit 1pt pour 25,4mm/400
 |}
 
 = Fichiers sources =
+
+[http://www.vorobotics.com/uploads/VOR-008/IIC_com.odt Sources] odt du présent document dans sa version originale.
+
+[http://www.vorobotics.com/uploads/VOR-008/IIC_com_images.zip Les images] qui vont avec.
+
+[http://www.vorobotics.com/uploads/VOR-008/IIC_com.pdf Le même fichier] en pdf
+
+Et le code sous github https://github.com/volab/VOR-008_ODOSOURIS_I2C.git
+
 = Licence =
 Ce document est mise à disposition selon les termes de la&nbsp;[http://creativecommons.org/licenses/by/4.0/ Licence Creative Commons Attribution 4.0 International]. 
 
