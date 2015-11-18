@@ -203,7 +203,7 @@ Ce calcul est erroné:
 
 |}
 Code d'acquisition des données capteur
-
+<code>
  uint8_t OptiMouse::readRegister(uint8_t address)
  {
    int i = 7;
@@ -235,7 +235,7 @@ Code d'acquisition des données capteur
 
    return r;
  }
-
+</code>
 Extrait de la lib:
 
 /*
