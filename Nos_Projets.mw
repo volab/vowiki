@@ -62,7 +62,7 @@ Voici la liste (non exhaustive) de nos réalisations.
   | Nom = VOR-012
   | Auteur = [[Utilisateur:Jeremie|Jérémie]]
   | Image = X.png
-  | Description = Une webcam mobile programmée pour suivre un objet donné, servant de plate-forme de test pour [http://opencv.org/ OpenCV] (traitement d'images en temps réel) et [[PyAX-12]].
+  | Description = Une webcam mobile programmée pour suivre un objet donné et utilisée comme plate-forme de test pour [http://opencv.org/ OpenCV] et [[PyAX-12]].
 }}
 
 {{Vignette de projet
@@ -74,7 +74,6 @@ Voici la liste (non exhaustive) de nos réalisations.
 }}
 
 {{clr}}
-
 
 === Outils ===
 
