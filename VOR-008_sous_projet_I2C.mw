@@ -291,14 +291,15 @@ soit 1pt pour 25,4mm/400
 == Relevés oscilloscope ==
 
 {| style="border-spacing:0;"
-| style="border-top:0.002cm solid #000000;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| [[Image:IMAG001.BMP]]
-| style="border:0.002cm solid #000000;padding:0.097cm;"| [[Image:IMAG002.BMP]]
+| style="border-top:0.002cm solid #000000;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| [[Image:IMAG001.jpg]]
+| style="border:0.002cm solid #000000;padding:0.097cm;"| [[Image:IMAG002.jpg]]
 
 |-
 | style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:none;padding:0.097cm;"| Trame IIC sans résiatance de rappel au 5V sur SCL et SDA
 | style="border-top:none;border-bottom:0.002cm solid #000000;border-left:0.002cm solid #000000;border-right:0.002cm solid #000000;padding:0.097cm;"| Les même Trame avec.
 
 |}
+
 = Fichiers sources =
 = Licence =
 Ce document est mise à disposition selon les termes de la&nbsp;[http://creativecommons.org/licenses/by/4.0/ Licence Creative Commons Attribution 4.0 International]. 
