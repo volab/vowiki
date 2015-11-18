@@ -50,10 +50,11 @@ Code suivi sous git & github https://github.com/volab/VOR-008_ODOSOURIS_I2C.git
 = Manip de mise au point =
 Afin de mettre au point ce canal de communication et pour simplifier les manipulation, j'ai utilisé 2 ARDUINO UNO. Un en maître pour simuler la 2560 et un en escalve pour simuler le module capteur.
 
-[[Image:manipMapIIC.JPG]]Le maître est directement programmé via USBASP depuis codeblocks quant à l'esclave, il est programmé via son port série usb de manière classique.
+[[Image:manipMapIIC.JPG]]
+
+Le maître est directement programmé via USBASP depuis codeblocks quant à l'esclave, il est programmé via son port série usb de manière classique.
 
 La programmation du maître via cette méthode permet de laisser connecté sur son port série USB une fenêtre de terminal puTTY
-
 
 = Communication IIC version EEPROM =
 Phase1
