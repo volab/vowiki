@@ -1,0 +1,12 @@
+{{Brouillon}}
+
+Ce projet vise à construire un détecteur de rayons cosmiques.
+
+Plusieurs techniques sont envisagées :
+* par assemblage d'une matrice de tubes Geiger–Müller
+* par effet Cherenkov
+* avec une [https://fr.wikipedia.org/wiki/Chambre_%C3%A0_brouillard chambre à brouillard] ("cloud chamber")
+** https://www.youtube.com/watch?v=1vSTsADQXG8
+** https://www.youtube.com/watch?v=7eLYCpSpoDU
+
+Cf. aussi : http://hackaday.com/2013/06/03/a-very-tiny-gamma-ray-detector/
