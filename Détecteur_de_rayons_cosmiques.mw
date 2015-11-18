@@ -1,6 +1,12 @@
 {{Brouillon}}
 
-Ce projet vise à construire un détecteur de rayons cosmiques.
+Ce projet vise à construire un détecteur de rayons gamma (rayons cosmiques et radioactivité).
+
+Motivations:
+* pédagogique
+* parce qu'une chambres à brouillard c'est beau (et plus amusant à regarder qu'un aquarium rempli de poissons rouges)
+* pour compléter le projet de compteur Geiger (ici on peut "voir" les rayonnements)
+* pour la beauté de la science
 
 Plusieurs techniques sont envisagées :
 * par assemblage d'une matrice de tubes Geiger–Müller
