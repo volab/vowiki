@@ -16,9 +16,7 @@ Thème: Communication IIC, odométrie, souris optique
 
 Projet&nbsp;: VOR008 plate-forme odométrique
 
-
-
-
+__TOC__
 
 = Problématique =
 Dans le cadre du projet VOR008 implémenter un canal de communication entre un module capteur odométrique constitué d'un composant ADNS-2610 (des souris optiques) et un ARDUINO UNO (dans un premier temps puis d'un microcontrôleur Atmega88PA) et le contrôleur du robot (Atmega2560).
