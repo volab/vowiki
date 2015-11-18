@@ -166,6 +166,10 @@ Durée de la trame : 19*10bits*10us= 1,9ms
 | style="border:0.002cm solid #000000;padding:0.097cm;"| LE premier octet de la trame est 5 (adresse du composant) puis 1C 34 20 en hexa
 
 |}
+
+
+
+
 = Intégration avec la souris optique =
 ADSN2610 de chez AGILENT
 
@@ -202,6 +206,7 @@ Ce calcul est erroné:
 | style="border:none;padding:0.097cm;"| Trames du capteur avec le code ci-après.
 
 |}
+
 Code d'acquisition des données capteur
  <nowiki>
  uint8_t OptiMouse::readRegister(uint8_t address)
@@ -234,8 +239,8 @@ Code d'acquisition des données capteur
    delayMicroseconds(100);
 
    return r;
- }
-</nowiki>
+ }</nowiki>
+
 Extrait de la lib:
 
 /*
