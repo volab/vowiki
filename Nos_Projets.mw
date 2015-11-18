@@ -98,12 +98,54 @@ Voici quelques-uns de nos projets en cours d'élaboration.
 === Robots ===
 
 <!-- * VOR-004 : Mecanum, projet abandonné qui, de plus, n'a pas été conçu au VoLab -->
-* [[VOR-005]]  (par [[Utilisateur:Pierre|Pierre]], [[Utilisateur:Majorlee|Joël]] et Gilles de l'[http://www.electrolab.fr/ electrolab]) : un robot hexapod contrôlé par un Arduino
-* [[VOR-007]]  (par [[Utilisateur:Pierre|Pierre]]) : le hack d'un jouet télécommandé pour en faire un robot suiveur de ligne (contrôlé par un Raspberry Pi et un Arduino)
-* VOR-010 (a.k.a. Rex) (par [[Utilisateur:Pierre|Pierre]]) : un robot suiveur de ligne également utilisé comme plate-forme de test pour l'odométrie et les trains épicycloïdaux
-* [[VOR-011]] (par [[Utilisateur:Jeremie|Jérémie]]) : un robot roulant modulaire, contrôlé par un RaspberryPi et des microcontrôleurs Atmel AVR et utilisé comme plate-forme de test robotique généraliste
-* Assuro (par [[Utilisateur:Jeremie|Jérémie]]) : un robot [http://www.arexx.nl/arexx.php?cmd=goto&cparam=p_asuro Arexx Asuro] modifié pour être radio contrôlé
-* Pololu 3Pi (par [[Utilisateur:Jeremie|Jérémie]]) : un robot [https://www.pololu.com/product/975/ Pololu 3Pi] modifié pour être radio contrôlé
+
+{{Vignette de projet
+  | Page = VOR-005
+  | Nom = VOR-005
+  | Auteur = [[Utilisateur:Pierre|Pierre]], [[Utilisateur:Majorlee|Joël]] et Gilles de l'[http://www.electrolab.fr/ electrolab]
+  | Image = X.png
+  | Description = Un robot hexapod contrôlé par un Arduino.
+}}
+
+{{Vignette de projet
+  | Page = VOR-007
+  | Nom = VOR-007
+  | Auteur = [[Utilisateur:Pierre|Pierre]]
+  | Image = IMG_7063.JPG
+  | Description = Le hack d'un jouet télécommandé pour en faire un robot suiveur de ligne (contrôlé par un Raspberry Pi et un Arduino).
+}}
+
+{{Vignette de projet
+  | Page = VOR-010
+  | Nom = VOR-010 (a.k.a. Rex)
+  | Auteur = [[Utilisateur:Pierre|Pierre]]
+  | Image = X.png
+  | Description = Un robot suiveur de ligne également utilisé comme plate-forme de test pour l'odométrie et les trains épicycloïdaux.
+}}
+
+{{Vignette de projet
+  | Page = VOR-011
+  | Nom = VOR-011
+  | Auteur = [[Utilisateur:Jeremie|Jérémie]]
+  | Image = Vor11-2.jpeg
+  | Description = Un robot roulant modulaire, contrôlé par un RaspberryPi et des microcontrôleurs Atmel AVR et utilisé comme plate-forme de test robotique généraliste.
+}}
+
+{{Vignette de projet
+  | Page = Assuro
+  | Nom = Assuro
+  | Auteur = [[Utilisateur:Jeremie|Jérémie]]
+  | Image = X.png
+  | Description = Un robot [http://www.arexx.nl/arexx.php?cmd=goto&cparam=p_asuro Arexx Asuro] modifié pour être radio contrôlé.
+}}
+
+{{Vignette de projet
+  | Page = 3Pi
+  | Nom = Pololu 3Pi
+  | Auteur = [[Utilisateur:Jeremie|Jérémie]]
+  | Image = X.png
+  | Description = Un robot [https://www.pololu.com/product/975/ Pololu 3Pi] modifié pour être radio contrôlé.
+}}
 
 === Outils ===
  
