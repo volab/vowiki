@@ -1,0 +1,25 @@
+{{Brouillon}}
+
+Étapes:
+* step 1: store - play photos / music / videos (buy codecs + add a big HDD or SSD) use it to centralize all photos / music / videos + file server
+* step 2: record videos from the TNT / Satellite (USB dongle)
+* step 3: program videos recording (+ automatically find relevant videos to record on the TNT based on my centers of interests)
+
+
+* openELEC
+** + mature ?, mais limité à xbmc
+** openelec n'est pas "reservé" au raspberry pi, cette distribution est disponible pour de nombreuses plateformes (dont les x86)
+** The problem is that you will not find anything advanced like a webserver or any other package you will find in other distributions. Also I was really disappointed when I figured out that It doesn’t support changing ssh root password as its FAQ states. http://blog.nicolargo.com/2013/04/test-openelec-raspberry-pi.html
+** OpenELEC is not based on Ubuntu. In fact, it’s not based on any Linux distribution; OpenELEC has been built from scratch specifically to act as a media center. 
+** At the moment it's not possible to change the root password as it's held in a read-only filesystem. However, for the really security conscious advanced user, you can change the password if you build OpenELEC from source. Also you can consider logging in with ssh keys and disabling password logins. 
+** Avantage d'openelec coté sécurité: si il se fait pirater, il peut difficilement servir de relais car c'est une coquille vide (on ne peut pas installer de paquets dessus, etc. => le pirate ne pourra rien en tirer à part télécharger les photos, etc.) => ok si le routeur l'isole de l'extérieur.
+* Raspbmc
+** XBMC préinstallé, mais debian "complète", maintenu par un adolescent (quid de la pérennité ?)
+** “Raspbmc is created and maintained by Sam Nazarko, a 19 years old student from London”. It may be the fact that Raspbmc is a one person project but the fact is that I found it really unstable and not flexible.
+* Xbian
+** XBMC préinstallé, mais debian "complète"
+* Raspbian + XBMC
+** installation manuelle de l'un puis de l'autre, un peu moins optimisé
+
+
+"Un disque dur USB contenant mes vidéos (attention de bien alimenter le disque par une source externe car le Raspberry Pi n'y arrive pas)." => il faut un disque 3"1/2, de préférence SSD
