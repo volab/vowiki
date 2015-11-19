@@ -29,3 +29,71 @@
 == TODO ==
 
 * écrire et animer un atelier autour de cette page
+
+== Nomenclature (Brouillon) ==
+
+Extrait des échanges de mails (à utiliser comme base de travail):
+
+ > Ce serait bien qu'on adopte une nomenclature commune pour nommer les VoR par
+ > exemple. Mais aussi pour d'autres sujets.
+ > C'est juste histoire d'être cohérent.
+
+Les autres questions à traiter:
+* Qu'est-ce qu'un projet "VOR*" ?
+* Quels sont les projets qu'il serait souhaitable d'appeler "VOR*" ?
+* Y a-t-il des "critères" ?
+* Seulement les robots ?
+* Est-ce juste un nom de code et encourage-t-on a utiliser un nom complémentaire (par ex. VOR10 = Rex) ?
+* Et les versions (VOR9.1, VOR9.2, ... ou VOR9-A, VOR9-B, ... ou autre chose) ?
+
+Qu'en est-il des projets tels que VOR-surveillance (aka VoR-Cam), etc.
+
+De mon point de vue, VOR+nombre = robot et VOR+mot = les autres projets
+
+ > J'avais commencé à nommer les VOR avec 2 chiffres (on pourrait passer à 3
+ > pour se laisser de la marge) et sans espace histoire que lors d'un
+ > classement alphabétique on est pas
+ > VOR1
+ > VOR10
+ > VOR2
+ > ...
+ > Vor ou VoR ou VOR ?
+
+Personnellement j'ai adopté la notation "VoR*" ou "VoR-*" sans trop me
+poser de question (je trouvais ça plus graphique que "VOR*" et le
+tiret c'est un clin d’œil à "WALL-E") ; mais vu que VO est un acronyme
+pour Val d'Oise (si je ne me trompe pas) il serait plus juste
+d'utiliser la notation "VOR" en effet (bon c'est un peu tiré par les
+cheveux mais on peut éventuellement justifier "Vo" par le début de
+Vauréal en phonétique...). Je peux modifier si la notation "VOR" fait
+consensus. Par contre je n'aime pas "Vor" (ni graphique ni justifiée).
+
+Je trouve "VOR01", "VOR001", etc; trop lourd à lire et confus : la
+séparation entre l’acronyme et le numéro n'est pas immédiate à cause
+de la confusion possible entre la lettre 'O' et les chiffres '0'
+presque côte à côte ; de plus, comme la première partie est un
+acronyme et non pas un nom commun, il n'est pas évident pour quelqu'un
+qui ne nous connaît pas déjà que c'est "VOR" et non pas "VORO" ou
+"VOROO"...
+Je préfère sans les '0' supplémentaires (il y a beaucoup d'outils qui
+tiennent compte de ça est classent correctement même sans les '0' en
+plus).
+Ou "VoR-001" à la limite, est plus facile à lire que "VOR001" (ou
+"VOR-001" dans une moindre mesure).
+
+Il faut donc aussi trancher entre "VOR1", "VOR 1" et "VOR-1".
+
+Pour ce qui est d'un éventuel espace plutôt qu'un tiret (ou rien)
+comme dans "VOR *", le problème est que l'espace passe mal dans les
+noms de fichier (à moins de coller des guillemets partout), les url,
+les retours à la ligne entre "VOR" et le nombre, etc.
+Encore une fois, le tiret à l'avantage de permettre d'identifier
+immédiatement l'ensemble "acronyme + numéro identifiant" même pour
+quelqu'un qui ne nous connaît pas (mieux que l'espace en tout cas).
+
+ > On pourrait commencer une page nomenclature sur le wiki (ou un autre nom
+ > peut être plus significatif.
+
+Pourquoi pas (une page référencée au début de la page "nos projets"),
+mais bien sûr ça ne peut être qu'une recommandation rien de plus,
+chacun est libre de nommer ses projet comme il le souhaite...
