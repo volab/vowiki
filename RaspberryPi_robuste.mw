@@ -1,0 +1,31 @@
+{{Brouillon}}
+
+Build a minimal/robust/monotask system:
+* apt-get remove --auto-remove --purge "libx11-.*"
+** continuer avec d'autres paquets jusqu'à avoir un système minimal
+* RPi from USB serial cable
+* partitions: readonly (/usr, /etc, /bin, ...) + ram (/tmp, /var, ...)
+* build a custome image of debian
+* init1
+* replace init par un programme (appels système noyaux directement)
+* linux from scratch pour RPi ?
+* Linux From Scratch for RPi ??
+** http://raspberrypi.stackexchange.com/questions/25/is-there-a-linux-from-scratch-lfs-arm-equivalent
+** http://www.intestinate.com/pilfs/
+** http://www.blaess.fr/christophe/2013/09/10/raspberry-pi-from-scratch-2/
+* fight "corruption-proof SD card"
+** http://unix.stackexchange.com/questions/136269/corruption-proof-sd-card-filesystem-for-embedded-linux
+** http://www.reddit.com/r/raspberry_pi/comments/282cam/more_reliable_storage_sd_cards_arent_working_for/
+*** Boot off an SD card then put your root fs on a USB drive. Mount that
+*** and don't mount anything on the SD card. I've had this setup for months
+*** and have had no SD problems like I did when I ran off the SD card
+*** directly.
+** http://www.raspberrypi.org/forums/viewtopic.php?f=29&t=91186
+** http://forum.openframeworks.cc/t/robustness-of-raspberry-pi/15079/7
+** https://www.google.fr/#safe=active&q=raspberry+pi+more+robust+sd+card+corruption+power
+** http://www.raspyfi.com/the-best-raspberry-pi-power-supply/
+* bouton soft poweroff
+* module RTC pour ne plus dépendre d'NTP
+
+* tasksel --list-tasks
+* tasksel --task-packages desktop
