@@ -1,8 +1,24 @@
 {{Brouillon}}
 
+But:
+* faire une ordinateur et/ou des contrôleurs à très faible consommation et totalement autonomes d'un point de vue énergétique
+* faire des appareils autonomes et hors alimentation secteur
+** recueil et enregistrement de données (sensor box)
+** domotique
+** station météo
+** etc. 
+
 Cf.:
 * http://learn.adafruit.com/usb-dc-and-solar-lipoly-charger/overview
 * http://pi.qcontinuum.com/project.html
 * http://cgi.cottonpickers.plus.com/~cottonpickers/forum/viewtopic.php?f=4&t=3
 * http://hackaday.com/2010/09/30/launchpad-takes-ultra-low-power-to-the-extreme/
 * http://www.instructables.com/id/Self-Sufficient-Arduino-Board/
+
+Composants à étudier:
+* panneaux solaires
+* dynamos
+* super condensateurs
+* écrans "e-ink"
+* éoliennes
+* communications sans fil à très basse consommation (zigbee/xbee ? radio ? etc.)
