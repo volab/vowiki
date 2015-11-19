@@ -2,4 +2,34 @@
 
 {{Brouillon}}
 
-[http://www.vorobotics.com/wp/quadricoptere-vor003/ VOR-003]
+== Description ==
+
+VOR-003 est un QuadCopter assemblé et programmé par Julien.
+Il utilise une carte ardupilot pour voler et recevoir des instructions de la télécommande.
+
+
+[[Fichier:20130702_232646_reduced.jpg]]
+
+== Le chassis ==
+
+[[Fichier:F450-1.jpg]]
+
+[[Fichier:Circuit-distribution.jpg]]
+
+== La Télécommande ==
+
+Turnigy 9X 9Ch Transmitter w/ Module & 8ch Receiver (Mode 1).
+
+[[Fichier:Mready-01.jpg]]
+
+== Les Contrôleurs des Moteurs ==
+
+Turnigy dlux 20A SBEC Brushless Speed Controller w/Data Logging.
+
+[[Fichier:Dlux20a-main.jpg]]
+
+== Les Moteurs ==
+
+NX-4005-650kv Brushless Quadcopter Motor.
+
+[[Fichier:17922(2).jpg]]
