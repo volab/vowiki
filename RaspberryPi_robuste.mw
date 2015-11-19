@@ -1,6 +1,6 @@
 {{Brouillon}}
 
-Build a minimal/robust/monotask system:
+Build a minimal, robust and monotask system:
 * apt-get remove --auto-remove --purge "libx11-.*"
 ** continuer avec d'autres paquets jusqu'à avoir un système minimal
 * RPi from USB serial cable
