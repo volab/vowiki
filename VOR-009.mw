@@ -2,7 +2,258 @@
 
 {{Brouillon}}
 
-Un robot suiveur de ligne servant également de plate-forme de test pour l'odométrie (inspiré du robot Zumo de Pololu).<br />
+== Description ==
+
+Vor09 est un petit robot à trois roues.
+Deux sont motorisées et la troisième est une roule libre.
+
+Ici le but est de faire une plate-forme roulante, pouvant servir pour d'autre projets.
+Le kit plaque + 2 moteur + 2 roues+ support de piles n'a couté que 8€.
+Rajouté 15 - 20€ pour l'arduino et le shield, 3€ de capteur  et nous avons un robot fabriqué en Chine puis assemblé et programmé en France pour une trentaine d'euros !
+
+
+[[Fichier:20141004_222428.jpg]]
+
+
+Il embarque un arduino uno et un motorshield v2.
+Pour l'environnement nous avons un HC-SR04 pour éviter les obstacles, et un capteur infrarouge pour vérifier que l'on ne tombe pas.
+
+Si dessous les informations de montages, schema qui m'ont servi à le monter.
+
+
+[[Fichier:IMG_20140907_004901.jpg]]
+
+
+Schéma récapitulatif des branchements, avec la double alimentation.
+La première version de Vor09, devait avoir un capteur infrarouge Sharp, mais j'ai eu trop de difficulté à l'utiliser correctement, donc je me suis repliés sur une solution maîtrisée, le sonar.
+Noter le tableau pour gérer le pont en H.
+
+
+[[Fichier:20141008_002137.jpg]]
+
+
+<table width="600">
+<tr>
+<td colspan="6" width="600"><strong>VOR 09 - Arduino Uno + MotorShield Adafruit</strong></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><strong>Motor Shield Mapping</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Motor Shield Pin</strong></td>
+<td><strong>Variable Name</strong></td>
+<td><strong>Feature</strong></td>
+<td><strong>Note</strong></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>M1</td>
+<td>motorLeft</td>
+<td></td>
+<td>Motor 1</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>M2</td>
+<td>motorRight</td>
+<td></td>
+<td>Motor 2</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>M3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>M4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>A0</td>
+<td><strong>groundDetector</strong></td>
+<td><strong>Detection du sol</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>A1</td>
+<td>sonarTrig</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>A2</td>
+<td>sonarEcho</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><strong>Modules Mapping</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>TCRT5000 Module</strong></td>
+<td><strong>Couleur du Cable</strong></td>
+<td><strong>Arduino Pin</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>VCC</td>
+<td>Rouge</td>
+<td>5V</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>GND</td>
+<td>Blanc</td>
+<td>GND</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Analog Input</td>
+<td>Orange</td>
+<td>A0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>HC-SR04 Module</strong></td>
+<td><strong>Couleur du Cable</strong></td>
+<td><strong>Arduino Pin</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>GND</td>
+<td>Marron</td>
+<td>GND</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Output</td>
+<td>Rouge</td>
+<td>A2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Trigger Input</td>
+<td>Orange</td>
+<td>A1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>VCC</td>
+<td>Jaune</td>
+<td>5V</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+
+
+== VOR-009 sur notre blog ==
+
+Un robot suiveur de ligne servant également de plate-forme de test pour l'odométrie (inspiré du robot Zumo de Pololu).
 
 Ce projet n'est pas encore documenté mais plusieurs billets en parlent sur notre blog :
 * [http://www.vorobotics.com/wp/un-autre-week-end-charge-au-lab/ 12 octobre 2015]
