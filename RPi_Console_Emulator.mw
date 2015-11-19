@@ -1,0 +1,14 @@
+{{Brouillon}}
+
+
+Console emulators (SNES, Genesis, NeoGeo, ...) + XBox controller
+
+Cf.:
+* Retropie: http://blog.petrockblock.com/download/retropie-project-image/
+* http://lifehacker.com/how-to-turn-your-raspberry-pi-into-a-retro-game-console-498561192
+
+Game controllers:
+* ps3 dualshock: bluetooth + usb (http://www.ldlc.com/fiche/PB00074708.html)
+* xbox 360: wireless controller requires an adaptater (propriatary wireless technology) (http://www.ldlc.com/fiche/PB00114734.html)
+** usb version: ok (http://www.ldlc.com/fiche/PB00103800.html)
+** setup on retropi: https://github.com/petrockblog/RetroPie-Setup/wiki/Setting-up-the-XBox360-controller
