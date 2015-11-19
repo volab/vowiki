@@ -1,0 +1,8 @@
+{{Brouillon}}
+
+Étapes:
+* step 1: web radio -> done
+* step 2: add video (+buy codecs), meteo widgets, trafic info (RER, ...), next train/bus, photos, ...
+* step 3: let it be configured from a PC / smartphone / tablet (Android) -> RPC or embeded web server
+* step 4: create a debian package
+* step 5: add a RTC chip
