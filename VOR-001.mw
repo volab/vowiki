@@ -3,7 +3,20 @@
 {{Brouillon}}
 
 
-Article VOR-001 sur le site faute de mieux en attendant ! [http://www.vorobotics.com/wp/robot-quadri-roue-vor001/ VOR-001]
+[[Fichier:150802 1952 IMG 4020.jpg|right|vignette|300px|VOR-001 : Photo récente de VOR-001: prise en Aout 2015.]]
 
+== Description ==
 
-[[Fichier:150802 1952 IMG 4020.jpg|center|vignette|300px|VOR-001 : Photo récente de VOR-001: prise en Aout 2015.]]
+VOR-001 est un petit robots quadri-roues destiné à faire découvrir aux membres de l’association les joies de la robotique.
+C’est le projet fédérateur de l’association.
+
+Il embarque un arduino et un raspberry communicant ensemble via un port série.
+Le raspberry est joignable grâce à une carte wifi.
+Coté senseurs, il est équipé d’un magnetometre, d’un capteur à ultrason et d’un à infra rouge.
+Nous somme aujourd’hui capable de lui indiquer une direction et une vitesse.
+
+== Évolutions souhaitées ==
+
+Bientôt l’automatisation !
+
+Nous travaillons sur l’odométrie et un prompt de controle pour l’arduino.
