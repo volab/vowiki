@@ -1,0 +1,26 @@
+{{Brouillon}}
+
+Points à évoquer/expliquer:
+* le fonctionnement du wiki
+** présentation du concept de wiki et de la plateforme mediawiki : qu'est-ce que c'est, etc.
+** les utilisateurs ont une page perso, où nous les invitons à mettre:
+*** une brève description de leurs motivation, etc.
+*** une description de leurs activités (projets, articles, etc.)
+*** leurs pages brouillons (en attendant d'être indexées autre part dans le wiki et pour éviter les pages orphelines)...
+** syntaxe du wiki
+** l'éditeur visuel (maj mediawiki avant)
+** les modèles : qu'est-ce que c'est, comment ça marche, les modèles du vowiki
+** les catégories : qu'est-ce que c'est, comment ça marche, les catégories du vowiki
+** comment utiliser des images
+** le framework autour du wiki
+** les pages discussion
+** l'historique des pages
+** voir les modifications récentes
+** rédaction en français vs rédaction en anglais, la traduction des pages (comment ça marche techniquement dans wikimedia)
+** le css du site (pour les autres administrateurs du wiki seulement) : qu'est-ce que c'est, où c'est, comment le modifier, ...
+* nomenclatures: VOR-XXX, ...
+* licences à utiliser (ou juste suggérées ?) sur le wiki
+* les autres outils de publications à disposition : blog, ... (?)
+
+TODO:
+* écrire et animer un atelier autour de cette page
