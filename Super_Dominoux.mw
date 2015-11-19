@@ -1,0 +1,65 @@
+== Description ==
+
+Projet SuperDominoux est une petit amélioration du projet Dominoux.
+
+== Dominoux vous ne connaissez pas ? ==
+
+Winner of the 555 Timer Contest (Artistic category) : Randy Elwin
+
+* https://www.youtube.com/watch?v=PQOjkuJtBfM
+* http://relwin.hackhut.com/2011/03/01/555-timer-contest-entry/
+
+== SuperDominoux ==
+
+Depuis que j’ai découvert ce petit circuit à l'[http://www.electrolab.fr/ Electrolab], je me suis toujours dis que ce serait bien cool d’améliorer le concept.
+A l’occasion de la fête de la science à Grolay le Dimanche 11 octobre dernier, je me suis mis au travail.
+Première chose : j’ai toujours trouvé ces Dominoux trop dépendant de la lumière ambiante.
+Je me suis donc attelé à une petite amélioration côté capteur. Je me suis alors un peu documenté sur le sujet.
+Tout d’abord le schéma original ou celui qu’on peut trouver rapidement sur le net, utilise une LDR en guise de capteur.
+Dans le kit de l’Electrolab on trouve un phototransistor. Voyant cela, je me suis dit, naïvement, que ce transistor NPN serait probablement mieux polarisé si sont émetteur était relié au GND et donc qu’il soit placé dans la partie basse du pont diviseur qu’il forme avec R2 (du coup au passage, j’ai supprimé C2 et R5.
+
+
+[[Fichier:SchemaDominouxElectrolab.jpg]]
+
+
+Problème avec cette modification est que le NE555 est déclenché dès que le transistor reçoit l’éclat de la LED précédente ci bien que très rapidement toutes les LED sont allumées. Je suis donc descendu un peu plus dans la compréhension du fonctionnement de ce montage. Un survol grossier ne me paraissait alors plus suffisant.
+
+
+[[Fichier:0004.jpg]]
+
+
+Relevé à l’oscilloscope des principaux signaux du dominoux
+
+Étude de la datasheet et relevés à l’oscillo (pour confirmer) montrent que l’éclat de la LED et la temporisation sont déclenché par le front descendant du signal capteur lorsque celui-ci passe en dessous du tiers de la tension d’alimentation VCC/3. Et si on revient au schéma original, le pont diviseur (R5, R3) sert à polariser la broche 2 du NE555 à VCC/2. La capa C2 sert alors à supprimer la composante continue du signal du capteur pour n’en garder que les front sous forme d’impulsions. Impulsion positive pour le front montant et impulsion négative pour le front descendant. Cette impulsion vient alors se superposer à la polarisation (R5, R3) provoquant pour les front descendant un passage en dessous du seuil de VCC/3.
+
+J’ai donc ajouté (ou plus exactement remis) la résistance R3 dans le montage (en la soudant entre la broche 1 du 555 qui est au GND et la patte de R5 qui est connecté à la broche 2 du 555. Cette opération oblige à ne pas respecter la Sérigraphie de R5 mais à la souder dans l’autre sens.
+
+
+[[Fichier:Img_4071soudureR3.jpg]]
+
+
+On arrive comme cela à atteindre 5 à 10mm d’écartement entre les Dominoux selon les conditions d’éclairage aux quelles ils restent malgré tout sensibles. Pas question de les utiliser en plein soleil !
+
+
+[[Fichier:SchemaOriginal.jpg]]
+
+
+Le schéma Original sur lequel figure R3
+
+On peut également diminuer R4 de 100 à 50 ohm mais on diminue alors également la durée de vie de la batterie.
+
+Après cette petite amélioration qui n’en est pas une. J’ai pu passer à l’étude du SuperDominoux à base d’ArduiLoL.
+
+Au passage je me suis fait des petits supports que je pensais accrocher les uns aux autres tellement l’alignement des Dominoux était délicats.
+J’ai vite laissé tombé cette approche mais j’ai gardé les supports.
+
+
+[[Fichier:BoitierEnCoursEtude.jpg]]
+
+[[Fichier:20151009_225511_reduced.jpg]]
+
+[[Fichier:20151007_233810_reduced.jpg]]
+
+Dominoux prèt pour la Fête de la Science à Gorslay.
+
+A venir : le SuperDominoux commandé en Bleutooth !
