@@ -2,4 +2,45 @@
 
 {{Brouillon}}
 
-[http://www.vorobotics.com/wp/robot-tricycle-vor002/ VoR2]
+[[Fichier:IMG_20130910_233545.jpg|right|vignette|400px|VOR-002.]]
+
+== Description ==
+
+VOR-002 est une plate-forme crée pour nous permettre de tester des solutions appliquées à VOR-001.
+C'est un cobaye.
+
+Un servo pour la direction, un second pour agiter un drapeau et un moteur pour la propulsion.
+Nous utilisons un arduino pour gérer l'allumage de phares et de feux de stop, la propulsion (arrêt si la radio commande est hors de porté, obstacle etc.) et différent capteurs d'environnement (capteur d'intensité lumineuse et ultrason).
+
+Le phare s'allume si la luminosité est trop faible et les feux de stop si le robot est à l'arrêt ou ralenti.
+
+Le capteur a ultrason arrête le moteur principal à l'approche d'un obstacle.
+En actionnant la commande de direction, le moteur repart permettant d'éviter l'obstacle.
+
+Les deux pièces bleues, ont étés faites à l'aide de notre imprimante 3D.
+La première permet de tenir le capteur à ultrason ;
+la seconde permet de rigidifier la direction et d'accueillir le servo qui agite le drapeau.
+
+Des tests d'odométrie seront réalisés avec une souris PS2 et/ou avec un système d'électro-aimant.
+
+== Schéma électronique ==
+
+Si dessous le schéma de l'électronique de Vor02 réalisé avec le logiciel Fritzing.
+
+[[Fichier:Fritzing-vor002.png]]
+
+Sur ce schéma il manque des capas placés sur les alimentations des servos.
+Nous pensons qu'ils génèrent du bruit causant des acoups dans le moteur à bas régime.
+Ce problème a été résolu en baissant la sensibilité des commandes, dans le programme de VOR-002.
+
+== Composition détaillée du VOR-002 ==
+
+Le servo de direction est un Pro-Tronik 6811 MG-A (52.3g - 40x39.4x19.9 - @6V 0.16sec/60° 13.5kg/cm).
+
+Le servo actionnant le drapeau (au premier plan) est un Hitek RC mini (9g).
+
+Le chassis est en mecanno.
+
+Il accueil Sain Smart Uno R3 et un shiel Sain Smart de prototypage sur le lequel est soudé une grande partie de l'électronique, ainsi que le capteur à ultrason HC-SR04.
+
+La radio commande et le radio récepteur sont de marque Futaba.
