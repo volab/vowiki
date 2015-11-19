@@ -1,5 +1,6 @@
-← [[Accueil]] ← [[Nos Projets]]
+{{Brouillon}}
 
+{{Projet}}
 
 Raspicam-apache (a.k.a. VorCam) est une caméra de surveillance utilisant un RaspberryPi et une RaspiCam pour diffuser en temps réel les vidéos capturées vers un serveur web Apache.
 
@@ -8,3 +9,24 @@ Le code source du projet est disponible sur le référentiel Git suivant : https
 [[Fichier:Raspicam-apache-1.jpeg|600px]]
 
 [[Fichier:Raspicam-apache-2.jpeg|600px]]
+
+== Brouillon ==
+
+* V1: camera over IP. See: http://www.raspberrypi.org/camera
+** step 1: transmite video over the network, take pictures
+** step 2: add servo to rotate (remotely) the camera
+* V2: video + audio + control (C++ or Python ?)
+** step  1: try boost:asio -> transmite text data via UDP or TCP from server to client(s), try unicast vs multicast, ...
+** step  2: acquire audio via libpulseaudio (or libasla or ...)
+***  A comprehensive list of audio libs for python: https://wiki.python.org/moin/PythonInMusic
+*** Debian packages:
+**** python-alsaaudio - Alsa bindings for Python                  
+**** python-pyalsa    - Official ALSA Python binding library 
+** step  3: transmite audio over network
+** step  4: acquire and transmite temperature and light
+** step  5: log events on the server (or client ?) side -> temperature of the last 24 hours, noise activity, light, ...
+** step  6: acquire video (webcam or picamera ?)
+** step  7: transmite video
+** step  8: acquire video withe opencv and picamera
+** step  9: pattern detection with opencv
+** step 10: find correlations between noise, time, light, temperature, ... ?
