@@ -1,0 +1,4 @@
+{{Brouillon}}
+
+* step 1: router / firewall / ssh server / proxy (ads killer, ...)
+* step 2: web server / file server - NAS / cloud / HTTPS tunnel maker / trafic logger-analyser / wifi acces point / sniffer / ...
