@@ -49,7 +49,7 @@ Chercher tag "openscad", "robots", "hexapod" sur http://www.thingiverse.com/ (et
 
 * openscad...
 
-=== Étape 2: trancheur avec slic3r ===
+=== Étape 2: "trancher" avec slic3r ===
 
 * charger la config
 * faire 2 tours de chauffe pour nettoyer la tête de la buse ()
