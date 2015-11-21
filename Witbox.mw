@@ -1,3 +1,92 @@
 {{Brouillon}}
 
 cf. git/priv/docs_incubator/tutoriel_impression_3d_openscad_slic3r_witbox/
+
+== Design ==
+
+* OpenSCAD : une référence pour le design opensource par langage scripté notament pour les imprimantes 3D.
+* FreeCAD : "Modulaire, paramétrique, le scriptage Python donne accès à toutes les fonctionnalités de construction avancées du noyau géométrique OpenCASCADE."
+
+== Modèles intéressants ==
+
+* http://www.thingiverse.com/
+
+Chercher tag "openscad", "robots", "hexapod" sur http://www.thingiverse.com/ (et http://www.shapeways.com/ ?)
+* http://www.thingiverse.com/search/relevant/things?q=openscad&description=&username=&tags=openscad&license=
+* http://www.thingiverse.com/explore/popular/hobby/robotics
+* http://www.thingiverse.com/explore/popular/hobby/rc-vehicles
+* http://www.thingiverse.com/explore/popular/hobby/electronics
+* http://www.thingiverse.com/thing:38159
+* http://www.thingiverse.com/thing:305051
+* http://www.thingiverse.com/thing:32048
+* http://www.thingiverse.com/thing:152638
+* http://www.thingiverse.com/thing:31569
+* http://www.thingiverse.com/thing:10624
+* http://www.thingiverse.com/thing:56698
+* http://www.thingiverse.com/thing:183631
+* http://www.thingiverse.com/thing:299469
+
+* http://www.shapeways.com/
+
+== OpenScad: manuel et tutoriels ==
+
+* http://en.wikibooks.org/wiki/OpenSCAD_User_Manual
+* http://reprapide.fr/tutoriel-openscad-introduction
+* http://www.linuxgraphic.org/wp/debuter-avec-openscad/
+
+== Voir aussi ==
+
+* http://reprap.org/wiki/Useful_Software_Packages#Open-source_software
+* http://reprap.org/wiki/Useful_Software_Packages#OpenSCAD
+* http://reprap.org/wiki/Useful_Software_Packages#FreeCAD
+* http://doc.ubuntu-fr.org/openscad
+* http://doc.ubuntu-fr.org/freecad
+* http://doc.ubuntu-fr.org/mecanique
+
+== Impression 3D OpenSCAD Withbox ==
+
+=== Étape 1: design ===
+
+* openscad...
+
+=== Étape 2: trancheur avec slic3r ===
+
+* charger la config
+* faire 2 tours de chauffe pour nettoyer la tête de la buse ()
+** http://manual.slic3r.org/expert-mode/skirt
+** skirts = 2  (skirts/Loops dans l'interface)
+* extrusion en 0.3 (sachant que la ~buse~ est en 0.4), voir 0.2 pour des impressions plus précises (mais temps d'impression plus long)
+** paramètre "layer_height" et "first_layer_height" (pour la première couche, ie celle au contact du support)
+* nombre de périmètres dans la pièce
+* fill_angle = 45
+** fill_density = 0.20
+** infill patterns and density: http://manual.slic3r.org/expert-mode/infill
+* http://manual.slic3r.org/expert-mode/extrusion-width
+* attention, les configs "print settings", "filament settings" et "printer settings" sont indépendants.
+** il est facile de se tromper en définissant une des 3 configs mais pas les autres.
+** de même, quand la config est modifiée, il ne faut pas oublier d'appuyer sur enregistrer pour qu'elle soit prise en compte...
+** en cas de doute, les configs fournies par witbox marchent très bien...
+
+=== Étape 3: préparer le plateau ===
+
+* mettre une feuille pliée en 2 sur le plateau
+* ctrl/levelplate
+** doit "gratter" au niveau de la buse quand on bouge la feuille
+*** visser pour éloigner le plateau de la buse (pour que ça "accroche moins")
+*** dévisser pour approcher le plateau de la buse (pour que ça "accroche plus")
+*** attention le sens de vissage/dévissage est contre intuitif
+** l'oppération est effectuée sur 3 points du plateau (correspondant aux 3 visses...)
+*** valider avec ok une fois la résistance correctement ajustée
+** un 4e point est testé (centre du plateau) mais il n'y a pas de vis pour faire le réglage, ce point est généralement plus résitant que les autres, c'est normal, valider simplement avec ok
+   
+=== Étape 4: préparer le filament ===
+
+* filament: PLA seulement (!) en 1.75mm
+* couper le bout de la bobine si elle a déjà servi et si il n'est pas "propre"
+* monter la bobine sur l'imprimante comme sur la photo et introduire le filament à l'arrière de l'imprimante
+* vérifier qu'il n'y ait pas de noeud dans la bobine en déroulant un peu le fil...
+* sortir le filament de la buse tout en poussant un peu le filament 
+** ctrl/filant/load
+** attendre que ça monte à 220°C
+** attraper le filament avec une pince ... comme sur la photo
+** renouveler l'opération une 2e fois si nécessaire
