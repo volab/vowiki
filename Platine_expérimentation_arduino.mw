@@ -1,0 +1,402 @@
+<center>[[Image:]]</center>
+
+
+'''Platine d’expérimentation Arduino'''
+
+
+[[Image:|thumb|<center></center>]]
+
+= VoLAB =
+= Association VoRoBoTics =
+Date : 27 octobre 2015
+
+Auteur : Francis SALAUN
+
+Relecteur :
+
+Thème: Arduino
+
+Projet&nbsp;: Rendre plus pratique le transport et les manipulations entre une platine Arduino UNO ou 2560, les breadboards et les shields les plus courants. 
+
+= Problématique =
+Les utilisateurs d’Arduino ont tous été confrontés au problème des cartes reliées entre elles par des fils&nbsp;: le déplacement du montage final ou en cours d’un lieu à un autre est rendu difficile, voire risqué. Les manipulations des interrupteurs, potentiomètres, joystik ou encodeurs rotatifs font appels aux deux mains quand ils sont laissés «&nbsp;libres&nbsp;» ce qui peut entraver le bon déroulement d’un test ou d’un réglage. Que dire des moteurs pas à pas qui se promènent seuls en travers de la table à la moindre sollicitation ou bien des afficheurs que l’on doit correctement orienter pour qu’ils restent lisibles&nbsp;? Terminons par les cartes reliées au secteur EDF et dont les contacts risquent de toucher des composants environnants …
+
+
+Ce constat m’a conduit à réaliser une platine regroupant ces différents éléments sur un support rigide et adapté au transport. 
+
+
+Voici le cahier des charges&nbsp;:
+
+
+* La platine devra s’adapter au support des cartes Arduino UNO et 2560 
+* Une zone «&nbsp;Breadboard&nbsp;» sera définie au centre de cette platine
+* Les éléments les plus communément utilisés dans cet environnement seront positionnés autour de la Breadboard
+* 4 alimentations seront disponibles&nbsp;: 3,3 v&nbsp;; 5v&nbsp;; 12v&nbsp;; ajustable 3 à 30v
+* Des voltmètres indiqueront en permanence l’état des alimentations
+* Celles-ci seront protégées en sortie par un fusible
+* 2 afficheurs LCD rétroéclairés seront disponibles&nbsp;: 2 lignes de 16 caractères en I2C et 4 lignes de 20 caractères en adressage parallèle
+* Une carte de commutation 4/8 voies isolées par des photo-coupleurs
+* La platine pourra se ranger facilement&nbsp;: des points d’accroche muraux seront prévus
+* Le poids sera suffisamment conséquent pour éviter tout déplacement intempestif 
+* Le matériau utilisé résistera à l’usure, aux manipulations et aux transports 
+
+NB&nbsp;: Les «&nbsp;shields&nbsp;» de petits formats seront directement montés sur la Breadboard et placés verticalement à l’aide de connecteurs coudés à 90° afin d’optimiser l’espace.
+
+
+Les composants et leurs coûts:
+
+
+
+{| style="border-spacing:0;"
+| style="background-color:#d9d9d9;border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>Référence</center>
+| style="background-color:#d9d9d9;border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>Désignation</center>
+| style="background-color:#d9d9d9;border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>Quantité</center>
+| style="background-color:#d9d9d9;border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>Coût total (€)</center>
+| style="background-color:#d9d9d9;border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>Fournisseur</center>
+
+|-
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| 1987603973
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Breadboard 830 points
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>3</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>6.15</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Aliexpress
+
+|-
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| 32270432761
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Lot de câbles pour platine breadboard
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>1</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>1.30</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Aliexpress
+
+|-
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| SKU198611
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Arduino UNO
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>1</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>3.59</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Banggood
+
+|-
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| SKU144657
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Lot de 2 prises Jack males 2.1 mm
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>1</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>1.29</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Banggood
+
+|-
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| SKU090677
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Carte de commutation 4 relais
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>1</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>3.70</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Banggood
+
+|-
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| SKU166911
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Afficheur 1602 liaison I2C rétroéclairé
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>1</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>3.52</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Banggood
+
+|-
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| SKU116586
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Afficheur 2004 entrées parallèles et rétroéclairé
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>1</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>5.01</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Banggood
+
+|-
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| SKU078682
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Joystick avec bouton poussoir
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>1</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>1.47</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Banggood
+
+|-
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| SKU108599
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Encodeur rotatif
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>1</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>1.54</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Banggood
+
+|-
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| SKU182344
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Potentiomètre 10K avec bouton
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>1</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>2.81</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Banggood
+
+|-
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| SKU131182
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Alimentation externe 12V / 5A
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>1</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>7.43</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Banggood
+
+|-
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| 1885702719
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Carte alimentation ajustable 
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>2</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>2.31</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Aliexpress
+
+|-
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| 32276872009
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Lot de 5 interrupteurs Marche / Arrêt
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>1</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>1.53</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Aliexpress
+
+|-
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| SKU108753
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Voltmètre digital
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>4</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>10.68</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Banggood
+
+|-
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| 2034813391
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Lot de 5 portes fusible
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>4</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>1.28</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Aliexpress
+
+|-
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| 32252788350
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Lot de 5 connecteurs banane femelle M4
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>2</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>3.54</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Aliexpress
+
+|-
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| 32217138845
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Moteur Nema 17 – 17HS8401
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>1</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>13.93</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Aliexpress
+
+|-
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| 32264774875
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Lot de cosses à souder pour fiche banane
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>1</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>1.79</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Aliexpress
+
+|-
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| 32509208830
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Lot de visserie métallique diamètre 3 mm
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>1</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>1.41</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Aliexpress
+
+|-
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| SKU229170
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Lot de 300 entretoises plastiques M3
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>1</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>9.03</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Banggood
+
+|-
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| 
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Pot de peinture martelée
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>1</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>-</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Castorama
+
+|-
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| 
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Tôle acier de 2 mm d’épaisseur
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>1</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>-</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| SC2M.eu
+
+|-
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| 
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| Support moteur nema 17
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>1</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| <center>-</center>
+| style="border:0.018cm solid #000000;padding-top:0cm;padding-bottom:0cm;padding-left:0.191cm;padding-right:0.191cm;"| SC2M.eu
+
+|}
+Les moyens matériels&nbsp;:
+
+
+* Fer à souder
+* Découpeuse laser (pour métal)
+* Plieuse (pour métal)
+* Petit outillage courant (tournevis, pinces…)
+
+Les prérequis&nbsp;:
+
+
+* Dessiner les plans de tôlerie sous format STEP
+* Acquérir les notions de découpe et pliage en tôlerie
+
+'''Les plans de tôlerie'''
+
+
+Deux plans seront nécessaires pour la réalisation de cet ensemble. Le premier est une équerre de maintien du moteur pas à pas sur la platine, le deuxième sera la platine elle-même.
+
+
+Quelques règles&nbsp;:
+
+
+* Les plans seront dessinés sous une application permettant la «&nbsp;mise à plat&nbsp;» de la tôle une fois sa forme définitive dessinée et la prise en compte des pertes dues aux rayons de pliage. 
+* Toutes les côtes doivent être prises sur les extérieurs de la pièce une fois pliée. 
+* Différents formats d’enregistrement sont compatibles avec le logiciel de pilotage de la découpeuse laser, celui qui sera préféré par l’opérateur est le format STEP.
+* Le découpage au laser est d’une grande précision dans de fines épaisseurs, les tolérances de découpes retenues pour les alésages (trous) seront de + 2 dixièmes au rayon (cela permettra le passage des pièces sans problème de reprise). 
+* Le diamètre minimum d’un alésage est&nbsp;: D mini = 0.8 x l’épaisseur de la tôle.
+* Les pièces étant destinées à être pliées, un tableau reprenant les pertes au pli est communiqué par l’entreprise SC2M ([http://www.sc2m.eu/ www.sc2m.eu]) en fonction de la plieuse utilisée et les vé de pliage (documentation communiquée dans les sources)
+* Quand 2 bords sont destinés à être rabattus l’un vers l’autre ou en opposition, il faut prévoir un «&nbsp;grugeage&nbsp;» au niveau du point commun aux 2 plans. Ceci évite le bourrelet ou bien la déchirure du métal.
+
+<center>[[Image:]]</center>
+
+<center>''Exemple de grugeage''</center>
+
+
+* Il est important au moment de la conception des plans de connaitre les contraintes de pliage, notamment les possibilités des vé de pliage. Rien de plus de rageant que de s’apercevoir au moment de la production que la pièce est irréalisable.
+
+<center>[[Image:]]</center>
+
+<center>''Quelques exemples nécessitant un outillage spécial''</center>
+
+
+* S’informer également des jeux de vé disponibles en entreprise.
+* Prendre en compte la position et les dimensions des éléments qui seront montés, notamment les fiches d’alimentation qui ne doivent pas gêner l’insertion de l’interrupteur marche/arrêt.
+* Penser également qu’il va falloir serrer ou souder certaines pièces à l’aide d’un outil. Le passage de celui-ci doit donc être prévu sans être gêné.
+
+Choix de la tôle&nbsp;: 
+
+
+* Epaisseur&nbsp;: 2 mm
+* Matière&nbsp;: acier
+
+Les plans seront réalisés sur un logiciel de CAO prenant en charge les paramètres de tôlerie. Le dessin est d’abord réalisé en 3D avant de faire une «&nbsp;mise à plat&nbsp;»&nbsp;:
+
+<center>[[Image:]]</center>
+
+<center>''1<sup>ère</sup> étape''</center>
+
+<center>[[Image:]]</center>
+
+<center>''2<sup>ème</sup> étape''</center>
+
+
+<center>[[Image:]]</center>
+
+<center>''Vue en 3D''</center>
+
+
+<center>[[Image:]]</center>
+
+<center>''Pièce réalisée''</center>
+
+
+'''La découpe laser'''
+
+
+La découpeuse laser est une machine de la marque Bystronic dont voici les caractéristiques&nbsp;:
+
+
+* Type BYSPRINT 3015
+* Puissance 3KW
+* Format maxi 3000 x 1500
+* Découpe acier&nbsp;: épaisseur maxi 20 mm
+* Découpe inox&nbsp;: épaisseur maxi 12 mm
+* Découpe aluminium&nbsp;: épaisseur maxi 8 mm
+
+<center>[[Image:]]</center>
+
+<center>''La découpeuse laser avec son chargeur de tôles''</center>
+
+
+'''Le pliage'''
+
+
+La plieuse est une machine de la marque Beyeler du groupe Bystronic dont voici les caractéristiques&nbsp;:
+
+
+* Type PR6 5axes
+* Longueur maxi de pliage&nbsp;: 4 m
+* Pression&nbsp;: 150 Tonnes
+
+<center>[[Image:]]</center>
+
+<center>''La plieuse''</center>
+
+
+Les vé de pliage sont de la marque Soclam .
+
+La documentation est disponible sur le lien suivant&nbsp;: [http://www.soclam.com/ http://www.soclam.com/] 
+
+Les outils de pliage sont composés de 2 éléments&nbsp;:
+
+
+* Les lames&nbsp;: c’est la pièce mobile qui va rentrer en contact avec la tôle.
+
+<center>[[Image:]]</center>
+
+* Les matrices&nbsp;: C’est la pièce fixe, composée d’éléments de longueurs différentes et permettant de reconstituer la longueur nécessaire. La lame en descendant va pousser la tôle dans la matrice.
+
+<center>[[Image:]]</center>
+
+Une documentation plus complète est disponible en cliquant sur le lien suivant&nbsp;: [http://www.soclam.com/?page_id=212 http://www.soclam.com/?page_id=212] 
+
+
+<center>[[Image:]]</center>
+
+
+<center>''La platine découpée et pliée''</center>
+
+'''La peinture'''
+
+
+Je vais faire simple&nbsp;: une peinture martelée sera du plus bel effet sans contrainte de finition. Les plus perfectionnistes pourront s’orienter vers une peinture au four (dépôt par électro-statisme de la couleur sous forme de poudre puis passage au four pour coller et durcir la peinture).
+
+
+<center>[[Image:]]</center>
+
+
+'''L’assemblage'''
+
+
+Les éléments seront assemblés par vissage en utilisant des entretoises plastiques afin de séparer électriquement les cartes du support en acier. Les lignes d’alimentation seront câblées en dessous de la plaque et les alimentations seront ajustées aux tensions requises avant fixation. Les vis seront maintenues par des colliers rilsan pour ne pas accrocher et tout arracher. Des pieds en plastiques seront collés afin d’éviter de rayer les tables.
+
+
+[[Image:]]
+
+<center>''Dessous de la platine''</center>
+
+
+Les connecteurs d’alimentation seront isolés à l’aide de cire à cacheter et d’un pistolet à colle (spécifique pour la cire)
+
+<center>[[Image:]][[Image:]]</center>
+
+<center>''Isolation des connecteurs''</center>
+
+
+'''L’utilisation'''
+
+
+Une image vaut mille mots… 
+
+[[Image:]]
+
+= Fichiers sources =
+= Licence =
+Ce document est mis à disposition selon les termes de la&nbsp;[http://creativecommons.org/licenses/by/4.0/ Licence Creative Commons Attribution 4.0 International].
+
+Paternité 'by' :''L'œuvre peut être librement utilisée, à la condition de l'attribuer à l'auteur en citant son nom.''
+
+
+Note aux auteurs de documents du VoLAB, Vous avez la possibilité de changer de licence. Mais ce serait bien de rester libre et ouvert. Encore une fois ceci est une recommandation et pas une obligation.
+
+= Bibliographie =
+= webographie =
+[http://fr.wikipedia.org/wiki/Licence_Creative_Commons http://fr.wikipedia.org/wiki/Licence_Creative_Commons]
+
+= Rédaction en langue française =
+Partant du constat de terrain qu'une énorme masse d'information concernant les sujets qui nous intéressent comme entre autres l'impression 3D n'étaient disponibles que dans la langue de Shakespeare et que de nombreuses personnes dans notre entourage ne maîtrisaient pas la dite langue et soucieux de diffuser encore plus l'information, nous avons pris le parti, au VoLAB, de rédiger nos documents de préférence en langue française.
+
+= VoLAB =
+Un mot sur le VoLAB. VoLAB est un fablab implanté à environ 30km au nord-ouest de Paris dans la commune de Vauréal dans l'agglomération de Cergy Pontoise. Il est animé par l'association VoRoBoTics.
+
+Site internet [http://www.vorobotics.com/ www.vorobotics.com]
