@@ -1,8 +1,6 @@
 
 
 
-'''Platine d’expérimentation Arduino'''
-
 
 [[Image:Platine terminée.jpg|thumb|400px|center]]
 
@@ -18,6 +16,8 @@ Relecteur :
 Thème: Arduino
 
 Projet&nbsp;: Rendre plus pratique le transport et les manipulations entre une platine Arduino UNO ou 2560, les breadboards et les shields les plus courants. 
+
+__TOC__
 
 = Problématique =
 Les utilisateurs d’Arduino ont tous été confrontés au problème des cartes reliées entre elles par des fils&nbsp;: le déplacement du montage final ou en cours d’un lieu à un autre est rendu difficile, voire risqué. Les manipulations des interrupteurs, potentiomètres, joystik ou encodeurs rotatifs font appels aux deux mains quand ils sont laissés «&nbsp;libres&nbsp;» ce qui peut entraver le bon déroulement d’un test ou d’un réglage. Que dire des moteurs pas à pas qui se promènent seuls en travers de la table à la moindre sollicitation ou bien des afficheurs que l’on doit correctement orienter pour qu’ils restent lisibles&nbsp;? Terminons par les cartes reliées au secteur EDF et dont les contacts risquent de toucher des composants environnants …
