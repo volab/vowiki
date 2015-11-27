@@ -1,3 +1,10 @@
 {{Brouillon}}
 
+''S'assurer au préalable que l'achat de tubes Geiger-Muller est bien autorisé par la douane.''
+
+Buts:
+* mesurer le niveau de radiation ambiant (air, eau, aliments, etc.)
+* utiliser ce projet comme une première étape pour faire des expériences en astrophysique (détecteur de rayons cosmiques)
+* l'utiliser comme générateur de nombres aléatoire (en remplacement des générateurs pseudo-aléatoires implémentés de façon logicielle) : utile pour certains algorithmes d'intelligence artificielle (Monte Carlo, etc.)
+
 Cf. git/priv/docs_incubator/VOLAB_diy_geiger_counter
