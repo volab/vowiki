@@ -1,3 +1,4 @@
+{{Projets}}
 [[Image:illu-arduino-UNO.png|center| thumb|]]
 
 
@@ -14,6 +15,8 @@ Relecteur : Francis
 Thème: Arduino, Avr, bootloader
 
 Projet&nbsp;: expérimentations diverses sur l'Arduino
+
+__TOC__
 
 = Problématique =
 Dans le magazine Hackable n°8, il y a un article intitulé «&nbsp;Construisez votre programmeur Arduino sans Arduino&nbsp;». Cet article explore toutes les possibilités de programmer un Arduino sans programmeur et sans passer par le port USB. Il y est également question de programmer des microcontrôleurs qui ne sont pas nécessairement des cœurs de cartes ARDUINO comme l'ATmega 168 ou les Attiny. Il y a quelques mois je m'étais penché sur la programmation des Atmega dans Atmel Studio et via les sondes de programmation USBASP. La lecture de cet article m'a donné envie d'aller encore plus loin dans la compréhension du bootloader de l'Arduino. Cela sert à quoi&nbsp;? Comment cela fonctionne-t-il&nbsp;?
