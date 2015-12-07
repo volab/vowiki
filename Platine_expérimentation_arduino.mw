@@ -359,7 +359,7 @@ Je vais faire simple&nbsp;: une peinture martelée sera du plus bel effet sans c
 Les éléments seront assemblés par vissage en utilisant des entretoises plastiques afin de séparer électriquement les cartes du support en acier. Les lignes d’alimentation seront câblées en dessous de la plaque et les alimentations seront ajustées aux tensions requises avant fixation. Les vis seront maintenues par des colliers rilsan pour ne pas accrocher et tout arracher. Des pieds en plastiques seront collés afin d’éviter de rayer les tables.
 
 
-[[Image:]]
+[[Image:Dos de la platine v3.jpg|thumb|center|400px]]
 
 <center>''Dessous de la platine''</center>
 
@@ -367,16 +367,30 @@ Les éléments seront assemblés par vissage en utilisant des entretoises plasti
 Les connecteurs d’alimentation seront isolés à l’aide de cire à cacheter et d’un pistolet à colle (spécifique pour la cire)
 
 <center>[[Image:]][[Image:]]</center>
+{| class="wikitable" border="1"
+|-
+! en-tête 1
+! en-tête 2
+! en-tête 3
+|-
+| ligne 1, case 1
+| ligne 1, case 2
+| ligne 1, case 3
+|-
+| ligne 2, case 1
+| ligne 2, case 2
+| ligne 2, case 3
+|}
 
 <center>''Isolation des connecteurs''</center>
 
 
-'''L’utilisation'''
+=L’utilisation=
 
 
 Une image vaut mille mots… 
 
-[[Image:]]
+[[Image:Platine retouchée.jpg|thumb|center|400px]]
 
 = Fichiers sources =
 = Licence =
