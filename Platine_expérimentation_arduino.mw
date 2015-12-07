@@ -362,20 +362,19 @@ Les éléments seront assemblés par vissage en utilisant des entretoises plasti
 [[Image:Dos de la platine v3.jpg|thumb|center|400px]]
 
 <center>''Dessous de la platine''</center>
+{| class="wikitable" border="1"
 
 
 Les connecteurs d’alimentation seront isolés à l’aide de cire à cacheter et d’un pistolet à colle (spécifique pour la cire)
 
-<center>[[Image:]][[Image:]]</center>
-{| style="text-align:center;" border="1"|center
+{| class="wikitable" border="1"
 |-
-! en-tête 1
-! en-tête 2
+! Connecteur isolé
+! Connecteur en place
 |-
-| ligne 1, case 1
-| ligne 1, case 2
+| [[Image:Isolation des connecteurs.jpg|thumb|center|400px]]
+| [[Image:Connecteur en place.jpg|thumb|center|400px]]
 |}
-
 <center>''Isolation des connecteurs''</center>
 
 =L’utilisation=
