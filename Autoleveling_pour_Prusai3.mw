@@ -686,7 +686,9 @@ Ce n'est peut-être pas très claire dans ce qui précède, mais la seule versio
 
 La prochaine étape, après beaucoup de repos sur ce sujet, sera l'implémentation d'un capteur à effet capacitif avec zéro contact et zéro mécanique.
 
-cf [[http://premium-forum.fr/viewtopic.php?f=9&t=391 Capteur capacitif]]  LJ12a3-4-z 
+cf [[http://premium-forum.fr/viewtopic.php?f=9&t=391 Capteur capacitif]]  Attention : capteur LJ12a3-4-z est inductif.
+Le capteur LJC18A3-H-Z/BX est capacitif.
+
 
 [[Fichier:capteurCapacitif.png|center]]<br /> 
 
