@@ -1,0 +1,231 @@
+[[Image:vehicule_magn.JPG]][[Image:IMG_20151017_165419.jpg]]<center>'''Véhicule à sustentation magnétique'''</center>
+
+
+== <center>'''Table des matières'''</center> ==
+[#__RefHeading__2518_723715849 1 VoLAB1]
+
+[#__RefHeading__1412_1287691654 Association VoRoBotics1]
+
+[#__RefHeading__2521_723715849 2 Présentation2]
+
+[#__RefHeading__2525_723715849 3 Banc d'essais2]
+
+[#__RefHeading__2665_723715849 3.1 Matériaux, matériels2]
+
+[#__RefHeading__2673_723715849 3.2 Logiciel2]
+
+[#__RefHeading__2675_723715849 3.2.1 Le logiciel2]
+
+[#__RefHeading__2677_723715849 3.2.2 Ardublock2]
+
+[#__RefHeading__2680_723715849 3.3 Câblage des interrupteurs et boutons poussoir3]
+
+[#__RefHeading__2689_723715849 3.4 Montage de la carte Arduino Uno3]
+
+[#__RefHeading__2691_723715849 3.4.1 Repérage des branchements3]
+
+[#__RefHeading__2693_723715849 3.5 Programmation3]
+
+[#__RefHeading__2695_723715849 3.5.1 Scénario3]
+
+[#__RefHeading__2697_723715849 3.5.2 Programme ArduBlock4]
+
+[#__RefHeading__2699_723715849 3.5.3 Vidéo « Véhicule à sustentation magnétique »4]
+
+[#__RefHeading__820_1262036055 4 La soufflerie4]
+
+[#__RefHeading__822_1262036055 3.1 Matériaux, matériels4]
+
+[#__RefHeading__888_1262036055 3.2 Essais5]
+
+[#__RefHeading__746_1596098441 3.3 Modifications5]
+
+[#__RefHeading__890_1262036055 6 Licence5]
+
+[#__RefHeading__922_1262036055 7 Webographie5]
+
+[#__RefHeading__948_1262036055 8 Rédaction en langue française5]
+
+[#__RefHeading__950_1262036055 9 VoLAB6]= [[Image:]]1 VoLAB =
+== Association VoRoBotics ==
+Date : 20/10/2015
+
+Auteur : Lecorsier
+
+Relecteur : 
+
+Thème : Transition écologique et développement durable
+
+Projet : Véhicule à sustentation magnétique, programmation Arduino, essais en soufflerie
+
+
+= 2 Présentation =
+Ce document présente un travail développé sur le thème des transports pour un tourisme durable . La pollution des transports est visée et le train à sustentation magnétique peut être une réponse à ce problème.
+
+Au départ, ce travail est proposé aux élèves de 6ème de collège (voir le [http://lecorsiergilles.blogspot.fr/ blog La Technologie au Collège]). Les élèves recherchent une solution aux épisodes de pollution dans la vallée de Chamonix. [http://www.youtube.com/watch?v=vhJtWw2tgtE http://www.youtube.com/watch?v=vhJtWw2tgtE]
+
+Les différentes séances réalisées par les élèves sont présentées sur le [http://lecorsiergilles.blogspot.fr/2014_02_01_archive.html blog La technologie au collège].
+
+
+Dans ce document sont abordés&nbsp;:
+
+Banc d'essais pour véhicule à sustentation magnétique.
+
+La programmation à l'aide d'ArduBlock, plugin (module d'extension) du logiciel Arduino.
+
+Les essais en soufflerie de formes de véhicules.
+
+
+= 3 Banc d'essais =
+== 3.1 Matériaux, matériels ==
+[[Image:vehicule_magn.JPG]]PVC expansé recyclé bi-colore 10mm (Plate-forme)
+
+PVC 2mm incolore (rail et guides)
+
+Pièces imprimante 3D (Support de servomoteur et de roue libre)
+
+Courroie polyuréthane Ø 2mm
+
+Servomoteur à rotation continu (40,4 x 19,8 x 37,2 mm.
+
+Couple : 3.2 kg.cm sous 4,8 V -&nbsp; 4,1 kg.cm sous 6 V.
+
+Vitesse :&nbsp;43 tr/mn&nbsp;sous 4,8 V -&nbsp;53 tr/mn&nbsp;sous 6 V.)
+
+2 Micro-rupteurs (fin de course) normalement ouverts.
+
+2 Boutons poussoir normalement ouverts.
+
+1 carte Arduino Uno
+
+
+== 3.2 Logiciel ==
+=== 3.2.1 Le logiciel ===
+Arduino installé (voir : [http://www.arduino.cc/ http://www.arduino.cc/])
+
+=== 3.2.2 [http://www.semageek.com/arduino-presentation-et-traduction-en-francais-de-ardublock/ Ardublock] ===
+Plugin qui s’ajoute à l’ide d’arduino. (Programmation graphique), à placer dans&nbsp;: C:\Users\nom_du_compte\Documents\Arduino\Tools\ArduBlockTool\Tool
+
+
+== 3.3 Câblage des interrupteurs et boutons poussoir ==
+Attention car j'ai câblé les capteurs et boutons poussoir du banc d'essais en "pull-up". Avec la résistance de rappel "pull-up", l'entrée numérique est à l'état HIGH lorsque les micro-rupteurs ou les boutons poussoir sont ouverts (relâchés).
+
+
+== 3.4 Montage de la carte Arduino Uno ==
+=== 3.4.1 Repérage des branchements ===
+Bouton déplacement Droite (6)
+
+Fin de course Droite (2)
+
+Bouton déplacement Gauche (4)
+
+Fin de course Gauche (8)
+
+[[Image:carte_uno.JPG]]Servomoteur (~10)
+
+
+== 3.5 Programmation ==
+=== 3.5.1 Scénario ===
+Le chariot est à gauche
+
+Appui sur le bouton poussoir «&nbsp;Déplacement vers la droite&nbsp;»
+
+Le chariot se déplace vers la droite
+
+Le chariot s’arrête en fin de course droite
+
+Appui sur le bouton poussoir «&nbsp;Déplacement vers la gauche&nbsp;»
+
+Le chariot se déplace vers la gauche
+
+Le chariot s’arrête en fin de course gauche
+
+Le programme boucle
+
+
+=== 3.5.2 Programme ArduBlock ===
+[[Image:prog-ardublock.JPG]]=== 3.5.3 Vidéo « Véhicule à sustentation magnétique » ===
+Le projet est présenté dans une vidéo à cette adresse&nbsp;: [https://youtu.be/8rij225i7CE https://youtu.be/8rij225i7CE]
+
+
+= 4 La soufflerie =
+== 3.1 Matériaux, matériels ==
+Panneau d'aggloméré épaisseur 15mm
+
+PVC 6mm jaune (mur à vent et sortie du flux d'air)
+
+PVC 2mm incolore (cloisons)
+
+Barre carrée PVC 10x10mm
+
+Charnière piano
+
+6 ventilateurs d'ordinateur
+
+Grille de protection
+
+Carton plume épaisseur 5mm + pailles (guide du flux d'air)
+
+Pailles
+
+[http://souterweb.free.fr/boitaoutils/eclairage/annexes/ATX/modif_ATX.htm Alimentation stabilisée fabriquée à partir d'une alimentation d'ordinateur]
+
+Machine à fumée 400 watts (achetée)
+
+
+== [[Image:vehicule_carton.JPG]]3.2 Essais ==
+J'ai essayé la soufflerie avec une forme d'automobile. Le flux d'air et de fumée sont le plus visibles lorsque les ventilateurs sont alimentés en 5V.
+
+Il est donc possible de créer une forme en carton (par exemple) pour le véhicule à sustentation magnétique et faire des essais d'écoulement d'air dans la soufflerie.
+
+
+Les premiers essais ont été filmés et la vidéo est présentée à cette adresse&nbsp;:
+
+[https://youtu.be/OkEV2OZdb3E https://youtu.be/OkEV2OZdb3E]
+
+
+== 3.3 Modifications ==
+[[Image:IMG_00011.JPG]]Les premiers essais n'étant pas concluants, le flux d'air encore trop peu visible, j'ai ajouté un mur de pailles, retourné les ventilateurs. 
+
+[[Image:voiture.JPG]]Ainsi le flux d'air est plus laminaire et suit les formes des objets et montre les perturbations.
+
+= 6 Licence =
+Ce document est mise à disposition selon les termes de la Licence Creative Commons Attribution 4.0 International.
+
+[[Image:CC88x31.jpg]]Parternité 'by' :L'oeuvre peut être librement utilisée, à la condition de l'attribuer à l'auteur en citant son nom.
+
+Note aux auteurs de documents du VoLAB, Vous avez la possibilité de changer de licence. Mais ce serait bien de rester
+
+libre et ouvert. Encore une fois ceci est une recommandation et non une obligation.
+
+
+= 7 Webographie =
+http://fr.wikipedia.org/wiki/Licence_Creative_Commons
+
+http://lecorsiergilles.blogspot.fr/
+
+http://www.vorobotics.com/wp/le-projet-volab/
+
+http://www.arduino.cc/
+
+http://www.semageek.com/arduino-presentation-et-traduction-en-francais-de-ardublock/
+
+http://souterweb.free.fr/boitaoutils/eclairage/annexes/ATX/modif_ATX.htm
+
+
+= 8 Rédaction en langue française =
+Partant du constat de terrain qu'une énorme masse d'information concernant les sujets qui nous intéressent comme entre
+
+autres l'impression 3D n'étaient disponibles que dans la langue de Shakespeare et que de nombreuses personnes dans
+
+notre entourage ne maîtrisaient pas la dite langue et soucieux de diffuser encore plus l'information, nous avons pris le
+
+parti, au VoLAB, de rédiger nos documents de préférence en langue française.
+
+
+= 9 VoLAB =
+Un mot sur le VoLAB. VoLAB est un fablab implanté à environ 30km au nord-ouest de Paris dans la commune de
+
+Vauréal dans l'agglomération de Cergy Pontoise. Il est animé par l'association VoRoBoTics.
+
+Site internet www.vorobotics.com
