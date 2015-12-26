@@ -70,8 +70,8 @@ Plugin qui s’ajoute à l’ide d’arduino. (Programmation graphique), à plac
 == Câblage des interrupteurs et boutons poussoir ==
 Attention car j'ai câblé les capteurs et boutons poussoir du banc d'essais en "pull-up". Avec la résistance de rappel "pull-up", l'entrée numérique est à l'état HIGH lorsque les micro-rupteurs ou les boutons poussoir sont ouverts (relâchés).
 
-== 3.4 Montage de la carte Arduino Uno ==
-=== 3.4.1 Repérage des branchements ===
+== Montage de la carte Arduino Uno ==
+=== Repérage des branchements ===
 Bouton déplacement Droite (6)
 
 Fin de course Droite (2)
