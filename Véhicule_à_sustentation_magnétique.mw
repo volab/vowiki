@@ -84,8 +84,8 @@ Servomoteur (~10)
 
 [[Image:carte_uno.JPG|center]]
 
-== 3.5 Programmation ==
-=== 3.5.1 Scénario ===
+== Programmation ==
+=== Scénario ===
 Le chariot est à gauche
 
 Appui sur le bouton poussoir «&nbsp;Déplacement vers la droite&nbsp;»
@@ -103,10 +103,10 @@ Le chariot s’arrête en fin de course gauche
 Le programme boucle
 
 
-=== 3.5.2 Programme ArduBlock ===
+=== Programme ArduBlock ===
 [[Image:prog-ardublock.JPG|center]]
 
-=== 3.5.3 Vidéo « Véhicule à sustentation magnétique » ===
+=== Vidéo « Véhicule à sustentation magnétique » ===
 
 Le projet est présenté dans une vidéo à cette adresse&nbsp;: [https://youtu.be/8rij225i7CE https://youtu.be/8rij225i7CE]
 
