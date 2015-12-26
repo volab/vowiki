@@ -64,7 +64,7 @@ Vitesse :&nbsp;43 tr/mn&nbsp;sous 4,8 V -&nbsp;53 tr/mn&nbsp;sous 6 V.)
 === Le logiciel ===
 Arduino installé (voir : [http://www.arduino.cc/ http://www.arduino.cc/])
 
-=== 3.2.2 [http://www.semageek.com/arduino-presentation-et-traduction-en-francais-de-ardublock/ Ardublock] ===
+=== [http://www.semageek.com/arduino-presentation-et-traduction-en-francais-de-ardublock/ Ardublock] ===
 Plugin qui s’ajoute à l’ide d’arduino. (Programmation graphique), à placer dans&nbsp;: C:\Users\nom_du_compte\Documents\Arduino\Tools\ArduBlockTool\Tool
 
 == 3.3 Câblage des interrupteurs et boutons poussoir ==
