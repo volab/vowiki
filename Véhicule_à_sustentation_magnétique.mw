@@ -110,8 +110,8 @@ Le programme boucle
 
 Le projet est présenté dans une vidéo à cette adresse&nbsp;: [https://youtu.be/8rij225i7CE https://youtu.be/8rij225i7CE]
 
-= 4 La soufflerie =
-== 3.1 Matériaux, matériels ==
+= La soufflerie =
+== Matériaux, matériels ==
 Panneau d'aggloméré épaisseur 15mm
 
 PVC 6mm jaune (mur à vent et sortie du flux d'air)
@@ -134,7 +134,7 @@ Pailles
 
 Machine à fumée 400 watts (achetée)
 
-==3.2 Essais==
+== Essais==
 
 J'ai essayé la soufflerie avec une forme d'automobile. Le flux d'air et de fumée sont le plus visibles lorsque les ventilateurs sont alimentés en 5V.
 
@@ -147,7 +147,7 @@ Les premiers essais ont été filmés et la vidéo est présentée à cette adre
 
 [https://youtu.be/OkEV2OZdb3E https://youtu.be/OkEV2OZdb3E]
 
-== 3.3 Modifications ==
+== Modifications ==
 Les premiers essais n'étant pas concluants, le flux d'air encore trop peu visible, j'ai ajouté un mur de pailles, retourné les ventilateurs. 
 
 Ainsi le flux d'air est plus laminaire et suit les formes des objets et montre les perturbations.
