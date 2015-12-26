@@ -18,7 +18,9 @@ Projet : Véhicule à sustentation magnétique, programmation Arduino, essais en
 = 2 Présentation =
 Ce document présente un travail développé sur le thème des transports pour un tourisme durable . La pollution des transports est visée et le train à sustentation magnétique peut être une réponse à ce problème.
 
-Au départ, ce travail est proposé aux élèves de 6ème de collège (voir le [http://lecorsiergilles.blogspot.fr/ blog La Technologie au Collège]). Les élèves recherchent une solution aux épisodes de pollution dans la vallée de Chamonix. [http://www.youtube.com/watch?v=vhJtWw2tgtE http://www.youtube.com/watch?v=vhJtWw2tgtE]
+Au départ, ce travail est proposé aux élèves de 6ème de collège (voir le [http://lecorsiergilles.blogspot.fr/ blog La Technologie au Collège]).
+Les élèves recherchent une solution aux épisodes de pollution dans la vallée de Chamonix.
+[http://www.youtube.com/watch?v=vhJtWw2tgtE http://www.youtube.com/watch?v=vhJtWw2tgtE]
 
 Les différentes séances réalisées par les élèves sont présentées sur le [http://lecorsiergilles.blogspot.fr/2014_02_01_archive.html blog La technologie au collège].
 
@@ -30,7 +32,6 @@ Banc d'essais pour véhicule à sustentation magnétique.
 La programmation à l'aide d'ArduBlock, plugin (module d'extension) du logiciel Arduino.
 
 Les essais en soufflerie de formes de véhicules.
-
 
 = 3 Banc d'essais =
 == 3.1 Matériaux, matériels ==
