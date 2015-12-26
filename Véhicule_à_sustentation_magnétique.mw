@@ -61,7 +61,7 @@ Vitesse :&nbsp;43 tr/mn&nbsp;sous 4,8 V -&nbsp;53 tr/mn&nbsp;sous 6 V.)
 1 carte Arduino Uno
 
 == Logiciel ==
-=== 3.2.1 Le logiciel ===
+=== Le logiciel ===
 Arduino installé (voir : [http://www.arduino.cc/ http://www.arduino.cc/])
 
 === 3.2.2 [http://www.semageek.com/arduino-presentation-et-traduction-en-francais-de-ardublock/ Ardublock] ===
