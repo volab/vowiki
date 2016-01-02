@@ -1,0 +1,20 @@
+{{brouillon}}
+
+VOR-GPG un mini ordinateur chargé de signer (et éventuellement chiffrer/déchiffrer) des fichiers avec un trousseau GPG.
+
+Il est fait pour les utilisateur paranoïaques de GPG qui souhaitent limiter au maximum le risque de piratage de leur clés privées (notamment via des keyloggers).
+
+VOR-GPG est essentiellement fait pour la signature de fichiers (hashs, code source, etc.).
+
+* VOR-GPG contient un système embarqué (Raspberry Pi ou autre)
+* il fonctionne avec un système Linux (ou BSD) minimal (le noyau système + GPG et les bibliothèques logicielles nécessaires au fonctionnement de GPG + un service "fait maison" pour contrôler le système)
+* VOR-GPG est sans écran (headless), sans clavier ni souris et surtout **sans interface réseau**
+* le système est toutefois relié à un mini écran LCD pour afficher le statut du système
+* le principal intérêt de VOR-GPG et de garantir l'intégrité des clés GPG (privées) de son utilisateur en les stockant sur un système (VOR-GPG) totalement isolé des réseaux informatiques et des autres ordinateurs
+* le système dispose d'une interface USB servant brancher des clés USB contenant les fichiers à signer (ou chiffre/déchiffrer)
+* le système est relié à trois boutons physiques
+** quand on appuie sur le premier et qu'une clé USB est reliée au système, tous les fichiers contenus sur la clé sont *signés* avec le trousseau GPG
+** quand on appuie sur le second et qu'une clé USB est reliée au système, tous les fichiers contenus sur la clé sont *chiffrés* avec le trousseau GPG
+** quand on appuie sur le troisième et qu'une clé USB est reliée au système, tous les fichiers contenus sur la clé sont *déchiffrés* avec le trousseau GPG
+* le système est relié à un pavé numérique pour déverrouiller le trousseau de clés
+* le service "fait maison" est chargé de surveiller l'insertion des clés USB (montage/démontage), l'appui sur les trois boutons physiques et l'affichage de la barre de progression sur l'afficheur LCD
