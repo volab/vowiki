@@ -375,13 +375,16 @@ sudo apt-get install git-core
 
 A partir de cette étape, il est possible d'utiliser les GPIO de la carte Raspberry pour lire les entrées ou écrire des sorties
 
+Il est conseillé de faire quelques exemples pour bien maitriser l'affectation des pins GPIO qui ne sont pas tous des entrées/sorties et les différentes sources de tension disponibles: 3,3V et 5V
+
+<center>[[Image:GPIO-affectation.JPG]]</center>
+
 A noter que dans le but de ne pas limiter l’utilisation du Raspberry Pi de VoLAB&nbsp; uniquement à l’application&nbsp; VORSurv,&nbsp; nous avons décidé d’optimiser la conception du système afin permettre la réalisation d’autres applications et de les faire tourner sur le même système.
 
 
 Parmi les applications déjà identifies pour qu’elles soient installées sur&nbsp; le même Raspberry PI&nbsp;:
 
-VORSms&nbsp;: Une application pour l’envoi des SMS à une liste d’adhérents (depuis un fichier) ou des SMS «&nbsp;prédéfinis&nbsp;» tel que l’ouverture du VoLAB, etc 
-
+VORSms&nbsp;: Une application pour l’envoi des SMS à une liste d’adhérents (depuis un fichier) ou des SMS «&nbsp;prédéfinis&nbsp;» tel que l’ouverture du VoLAB, etc
 
 = Architecture du système =
 Sans aucun doute, notre génération a beucoup de chance... 
