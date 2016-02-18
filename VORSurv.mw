@@ -424,7 +424,7 @@ Dans un souci d’optimisation du temps CPU, le système sera composé d’un en
 <center>[[Image:Programme%20principal.JPG]]</center>
 
 Tel que décrit dans ce schéma, le concept du système est basé sur un programme principal qui contrôle et synchronise un ensemble de sous-programmes qui s'exécutent d'une manière autonome.
-En fonction des contenu des pipes d'échanges inter-processus (simple fichiers textes partagés) le programme principale prendra la décision qui s'impose: allumer le projecteur, générer une alarme, envoyer un SMS, déplacer le contenu du répertoire de travail, etc..
+En fonction des contenus des différents pipes d'échanges inter-processus (simple fichiers textes partagés dans notre cas) le programme principale prendra la décision qui s'impose en fonction de la situation: allumer le projecteur, générer une alarme, envoyer un SMS, déplacer le contenu du répertoire de travail, etc..
 
  
 == Processus  1 : Motion ==
