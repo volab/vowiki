@@ -638,7 +638,7 @@ Pour la gestion du mode de fonctionnement ainsi que la diffusion des images en t
 <center>[[Image:Interface.JPG]]</center>
 <center>'''Interface Web – Gestion du mot de passe '''</center>
 == Bonnus !! ==
-Cette interface ne fait pas partie du cahier des charges de VORSurv. Durant la phase test, nous avons développé cette interface pour l'envoi de SMS qui offre les trois possibilités suivantes pour envoyer un ou des SMS
+Initialement, l'interface d'envoi de SMS (VORSms) ne fait pas partie du cahier des charges de VORSurv. Durant la phase test, nous avons développé cette interface pour l'envoi de SMS qui offre les trois possibilités suivantes pour envoyer un ou des SMS
 
 - Envoi individuel : Un numéro de portable et le message à envoyer seront demandés
 
