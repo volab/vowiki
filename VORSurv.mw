@@ -1,0 +1,716 @@
+<center>'''Projet VORSurv'''</center>
+<center>[[Image:VORSurv-distant.JPG]]</center>
+
+= VoLAB =
+= Association VoRoBoTics =
+Date : 25/01/2015
+
+Auteur : D.Mebarki
+
+Relecteur : J.Soranzo
+
+Thème: Vidéo surveillance, GPIO, Commande d'un relais, shell, awk
+
+Projet&nbsp;: VORSurv== <center>'''Table des matières'''</center> ==
+[#__RefHeading___Toc2884_897401352 VoLAB1]
+
+[#__RefHeading___Toc2886_897401352 Association VoRoBoTics1]
+
+[#__RefHeading___Toc2888_897401352 Problématique3]
+
+[#__RefHeading___Toc2913_897401352 Le cahier des charges3]
+
+[#__RefHeading___Toc2915_897401352 Analyse du cahier des charges][#__RefHeading___Toc2915_897401352 :4]
+
+[#__RefHeading___Toc2022_1171147839 Important4]
+
+[#__RefHeading___Toc2890_897401352 Matériel utilisé4]
+
+[#__RefHeading___Toc2892_897401352 Configuration du système5]
+
+[#__RefHeading___Toc2927_897401352 Preparation de la carte Raspberry5]
+
+[#__RefHeading___Toc2917_897401352 Etape 1: Préparation de la carte SD5]
+
+[#__RefHeading___Toc2919_897401352 Etape 2: Configuration du système5]
+
+[#__RefHeading___Toc2941_897401352 Installation des logiciels necessaires6]
+
+[#__RefHeading___Toc2923_897401352 Motion:6]
+
+[#__RefHeading___Toc2925_897401352 Installation du module caméra RPI7]
+
+[#__RefHeading___Toc2931_897401352 Paramétrage de Motion7]
+
+[#__RefHeading___Toc2933_897401352 Serveur Web et PHP:8]
+
+[#__RefHeading___Toc2935_897401352 Installation de PHP][#__RefHeading___Toc2935_897401352 8]
+
+[#__RefHeading___Toc2937_897401352 Envoi de messages d'alerte sur telephone mobile:9]
+
+[#__RefHeading___Toc2939_897401352 Gammu-smsd:9]
+
+[#__RefHeading___Toc2943_897401352 Vérification :11]
+
+[#__RefHeading___Toc2945_897401352 1- Fonctionnement du serveur web :11]
+
+[#__RefHeading___Toc2947_897401352 2 – Test du fonctionnement du PHP11]
+
+[#__RefHeading___Toc2949_897401352 3 – Motion et diffusion des images en temps réel12]
+
+[#__RefHeading___Toc2951_897401352 4 – Test du fonctionnement de gammu-smsd12]
+
+[#__RefHeading___Toc2024_1171147839 Interfaces GPIO12]
+
+[#__RefHeading__2102_1041987972 Architecture du système14]
+
+[#__RefHeading__2104_1041987972 Processus  1 : Motion15]
+
+[#__RefHeading__2106_1041987972 Processus 2 : Scan GPIO16]
+
+[#__RefHeading__2108_1041987972 Sensibilité de VORSurv19]
+
+[#__RefHeading__2110_1041987972 Solution:20]
+
+[#__RefHeading___Toc2026_1171147839 Programme principal23]
+
+[#__RefHeading___Toc2028_1171147839 Qualité d’image 24]
+
+[#__RefHeading___Toc2894_897401352 Interface web de configuration et de paramétrage][#__RefHeading___Toc2894_897401352 25]
+
+[#__RefHeading___Toc2896_897401352 Conception et fabrication des boîtiers:28]
+
+[#__RefHeading___Toc2898_897401352 Performances29]
+
+[#__RefHeading__4301_97860895 Ressources: CPU & RAM29]
+
+[#__RefHeading__2112_1041987972 Durée de vie de la carte SD :29]
+
+[#__RefHeading__4303_97860895 Conclusion,30]
+
+[#__RefHeading___Toc2900_897401352 Fichiers sources31]
+
+[#__RefHeading___Toc2902_897401352 Licence31]
+
+[#__RefHeading___Toc2904_897401352 Bibliographie31]
+
+[#__RefHeading___Toc2906_897401352 webographie31]
+
+[#__RefHeading___Toc2908_897401352 Rédaction en langue française31]
+
+[#__RefHeading___Toc2910_897401352 VoLAB31]= Problématique =
+VORSurv est l'un des projets VoLAB. Il fait partie d'une grande liste, collée sur l'une des portes du lab, pour quelle soit visible et lisible pour tous les adhérents&nbsp;: les jeunes et les vieux. 
+
+
+<center>[[Image:Liste-Projets-Volab.JPG]]</center>
+
+= Le cahier des charges  =
+La version initiale du cahier des charges se résume comme suit:
+
+Conception et réalisation d'un système, '''''Made in VoLAB''''', capable de répondre aux principaux besoins suivants&nbsp;:
+
+* Superviser, en temps réel, l'entrée principale du VoLAB, depuis n'importe quel poste du réseau local 
+* Détecter et signaler toute intrusion au VoLAB et être capable de conserver les traces (images, date et heure) d'une éventuelle infraction dans un endroit sécurisé physiquement éloigné.
+* Envoyer des messages d'alarme, par SMS, à une liste prédéfinie d'adhérents, en cas d'intrusion durant les heures de fermeture du VoLAB
+
+'''''Made in VoLAB&nbsp;'''''? 
+
+* Réalisation d'un projet, l'un de la liste des projets inscrits sur le tableau, et de le personnaliser, en s’appuyant sur les outils, les ressources internes et les compétences des adhérents de VoLAB 
+* Echanger et partager le savoir et faire participer le maximum d’adhérents
+
+Comme c'est le cas pour tout nouveau adhérent, la fameuse liste de projets de VoLAB m'a été présentée dès le premier jour par Joel et Pière, en me proposant, si j'étais intéressé, de prendre la responsabilité de l'un des projets.
+
+
+== Analyse du cahier des charges: ==
+D'après l'analyse préliminaire du cahier des charges, le travail demandé consiste à concevoir et réaliser un système capable d'assurer les fonctionnalités suivantes 
+
+* Supervision de la porte d'entrée du VoLAB depuis n'importe quel poste du réseau 
+* Signaler toute éventuelle intrusion, '''uniquement''', durant les heures de fermeture du VoLAB
+* Envoyer des SMS d'alerte uniquement au numéros de portables d'une liste prédéfinie facilement modifiable, à télécharger depuis un site sécurisé.
+* Sauvegarder une copie des traces (Images, date et heure) sur un serveur distant et sécurisé.
+
+= Important =
+Vous pouvez réaliser le même système chez vous, par vous même, toutefois, nous attirons l'attention sur l'éventuel risque lors des tests de la partie commande. 
+Dans notre cas, les deux fils, phase et neutre, du câble d'alimentation 230V du projecteur sont commandés par le relais piloté par la carte Raspiberry. Vous devez s'assurer de la conformité de votre câblage avant d'entamer les tests de cette partie.
+
+<center>[[Image:Danger.JPG]]</center>
+
+= Matériel utilisé =
+* 
+** Un Raspberry Pi modèle B
+** Une carte SD 8GO
+** Module caméra PI
+** Modem 3/4G avec une carte SIM (SMS illimité de préference)
+** Leds : couleur rouge & verte
+** Résistances: 1K
+** Relais 5V 
+** Detecteur de mouvement (IR)
+** Bouton poussoir
+** Transitor BC337
+** Diode 1N4000Boitier (conçu et fabrique par VoLAB)
+
+= Configuration du système =
+== Preparation de la carte Raspberry ==
+=== Etape 1: Préparation de la carte SD  ===
+La première étape consiste à la préparation de la carte SD et l’installation de l’image du système d’exploitation 
+
+1 – Télécharger et installer le logiciel Sdformater&nbsp;&nbsp;&nbsp;&nbsp; 
+
+2 – Télécharger et installer le logiciel&nbsp; 
+
+3 – Télécharger l’image de votre OS depuis&nbsp; [http://www.raspberrypi.org/ http://www.raspberrypi.org]
+
+
+=== Etape 2: Configuration du système ===
+Dès l'insertation de la carte SD et le premier démarrage du système sur le Raspberry, il faut passer à sa configuration en utilisant la commande raspi-config :
+
+'''''sudo raspi-config'''''
+
+- Selection de vos parametres régionales:
+
+* Langue,
+* Clavier
+* Fissseau horaire
+
+- Activation de l'utilisation du caméra RP
+
+Pensez è redamarrer le système pour s'assurer de la bonne prise en compte de votre nouvelle configuration.
+
+'''''sudo reboot'''''
+
+= Installation des logiciels necessaires =
+== Motion:  ==
+C'est un logiciel de surveillance pour rasbian, simple à utiliser, qui offre la possibilité de faire de la védio-surveillance et la diffusion en ligne, en temps réel, des images prises par le système.
+
+En comparent la toute dernière images avec la nouvelle image prise, Motion est capable de détecter tout éventuel mouvement.
+
+On trouve plusieurs sites internet qui expliquent très bien l'installation et la configuration de Motion.
+
+Parmi ces sites, on peut citer: [http://www.pihomeserver.fr/2013/05/29/raspberry-pi-home-server-video-surveillance-avec-motion/ http://www.pihomeserver.fr/2013/05/29/raspberry-pi-home-server-video-surveillance-avec-motion/]
+
+Le paragraphe suivant décrit la démarche suivie lors de la réalisation de VORSurv
+
+* 
+** 
+*** 
+**** 
+***** '''''sudo apt-get update'''''
+***** '''''sudo apt-get upgrade'''''
+***** '''''sudo apt-get install motion '''''
+
+Comme nous allons utiliser la caméra RPI, on doit telecharger la version de Motion compatible avec ce type de caméra
+
+* 
+** 
+*** 
+**** 
+***** '''''wget http://raspbian-france.fr/download/motion-mmal.tar.gz'''''
+***** '''''tar zxvf motion-mmal.tar.gz'''''
+***** '''''mv motion /usr/bin/motion'''''
+***** '''''mv motion-mmalcam.conf /etc/motion.conf'''''
+
+A l'issue de cette étape, on doit attribuer les bons droits d'accès pour éviter les erreurs lors du lancement du programme.
+
+
+* 
+** '''''sudo chmod 664 /etc/motion.conf'''''
+** '''''sudo chmod 755 /usr/bin/motion'''''
+** '''''sudo touch /tmp/motion.log'''''
+** '''''sudo chmod 775 /tmp/motion.log'''''
+
+Avant le lancement du programme, on doit revoir le fichier de configuration, en fonction de la configuration souhaiter et s'assurer que le module Camera RPI est bien installé. 
+
+<center>[[Image:RPI+Camera.JPG]]</center>
+=== Installation du module caméra RPI ===
+Une excellente video résume bien les étapes d'installation du module caméra de Raspberry, ainsi que les précautions à prendre en considération, lors de cette opération, se trouve sur le lien suivant:
+
+https://www.raspberrypi.org/help/camera-module-setup/
+
+=== Paramétrage de Motion ===
+Pour le cas du système de VORSurv, nous avons procèdé ainsi:
+
+A) – Activation de l'option start_motion_daemon pour autoriser la lancement de motion dès le démarrage du système sans aucune intervention. Pour faire, il suffut d'éditer le fichier '''''/etc/default/motion''''' et décommenter la ligne : '''''start_motion_daemon=yes '''''B) Mise à jour du fichier de configuration '''''/etc/motion.conf '''''comme suit:
+
+'''''daemon on'''''
+
+'''''logfile /tmp/motion.log'''''
+
+'''''width 1280'''''
+
+'''''height 720'''''
+
+'''''framerate 2'''''
+
+'''''pre_capture 2'''''
+
+'''''post_capture 2'''''
+
+'''''ffmpeg_video_codec msmpeg4'''''
+
+'''''stream_localhost off'''''
+
+
+A la fin de cette étape, il faut rebooter le système pour s'assurer du lancement automatique de Motion ou procèder comme suit pour lancer son éxecution manuellement:
+
+'''''sudo service motion start'''''
+
+En cas d'erreur, il faut vérifier le fichier:
+
+'''''/tmp/motion.log'''''
+
+
+Pour pouvoir diffuser les images, les images prises doivent être accessibles depuis un serveur web ou installer son propre serveur web.
+
+Dans le cas de VORSur, nous avons préféré l'installation un serveur web sur le Raspberry et développer nos propres interfaces pour sécuriser l'accès aux cameras et d'autres fonctionnalités telles que la désactivation ou l'activation d'envoi d'alertes via une interface web, changement du mot de passe administrateur, etc..
+
+Pour ça, nous avons installer un serveur web très light ainsi que le langage PHP
+
+== Serveur Web et PHP:  ==
+Pour pouvoir diffuser, en temps réel, les images prises par VORSurv, nous avons opté pour l'installation d'un serveur web capable de diffuser le flux d'images à n'importe quel poste de notre réseau local. Un mot de passe sera demandé bien évidement..!
+
+Aussi, nous avons développé des interfaces, accécibles depuis le serveur web, en utilisant le langage PHP, pour le paremétrage et la configuration de VORSURv.
+
+Le but essentiel est de donner la main aux personnes autorisées, de changer le mode de fonctionnement, consulter les logs et visualiser les images depuis n'importe qu'elle lieu. 
+
+
+'''Serveur WEB Lighttpd''':
+
+Comme le besoin se limite à la diffusion des images pour quelques postes de travail, nous avons installé Lighttpd qui est un serveur web très légèr qui s'adapte parfaitement à notre besoin.
+
+'''''sudo apt-get install lighttpd '''''
+
+=== Installation de PHP ===
+'''''sudo apt-get install php5-common php5-cgi php5'''''
+
+Vérifier la configuration du serveur web, en particulier le répertoire racine "root", des documments accessibles depuis les postes clients
+
+
+Configuration pour la prise en compte des script php et droits d'accès au répertoire
+
+'''''sudo lighty-enable-mod fastcgi-php'''''
+
+'''''sudo chown www-data:www-data /var/www'''''
+
+'''''sudo chmod 775 /var/www'''''
+
+Attribution des droits du groupe www-data et pi
+
+'''''sudo usermod -a -G www-data pi'''''
+
+
+A la fin de ces étapes, il faut relancer lighttpd pour s'assurer de la prise en compte de ces nouvelles modifications et tester le bon fonctionnement du serveur web. 
+Pour effectuer un test, il suffit de taper:
+
+[http://127.0.0.1/ http://127.0.0.1/]&nbsp;ou&nbsp;[http://localhost/ http://localhost/]. '''''
+
+
+'''''http://@IP/ '''''où @IP est l'adresse IP du serveur web
+
+
+Aussi, il faut s'assurer du fonctionnement du PHP : Il suffit d'éditer le simple fichier texte suivant, à placer dans le répertoire racine du serveur web: /var/www/test.php
+
+'''''&nbsp;&nbsp;<nowiki><?PHP</nowiki>'''''
+
+'''''&nbsp;&nbsp;phpinfo()'''''
+
+'''''&nbsp;&nbsp;?>'''''
+
+== Envoi de messages d'alerte sur telephone mobile: ==
+=== Gammu-smsd:  ===
+Selon le cahier des charges de VORSurv, l'envoi de messages d'alerte, suite à une intrusion durant la fermeture du VoLAB, se fait par SMS.
+
+Les destinataires sont les adhérents qui font d'une liste variable de numéros de mobiles disponible sur un serveur internet bien évidement sécurisé.. 
+
+Pour pouvoir envoyer un SMS, VORSurv utilise le logiciel libre gammu.
+
+Installation & configuration de GAMMU:
+
+Etape 1: Inserer la carte SIM dans le dongle 3G
+
+Etape 2: Inserer le dongle 3G dans l'un des ports USB du Raspberry
+
+Installer gammu et gammu-smsd
+
+'''''sudo apt-get install gammu gammu-smsd'''''
+
+Déterminer le port USB utilisé par le modem 3G en utilisant la commande 
+
+'''''dmesg '''''
+
+Le numéro du port usb utilisé, ttyUSB0 ou ttyUSB1, sera utilisé pour la mise à jour du fichier de configuration '''''/etc/gammu-smsd'''''
+
+ <nowiki>[</nowiki>'''''gammu]'''''
+ '''''<nowiki>#Please configure this!</nowiki>'''''
+ '''''port = ''/dev/ttyUSB0'''
+ '''''connection = at19200'''''
+ '''''<nowiki># Debugging</nowiki>'''''
+ '''''<nowiki>#logformat = textall</nowiki>'''''
+
+
+Si un code pin de la carte SIM est utilisé, il faut le préciser aussi
+
+pin = XXXX 
+
+Après la sauvegarde de vos modification, il faut relancer le service
+
+'''''sudo gammu-smsd restart'''''
+
+Afin de s'assurer que le modem est bien installé et que la configuration a été bien prise en compte, on doit faire un test comme suit:
+
+'''''gammu-smsd-inject TEXT NUMERO -text "MESSAGE"''''' 
+
+A noter que VORSur utilise une clef USB (Modem 3G), initialement son utilisation est bloquée avec un seul opérateur et pour laquelle Pierre a réussi à lui redonner sa liberté . Du fait, ce modem peut utiliser n'importe quel opérateur mobile.
+
+<center>[[Image:Modem-3G.JPG]]</center>
+
+= Vérification : =
+Avant de passer aux étapes suivantes, on doit faire le Check-list pour s'assurer du bon fonctionnement de tous les logiciels installés.
+
+== Fonctionnement du serveur web : ==
+Tapez l'adresse '''''http://@IP/''''' depuis un navigateur d'un poste du réseau local où @IP est l'adresse IP du serveur (utiliser la commande '''''ifconfig '''''pour connaître l'adresse IP de l'interface réseau du serveur 
+
+Si tout va bien on aura la base web suivante&nbsp;:
+
+<center>[[Image:Itworks.JPG]]</center>
+
+== Test du fonctionnement du PHP ==
+Tapez le lien '''''http://@ip/test.php''''' depuis le navigateur d'un poste connecté au réseau local.
+
+Si tout va bien, on aura la page suivante&nbsp;:
+
+
+<center>[[Image:Phptest.JPG]]</center>
+
+== Motion et diffusion des images en temps réel ==
+Tapez le lien '''''http:'''''[mailto://@ip //@ip]''''':8081/ '''''depuis le navigateur d'un poste connecté au réseau local. 
+
+Si tout va bien, une image de l'objet, en face de la camera, sera affichée dans le navigateur, probablement, avec un petit décalage (latence) dans le temps qui dépendra de la qualité de la liaison réseau et le temps de traitement de l'image.
+
+Pour le cas de VORSurv&nbsp;:
+
+
+=== Test du fonctionnement de gammu-smsd ===
+Depuis la ligne de commande, localement, ou depuis l'interface ssh, lancée depuis un autre poste, envoyez un simple message à un numéro de portable comme suit&nbsp;:
+
+'''''gammu-smsd-inject TEXT NUMERO -text "MESSAGE"''''' 
+
+Si tout va bien, le message envoyé sera réceptionné, après quelques secondes ou peut-être plus, tout dépend des opérateurs mobile..&nbsp;! 
+
+Si tous les tests sont concluants, à partir de cette étape on peut commencer la configuration du système et répondre aux exigences du cahier des charges de VORSur
+
+= Interfaces GPIO =
+Afin de satisfaire les conditions du cahier des charges, nous aurons besoin de certaines Entrées/Sorties. 
+
+Pour assurer ses fonctionnalités, VORSurv utilise quelques Entrées/ Sorites GPIO du Raspberry pour&nbsp;:
+
+Lire le mode souhaité (Bouton poussoir)
+
+Indiqué le mode de fonctionnement&nbsp;: Local ou Distant (Allumer des Leds rouge & verte)
+
+Acquisition du signal envoyé par le détecteur IR
+
+Actionner le relais de sortie pour allumer le projecteur LED de 20W/220V pour obtenir des images de meilleure qualité
+
+Pour cela, nous allons paramétrer le système afin de pouvoir utiliser ces entrées/sorties en mode ligne de commande. Le lien suivant [http://wiringpi.com/download-and-install/ http://wiringpi.com/download-and-install/] est un site complet qui explique, en détails avec des exemples, l'utilisation des GPIO d'un Raspberry
+
+On commande par l'installation de l'utilitaire git
+
+sudo apt-get install git-core
+
+sudo apt-get install git-core
+
+'''''sudo apt-get install git-core'''''
+
+'''''git clone git://git.drogon.net/wiringPi'''''
+
+'''''cd wiringPi'''''
+
+'''''git pull origin'''''
+
+'''''cd wiringPi'''''
+
+'''''sudo ./build'''''
+
+
+A partir de cette étape, il est possible d'utiliser les GPIO de la carte Raspberry pour lire les entrées ou écrire des sorties
+
+A noter que dans le but de ne pas limiter l’utilisation du Raspberry Pi de VoLAB&nbsp; uniquement à l’application&nbsp; VORSurv,&nbsp; nous avons décidé d’optimiser la conception du système afin permettre la réalisation d’autres applications et de les faire tourner sur le même système.
+
+
+Parmi les applications déjà identifies pour qu’elles soient installées sur&nbsp; le même Raspberry PI&nbsp;:
+
+VORSms&nbsp;: Une application pour l’envoi des SMS à une liste d’adhérents (depuis un fichier) ou des SMS «&nbsp;prédéfinis&nbsp;» tel que l’ouverture du VoLAB, etc 
+
+
+= Architecture du système =
+Sans aucun doute, notre génération a beucoup de chance... 
+
+Aujourd’hui, pour quelques euros, nous pouvons avoir un ordinateur de la taille de la carte bancaire, plus puissant qu'un PDP11 utilisé par Ken Thompson et Dennis Ritchie pour développer le langage C, 
+
+<center>[[Image:Ken%20et%20Dennis.JPG]]</center>
+
+'''Remarque''': Un PDP 11 avait 24KO: 16KO utilisé par l'Operating System et 8KO à partager entre tous les utilisateurs..!VORSurv utilise un Raspberry, model B, d'une CPU de 700GHz et une RAM de 512MO. 
+<center>[[Image:Denis-ke.JPG]]</center>
+<center>PDP 11 : Ken & Dennis </center>
+Toutefois, afin de garantir une meilleure disponibilité du système, nous avons opté pour l’utilisation de langages''' '''de programmation «&nbsp;basique&nbsp;», non exigeants en terme de ressources CPU, RAM etc .. 
+
+La configuration et le paramétrage du système sera fait uniquement en utilisant des scripts shell (bash), les langages AWK, Perl et PHP pour la programmation des interfaces web (Administration du système, accès à distance, etc..).
+
+Dans un souci d’optimisation du temps CPU, le système sera composé d’un ensemble de processus qui s’exécutent en &nbsp;parallèle, en interaction permanente via de simples pipes de communication, fichiers texte, pour échanger et partager l’information des ressources communes. 
+<center>[[Image:Programme%20principal.JPG]]</center>
+== Processus  1 : Motion ==
+Motion est un logiciel puissant capable de prendre des images, de les traiter et de&nbsp; signaler tout changement aux différences constatées entre deux prises successives.
+
+L’action est prise en fonction du point de consigne&nbsp;fixé dans le fichier de configuration. Dans notre cas, le nombre de 1500 pixels, valeur par défaut, a été conservé. 
+
+Une différence de plus de 1500 pixels entre deux images sera considérée comme un événement à signaler&nbsp; (Voir configuration plus loin)
+
+== Processus 2 : Scan GPIO ==
+VORSur a été conçu pour un fonctionnement permanent&nbsp;: Les messages d’alerte à envoyer par SMS seront générés et envoyés &nbsp;uniquement pendant &nbsp;les heures de fermeture du VoLAB si le mode Distant est activé. 
+
+
+Afin de déterminer le mode sélectionné, le système est équipé d’un bouton poussoir qui permet de sélectionner le mode de fonctionnement&nbsp;: Si le bouton poussoir , connecté aux entrées GPIO du Raspberry, est&nbsp; actionné pendant une période de 3 secondes, le système bascule d’un mode de fonctionnement à l’autre (Local vers Distant ou Distant vers Local).
+
+
+Un bouton poussoir est raccordé à l'une des pins du GPIO du Raspberry scannée en permanenece par le script pour informer le programme principal de tout éventuel changement d'état.
+
+
+<center>[[Image:VORSurv-distant.JPG]]</center>
+<center>'''VORSurv – Mode "Distant" '''</center>
+
+
+Le programme Scan GPIO s’exécute en permanence pour surveiller la position du bouton poussoir et mettre à jour le fichier «&nbsp;mode.txt&nbsp;» en fonction du mode sélectionné.
+
+Si le mode Local est sélectionné, le système désactive l’envoi de message d’alerte et &nbsp;un témoin est allumé pour attirer l’attention.
+
+<center>[[Image:Vorsur-local.jpg]]</center>
+
+<center>'''VORSurv – Mode "Local" '''</center>
+
+Cette Led verte est l'une des pins GPIO déclarée comme sortie et raccordée à travers une petite résistance comme illustré dans le schéma suivant:
+<center>[[Image:resistance.JPG]]</center>
+
+A noter que la sélection du mode de fonctionnement du système se fait soit manuellement par l’utilisation du bouton poussoir, décrit ci-dessus, ou via l’interface web protégée par un mot de passe réservée uniquement aux personnes autorisées (décrite plus loin).
+
+= Sensibilité de VORSurv =
+L'une des premières difficultés rencontrée lors de la réalisation du système est sa sensibilité: Comme l’entrée 
+
+principale du VoLAB se trouve du coté de la façade vitrée, tout mouvement ou passage à proximité de l’entrée principale, coté extérieur, a été signalé par le système. 
+
+<center>[[Image:Photo-passage-1.JPG]]</center>
+
+Plusieurs messages d'alertes ont été envoyés très tôt ou durant la nuit dès qu'un passage devant la porte est détecté.
+
+<center>[[Image:Photo-passage-2.JPG]]</center>
+
+== Solution:  ==
+Pour palier à ce problème de fausse détection d'intrusion, un détecteur Infra-Rouge a été installé. Comme les rayons IR ne traversent pas la vitre, ce capteur ne détecte que les intrusions réelles. Un mouvement détecté ne peut être déclaré comme intrusion que s'il est signalé par les deux systèmes en même temps (Motion ET capture infra-rouge).
+
+Le détecteur infra rouge a été installé et connecté à l’une des entrées GPIO du Raspberry PI qui sera scannée en permanence par le programme principal du système.
+
+
+<center>[[Image:Detecteur%20IR-2.JPG]]</center>
+<center>Détecteur de mouvement – Ifra Rouge</center>
+
+
+Seulement la sortie TOR du module a été raccordée à l’une des entrées GPIO du raspberry PI après un ajustement manuel pour limiter la sensibilité du détecteur en fonction de la distance de proximité.
+
+La génération d’une alerte se fait uniquement dans le cas où le mouvement détecté est&nbsp; signalé par les deux systèmes au même temps&nbsp;: Motion & Détecteur infrarouges
+
+L'acquisition du signal du capteur de mouvement InfraRouge se fait via l'une des pin GPIO selon le principe suivant:
+
+<center>[[Image:Detddddecteur%20IR-2.JPG]]</center>
+<center>'''Raccordement du capteur de mouvement'''</center>
+
+Le signal Data a été raccordé à l'une des entrées/sorties GPIO qui sera scrutée en permanence par le programme principal 
+
+Le programme Scan GPIO surveille en permanence les entrées GPIO et mis à jour les deux&nbsp; fichiers suivants&nbsp;:
+
+- mode.txt&nbsp;: Msie à jour en cas de changement de mode via le bouton poussoir
+
+- mouv.txt&nbsp;: Mise à jour en cas de mouvement détecté par le système infrarouges&nbsp;
+
+Ces deux fichiers sont utilisés aussi par d’autres processus pour décider l’action à prendre en fonction de la situation comme suit&nbsp;:
+
+
+'''A - Mouvement signalé par Motion seulement&nbsp;'''
+
+Actions&nbsp;:
+
+Sauvegarder l’image
+
+Envoi via ftp
+
+Mise à jour du fichier VORSur.log
+
+'''B - Mouvement signalé par Motion et le détecteur d’infrarouges&nbsp;'''
+
+Actions&nbsp;:
+
+Allumer le projecteur pour avoir une image de meilleure qualité
+
+Sauvegarder l’image
+
+Envoi via ftp
+
+Mise à jour du fichier mouv.txt
+
+Mise à jour du fichier VORSur.log
+
+Génération d’une alerte et mise à jour du fichier SMS. A noter que l’envoi de SMS sera décidé par le programme principal en fonction de d’autres conditions, principalement, la position actuelle ou le mode de fonctionnement sélectionné par l’administrateur système via l’interface web
+
+
+Pour des raisons pratiques, pour éviter le réglage du position du caméra lors d'utilisation du bouton de changement de mode de fonctionnement ainsi pour faciliter l'orientation du détecteur de mouvement, une partie de VORSurv a été assemblé dans un deuxième boitier avec une liaison d'extension utilisant un cable DB9 récupéré.
+
+<center>[[Image:Detecteddddur_IR-2.JPG ‎]]</center>
+<center>'''Détecteur IR + Bouton "Mode de fonctionnement"''' </center>
+
+<center>[[Image:DetecteurdddR-2.JPG]]</center>
+<center>'''Extension de la liaison entre les deux boitiers'''</center>
+
+Physiquement, la liaison entre les deux boîtiers a été réalisée en utilisant un câble RS232 pour avoir plus de souplesse lors de la fixation des boîtiers et les tests de mise au point.
+
+
+Aussi, nous avons préparé une extension qui sera dévoilée dans l'un de nos prochains articles ... A suivre ..!
+<center>[[Detecteur IddddR-2.JPG]]</center>
+<center>'''RFID - Extension '''</center>
+
+= Programme principal =
+Le rôle du programme principal est de synchroniser les différents processus ainsi que l’exécution des actions suivantes en fonction des conditions prédéfinies&nbsp;:
+
+1 - Allumer le projecteur, sauvegarder les traces sur le serveur sécurisé, indiqué dans les fichiers de configuration et envoyer un message d’alerte intrusion, à tous les membres de VoLAB de la liste si les conditions suivantes sont vérifiées&nbsp;:
+
+- Mode de fonctionnement = Distant
+
+- Mouvement signalé simultanément par Motion et Détecteur IR
+
+2 – Après l’envoi de message d’alerte, maintenir l’alimentation du projecteur pendant toute la durée du mouvement afin d’assurer une meilleure qualité des images
+
+3 – Initialisation des variables et fichiers partagés entre tous les programmes
+
+4 - Gestion de l'espace mémoire utilisé comme répertoire de travail par Motion
+
+= Qualité d’image  =
+Comme nous utilisons un simple module de camera RPI (voir photo), dans le souci d'avoir des images de meuilleure quality, un projecteur LED 220V d'une puissance de 20W est raccordé au système. Il sera commandé par l'une des sortie GPIO du système via un relais électomécanique qui sera actionnée par le programme principal si les conditions sont vérifiées.
+
+<center>[[Image:Projecteur%20LED%20-%2020W.JPG]]</center>
+Le montage suivant a été réalisé pour actionner ce projecteur&nbsp;:
+
+
+<center>[[Image:Relais-sortie%20220V.JPG]]</center>
+<center>'''Raccordement Terre-Phase-Neutre du projecteur'''</center>
+
+
+Le montage a été réalisé selon le schéma de principe suivant&nbsp;:
+
+<center>[[Image:Deteeecteur%20IR-2.JPG]]</center>
+
+Remarque: Nous avons adapté le montage en utilisant un relais qui possède deux sorties au lieu d'une pour éviter tout risque lors de câblage du câble 230VAc
+Le montage final est le suivant:
+<center>[[Image:Dezzztecteur%20IR-2.JPG]]</center>
+'''''Attention: Tension 220V!!! Si vous comptez réaliser ce montage, par vous même, il faut faire très attention au risque électrocution lors de vos tests'''''
+
+= Interface web de configuration et de paramétrage  =
+Pour la gestion du mode de fonctionnement ainsi que la diffusion des images en temps réel nous avons développé nos propres interfaces, très simples et pratiques, en utilisant le langage PHP avec des scripts shell intégrant des commandes Awk pour effectuer quelques opérations de recherches, comparaison et remplacement dans des fichiers textes. 
+
+
+<center>[[Image:Interface%20web%20-%201.JPG]]</center>
+<center>'''Interface Web – Accès au système VORSur'''</center>
+
+
+<center>[[Image:Interface%20web%20-%202.JPG]]</center>
+<center>'''Interface Web – Menu VORSurv'''</center>
+
+
+<center>[[Image:Interface%20web%20-%204.JPG]]</center>
+<center>'''Interface Web – Diffusion des images en temps réel'''</center>
+
+<center>[[Image:Interface%20web%20-%203.JPG]]</center>
+<center>'''Interface Web – Mode de fonctionnement'''</center>
+
+<center>[[Image:Interface.JPG]]</center>
+<center>'''Interface Web – Gestion du mot de passe '''</center>
+== Bonnus !! ==
+Cette interface ne fait pas partie du cahier des charges de VORSurv. Durant la phase test, nous avons développé cette interface pour l'envoi de SMS qui offre les trois possibilités suivantes pour envoyer un ou des SMS
+
+- Envoi individuel : Un numéro de portable et le message à envoyer seront demandés
+
+- Envoi groupé: Le Message à envoyer ainsi que le chemin du fichier textes contenant la liste des portables de destinataires seront demandés
+
+- Envoi d'un message prédéfinie: Fonctionnalité propre à VoLAB  
+
+Le sujet fera l'objet d'un autre article. Si le sujet vous intéresse envoyer moi un petit email
+<center>[[Image:Interface%20web%20-%206.JPG]]</center>
+
+<center>'''Interface Web – Plate-forme d'envoi de SMS'''</center>
+
+= Conception et fabrication des boîtiers: =
+Au début, l'exercice était très difficile, pour la simple raison, personnellement, je n'avais aucune expérience dans le monde de la CAD et l'impression 3D. 
+
+Grace à un super tuto du wiki de l'association, qui se trouver à l'adresse suivante&nbsp;: 
+
+[http://www.vorobotics.com/wiki/index.php?title=Atelier_d'initiation_à_la_modélisation_3D%20 Cliquez ici]
+
+Et une excellente vidéo «&nbsp;Made in VoLAB&nbsp;» , qui se trouve sur la chaine du VoLAB que je recommande fortement à tous les débutants dans ce domaine: [https://www.youtube.com/watch?v=X2Ydloyc3xM https://www.youtube.com/watch?v=X2Ydloyc3xM]
+
+
+Et avec l'aide de Pierre et Joël, j'ai réussi à réaliser mes premières impressions des deux boîtiers&nbsp;celui de la caméra et du détecteur IR et le bouton de sélection du mode de fonctionnement en utilisant l'imprimante 3D du VoLAB
+
+J'ai utilisé le logiciel FreeCad téléchargeable depuis le lien suivant: http://www.freecadweb.org/wiki/?title=Download/fr
+
+<center>[[Image:Imprimante-3D.JPG]]</center>
+= Performances =
+== Ressources: CPU & RAM ==
+Après plusieurs jours de fonctionnement permanent, VORSur exploite peu de ressources du système du Raspberry ce qui va nous permettre de le faire cohabiter avec d'autres nouveaux projets.
+
+En plein traitement, l'ensemble des programmes de VORSur occupe 15&nbsp;% des ressources CPU et moins de 110MOctet de RAM de la carte Raspberry
+
+<center>[[Image:Imrefffprimante-3D.JPG]]</center>
+
+== Durée de vie de la carte SD : ==
+La durée de vie d'une carte SD est limitée en fonction des nombres d'écritures. Pour garantir une longue durée de vie, la conception de VORSurv tient compte de ce paramètre&nbsp;:
+
+Le répertoire de travail, utilisé par le logiciel Motion pour effectuer le traitement des images, en temps réel, est monté dans une partie de la mémoire vive. Un gain de temps d'accès considérable constaté lors de nos tests.
+
+
+Comme indiqué dans cette image, le répertoire /var/www/Images est monté dans «&nbsp;tmpfs&nbsp;» une partie de la mémoire vive du Raspberry. Le programme principal contrôle le volume de cette partie, dès l'atteint d'un volume indiqué dans les paramètres de configuration, le programme principal vide cette partie de la mémoire en transférant les images vers le NAS.
+
+En cas d'intrusion détectée, les images seront envoyée aussi vers un autre serveur sécurisé.
+
+Pour pouvoir effectuer ce genre de manipulation, il faut éditer le fichier «&nbsp;fstab&nbsp;», comme suit, pour indiquer au système d'utiliser une partie de sa RAM pour un répertoire ordinaire.
+
+<center>[[Image:ImrefffpriLLLLmante-3D.JPG]]</center>
+<center>Fichier fstab</center>
+
+
+'''''Attention'''&nbsp;: Pour effectuer ce genre de manipulations, il faut faire très attention, car une erreur de frappe ou un caractère en plus qui traîne dans ce fichier, risque de bloquer votre complètement votre système sans pouvoir le redémarrer. Pensez à faire une sauvegarde de l'image de votre carte SD.''
+
+= Conclusion, =
+C'est une petite belle expérience que je recommande fortement à tous les nouveaux et les anciens adhérents&nbsp;: Il reste plusieurs items dans la liste des projets du VoLAB.
+Nous allons mettre en ligne, pour téléchargement libre, tous les programmes sources, exceptés quelques fichiers contenant des paramètres sensibles.
+Pour toute demande de renseignement sur le fonctionnement du VoLAB, envoyez votre email à contact@vorobotics.com
+
+Une question ou un commentaire concernant ce sujet, vous pouvez me contacter à djamel@vorobotics.com
+
+= Fichiers sources =
+= Licence =
+Ce document est mis à disposition selon les termes de la&nbsp;[http://creativecommons.org/licenses/by/4.0/ Licence Creative Commons Attribution 4.0 International]. 
+
+[[Image:CC88x31.jpg]]Paternité 'by' :''L'œuvre peut être librement utilisée, à la condition de l'attribuer à l'auteur en citant son nom.'' 
+
+
+Note aux auteurs de documents du VoLAB, Vous avez la possibilité de changer de licence. Mais ce serait bien de rester libre et ouvert. Encore une fois ceci est une recommandation et pas une obligation.
+
+= Bibliographie =
+= webographie =
+[http://fr.wikipedia.org/wiki/Licence_Creative_Commons http://fr.wikipedia.org/wiki/Licence_Creative_Commons]
+
+[http://wiringpi.com/download-and-install/ http://wiringpi.com/download-and-install/]
+
+= Rédaction en langue française =
+Partant du constat de terrain qu'une énorme masse d'information concernant les sujets qui nous intéressent comme entre autres l'impression 3D n'étaient disponibles que dans la langue de Shakespeare et que de nombreuses personnes dans notre entourage ne maîtrisaient pas la dite langue et soucieux de diffuser encore plus l'information, nous avons pris le parti, au VoLAB, de rédiger nos documents de préférence en langue française.
+
+= VoLAB =
+Un mot sur le VoLAB. VoLAB est un fablab implanté à environ 30km au nord-ouest de Paris dans la commune de Vauréal dans l'agglomération de Cergy Pontoise. Il est animé par l'association VoRoBoTics.
+
+Site internet [http://www.vorobotics.com/ www.vorobotics.com]
