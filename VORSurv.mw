@@ -158,8 +158,10 @@ Comme nous allons utiliser la caméra RPI, on doit telecharger la version de Mot
 **** 
 ***** '''''wget http://raspbian-france.fr/download/motion-mmal.tar.gz'''''
 ***** '''''tar zxvf motion-mmal.tar.gz'''''
-***** '''''mv motion /usr/bin/motion'''''
-***** '''''mv motion-mmalcam.conf /etc/motion.conf'''''
+***** '''''sudo mv motion /usr/bin/motion'''''
+***** '''''sudo mv motion-mmalcam.conf /etc/motion.conf'''''
+
+Remarque: Pour l’exécution de certaines commandes, il faut être "root" ou utiliser la commande "sudo"
 
 A l'issue de cette étape, on doit attribuer les bons droits d'accès pour éviter les erreurs lors du lancement du programme.
 
