@@ -133,8 +133,12 @@ D'après l'analyse préliminaire du cahier des charges, le travail demandé cons
 * Sauvegarder une copie des traces (Images, date et heure) sur un serveur distant et sécurisé.
 
 = Important =
+
 Vous pouvez réaliser le même système chez vous, par vous même, toutefois, nous attirons l'attention sur l'éventuel risque lors des tests de la partie commande. 
-Dans notre cas, les deux fils, phase et neutre, du câble d'alimentation 230V du projecteur sont commandés par le relais piloté par la carte Raspiberry. Vous devez s'assurer de la conformité de votre câblage avant d'entamer les tests de cette partie.
+
+Dans notre cas, les deux fils, phase et neutre, du câble d'alimentation 230V du projecteur sont commandés par le relais piloté par la carte Raspiberry. 
+
+Vous devez s'assurer de la conformité de votre câblage avant d'entamer les tests de cette partie.
 
 <center>[[Image:Danger.JPG]]</center>
 
