@@ -571,7 +571,7 @@ Il y un risque de griller la carte Raspberry ou créer un court-circuit ..
 Si vous comptez réaliser ce montage, par vous même, il faut faire très attention au risque électrocution lors de vos tests
 Vérifiez bien qu'il n'y a pas de court-circuit ou retour vers les pins GPIO de la carte Raspberry
 
-<center>[[Image:electricite.JPG]]</center>
+<center>[[Image:electrocute.JPG]]</center>
 
 = Interface web de configuration et de paramétrage  =
 Pour la gestion du mode de fonctionnement ainsi que la diffusion des images en temps réel nous avons développé nos propres interfaces, très simples et pratiques, en utilisant le langage PHP avec des scripts shell intégrant des commandes Awk pour effectuer quelques opérations de recherches, comparaison et remplacement dans des fichiers textes. 
