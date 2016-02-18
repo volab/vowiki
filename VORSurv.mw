@@ -117,7 +117,11 @@ Pensez è redémarrer le système pour s'assurer de la bonne prise en compte de 
 
 Depuis l'interface Raspi-config
 <center>[[Image:raspi-reboot.JPG]]</center>
+
 ou 
+
+Depuis la ligne de commande:
+
 '''''sudo reboot'''''    
 
 
