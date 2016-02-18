@@ -569,10 +569,11 @@ Le montage final est le suivant:
 
 
 
-Attention: Tension 220V!!! 
+Attention: Tension 230VAc!!! 
 
 Si vous comptez réaliser ce montage, par vous même, il faut faire très attention au risque électrocution lors de vos tests
-Vérifiez bien qu'il n'y a pas de court-circuit ou retour vers les pins GPIO de la carte Raspberry
+
+Vérifiez bien qu'il n'y a pas de court-circuit ou de retour vers les pins GPIO de la carte Raspberry
 
 <center>[[Image:electrocute.JPG]]</center>
 
