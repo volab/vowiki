@@ -11,7 +11,8 @@ Relecteur : J.Soranzo
 
 Thème: Vidéo surveillance, GPIO, Commande d'un relais, shell, awk
 
-Projet&nbsp;: VORSurv== <center>'''Table des matières'''</center> ==
+Projet&nbsp;: VORSurv
+== <center>'''Table des matières'''</center> ==
 [#__RefHeading___Toc2884_897401352 VoLAB1]
 
 [#__RefHeading___Toc2886_897401352 Association VoRoBoTics1]
@@ -98,7 +99,9 @@ Projet&nbsp;: VORSurv== <center>'''Table des matières'''</center> ==
 
 [#__RefHeading___Toc2908_897401352 Rédaction en langue française31]
 
-[#__RefHeading___Toc2910_897401352 VoLAB31]= Problématique =
+[#__RefHeading___Toc2910_897401352 VoLAB31]
+
+= Problématique =
 VORSurv est l'un des projets VoLAB. Il fait partie d'une grande liste, collée sur l'une des portes du lab, pour quelle soit visible et lisible pour tous les adhérents&nbsp;: les jeunes et les vieux. 
 
 
