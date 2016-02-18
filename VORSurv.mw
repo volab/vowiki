@@ -181,7 +181,9 @@ https://www.raspberrypi.org/help/camera-module-setup/
 === Paramétrage de Motion ===
 Pour le cas du système de VORSurv, nous avons procèdé ainsi:
 
-A) – Activation de l'option start_motion_daemon pour autoriser la lancement de motion dès le démarrage du système sans aucune intervention. Pour faire, il suffut d'éditer le fichier '''''/etc/default/motion''''' et décommenter la ligne : '''''start_motion_daemon=yes '''''B) Mise à jour du fichier de configuration '''''/etc/motion.conf '''''comme suit:
+A) – Activation de l'option start_motion_daemon pour autoriser la lancement de motion dès le démarrage du système sans aucune intervention. Pour faire, il suffut d'éditer le fichier '''''/etc/default/motion''''' et décommenter la ligne : '''''start_motion_daemon=yes '''''
+
+B) Mise à jour du fichier de configuration '''''/etc/motion.conf '''''comme suit:
 
 '''''daemon on'''''
 
