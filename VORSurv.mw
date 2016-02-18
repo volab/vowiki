@@ -136,11 +136,12 @@ D'après l'analyse préliminaire du cahier des charges, le travail demandé cons
 
 Vous pouvez réaliser le même système chez vous, par vous même, toutefois, nous attirons l'attention sur l'éventuel risque lors des tests de la partie commande. 
 
+<center>[[Image:electricite.JPG]]</center>
+
+
 Dans notre cas, les deux fils, phase et neutre, du câble d'alimentation 230V du projecteur sont commandés par le relais piloté par la carte Raspiberry. 
 
 Vous devez s'assurer de la conformité de votre câblage avant d'entamer les tests de cette partie.
-
-<center>[[Image:electricite.JPG]]</center>
 
 = Matériel utilisé =
 * 
