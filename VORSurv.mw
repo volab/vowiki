@@ -103,13 +103,17 @@ Dès l'insertation de la carte SD et le premier démarrage du système sur le Ra
 
 * Langue,
 * Clavier
-* Fissseau horaire
+* Fuseau horaire
 
 - Activation de l'utilisation du caméra RP
+
+<center>[[Image:raspi-config.JPG]]</center>
 
 Pensez è redamarrer le système pour s'assurer de la bonne prise en compte de votre nouvelle configuration.
 
 '''''sudo reboot'''''
+
+'''Important:''' Le fonctionnement du système dépendra de la bonne prise en compte de l'utilisation de l'interface du caméra
 
 = Installation des logiciels necessaires =
 == Motion:  ==
