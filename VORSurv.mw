@@ -567,7 +567,9 @@ Le montage final est le suivant:
 
 
 Attention: Tension 220V!!! 
+
 Il y un risque de griller la carte Raspberry ou créer un court-circuit ..
+
 Si vous comptez réaliser ce montage, par vous même, il faut faire très attention au risque électrocution lors de vos tests
 Vérifiez bien qu'il n'y a pas de court-circuit ou retour vers les pins GPIO de la carte Raspberry
 
