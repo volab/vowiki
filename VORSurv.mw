@@ -3,15 +3,19 @@
 
 = VoLAB =
 = Association VoRoBoTics =
+
+<center>[[Image:volab.JPG]]</center>
+
 Date : 25/01/2015
 
-Auteur : D.Mebarki
+Auteur : D.Mebarki, djamel@vorobotics.com
 
 Relecteur : J.Soranzo
 
 Thème: Vidéo surveillance, GPIO, Commande d'un relais, shell, awk
 
 Projet&nbsp;: VORSurv
+
 = Problématique =
 VORSurv est l'un des projets VoLAB. Il fait partie d'une grande liste, collée sur l'une des portes du lab, pour quelle soit visible et lisible pour tous les adhérents&nbsp;: les jeunes et les vieux. 
 
