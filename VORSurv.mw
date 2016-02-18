@@ -77,8 +77,7 @@ La première étape consiste à la préparation de la carte SD et l’installati
 Cette procédure est destinée pour l'environnement Windows. 
 
 1 – Télécharger et installer le logiciel Sdformater&nbsp;&nbsp;&nbsp;&nbsp; 
-
-<center>[[Image:SDF.JPG]]</center>
+<center>[[Image:SD-logo.JPG]]</center>
 
 2 – Télécharger et installer le logiciel Win32DiskImager&nbsp; 
 
@@ -86,12 +85,14 @@ Cette procédure est destinée pour l'environnement Windows.
 
 3 – Télécharger l’image de votre OS depuis&nbsp; [http://www.raspberrypi.org/ http://www.raspberrypi.org]
 
+
 <center>[[Image:raspbian.JPG]]</center>
 
 4 - Lancer le logiciel Sdformater et procéder au formatage de la card SD en fonction des paramètres détectés
+<center>[[Image:SDF.JPG]]</center>
 
-<center>[[Image:Win32menu.JPG]]</center>
 5 - Lancer le logiciel Win32DiskImager, selectionner l'image OS téléchargée précédemment et appuyer sur "Write"
+<center>[[Image:Win32menu.JPG]]</center>
 
 === Etape 2: Configuration du système ===
 Dès l'insertation de la carte SD et le premier démarrage du système sur le Raspberry, il faut passer à sa configuration en utilisant la commande raspi-config :
