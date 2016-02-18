@@ -78,12 +78,19 @@ Cette procédure est destinée pour l'environnement Windows.
 
 1 – Télécharger et installer le logiciel Sdformater&nbsp;&nbsp;&nbsp;&nbsp; 
 
+<center>[[Image:SDF.JPG]]</center>
+
 2 – Télécharger et installer le logiciel Win32DiskImager&nbsp; 
+
+<center>[[Image:Win32.JPG]]</center>
 
 3 – Télécharger l’image de votre OS depuis&nbsp; [http://www.raspberrypi.org/ http://www.raspberrypi.org]
 
+<center>[[Image:raspbian.JPG]]</center>
+
 4 - Lancer le logiciel Sdformater et procéder au formatage de la card SD en fonction des paramètres détectés
 
+<center>[[Win32menu.JPG]]</center>
 5 - Lancer le logiciel Win32DiskImager, selectionner l'image OS téléchargée précédemment et appuyer sur "Write"
 
 === Etape 2: Configuration du système ===
