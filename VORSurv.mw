@@ -561,6 +561,9 @@ Le montage a été réalisé selon le schéma de principe suivant&nbsp;:
 Remarque: Nous avons adapté le montage en utilisant un relais qui possède deux sorties au lieu d'une pour éviter tout risque lors de câblage du câble 230VAc
 Le montage final est le suivant:
 <center>[[Image:Dezzztecteur%20IR-2.JPG]]</center>
+
+<center>= Rappel = </center>
+<center>[[Image:electricite.JPG]]</center>
 '''''Attention: Tension 220V!!! Si vous comptez réaliser ce montage, par vous même, il faut faire très attention au risque électrocution lors de vos tests'''''
 
 = Interface web de configuration et de paramétrage  =
