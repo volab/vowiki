@@ -129,6 +129,9 @@ Depuis la ligne de commande:
 
 = Installation des logiciels necessaires =
 == Motion:  ==
+
+<center>[[Image:Motion-logiciel.JPG]]</center>
+
 C'est un logiciel de surveillance pour rasbian, simple à utiliser, qui offre la possibilité de faire de la védio-surveillance et la diffusion en ligne, en temps réel, des images prises par le système.
 
 En comparent la toute dernière images avec la nouvelle image prise, Motion est capable de détecter tout éventuel mouvement.
