@@ -150,6 +150,10 @@ Le paragraphe suivant décrit la démarche suivie lors de la réalisation de VOR
 ***** '''''sudo apt-get upgrade'''''
 ***** '''''sudo apt-get install motion '''''
 
+Après, on diot télecharger et installer les librairies necessaires 
+
+sudo apt-get install -y libjpeg62 libjpeg62-dev libavformat53 libavformat-dev libavcodec53 libavcodec-dev libavutil51 libavutil-dev libc6-dev zlib1g-dev libmysqlclient18 libmysqlclient-dev libpq5 libpq-dev
+
 Comme nous allons utiliser la caméra RPI, on doit telecharger la version de Motion compatible avec ce type de caméra
 
 * 
