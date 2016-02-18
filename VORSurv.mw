@@ -331,7 +331,7 @@ Si tout va bien, on aura la page suivante&nbsp;:
 <center>[[Image:Phptest.JPG]]</center>
 
 == Motion et diffusion des images en temps réel ==
-Tapez le lien '''''http:'''''[mailto://@ip //@ip]''''':8081/ '''''depuis le navigateur d'un poste connecté au réseau local. 
+Tapez le lien '''''http:'''''[mailto://@ip:8081/ '''''depuis le navigateur d'un poste connecté au réseau local. 
 
 Si tout va bien, une image de l'objet, en face de la camera, sera affichée dans le navigateur, probablement, avec un petit décalage (latence) dans le temps qui dépendra de la qualité de la liaison réseau et le temps de traitement de l'image.
 
