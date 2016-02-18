@@ -423,7 +423,7 @@ La configuration et le paramétrage du système sera fait uniquement en utilisan
 Dans un souci d’optimisation du temps CPU, le système sera composé d’un ensemble de processus qui s’exécutent en &nbsp;parallèle, en interaction permanente via de simples pipes de communication, fichiers texte, pour échanger et partager l’information des ressources communes. 
 <center>[[Image:Programme%20principal.JPG]]</center>
 
-Telque décrit le schéma de ce schéma, le concept du système est basé sur un programme principal qui contrôle et synchronise un ensemble de sous-programmes qui s'exécutent d'une manière autonome.
+Tel que décrit dans ce schéma, le concept du système est basé sur un programme principal qui contrôle et synchronise un ensemble de sous-programmes qui s'exécutent d'une manière autonome.
 En fonction des contenu des pipes d'échanges inter-processus (simple fichiers textes partagés) le programme principale prendra la décision qui s'impose: allumer le projecteur, générer une alarme, envoyer un SMS, déplacer le contenu du répertoire de travail, etc..
 
  
