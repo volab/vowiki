@@ -60,7 +60,7 @@ La librairie [https://learn.adafruit.com/adafruit-motor-shield-v2-for-arduino/in
 Microrupteur (fin de course) normalement ouvert
 
 == Actionneurs ==
-Deux moteurs D21mm - Arbre 2mm de 1,5V à  4,5V: Caractéristiques sous 3 V :&nbsp;- 10 500 tr/mn Ã  vide, 250 mA, Couple : 11 g.cm
+Deux moteurs D21mm - Arbre 2mm de 1,5V à  4,5V: Caractéristiques sous 3 V : - 10500 tr/mn à  vide, 250 mA, Couple : 11 g.cm
 
 = PrÃ©paration =
 == CÃ¢blage des microrupteurs ==
