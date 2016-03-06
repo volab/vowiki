@@ -131,17 +131,17 @@ le registre PIN reflète l'état des broches configurées en ENTREE.
 Ce tableau permet de programmer le robot. Les actions attendues peuvent bien sur être modifiées.
 
 
-Capteur : 
+'''Capteur :''' 
 
-AVG : Avant
+AVG : Avant Gauche
 
-GaucheAVD : Avant Droit
+AVD : Avant Droit
 
 ARG : Arrière Gauche
 
 ARD : Arrière Droit
 
-
+'''Actionneurs :'''
 Moteur droit : M2
 
 Moteur gauche : M1
