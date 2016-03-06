@@ -168,6 +168,7 @@ Contacts pull-up : capteur relâché, entrée en valeur 1.
 DDRA : Fixe pins 1 en sortie, 0 en entrée (11110000)
 
 Pin 22, 23, 24, 25 fixées en entrée.
+
 Pin 26, 27, 28, 29 fixées en sortie (forcées pour éviter les perturbations)
 
 [[Image:Init.jpeg]]
