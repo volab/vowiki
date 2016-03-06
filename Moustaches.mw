@@ -130,6 +130,8 @@ le registre PIN reflète l'état des broches configurées en ENTREE.
 == Correspondance du registre et des actions attendues ==
 Ce tableau permet de programmer le robot. Les actions attendues peuvent bien sur être modifiées.
 
+[[Fichier:IMG 37|400px|border]]
+
 
 '''Capteur :''' 
 
