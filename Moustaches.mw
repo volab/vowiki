@@ -104,8 +104,7 @@ Moteur gauche : M1
 Pont de diode afin d'éviter les retours de courant sur la carte lors de l'arrêt brutal des moteurs ou de l'inversion de rotation.
 
 Schéma structurel :
-
-[[Image:schemastruc.PNG]]
+[[Image:schemastruc.PNG|border|center|500px]]
 Carte :
 
 
