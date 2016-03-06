@@ -179,3 +179,4 @@ Pin 26, 27, 28, 29 fixées en sortie (forcées pour éviter les perturbations)
 2) Contrôle de l'état des capteurs
 
 La variable «capteur» prend la valeur décimale de l'état des contacts au moment «t».
+[[Image:Ini.jpeg]]
