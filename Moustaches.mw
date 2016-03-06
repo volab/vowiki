@@ -46,7 +46,7 @@ La maquette proposée n'est qu'un support et le travail peut très bien être tr
 == Cartes  ==
 [http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.MaterielMega2560 La carte Arduino Mega 2560] est une carte à  microcontrôleur basée sur un ATmega2560 ([http://www.atmel.com/Images/doc2549.pdf fiche technique]).
 
-[[Fichier:Vo.JPG]]
+[[Fichier:ArduinoMega2560.jpeg]]
 
 [https://learn.adafruit.com/downloads/pdf/adafruit-motor-shield.pdf La carte afruit motor shield] est une carte d'extension de commande de moteurs
 
