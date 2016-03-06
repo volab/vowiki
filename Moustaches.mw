@@ -153,15 +153,15 @@ Chargement du fichier créé avec Ardublock
 
 1) Initialisation (setup)
 
-Contacts pull-up&nbsp;: capteur relÃ¢chÃ©, entrÃ©e en valeur 1.
+Contacts pull-up : capteur relâché, entrée en valeur 1.
 
-DDRA&nbsp;: Fixe pins 1 en sortie, 0 en entrÃ©e (11110000)
+DDRA : Fixe pins 1 en sortie, 0 en entrée (11110000)
 
-Pin 22, 23, 24, 25 fixÃ©es en entrÃ©e.
+Pin 22, 23, 24, 25 fixées en entrée.
 
-[[Image:init.PNG]]Pin 26, 27, 28, 29 fixÃ©es en sortie (forcÃ©es pour Ã©viter les perturbations)
+[[Image:init.PNG]]Pin 26, 27, 28, 29 fixées en sortie (forcées pour éviter les perturbations)
 
 
-2) ContrÃ´le de l'Ã©tat des capteurs
+2) Contrôle de l'état des capteurs
 
-La variable Â«&nbsp;capteur&nbsp;Â» prend la valeur dÃ©cimale de l'Ã©tat des contacts au moment Â«&nbsp;t&nbsp;Â».
+La variable «capteur» prend la valeur décimale de l'état des contacts au moment «t».
