@@ -107,6 +107,7 @@ Schéma structurel :
 
 [[Image:IMG_4240.JPG]][[Image:IMG_4237.JPG]]
 
+== Programmation ==
 == La manipulation des ports Ã  l'aide des registres de port ==
 La carte Arduino Mega est basÃ©e sur un microcontrÃ´leur AVR Atmel. 
 
@@ -120,7 +121,6 @@ le registre PORT contrÃ´le le niveau HAUT ou BAS des broches numÃ©riques en 
 
 
 le registre PIN reflÃ¨te l'Ã©tat des broches configurÃ©e en ENTREE.
-
 
 == Correspondance du registre et des actions attendues ==
 Ce tableau permet de programmer le robot. Les actions attendues peuvent bien sur Ãªtre modifiÃ©es.
