@@ -79,7 +79,7 @@ Cette information est importante car votre programme ne fonctionnera pas si vous
 [[Image:megaloupe5reperage.jpg]]J'utilise une batterie Litium 7,4V afin d'alimenter l'Arduino et les deux moteurs par l'alimentation extérieur en par un convertisseur de tension 5V.
 
 
-== Repé©rage des branchements ==
+== Repérage des branchements ==
 1) Capteurs
 
 AVG : Avant Gauche : pin 25
@@ -106,6 +106,7 @@ Schéma structurel :
 
 
 [[Image:IMG_4240.JPG]][[Image:IMG_4237.JPG]]= Programmation =
+
 == La manipulation des ports Ã  l'aide des registres de port ==
 La carte Arduino Mega est basÃ©e sur un microcontrÃ´leur AVR Atmel. 
 
