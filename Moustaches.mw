@@ -52,9 +52,9 @@ La maquette proposée n'est qu'un support et le travail peut très bien être tr
 == Logiciel ==
 Le logiciel Arduino installé (voir : http://www.arduino.cc/)
 
-[http://www.semageek.com/arduino-presentation-et-traduction-en-francais-de-ardublock/ Ardublock] est un plugin qui sâ€™ajoute Ã  lâ€™ide dâ€™arduino. (Programmation graphique), Ã  placer dans C:\Users\nom_du_compte\Documents\Arduino\Tools\ArduBlockTool\Tool
+[http://www.semageek.com/arduino-presentation-et-traduction-en-francais-de-ardublock/ Ardublock] est un plugin qui s'ajoute à  l'ide d'arduino. (Programmation graphique), à placer dans C:\Users\nom_du_compte\Documents\Arduino\Tools\ArduBlockTool\Tool
 
-La librairie [https://learn.adafruit.com/adafruit-motor-shield-v2-for-arduino/install-software adafruit motor shield] (mÃªme si elle apparaÃ®t dans Ardublock), Ã  placer dans C:\Users\nom_du_compte\Documents\Arduino\libraries
+La librairie [https://learn.adafruit.com/adafruit-motor-shield-v2-for-arduino/install-software adafruit motor shield] (même si elle apparait dans Ardublock), à  placer dans C:\Users\nom_du_compte\Documents\Arduino\libraries
 
 == Information (Attention au cÃ¢blage prÃ©sentÃ© plus tard) ==
 Microrupteur (fin de course) normalement ouvert
