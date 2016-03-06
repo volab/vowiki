@@ -140,13 +140,13 @@ Moteur gauche&nbsp;: M1
 
 
 == Programme ArduBlock ==
-Chargement du fichier crÃ©Ã© avec Ardublock
+Chargement du fichier créé avec Ardublock
 
 1) Ouvrir le logiciel Arduino
 
 2) Dans le menu outil, lancer le plugin Ardublock.
 
-3) Ouvrir le fichier Â«&nbsp;[./programmation%20robot.abp programmation robot]&nbsp;Â»
+3) Ouvrir le fichier [./programmation%20robot.abp programmation robot]»
 
 
 '''Description du programme'''
