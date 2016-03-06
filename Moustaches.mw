@@ -128,20 +128,20 @@ le registre PIN reflète l'état des broches configurées en ENTREE.
 [[Fichier:Registrepin.jpeg|400px|border]]
 
 == Correspondance du registre et des actions attendues ==
-Ce tableau permet de programmer le robot. Les actions attendues peuvent bien sur Ãªtre modifiÃ©es.
+Ce tableau permet de programmer le robot. Les actions attendues peuvent bien sur être modifiées.
 
 
-Capteur&nbsp;: 
+Capteur : 
 
-AVG&nbsp;: Avant GaucheAVD&nbsp;: Avant Droit
+AVG : Avant
+GaucheAVD : Avant Droit
+ARG : Arrière
+GaucheARD : Arrière Droit
 
-ARG&nbsp;: ArriÃ¨re GaucheARD&nbsp;: ArriÃ¨re Droit
 
+Moteur droit : M2
 
-Moteur droit&nbsp;: M2
-
-Moteur gauche&nbsp;: M1
-
+Moteur gauche : M1
 
 == Programme ArduBlock ==
 Chargement du fichier créé avec Ardublock
