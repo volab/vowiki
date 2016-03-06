@@ -56,9 +56,8 @@ Le logiciel Arduino installé (voir : http://www.arduino.cc/)
 
 La librairie [https://learn.adafruit.com/adafruit-motor-shield-v2-for-arduino/install-software adafruit motor shield] (même si elle apparait dans Ardublock), à  placer dans C:\Users\nom_du_compte\Documents\Arduino\libraries
 
-== Information (Attention au cÃ¢blage prÃ©sentÃ© plus tard) ==
+== Information (Attention au câblage présenté plus tard) ==
 Microrupteur (fin de course) normalement ouvert
-
 
 == Actionneurs ==
 Deux moteurs D21mm - Arbre 2mm de 1,5 Ã  4,5V&nbsp;: CaractÃ©ristiques sous 3 V :&nbsp;- 10 500 tr/mn Ã  vide, 250 mA, Couple : 11 g.cm 
