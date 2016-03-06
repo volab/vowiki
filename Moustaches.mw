@@ -62,45 +62,45 @@ Microrupteur (fin de course) normalement ouvert
 == Actionneurs ==
 Deux moteurs D21mm - Arbre 2mm de 1,5V à  4,5V: Caractéristiques sous 3 V : - 10500 tr/mn à  vide, 250 mA, Couple : 11 g.cm
 
-= PrÃ©paration =
-== CÃ¢blage des microrupteurs ==
-Une rÃ©sistance de rappel (Â«pull-upÂ» ou Â«pull-downÂ») permet de fixer une entrÃ©e numÃ©rique Ã  un Ã©tat HIGH (haut ou 1) ou LOW (bas ou 0).
+= Préparation =
+== Câblage des microrupteurs ==
+Une résistance de rappel («pull-upÂ» ou «pull-downÂ») permet de fixer une entrÃ©e numÃ©rique Ã  un Ã©tat HIGH (haut ou 1) ou LOW (bas ou 0).
 
-Attention car j'ai cÃ¢blÃ© les capteurs "pull-up". Faites bien attention et choisissez plutÃ´t le cÃ¢blage en "pull-up" afin d'Ãªtre en sÃ©curitÃ© si un court circuit vous arrive (la rÃ©sistance se trouve toujours entre le VCC et le GND) et de ne pas griller l'alimentation.
+Attention car j'ai cÃ¢blÃ© les capteurs "pull-up". Faites bien attention et choisissez plutôt le câblage en "pull-up" afin d'être en sécurité si un court circuit vous arrive (la résistance se trouve toujours entre le VCC et le GND) et de ne pas griller l'alimentation.
 
-[[Image:pullups.png]]Avec la rÃ©sistance de rappel "pull-down", l'entrÃ©e numÃ©rique est Ã  l'Ã©tat LOW lorsque le micro-rupteur ou le bouton poussoir sont ouverts (relÃ¢chÃ©s).
+[[Image:pullups.png]]Avec la résistance de rappel "pull-down", l'entrée numérique est à  l'état LOW lorsque le micro-rupteur ou le bouton poussoir sont ouverts (relâchés).
 
-Avec la rÃ©sistance de rappel "pull-up", l'entrÃ©e numÃ©rique est Ã  l'Ã©tat HIGH lorsque le micro-rupteur ou le bouton poussoir sont ouverts (relÃ¢chÃ©s).
+Avec la résistance de rappel "pull-up", l'entrée numérique est à  l'état HIGH lorsque le micro-rupteur ou le bouton poussoir sont ouverts (relâchés).
 
-Cette information est importante car votre programme ne fonctionnera pas si vous mÃ©langez les cÃ¢blages comme j'ai pu le faire et perdre un temps important pour trouver l'erreur.
+Cette information est importante car votre programme ne fonctionnera pas si vous mélangez les câblages comme j'ai pu le faire et perdre un temps important pour trouver l'erreur.
 
 
 == Montage de la carte Arduino Mega 2560 et la carte d'extension adafruit motor shield  ==
-[[Image:megaloupe5reperage.jpg]]J'utilise une batterie Litium 7,4V afin d'alimenter l'Arduino et les deux moteurs par l'alimentation extÃ©rieur en par un convertisseur de tension 5V.
+[[Image:megaloupe5reperage.jpg]]J'utilise une batterie Litium 7,4V afin d'alimenter l'Arduino et les deux moteurs par l'alimentation extérieur en par un convertisseur de tension 5V.
 
 
-== RepÃ©rage des branchements ==
+== Repé©rage des branchements ==
 1) Capteurs
 
-AVG&nbsp;: Avant Gauche&nbsp;: pin 25
+AVG : Avant Gauche : pin 25
 
-AVD&nbsp;: Avant Droit&nbsp;: pin 24
+AVD : Avant Droit : pin 24
 
-ARG&nbsp;: ArriÃ¨re Gauche&nbsp;: pin 23
+ARG : Arrière Gauche : pin 23
 
-ARD&nbsp;: ArriÃ¨re Droit&nbsp;: pin 22
+ARD: Arriére Droit : pin 22
 
 2) Moteurs
 
-Moteur droit&nbsp;: M2
+Moteur droit : M2
 
-Moteur gauche&nbsp;: M1
+Moteur gauche : M1
 
 3) Protection de la carte
 
-Pont de diode afin d'Ã©viter les retours de courant sur la carte lors de l'arrÃªt brutal des moteurs ou de lâ€™inversion de rotation.
+Pont de diode afin d'éviter les retours de courant sur la carte lors de l'arrêt brutal des moteurs ou de l'inversion de rotation.
 
-SchÃ©ma structurel&nbsp;:
+Schéma structurel :
 
 [[Image:schemastruc.PNG]]Carte&nbsp;:
 
