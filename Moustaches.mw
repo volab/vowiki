@@ -105,7 +105,7 @@ Schéma structurel :
 [[Image:schemastruc.PNG]]Carte&nbsp;:
 
 
-[[Image:IMG_4240.JPG]][[Image:IMG_4237.JPG]]= Programmation =
+[[Image:IMG_4240.JPG]][[Image:IMG_4237.JPG]]
 
 == La manipulation des ports Ã  l'aide des registres de port ==
 La carte Arduino Mega est basÃ©e sur un microcontrÃ´leur AVR Atmel. 
