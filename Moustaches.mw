@@ -22,7 +22,7 @@ J'ai repris le [http://www.a4.fr/automatisme-et-robotique/automatisme-et-robots-
 
 Je décris mon expérience sur ce robot avec la technologie PICAXE sur le [http://lecorsiergilles.blogspot.fr/ blog La Technologie au Collège] dans le [http://lecorsiergilles.blogspot.fr/2011/06/automatisme-et-robotique-picaxe-ter.html message Automatismes et robotique].
 
-Dans ce document sont abordÃ©s&nbsp;:
+Dans ce document sont abordés :
 
 Les cartes Arduino Mega 2560 et adafruit motor shield
 
@@ -30,7 +30,7 @@ Les branchements des capteurs et actionneurs
 
 Les moteurs CC et les branchements
 
-La programmation Ã  l'aide d'ArduBlock, plugin (module d'extension) du logiciel Arduino de&nbsp;:
+La programmation à  l'aide d'ArduBlock, plugin (module d'extension) du logiciel Arduino de&nbsp;:
 
 La commande Â«&nbsp;Tant que ...&nbsp;Â» (while)
 
