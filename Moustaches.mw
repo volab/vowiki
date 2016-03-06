@@ -134,12 +134,16 @@ Ce tableau permet de programmer le robot. Les actions attendues peuvent bien sur
 Capteur : 
 
 AVG : Avant
+
 GaucheAVD : Avant Droit
-ARG : Arrière
-GaucheARD : Arrière Droit
+
+ARG : Arrière Gauche
+
+ARD : Arrière Droit
 
 
 Moteur droit : M2
+
 Moteur gauche : M1
 
 == Programme ArduBlock ==
