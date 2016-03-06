@@ -1,0 +1,167 @@
+[[Image:IMG_4198.JPG]][[Image:IMG_4193.JPG]]<center>Moustaches</center>
+
+<center>Robot dÃ©tecteur d'obstacles</center>
+
+
+[[Image:|thumb|<center></center>]]
+
+= VoLAB =
+= Assocation VoRoBoTics =
+Date : 23/01/2016
+
+Auteur : Lecorsier
+
+Relecteur : 
+
+Thème : Domotique
+
+Projet : Robot détecteur d'obstacles, programmation Arduino et ArduBlock
+
+= Problématique =
+J'ai repris le [http://www.a4.fr/automatisme-et-robotique/automatisme-et-robots-avec-picaxe/technologie-picaxe/robotribu/kit-robopilot-equipe-avec-carte-motopilot-axe023.html RobotPilot dÃ©veloppÃ© et vendu par A4], concepteur et fabricant de matÃ©riel pÃ©dagogique.
+
+Je dÃ©cris mon expÃ©rience sur ce robot avec la technologie PICAXE sur le [http://lecorsiergilles.blogspot.fr/ blog La Technologie au CollÃ¨ge] dans le [http://lecorsiergilles.blogspot.fr/2011/06/automatisme-et-robotique-picaxe-ter.html message Automatismes et robotique].
+
+Dans ce document sont abordÃ©s&nbsp;:
+
+Les cartes Arduino Mega 2560 et adafruit motor shield
+
+Les branchements des capteurs et actionneurs
+
+Les moteurs CC et les branchements
+
+La programmation Ã  l'aide d'ArduBlock, plugin (module d'extension) du logiciel Arduino de&nbsp;:
+
+La commande Â«&nbsp;Tant que ...&nbsp;Â» (while)
+
+La boucle Â«&nbsp;Si&nbsp;Â» (if)
+
+Sous programme
+
+
+= MatÃ©riel =
+La maquette proposÃ©e n'est qu'un support et le travail peut trÃ¨s bien Ãªtre transfÃ©rÃ© sur un autre projet.
+
+== Cartes  ==
+[http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.MaterielMega2560 La carte Arduino Mega 2560] est une carte Ã  microcontrÃ´leur basÃ©e sur un ATmega2560 ([http://www.atmel.com/Images/doc2549.pdf fiche technique]).
+
+[[Image:]][https://learn.adafruit.com/downloads/pdf/adafruit-motor-shield.pdf La carte ][https://learn.adafruit.com/downloads/pdf/adafruit-motor-shield.pdf ad][https://learn.adafruit.com/downloads/pdf/adafruit-motor-shield.pdf afruit motor shield] est une carte d'extension de commande de moteurs
+
+[[Image:]]
+
+== Logiciel ==
+Le logiciel Arduino installÃ© (voir : http://www.arduino.cc/)
+
+[http://www.semageek.com/arduino-presentation-et-traduction-en-francais-de-ardublock/ Ardublock] est un plugin qui sâ€™ajoute Ã  lâ€™ide dâ€™arduino. (Programmation graphique), Ã  placer dans C:\Users\nom_du_compte\Documents\Arduino\Tools\ArduBlockTool\Tool
+
+La librairie [https://learn.adafruit.com/adafruit-motor-shield-v2-for-arduino/install-software adafruit motor shield] (mÃªme si elle apparaÃ®t dans Ardublock), Ã  placer dans C:\Users\nom_du_compte\Documents\Arduino\libraries
+
+== Information (Attention au cÃ¢blage prÃ©sentÃ© plus tard) ==
+Microrupteur (fin de course) normalement ouvert
+
+
+== Actionneurs ==
+Deux moteurs D21mm - Arbre 2mm de 1,5 Ã  4,5V&nbsp;: CaractÃ©ristiques sous 3 V :&nbsp;- 10 500 tr/mn Ã  vide, 250 mA, Couple : 11 g.cm 
+
+
+= PrÃ©paration =
+== CÃ¢blage des microrupteurs ==
+Une rÃ©sistance de rappel (Â«pull-upÂ» ou Â«pull-downÂ») permet de fixer une entrÃ©e numÃ©rique Ã  un Ã©tat HIGH (haut ou 1) ou LOW (bas ou 0).
+
+Attention car j'ai cÃ¢blÃ© les capteurs "pull-up". Faites bien attention et choisissez plutÃ´t le cÃ¢blage en "pull-up" afin d'Ãªtre en sÃ©curitÃ© si un court circuit vous arrive (la rÃ©sistance se trouve toujours entre le VCC et le GND) et de ne pas griller l'alimentation.
+
+[[Image:pullups.png]]Avec la rÃ©sistance de rappel "pull-down", l'entrÃ©e numÃ©rique est Ã  l'Ã©tat LOW lorsque le micro-rupteur ou le bouton poussoir sont ouverts (relÃ¢chÃ©s).
+
+Avec la rÃ©sistance de rappel "pull-up", l'entrÃ©e numÃ©rique est Ã  l'Ã©tat HIGH lorsque le micro-rupteur ou le bouton poussoir sont ouverts (relÃ¢chÃ©s).
+
+Cette information est importante car votre programme ne fonctionnera pas si vous mÃ©langez les cÃ¢blages comme j'ai pu le faire et perdre un temps important pour trouver l'erreur.
+
+
+== Montage de la carte Arduino Mega 2560 et la carte d'extension adafruit motor shield  ==
+[[Image:megaloupe5reperage.jpg]]J'utilise une batterie Litium 7,4V afin d'alimenter l'Arduino et les deux moteurs par l'alimentation extÃ©rieur en par un convertisseur de tension 5V.
+
+
+== RepÃ©rage des branchements ==
+1) Capteurs
+
+AVG&nbsp;: Avant Gauche&nbsp;: pin 25
+
+AVD&nbsp;: Avant Droit&nbsp;: pin 24
+
+ARG&nbsp;: ArriÃ¨re Gauche&nbsp;: pin 23
+
+ARD&nbsp;: ArriÃ¨re Droit&nbsp;: pin 22
+
+2) Moteurs
+
+Moteur droit&nbsp;: M2
+
+Moteur gauche&nbsp;: M1
+
+3) Protection de la carte
+
+Pont de diode afin d'Ã©viter les retours de courant sur la carte lors de l'arrÃªt brutal des moteurs ou de lâ€™inversion de rotation.
+
+SchÃ©ma structurel&nbsp;:
+
+[[Image:schemastruc.PNG]]Carte&nbsp;:
+
+
+[[Image:IMG_4240.JPG]][[Image:IMG_4237.JPG]]= Programmation =
+== La manipulation des ports Ã  l'aide des registres de port ==
+La carte Arduino Mega est basÃ©e sur un microcontrÃ´leur AVR Atmel. 
+
+Pour contrÃ´ler l'Ã©tat des capteurs, j'utilise les registres de port qui permet de ne pas utiliser les fonctions Â«&nbsp;digitalRead&nbsp;Â» et Â«&nbsp;digitalWrite&nbsp;Â» pour chaque capteur.
+
+Les registres de port permettent une manipulation de bas-niveau (Ã§Ã d au niveau du matÃ©riel lui-mÃªme) et plus rapide des broches d'entrÃ©e/sortie du microcontrÃ´leur de la carte Arduino Atmega2560&nbsp;:
+
+Le registre (un octet) DDR dÃ©termine le sens d'utilisation des broches numÃ©riques en tant qu'ENTREE ou SORTIE. 
+
+le registre PORT contrÃ´le le niveau HAUT ou BAS des broches numÃ©riques en SORTIE (et l'activation du PULLUP pour les broches en ENTREE).
+
+
+le registre PIN reflÃ¨te l'Ã©tat des broches configurÃ©e en ENTREE.
+
+
+== Correspondance du registre et des actions attendues ==
+Ce tableau permet de programmer le robot. Les actions attendues peuvent bien sur Ãªtre modifiÃ©es.
+
+
+Capteur&nbsp;: 
+
+AVG&nbsp;: Avant GaucheAVD&nbsp;: Avant Droit
+
+ARG&nbsp;: ArriÃ¨re GaucheARD&nbsp;: ArriÃ¨re Droit
+
+
+Moteur droit&nbsp;: M2
+
+Moteur gauche&nbsp;: M1
+
+
+== Programme ArduBlock ==
+Chargement du fichier crÃ©Ã© avec Ardublock
+
+1) Ouvrir le logiciel Arduino
+
+2) Dans le menu outil, lancer le plugin Ardublock.
+
+3) Ouvrir le fichier Â«&nbsp;[./programmation%20robot.abp programmation robot]&nbsp;Â»
+
+
+'''Description du programme'''
+
+1) Initialisation (setup)
+
+Contacts pull-up&nbsp;: capteur relÃ¢chÃ©, entrÃ©e en valeur 1.
+
+DDRA&nbsp;: Fixe pins 1 en sortie, 0 en entrÃ©e (11110000)
+
+Pin 22, 23, 24, 25 fixÃ©es en entrÃ©e.
+
+[[Image:init.PNG]]Pin 26, 27, 28, 29 fixÃ©es en sortie (forcÃ©es pour Ã©viter les perturbations)
+
+
+2) ContrÃ´le de l'Ã©tat des capteurs
+
+La variable Â«&nbsp;capteur&nbsp;Â» prend la valeur dÃ©cimale de l'Ã©tat des contacts au moment Â«&nbsp;t&nbsp;Â».
