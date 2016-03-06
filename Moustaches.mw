@@ -109,19 +109,19 @@ Schéma structurel :
 
 = Programmation =
 
-== La manipulation des ports Ã  l'aide des registres de port ==
-La carte Arduino Mega est basÃ©e sur un microcontrÃ´leur AVR Atmel. 
+== La manipulation des ports à  l'aide des registres de port ==
+La carte Arduino Mega est basée sur un microcontrôleur AVR Atmel. 
 
-Pour contrÃ´ler l'Ã©tat des capteurs, j'utilise les registres de port qui permet de ne pas utiliser les fonctions Â«&nbsp;digitalRead&nbsp;Â» et Â«&nbsp;digitalWrite&nbsp;Â» pour chaque capteur.
+Pour contrôler l'état des capteurs, j'utilise les registres de port qui permet de ne pas utiliser les fonctions «digitalRead» et «digitalWrite» pour chaque capteur.
 
-Les registres de port permettent une manipulation de bas-niveau (Ã§Ã d au niveau du matÃ©riel lui-mÃªme) et plus rapide des broches d'entrÃ©e/sortie du microcontrÃ´leur de la carte Arduino Atmega2560&nbsp;:
+Les registres de port permettent une manipulation de bas-niveau (çàd au niveau du matériel lui-même) et plus rapide des broches d'entrée/sortie du microcontrôleur de la carte Arduino Atmega2560 :
 
-Le registre (un octet) DDR dÃ©termine le sens d'utilisation des broches numÃ©riques en tant qu'ENTREE ou SORTIE. 
+Le registre (un octet) DDR détermine le sens d'utilisation des broches numériques en tant qu'ENTREE ou SORTIE. 
 
-le registre PORT contrÃ´le le niveau HAUT ou BAS des broches numÃ©riques en SORTIE (et l'activation du PULLUP pour les broches en ENTREE).
+le registre PORT contrôle le niveau HAUT ou BAS des broches numériques en SORTIE (et l'activation du PULLUP pour les broches en ENTREE).
 
 
-le registre PIN reflÃ¨te l'Ã©tat des broches configurÃ©e en ENTREE.
+le registre PIN reflète l'état des broches configurées en ENTREE.
 
 == Correspondance du registre et des actions attendues ==
 Ce tableau permet de programmer le robot. Les actions attendues peuvent bien sur Ãªtre modifiÃ©es.
