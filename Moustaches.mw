@@ -32,25 +32,25 @@ Les moteurs CC et les branchements
 
 La programmation à  l'aide d'ArduBlock, plugin (module d'extension) du logiciel Arduino de&nbsp;:
 
-La commande Â«&nbsp;Tant que ...&nbsp;Â» (while)
+La commande Â«&nbsp;Tant que ...» (while)
 
-La boucle Â«&nbsp;Si&nbsp;Â» (if)
+La boucle «Si» (if)
 
 Sous programme
 
 
-= MatÃ©riel =
-La maquette proposÃ©e n'est qu'un support et le travail peut trÃ¨s bien Ãªtre transfÃ©rÃ© sur un autre projet.
+= Matériel =
+La maquette proposée n'est qu'un support et le travail peut très bien être transféré sur un autre projet.
 
 == Cartes  ==
-[http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.MaterielMega2560 La carte Arduino Mega 2560] est une carte Ã  microcontrÃ´leur basÃ©e sur un ATmega2560 ([http://www.atmel.com/Images/doc2549.pdf fiche technique]).
+[http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.MaterielMega2560 La carte Arduino Mega 2560] est une carte à  microcontrôleur basée sur un ATmega2560 ([http://www.atmel.com/Images/doc2549.pdf fiche technique]).
 
 [[Image:]][https://learn.adafruit.com/downloads/pdf/adafruit-motor-shield.pdf La carte ][https://learn.adafruit.com/downloads/pdf/adafruit-motor-shield.pdf ad][https://learn.adafruit.com/downloads/pdf/adafruit-motor-shield.pdf afruit motor shield] est une carte d'extension de commande de moteurs
 
 [[Image:]]
 
 == Logiciel ==
-Le logiciel Arduino installÃ© (voir : http://www.arduino.cc/)
+Le logiciel Arduino installé (voir : http://www.arduino.cc/)
 
 [http://www.semageek.com/arduino-presentation-et-traduction-en-francais-de-ardublock/ Ardublock] est un plugin qui sâ€™ajoute Ã  lâ€™ide dâ€™arduino. (Programmation graphique), Ã  placer dans C:\Users\nom_du_compte\Documents\Arduino\Tools\ArduBlockTool\Tool
 
