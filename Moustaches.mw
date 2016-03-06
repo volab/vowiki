@@ -125,7 +125,7 @@ le registre PORT contrôle le niveau HAUT ou BAS des broches numériques en SORT
 
 
 le registre PIN reflète l'état des broches configurées en ENTREE.
-[[Fichier:IMG 374.JPG|400px|border]]
+[[Fichier:Registrepin.jpeg|400px|border]]
 
 == Correspondance du registre et des actions attendues ==
 Ce tableau permet de programmer le robot. Les actions attendues peuvent bien sur Ãªtre modifiÃ©es.
