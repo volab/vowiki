@@ -182,6 +182,7 @@ Pin 26, 27, 28, 29 fixées en sortie (forcées pour éviter les perturbations)
 La variable «capteur» prend la valeur décimale de l'état des contacts au moment «t».
 
 [[Image:Lecture_capteur.jpeg]]
+
 3) Déroulement du programme
 
 Suivant la valeur «capteur», les actions diffèrent suivant le tableau «Correspondance du registre et des actions attendues»
