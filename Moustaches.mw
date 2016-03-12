@@ -182,3 +182,45 @@ Pin 26, 27, 28, 29 fixées en sortie (forcées pour éviter les perturbations)
 La variable «capteur» prend la valeur décimale de l'état des contacts au moment «t».
 
 [[Image:Lecture_capteur.jpeg]]
+3) DÃ©roulement du programme
+
+Suivant la valeur Â«&nbsp;capteur&nbsp;Â», les actions diffÃ¨rent suivant le tableau Â«&nbsp;Correspondance du registre et des actions attendues&nbsp;Â»
+
+
+[[Image:reroule_prog.PNG]]3) Le programme (boucle)
+
+Le dÃ©placement du robot est dÃ©crit en sous programmes.
+
+
+= Licence =
+Ce document est mise Ã  disposition selon les termes de la&nbsp;[http://creativecommons.org/licenses/by/4.0/ Licence Creative Commons Attribution 4.0 International]. 
+
+[[Image:]]ParternitÃ© 'by' :''L'Å“uvre peut Ãªtre librement utilisÃ©e, Ã  la condition de l'attribuer Ã  l'auteur en citant son nom.'' 
+
+
+Note aux auteurs de documents du VoLAB, Vous avez la possibilitÃ© de changer de licence. Mais ce serait bien de rester libre et ouvert. Encore une fois ceci est une recommandation et non une obligation.
+
+= Bibliographie =
+= Webographie =
+[http://fr.wikipedia.org/wiki/Licence_Creative_Commons http://fr.wikipedia.org/wiki/Licence_Creative_Commons]
+
+[http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.PortManipulation http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.PortManipulation]
+
+[http://damien-monni.fr/blog/article/arduino-et-les-bases-de-la-programmation-atmel-avr http://damien-monni.fr/blog/article/arduino-et-les-bases-de-la-programmation-atmel-avr]
+
+[http://www.worldofgz.com/electronique/les-registres-de-port-arduino/ http://www.worldofgz.com/electronique/les-registres-de-port-arduino/]
+
+[http://www.atmel.com/images/atmel-2549-8-bit-avr-microcontroller-atmega640-1280-1281-2560-2561_datasheet.pdf http://www.atmel.com/images/atmel-2549-8-bit-avr-microcontroller-atmega640-1280-1281-2560-2561_datasheet.pdf]
+
+[http://www.atmel.com/images/atmel-2549-8-bit-avr-microcontroller-atmega640-1280-1281-2560-2561_datasheet.pdf http://www.atmel.com/images/atmel-2549-8-bit-avr-microcontroller-atmega640-1280-1281-2560-2561_datasheet.pdf]
+
+[http://www.atmel.com/images/atmel-2549-8-bit-avr-microcontroller-atmega640-1280-1281-2560-2561_datasheet.pdf http://www.atmel.com/images/atmel-2549-8-bit-avr-microcontroller-atmega640-1280-1281-2560-2561_datasheet.pdf]
+
+
+= RÃ©daction en langue franÃ§aise =
+Partant du constat de terrain qu'une Ã©norme masse d'information concernant les sujets qui nous intÃ©ressent comme entre autres l'impression 3D n'Ã©taient disponibles que dans la langue de Shakespeare et que de nombreuses personnes dans notre entourage ne maÃ®trisaient pas la dite langue et soucieux de diffuser encore plus l'information, nous avons pris le parti, au VoLAB, de rÃ©diger nos documents de prÃ©fÃ©rence en langue franÃ§aise.
+
+= VoLAB =
+Un mot sur le VoLAB. VoLAB est un fablab implantÃ© Ã  environ 30km au nord-ouest de Paris dans la commune de VaurÃ©al dans l'agglomÃ©ration de Cergy Pontoise. Il est animÃ© par l'association VoRoBoTics.
+
+Site internet [http://www.vorobotics.com/ www.vorobotics.com]
