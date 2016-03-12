@@ -66,16 +66,15 @@ Deux moteurs D21mm - Arbre 2mm de 1,5V à  4,5V: Caractéristiques sous 3 V : -
 
 = Préparation =
 == Câblage des microrupteurs ==
-Une résistance de rappel («pull-upÂ» ou «pull-downÂ») permet de fixer une entrÃ©e numÃ©rique Ã  un Ã©tat HIGH (haut ou 1) ou LOW (bas ou 0).
+Une résistance de rappel («pull-up» ou «pull-down») permet de fixer une entrée numérique à  un état HIGH (haut ou 1) ou LOW (bas ou 0).
 
-Attention car j'ai cÃ¢blÃ© les capteurs "pull-up". Faites bien attention et choisissez plutôt le câblage en "pull-up" afin d'être en sécurité si un court circuit vous arrive (la résistance se trouve toujours entre le VCC et le GND) et de ne pas griller l'alimentation.
+Attention car j'ai câblé les capteurs "pull-up". Faites bien attention et choisissez plutôt le câblage en "pull-up" afin d'être en sécurité si un court circuit vous arrive (la résistance se trouve toujours entre le VCC et le GND) et de ne pas griller l'alimentation.
 
 [[Image:pullups.png]]Avec la résistance de rappel "pull-down", l'entrée numérique est à  l'état LOW lorsque le micro-rupteur ou le bouton poussoir sont ouverts (relâchés).
 
 Avec la résistance de rappel "pull-up", l'entrée numérique est à  l'état HIGH lorsque le micro-rupteur ou le bouton poussoir sont ouverts (relâchés).
 
 Cette information est importante car votre programme ne fonctionnera pas si vous mélangez les câblages comme j'ai pu le faire et perdre un temps important pour trouver l'erreur.
-
 
 == Montage de la carte Arduino Mega 2560 et la carte d'extension adafruit motor shield  ==
 [[Image:megaloupe5reperage.jpg|border|center|500px]]
