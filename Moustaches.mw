@@ -182,15 +182,14 @@ Pin 26, 27, 28, 29 fixées en sortie (forcées pour éviter les perturbations)
 La variable «capteur» prend la valeur décimale de l'état des contacts au moment «t».
 
 [[Image:Lecture_capteur.jpeg]]
-3) DÃ©roulement du programme
+3) Déroulement du programme
 
-Suivant la valeur Â«&nbsp;capteur&nbsp;Â», les actions diffÃ¨rent suivant le tableau Â«&nbsp;Correspondance du registre et des actions attendues&nbsp;Â»
+Suivant la valeur «capteur», les actions diffèrent suivant le tableau «Correspondance du registre et des actions attendues»
 
 
 [[Image:reroule_prog.PNG]]3) Le programme (boucle)
 
 Le dÃ©placement du robot est dÃ©crit en sous programmes.
-
 
 = Licence =
 Ce document est mise Ã  disposition selon les termes de la&nbsp;[http://creativecommons.org/licenses/by/4.0/ Licence Creative Commons Attribution 4.0 International]. 
