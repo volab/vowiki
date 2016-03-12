@@ -81,7 +81,7 @@ Cette information est importante car votre programme ne fonctionnera pas si vous
 == Montage de la carte Arduino Mega 2560 et la carte d'extension adafruit motor shield  ==
 [[Image:megaloupe5reperage.jpg|border|center|500px]]
 J'utilise une batterie Litium 7,4V afin d'alimenter l'Arduino et les deux moteurs par l'alimentation extérieur en par un convertisseur de tension 5V.
-[[Image:Ubec.jpeg|border|center|500px]]
+[[Image:Ubec.jpeg|border|center|200px]]
 
 == Repérage des branchements ==
 1) Capteurs
